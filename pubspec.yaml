@@ -1,6 +1,6 @@
 name: getflutter_app
 description: A new Flutter project.
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -9,7 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.2
-  getflutter: 0.0.1-pre.1
+  getflutter: 1.0.0-dev.1
   flutter_svg: ^0.15.0
 
 dev_dependencies:
