@@ -1,22 +1,14 @@
 import 'package:getflutter_app/screens/button/button-types.dart';
-import 'package:getflutter_app/screens/cards.dart';
 import 'package:getflutter_app/screens/cards/cards.dart';
 import 'package:getflutter_app/screens/carousel/carousel.dart';
-import 'package:getflutter_app/screens/icon-button.dart';
-import 'package:getflutter_app/screens/list-tiles.dart';
 import 'package:getflutter_app/screens/tabs/tabsPage.dart';
 import 'package:getflutter_app/screens/tiles/tilesPage.dart';
 import 'package:getflutter_app/screens/typography/typography.dart';
 import 'package:flutter/material.dart';
 import 'package:getflutter/colors/gf_color.dart';
-import 'package:getflutter/components/card/gf_card.dart';
-//import 'avatars.dart';
-import 'toggles.dart';
-import 'headers.dart';
-import 'toasts.dart';
+
 import '../screens/badges/badges.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-//import '../screens/button/standard-buttons.dart';
 import 'images/images.dart';
 import 'avatar/avatars.dart';
 

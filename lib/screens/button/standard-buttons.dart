@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:getflutter/components/tabs/gf_segment_tabs.dart';
 import 'package:getflutter/components/typography/gf_typography.dart';
-import 'package:getflutter/components/tabs/gf_tabs.dart';
 import 'package:getflutter/components/button/gf_button.dart';
 import 'package:getflutter/size/gf_size.dart';
 import 'package:getflutter/types/gf_typography_type.dart';
-import 'package:getflutter/types/gf_toggle_type.dart';
 import 'package:getflutter/types/gf_type.dart';
 import 'package:getflutter/shape/gf_button_shape.dart';
 import 'package:getflutter/colors/gf_color.dart';

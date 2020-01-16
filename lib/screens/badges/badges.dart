@@ -6,15 +6,11 @@ import 'package:getflutter/components/badge/gf_button_badge.dart';
 import 'package:getflutter/components/badge/gf_icon_badge.dart';
 import 'package:getflutter/components/card/gf_card.dart';
 import 'package:getflutter/components/typography/gf_typography.dart';
-import 'package:getflutter/components/tabs/gf_tabs.dart';
 import 'package:getflutter/components/button/gf_icon_button.dart';
-import 'package:getflutter/position/gf_position.dart';
 import 'package:getflutter/shape/gf_badge_shape.dart';
-import 'package:getflutter/shape/gf_button_shape.dart';
 import 'package:getflutter/size/gf_size.dart';
 import 'package:getflutter/types/gf_typography_type.dart';
 import 'package:getflutter/types/gf_type.dart';
-import 'package:getflutter/components/tabs/gf_tabBarView.dart';
 import 'package:flutter/cupertino.dart';
 
 class BadgesPage extends StatefulWidget {

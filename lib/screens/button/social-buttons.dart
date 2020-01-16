@@ -6,8 +6,6 @@ import 'package:getflutter/components/button/gf_button.dart';
 import 'package:getflutter/components/button/gf_icon_button.dart';
 import 'package:getflutter/components/card/gf_card.dart';
 import 'package:getflutter/shape/gf_icon_button_shape.dart';
-import 'package:getflutter/types/gf_type.dart';
-import 'package:getflutter/size/gf_size.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/cupertino.dart';
 

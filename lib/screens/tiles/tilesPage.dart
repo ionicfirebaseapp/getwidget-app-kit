@@ -52,7 +52,6 @@ class _TilesPageState extends State<TilesPage> {
               subTitle:
                   Text('Lorem ipsum dolor sit amet, consectetur adipiscing'),
               icon: Icon(Icons.favorite),
-              showDivider: false,
             ),
           ),
           GFCard(
@@ -60,7 +59,6 @@ class _TilesPageState extends State<TilesPage> {
               avatar: Icon(Icons.favorite),
               title: Text('Title'),
               icon: Text('Caption'),
-              showDivider: false,
             ),
           ),
           Padding(
@@ -80,7 +78,6 @@ class _TilesPageState extends State<TilesPage> {
               title: Text('Title'),
               subTitle:
                   Text('Lorem ipsum dolor sit amet, consectetur adipiscing'),
-              showDivider: false,
             ),
           ),
           GFCard(
@@ -91,7 +88,6 @@ class _TilesPageState extends State<TilesPage> {
               ),
               title: Text('Title'),
               icon: Text('Caption'),
-              showDivider: false,
             ),
           ),
         ],
