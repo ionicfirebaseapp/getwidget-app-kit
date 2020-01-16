@@ -1,15 +1,7 @@
-//import 'package:getflutter_app/screens/avatars.dart';
-//import 'package:getflutter_app/screens/button/shadow-buttons.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:getflutter/components/avatar/gf_avatar.dart';
-import 'package:getflutter/components/button/gf_icon_button.dart';
-import 'package:getflutter/size/gf_size.dart';
-
 import 'standard-buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getflutter/colors/gf_color.dart';
-import 'package:getflutter/components/card/gf_card.dart';
 import 'package:getflutter/components/list_tile/gf_list_tile.dart';
 import 'pill-buttons.dart';
 import 'square-buttons.dart';
@@ -28,7 +20,7 @@ class _ButtonTypesState extends State<ButtonTypes> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: getGFColor(GFColor.dark),
-          leading: GestureDetector(
+          leading: InkWell(
               onTap: () {
                 Navigator.pop(context);
               },
@@ -71,7 +63,6 @@ class _ButtonTypesState extends State<ButtonTypes> {
                       ]),
                   child: GFListTile(
                       color: getGFColor(GFColor.dark),
-                      showDivider: false,
                       title: Text(
                         'Standard Buttons',
                         style: TextStyle(color: getGFColor(GFColor.white)),
@@ -102,7 +93,6 @@ class _ButtonTypesState extends State<ButtonTypes> {
                       ]),
                   child: GFListTile(
                       color: getGFColor(GFColor.dark),
-                      showDivider: false,
                       title: Text(
                         'Pills Buttons',
                         style: TextStyle(color: getGFColor(GFColor.white)),
@@ -133,7 +123,6 @@ class _ButtonTypesState extends State<ButtonTypes> {
                       ]),
                   child: GFListTile(
                       color: getGFColor(GFColor.dark),
-                      showDivider: false,
                       title: Text(
                         'Square Buttons',
                         style: TextStyle(color: getGFColor(GFColor.white)),
@@ -164,7 +153,6 @@ class _ButtonTypesState extends State<ButtonTypes> {
                       ]),
                   child: GFListTile(
                       color: getGFColor(GFColor.dark),
-                      showDivider: false,
                       title: Text(
                         'Shadow Buttons',
                         style: TextStyle(color: getGFColor(GFColor.white)),
@@ -195,7 +183,6 @@ class _ButtonTypesState extends State<ButtonTypes> {
                       ]),
                   child: GFListTile(
                       color: getGFColor(GFColor.dark),
-                      showDivider: false,
                       title: Text(
                         'Icons Buttons',
                         style: TextStyle(color: getGFColor(GFColor.white)),
@@ -227,7 +214,6 @@ class _ButtonTypesState extends State<ButtonTypes> {
                       ]),
                   child: GFListTile(
                       color: getGFColor(GFColor.dark),
-                      showDivider: false,
                       title: Text(
                         'Social Buttons',
                         style: TextStyle(color: getGFColor(GFColor.white)),

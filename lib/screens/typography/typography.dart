@@ -5,7 +5,6 @@ import 'package:getflutter/types/gf_typography_type.dart';
 import 'package:getflutter/components/card/gf_card.dart';
 import 'package:flutter/cupertino.dart';
 
-
 class TypographyPage extends StatefulWidget {
   @override
   _TypographyPageState createState() => _TypographyPageState();
@@ -17,19 +16,22 @@ class _TypographyPageState extends State<TypographyPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: getGFColor(GFColor.dark),
-        leading: GestureDetector(
-            onTap: () {
-              Navigator.pop(context);
-            },
-          child:  Icon(CupertinoIcons.back, color: getGFColor(GFColor.success), ),),
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            CupertinoIcons.back,
+            color: getGFColor(GFColor.success),
+          ),
+        ),
         title: Text(
           'Typography',
           style: TextStyle(fontSize: 17),
         ),
         centerTitle: true,
       ),
-      body:
-      ListView(
+      body: ListView(
         children: <Widget>[
           Padding(
             padding: EdgeInsets.only(left: 15, top: 30),
@@ -43,47 +45,61 @@ class _TypographyPageState extends State<TypographyPage> {
           GFCard(
             content: Column(
               children: <Widget>[
-                SizedBox(height: 15,),
+                SizedBox(
+                  height: 15,
+                ),
                 GFTypography(
                   text: 'GF Header Typo1',
                   type: GFTypographyType.typo1,
+                  icon: Icon(Icons.send),
                   showDivider: false,
                 ),
-                SizedBox(height: 15,),
+                SizedBox(
+                  height: 15,
+                ),
                 GFTypography(
                   text: 'GF Header Typo2',
                   type: GFTypographyType.typo2,
                   showDivider: false,
                 ),
-                SizedBox(height: 15,),
+                SizedBox(
+                  height: 15,
+                ),
                 GFTypography(
                   text: 'GF Header Typo3',
                   type: GFTypographyType.typo3,
                   showDivider: false,
                 ),
-                SizedBox(height: 15,),
+                SizedBox(
+                  height: 15,
+                ),
                 GFTypography(
                   text: 'GF Header Typo4',
                   type: GFTypographyType.typo4,
                   showDivider: false,
                 ),
-                SizedBox(height: 15,),
+                SizedBox(
+                  height: 15,
+                ),
                 GFTypography(
                   text: 'GF Header Typo5',
                   type: GFTypographyType.typo5,
                   showDivider: false,
                 ),
-                SizedBox(height: 15,),
+                SizedBox(
+                  height: 15,
+                ),
                 GFTypography(
                   text: 'GF Header Typo6',
                   type: GFTypographyType.typo6,
                   showDivider: false,
                 ),
-                SizedBox(height: 15,),
+                SizedBox(
+                  height: 15,
+                ),
               ],
             ),
           ),
-
           Padding(
             padding: EdgeInsets.only(left: 15, top: 30),
             child: GFTypography(
@@ -96,55 +112,62 @@ class _TypographyPageState extends State<TypographyPage> {
           GFCard(
             content: Column(
               children: <Widget>[
-                SizedBox(height: 15,),
-                GFTypography(
-                  text: 'GF Header Typo1',
-                  type: GFTypographyType.typo1,
-                  showDivider: false,
-                  textColor: Colors.black87
+                SizedBox(
+                  height: 15,
                 ),
-                SizedBox(height: 15,),
                 GFTypography(
-                  text: 'GF Header Typo2',
-                  type: GFTypographyType.typo2,
-                  showDivider: false,
-                    textColor: Colors.black54
+                    text: 'GF Header Typo1',
+                    type: GFTypographyType.typo1,
+                    showDivider: false,
+                    textColor: Colors.black87),
+                SizedBox(
+                  height: 15,
                 ),
-                SizedBox(height: 15,),
                 GFTypography(
-                  text: 'GF Header Typo3',
-                  type: GFTypographyType.typo3,
-                  showDivider: false,
-                    textColor: Colors.black45
+                    text: 'GF Header Typo2',
+                    type: GFTypographyType.typo2,
+                    showDivider: false,
+                    textColor: Colors.black54),
+                SizedBox(
+                  height: 15,
                 ),
-                SizedBox(height: 15,),
                 GFTypography(
-                  text: 'GF Header Typo4',
-                  type: GFTypographyType.typo4,
-                  showDivider: false,
-                    textColor: Colors.black38
+                    text: 'GF Header Typo3',
+                    type: GFTypographyType.typo3,
+                    showDivider: false,
+                    textColor: Colors.black45),
+                SizedBox(
+                  height: 15,
                 ),
-                SizedBox(height: 15,),
                 GFTypography(
-                  text: 'GF Header Typo5',
-                  type: GFTypographyType.typo5,
-                  showDivider: false,
-                    textColor: Colors.black26
+                    text: 'GF Header Typo4',
+                    type: GFTypographyType.typo4,
+                    showDivider: false,
+                    textColor: Colors.black38),
+                SizedBox(
+                  height: 15,
                 ),
-                SizedBox(height: 15,),
                 GFTypography(
-                  text: 'GF Header Typo6',
-                  type: GFTypographyType.typo6,
-                  showDivider: false,
-                    textColor: Colors.black12
+                    text: 'GF Header Typo5',
+                    type: GFTypographyType.typo5,
+                    showDivider: false,
+                    textColor: Colors.black26),
+                SizedBox(
+                  height: 15,
                 ),
-                SizedBox(height: 15,),
+                GFTypography(
+                    text: 'GF Header Typo6',
+                    type: GFTypographyType.typo6,
+                    showDivider: false,
+                    textColor: Colors.black12),
+                SizedBox(
+                  height: 15,
+                ),
               ],
             ),
           ),
         ],
       ),
-
     );
   }
 }

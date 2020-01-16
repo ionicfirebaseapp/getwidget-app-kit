@@ -9,7 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.2
-  getflutter: 1.0.0-dev.1
+  getflutter: 1.0.0-dev.4
   flutter_svg: ^0.15.0
 
 dev_dependencies:
@@ -92,7 +92,6 @@ flutter:
     - lib/assets/icons/typography.svg
     - lib/assets/icons/next.svg
     - lib/assets/icons/back.svg
-    # - lib/assets/icons/gf.svg
     - lib/assets/icons/GF.svg
     - lib/assets/icons/back-arrow.svg
     - lib/assets/icons/smallback.svg
