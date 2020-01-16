@@ -53,8 +53,6 @@ class _TypographyPageState extends State<TypographyPage> {
                   type: GFTypographyType.typo1,
                   icon: Icon(Icons.send),
                   showDivider: false,
-                  backgroundImagecolorFilter: new ColorFilter.mode(
-                      Colors.black.withOpacity(0.20), BlendMode.darken),
                 ),
                 SizedBox(
                   height: 15,
