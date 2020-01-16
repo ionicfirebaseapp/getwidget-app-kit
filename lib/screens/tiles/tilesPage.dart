@@ -19,7 +19,7 @@ class _TilesPageState extends State<TilesPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: getGFColor(GFColor.dark),
-        leading: GestureDetector(
+        leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
@@ -48,19 +48,16 @@ class _TilesPageState extends State<TilesPage> {
           ),
           GFCard(
             content: GFListTile(
-              title: Text('Title'),
-              subTitle:
-                  Text('Lorem ipsum dolor sit amet, consectetur adipiscing'),
+              titleText: 'Title',
+              subtitleText: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
               icon: Icon(Icons.favorite),
-              showDivider: false,
             ),
           ),
           GFCard(
             content: GFListTile(
               avatar: Icon(Icons.favorite),
-              title: Text('Title'),
+              titleText: 'Title',
               icon: Text('Caption'),
-              showDivider: false,
             ),
           ),
           Padding(
@@ -77,10 +74,8 @@ class _TilesPageState extends State<TilesPage> {
               avatar: GFAvatar(
                 backgroundImage: AssetImage('lib/assets/images/three3.png'),
               ),
-              title: Text('Title'),
-              subTitle:
-                  Text('Lorem ipsum dolor sit amet, consectetur adipiscing'),
-              showDivider: false,
+              titleText: 'Title',
+              subtitleText: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
             ),
           ),
           GFCard(
@@ -89,9 +84,8 @@ class _TilesPageState extends State<TilesPage> {
                 shape: GFAvatarShape.standard,
                 backgroundImage: AssetImage('lib/assets/images/three5.png'),
               ),
-              title: Text('Title'),
+              titleText: 'Title',
               icon: Text('Caption'),
-              showDivider: false,
             ),
           ),
         ],

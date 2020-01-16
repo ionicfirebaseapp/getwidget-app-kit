@@ -1,6 +1,6 @@
 name: getflutter_app
-description: A new Flutter project.
-version: 1.0.1+2
+description: A GetFlutter Demo App
+version: 1.0.2+3
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -9,7 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.2
-  getflutter: 1.0.0-dev.1
+  getflutter: 1.0.0-dev.7
   flutter_svg: ^0.15.0
 
 dev_dependencies:
@@ -92,7 +92,6 @@ flutter:
     - lib/assets/icons/typography.svg
     - lib/assets/icons/next.svg
     - lib/assets/icons/back.svg
-    # - lib/assets/icons/gf.svg
     - lib/assets/icons/GF.svg
     - lib/assets/icons/back-arrow.svg
     - lib/assets/icons/smallback.svg

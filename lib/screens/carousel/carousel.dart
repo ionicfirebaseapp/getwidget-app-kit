@@ -1,23 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:getflutter/colors/gf_color.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:getflutter/colors/gf_color.dart';
-import 'package:getflutter/components/button/gf_button.dart';
-import 'package:getflutter/components/button/gf_button_bar.dart';
-import 'package:getflutter/components/card/gf_card.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:getflutter/components/button/gf_button.dart';
+// import 'package:getflutter/components/button/gf_button_bar.dart';
+// import 'package:getflutter/components/card/gf_card.dart';
 import 'package:getflutter/components/image/gf_image_overlay.dart';
-import 'package:getflutter/shape/gf_icon_button_shape.dart';
-import 'package:getflutter/size/gf_size.dart';
 import 'package:getflutter/types/gf_typography_type.dart';
 import 'package:getflutter/components/typography/gf_typography.dart';
 import 'package:getflutter/components/tabs/gf_tabBarView.dart';
 import 'package:getflutter/components/tabs/gf_segment_tabs.dart';
-import 'package:getflutter/components/list_tile/gf_list_tile.dart';
-import 'package:getflutter/components/avatar/gf_avatar.dart';
-import 'package:getflutter/position/gf_position.dart';
-import 'package:getflutter/components/button/gf_icon_button.dart';
-import 'package:getflutter/types/gf_type.dart';
-import 'package:getflutter/shape/gf_button_shape.dart';
 import 'package:getflutter/components/carousel/gf_carousel.dart';
 import 'package:getflutter/components/carousel/gf_items_carousel.dart';
 import 'package:flutter/cupertino.dart';
@@ -65,7 +56,7 @@ class _CarouselState extends State<Carousel>  with SingleTickerProviderStateMixi
     return Scaffold(
       appBar: AppBar(
         backgroundColor: getGFColor(GFColor.dark),
-        leading: GestureDetector(
+        leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
@@ -168,7 +159,7 @@ color: Colors.transparent,
               ).toList(),
               onPageChanged: (index) {
                 setState(() {
-                  index;
+                  
                 });
               },
             ),
@@ -250,7 +241,7 @@ color: Colors.transparent,
               ).toList(),
               onPageChanged: (index) {
                 setState(() {
-                  index;
+                  
                 });
               },
             ),
@@ -305,7 +296,7 @@ color: Colors.transparent,
               ).toList(),
               onPageChanged: (index) {
                 setState(() {
-                  index;
+                  
                 });
               },
             ),
@@ -387,7 +378,7 @@ color: Colors.transparent,
               ).toList(),
               onPageChanged: (index) {
                 setState(() {
-                  index;
+                  
                 });
               },
             ),
