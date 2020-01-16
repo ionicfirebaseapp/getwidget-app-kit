@@ -31,7 +31,7 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: getGFColor(GFColor.dark),
-          leading: GestureDetector(
+          leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },

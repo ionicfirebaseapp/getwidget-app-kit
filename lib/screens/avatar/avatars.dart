@@ -19,7 +19,7 @@ class _AvatarState extends State<Avatar> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: getGFColor(GFColor.dark),
-        leading: GestureDetector(
+        leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },

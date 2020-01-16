@@ -43,7 +43,7 @@ class _CardPageState extends State<CardPage>
     return Scaffold(
         appBar: AppBar(
           backgroundColor: getGFColor(GFColor.dark),
-          leading: GestureDetector(
+          leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
@@ -124,9 +124,7 @@ class _CardPageState extends State<CardPage>
 //              imageOverlay: AssetImage("lib/assets/food.jpeg"),
                             titlePosition: GFPosition.end,
                             title: GFListTile(
-                              title: Text(
-                                'Card Title',
-                              ),
+                              titleText: 'Card Title',
                               icon: GFIconButton(
                                 onPressed: null,
                                 icon: GestureDetector(
@@ -175,9 +173,7 @@ class _CardPageState extends State<CardPage>
 //              imageOverlay: AssetImage("lib/assets/food.jpeg"),
                             titlePosition: GFPosition.end,
                             title: GFListTile(
-                              title: Text(
-                                'Card Title',
-                              ),
+                              titleText: 'Card Title',
                               icon: GFIconButton(
                                 onPressed: null,
                                 icon: GestureDetector(
@@ -225,9 +221,7 @@ class _CardPageState extends State<CardPage>
 //              imageOverlay: AssetImage("lib/assets/food.jpeg"),
                             titlePosition: GFPosition.end,
                             title: GFListTile(
-                              title: Text(
-                                'Card Title',
-                              ),
+                              titleText: 'Card Title',
 
                             ),
                             content: Text(
@@ -256,9 +250,7 @@ class _CardPageState extends State<CardPage>
 //              imageOverlay: AssetImage("lib/assets/food.jpeg"),
                             titlePosition: GFPosition.end,
                             title: GFListTile(
-                              title: Text(
-                                'Card Title',
-                              ),
+                              titleText: 'Card Title',
 
                             ),
                             content: Text(
@@ -302,13 +294,8 @@ class _CardPageState extends State<CardPage>
                                 backgroundImage:
                                     AssetImage('lib/assets/images/three3.png'),
                               ),
-                              title: Text(
-                                'Card Title',
-                              ),
-                              subTitle: Text(
-                                'subtitle',
-                                style: TextStyle(color: Colors.grey),
-                              ),
+                              titleText: 'Card Title',
+                              subtitleText: 'Sub Title',
                               icon: GFIconButton(
                                 onPressed: null,
                                 icon: GestureDetector(
@@ -352,10 +339,8 @@ class _CardPageState extends State<CardPage>
                                 backgroundImage:
                                     AssetImage('lib/assets/images/three4.png'),
                               ),
-                              title: Text(
-                                'Card Title',
-                              ),
-                              subTitle: Text('Subtitle'),
+                              titleText: 'Card Title',
+                              subtitleText: 'Sub Title',
                             ),
                             content: Text(
                               "Some quick example text to build on the card",
@@ -425,7 +410,7 @@ class _CardPageState extends State<CardPage>
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(
-
+                              padding: EdgeInsets.only(bottom: 10),
                               children: <Widget>[
                                 GFButton(
                                   onPressed: () {},
@@ -468,7 +453,7 @@ class _CardPageState extends State<CardPage>
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(
-
+                             padding: EdgeInsets.only(bottom: 10),
                               children: <Widget>[
                                 GFIconButton(
                                     color: Color(0xFF3B5998),

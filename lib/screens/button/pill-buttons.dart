@@ -36,7 +36,7 @@ class _PillsButtonsState extends State<PillsButtons> with SingleTickerProviderSt
     return Scaffold(
       appBar: AppBar(
         backgroundColor: getGFColor(GFColor.dark),
-        leading: GestureDetector(
+        leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },

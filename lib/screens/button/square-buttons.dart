@@ -36,7 +36,7 @@ class _SquareButtonsState extends State<SquareButtons> with SingleTickerProvider
     return Scaffold(
       appBar: AppBar(
         backgroundColor: getGFColor(GFColor.dark),
-        leading: GestureDetector(
+        leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
