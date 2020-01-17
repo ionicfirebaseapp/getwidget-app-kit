@@ -544,7 +544,7 @@ class _StandardButtonsState extends State<StandardButtons> with SingleTickerProv
                         Padding(
                           padding: EdgeInsets.only(left: 15, top: 10),
                           child: GFTypography(
-                            text: 'Full Width 1Buttons',
+                            text: 'Full Width Buttons',
                             type: GFTypographyType.typo5,
                             dividerWidth: 25,
                             dividerColor: Color(0xFF19CA4B),

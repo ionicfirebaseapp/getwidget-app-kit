@@ -61,7 +61,7 @@ class _TilesPageState extends State<TilesPage> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 15, top: 30),
+            padding: EdgeInsets.only(left: 15,top:5),
             child: GFTypography(
               text: 'With Avatar',
               type: GFTypographyType.typo5,
@@ -72,7 +72,7 @@ class _TilesPageState extends State<TilesPage> {
           GFCard(
             content: GFListTile(
               avatar: GFAvatar(
-                backgroundImage: AssetImage('lib/assets/images/three3.png'),
+                backgroundImage: AssetImage('lib/assets/images/avatar5.png'),
               ),
               titleText: 'Title',
               subtitleText: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
@@ -82,7 +82,7 @@ class _TilesPageState extends State<TilesPage> {
             content: GFListTile(
               avatar: GFAvatar(
                 shape: GFAvatarShape.standard,
-                backgroundImage: AssetImage('lib/assets/images/three5.png'),
+                backgroundImage: AssetImage('lib/assets/images/avatar11.png'),
               ),
               titleText: 'Title',
               icon: Text('Caption'),
