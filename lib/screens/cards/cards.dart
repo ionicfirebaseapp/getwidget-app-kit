@@ -148,6 +148,7 @@ class _CardPageState extends State<CardPage>
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(
+                              padding: EdgeInsets.only(bottom: 10),
                               children: <Widget>[
                                 GFButton(
                                   onPressed: () {},
@@ -229,6 +230,7 @@ class _CardPageState extends State<CardPage>
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(
+                              padding: EdgeInsets.only(bottom: 10),
                               children: <Widget>[
                                 GFButton(
                                   onPressed: () {},
@@ -258,7 +260,7 @@ class _CardPageState extends State<CardPage>
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(
-
+                              padding: EdgeInsets.only(bottom: 10),
                               children: <Widget>[
                                 GFButton(
                                   onPressed: () {},
@@ -292,7 +294,7 @@ class _CardPageState extends State<CardPage>
                             title: GFListTile(
                               avatar: GFAvatar(
                                 backgroundImage:
-                                    AssetImage('lib/assets/images/three3.png'),
+                                    AssetImage('lib/assets/images/avatar8.png'),
                               ),
                               titleText: 'Card Title',
                               subtitleText: 'Sub Title',
@@ -337,7 +339,7 @@ class _CardPageState extends State<CardPage>
                             title: GFListTile(
                               avatar: GFAvatar(
                                 backgroundImage:
-                                    AssetImage('lib/assets/images/three4.png'),
+                                    AssetImage('lib/assets/images/avatar9.png'),
                               ),
                               titleText: 'Card Title',
                               subtitleText: 'Sub Title',
@@ -347,7 +349,7 @@ class _CardPageState extends State<CardPage>
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(
-
+                              padding: EdgeInsets.only(bottom: 10),
                               children: <Widget>[
                                 GFIconButton(
                                     color: Color(0xFF3B5998),
@@ -386,7 +388,7 @@ class _CardPageState extends State<CardPage>
                             title: GFListTile(
                               avatar: GFAvatar(
                                 backgroundImage:
-                                    AssetImage('lib/assets/images/three5.png'),
+                                    AssetImage('lib/assets/images/avatar10.png'),
                               ),
                               title: Text(
                                 'Card Title',

@@ -23,7 +23,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: getGFColor(GFColor.dark),
-          title: SvgPicture.asset('lib/assets/icons/GF.svg'),
+
+          title: SvgPicture.asset('lib/assets/icons/gflogo.svg'),
           centerTitle: true,
         ),
         body: Container(

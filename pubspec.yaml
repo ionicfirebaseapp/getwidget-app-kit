@@ -19,24 +19,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - lib/assets/logo/logo.png
-    - lib/assets/icons/buttons.png
     - lib/assets/icons/buttons.svg
-    - lib/assets/icons/avatar.png
-    - lib/assets/icons/badge.png
-    - lib/assets/icons/card.png
-    - lib/assets/icons/chips.png
-    - lib/assets/icons/items.png
-    - lib/assets/icons/lists.png
-    - lib/assets/icons/menu.png
-    - lib/assets/icons/slider.png
-    - lib/assets/icons/tabs.png
-    - lib/assets/icons/toast.png
-    - lib/assets/icons/toggle.png
-    - lib/assets/icons/typo.png
-    - lib/assets/icons/images.png
-    - lib/assets/icons/back.png
-    - lib/assets/icons/next.png
     - lib/assets/icons/primary.svg
     - lib/assets/icons/secondary.svg
     - lib/assets/icons/success.svg
@@ -60,13 +43,7 @@ flutter:
     - lib/assets/images/red.png
     - lib/assets/images/purple.png
     - lib/assets/images/pink.png
-    - lib/assets/images/green.png
-    - lib/assets/images/green1.png
     - lib/assets/images/orange.png
-    - lib/assets/images/avatar1.png
-    - lib/assets/images/avatar2.png
-    - lib/assets/images/avatar3.png
-    - lib/assets/images/avatar4.png
     - lib/assets/images/image2.png
     - lib/assets/images/img.png
     - lib/assets/images/img1.png
@@ -75,12 +52,8 @@ flutter:
     - lib/assets/images/card1.png
     - lib/assets/images/card2.png
     - lib/assets/images/card3.png
-    - lib/assets/images/car.png
-    - lib/assets/images/car1.png
-    - lib/assets/images/car2.png
-    - lib/assets/images/car3.png
-    - lib/assets/images/car4.png
-    - lib/assets/images/car5.png
+    - lib/assets/images/card5.png
+    - lib/assets/images/card4.png
     - lib/assets/icons/buttons.svg
     - lib/assets/icons/badges.svg
     - lib/assets/icons/avatars.svg
@@ -90,20 +63,16 @@ flutter:
     - lib/assets/icons/tabs.svg
     - lib/assets/icons/tiles.svg
     - lib/assets/icons/typography.svg
-    - lib/assets/icons/next.svg
-    - lib/assets/icons/back.svg
-    - lib/assets/icons/GF.svg
-    - lib/assets/icons/back-arrow.svg
-    - lib/assets/icons/smallback.svg
-    - lib/assets/icons/a.jpg
-    - lib/assets/images/a.png
-    - lib/assets/images/three.png
-    - lib/assets/images/two.png
-    - lib/assets/images/three1.png
-    - lib/assets/images/three2.png
-    - lib/assets/images/three3.png
-    - lib/assets/images/three4.png
-    - lib/assets/images/three5.png
-    - lib/assets/images/three6.png
-    - lib/assets/images/three7.png
-    - lib/assets/images/cir.png
+    - lib/assets/icons/gflogo.svg
+    - lib/assets/images/avatar1.png
+    - lib/assets/images/avatar2.png
+    - lib/assets/images/avatar3.png
+    - lib/assets/images/avatar4.png
+    - lib/assets/images/avatar5.png
+    - lib/assets/images/avatar6.png
+    - lib/assets/images/avatar7.png
+    - lib/assets/images/avatar8.png
+    - lib/assets/images/avatar9.png
+    - lib/assets/images/avatar10.png
+    - lib/assets/images/avatar11.png
+    - lib/assets/images/avatar12.png
