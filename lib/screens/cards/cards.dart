@@ -58,10 +58,10 @@ class _CardPageState extends State<CardPage>
           ),
           centerTitle: true,
         ),
-        body: Column(children: <Widget>[
+        body: ListView(children: <Widget>[
           Container(
             height: 40,
-            margin: EdgeInsets.only(top: 20),
+            margin: EdgeInsets.only(top: 20, left: 20, right: 20),
             child: GFSegmentTabs(
               tabController: tabController,
 //              height: 38.0,
@@ -222,7 +222,6 @@ class _CardPageState extends State<CardPage>
                             titlePosition: GFPosition.end,
                             title: GFListTile(
                               titleText: 'Card Title',
-
                             ),
                             content: Text(
                               "Some quick example text to build on the card",
@@ -251,14 +250,12 @@ class _CardPageState extends State<CardPage>
                             titlePosition: GFPosition.end,
                             title: GFListTile(
                               titleText: 'Card Title',
-
                             ),
                             content: Text(
                               "Some quick example text to build on the card",
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(
-
                               children: <Widget>[
                                 GFButton(
                                   onPressed: () {},
@@ -347,7 +344,6 @@ class _CardPageState extends State<CardPage>
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(
-
                               children: <Widget>[
                                 GFIconButton(
                                     color: Color(0xFF3B5998),
@@ -453,7 +449,7 @@ class _CardPageState extends State<CardPage>
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(
-                             padding: EdgeInsets.only(bottom: 10),
+                              padding: EdgeInsets.only(bottom: 10),
                               children: <Widget>[
                                 GFIconButton(
                                     color: Color(0xFF3B5998),
