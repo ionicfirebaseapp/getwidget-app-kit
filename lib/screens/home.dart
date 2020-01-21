@@ -6,7 +6,6 @@ import 'package:getflutter_app/screens/tiles/tilesPage.dart';
 import 'package:getflutter_app/screens/typography/typography.dart';
 import 'package:flutter/material.dart';
 import 'package:getflutter/colors/gf_color.dart';
-
 import '../screens/badges/badges.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'images/images.dart';
@@ -23,7 +22,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: getGFColor(GFColor.dark),
-
           title: SvgPicture.asset('lib/assets/icons/gflogo.svg'),
           centerTitle: true,
         ),
