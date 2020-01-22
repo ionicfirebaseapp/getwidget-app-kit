@@ -30,14 +30,14 @@ class _TabsPageState extends State<TabsPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: getGFColor(GFColor.dark),
+        backgroundColor: GFColors.getGFColor(GFColor.dark),
         leading: InkWell(
           onTap: () {
             Navigator.pop(context);
           },
           child: Icon(
             CupertinoIcons.back,
-            color: getGFColor(GFColor.success),
+            color: GFColors.getGFColor(GFColor.success),
           ),
         ),
         title: Text(
@@ -46,11 +46,11 @@ class _TabsPageState extends State<TabsPage>
         ),
         centerTitle: true,
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
           Container(
             height: 40,
-            margin: EdgeInsets.only(top: 20),
+            margin: EdgeInsets.only(top: 20, left: 25, right: 25),
             child: GFSegmentTabs(
               tabController: tabController,
 //              height: 38.0,
@@ -77,15 +77,15 @@ class _TabsPageState extends State<TabsPage>
                   ),
                 ),
               ],
-              tabBarColor: getGFColor(GFColor.light),
+              tabBarColor: GFColors.getGFColor(GFColor.light),
               indicatorSize: TabBarIndicatorSize.tab,
-              labelColor: getGFColor(GFColor.white),
-              unselectedLabelColor: getGFColor(GFColor.dark),
+              labelColor: GFColors.getGFColor(GFColor.white),
+              unselectedLabelColor: GFColors.getGFColor(GFColor.dark),
               indicator: BoxDecoration(
                 color: Colors.black,
                 border: Border(
                   bottom: BorderSide(
-                    color: getGFColor(GFColor.success),
+                    color: GFColors.getGFColor(GFColor.success),
                     width: 3.0,
                   ),
                 ),
@@ -103,7 +103,7 @@ class _TabsPageState extends State<TabsPage>
             child: GFTabBarView(controller: tabController, children: [
               Container(
                   height: 30,
-                  color: getGFColor(GFColor.white),
+                  color: GFColors.getGFColor(GFColor.white),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
@@ -137,12 +137,13 @@ class _TabsPageState extends State<TabsPage>
 //                              onPressed: (){},
 //                            ),
                         ],
-                        indicatorColor: getGFColor(GFColor.success),
+                        indicatorColor: GFColors.getGFColor(GFColor.success),
 //        indicatorSize: TabBarIndicatorSize.label,
-                        labelColor: getGFColor(GFColor.success),
+                        labelColor: GFColors.getGFColor(GFColor.success),
                         labelPadding: EdgeInsets.all(8.0),
-                        tabBarColor: getGFColor(GFColor.dark),
-                        unselectedLabelColor: getGFColor(GFColor.white),
+                        tabBarColor: GFColors.getGFColor(GFColor.dark),
+                        unselectedLabelColor:
+                            GFColors.getGFColor(GFColor.white),
                         labelStyle: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 13.0,
@@ -160,16 +161,17 @@ class _TabsPageState extends State<TabsPage>
                   )),
               Container(
                   height: 30,
-                  color: getGFColor(GFColor.white),
+                  color: GFColors.getGFColor(GFColor.white),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       Container(
                         decoration: BoxDecoration(
-                            color: getGFColor(GFColor.white),
+                            color: GFColors.getGFColor(GFColor.white),
                             border: Border(
                                 top: BorderSide(
-                                    color: getGFColor(GFColor.light)))),
+                                    color:
+                                        GFColors.getGFColor(GFColor.light)))),
                       ),
                       GFTabBar(
                         initialIndex: 0,
@@ -198,10 +200,11 @@ class _TabsPageState extends State<TabsPage>
                         indicatorColor: Colors.teal,
 
 //        indicatorSize: TabBarIndicatorSize.label,
-                        labelColor: getGFColor(GFColor.success),
+                        labelColor: GFColors.getGFColor(GFColor.success),
                         labelPadding: EdgeInsets.all(8.0),
-                        tabBarColor: getGFColor(GFColor.white),
-                        unselectedLabelColor: getGFColor(GFColor.light),
+                        tabBarColor: GFColors.getGFColor(GFColor.white),
+                        unselectedLabelColor:
+                            GFColors.getGFColor(GFColor.light),
                         labelStyle: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 13.0,
@@ -220,16 +223,17 @@ class _TabsPageState extends State<TabsPage>
                   )),
               Container(
                   height: 50,
-                  color: getGFColor(GFColor.white),
+                  color: GFColors.getGFColor(GFColor.white),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       Container(
                         decoration: BoxDecoration(
-                            color: getGFColor(GFColor.white),
+                            color: GFColors.getGFColor(GFColor.white),
                             border: Border(
                                 top: BorderSide(
-                                    color: getGFColor(GFColor.light)))),
+                                    color:
+                                        GFColors.getGFColor(GFColor.light)))),
                       ),
                       GFTabBar(
                         initialIndex: 0,
@@ -254,7 +258,7 @@ class _TabsPageState extends State<TabsPage>
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Icon(Icons.music_note,
-                                  color: getGFColor(GFColor.light)),
+                                  color: GFColors.getGFColor(GFColor.light)),
                               Text(
                                 'Music',
                                 style: TextStyle(
@@ -295,10 +299,11 @@ class _TabsPageState extends State<TabsPage>
                         indicatorColor: Colors.teal,
 
 //        indicatorSize: TabBarIndicatorSize.label,
-                        labelColor: getGFColor(GFColor.success),
+                        labelColor: GFColors.getGFColor(GFColor.success),
                         labelPadding: EdgeInsets.all(8.0),
-                        tabBarColor: getGFColor(GFColor.dark),
-                        unselectedLabelColor: getGFColor(GFColor.light),
+                        tabBarColor: GFColors.getGFColor(GFColor.dark),
+                        unselectedLabelColor:
+                            GFColors.getGFColor(GFColor.light),
                         labelStyle: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 13.0,
@@ -316,16 +321,17 @@ class _TabsPageState extends State<TabsPage>
                   )),
               Container(
                   height: 50,
-                  color: getGFColor(GFColor.white),
+                  color: GFColors.getGFColor(GFColor.white),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       Container(
                         decoration: BoxDecoration(
-                            color: getGFColor(GFColor.white),
+                            color: GFColors.getGFColor(GFColor.white),
                             border: Border(
                                 top: BorderSide(
-                                    color: getGFColor(GFColor.light)))),
+                                    color:
+                                        GFColors.getGFColor(GFColor.light)))),
                       ),
                       GFTabBar(
                         initialIndex: 0,
@@ -392,10 +398,11 @@ class _TabsPageState extends State<TabsPage>
                         indicatorColor: Colors.teal,
 
 //        indicatorSize: TabBarIndicatorSize.label,
-                        labelColor: getGFColor(GFColor.success),
+                        labelColor: GFColors.getGFColor(GFColor.success),
                         labelPadding: EdgeInsets.all(8.0),
-                        tabBarColor: getGFColor(GFColor.white),
-                        unselectedLabelColor: getGFColor(GFColor.light),
+                        tabBarColor: GFColors.getGFColor(GFColor.white),
+                        unselectedLabelColor:
+                            GFColors.getGFColor(GFColor.light),
                         labelStyle: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 13.0,

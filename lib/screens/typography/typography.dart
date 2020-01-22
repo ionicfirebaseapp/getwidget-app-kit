@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getflutter/colors/gf_color.dart';
+import 'package:getflutter/components/avatar/gf_avatar.dart';
 import 'package:getflutter/components/typography/gf_typography.dart';
 import 'package:getflutter/types/gf_typography_type.dart';
 import 'package:getflutter/components/card/gf_card.dart';
@@ -15,14 +16,14 @@ class _TypographyPageState extends State<TypographyPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: getGFColor(GFColor.dark),
+        backgroundColor: GFColors.getGFColor(GFColor.dark),
         leading: InkWell(
           onTap: () {
             Navigator.pop(context);
           },
           child: Icon(
             CupertinoIcons.back,
-            color: getGFColor(GFColor.success),
+            color: GFColors.getGFColor(GFColor.success),
           ),
         ),
         title: Text(
@@ -100,7 +101,9 @@ class _TypographyPageState extends State<TypographyPage> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 15, ),
+            padding: EdgeInsets.only(
+              left: 15,
+            ),
             child: GFTypography(
               text: 'Opacity',
               type: GFTypographyType.typo5,
@@ -159,6 +162,45 @@ class _TypographyPageState extends State<TypographyPage> {
                     type: GFTypographyType.typo6,
                     showDivider: false,
                     textColor: Colors.black12),
+                SizedBox(
+                  height: 15,
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 15),
+            child: GFTypography(
+              text: 'Custom Heading',
+              type: GFTypographyType.typo5,
+              dividerWidth: 25,
+              dividerColor: Color(0xFF19CA4B),
+            ),
+          ),
+          GFCard(
+            content: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 15,
+                ),
+                GFTypography(
+                  text: 'GF Header Typo2',
+                  type: GFTypographyType.typo2,
+                  showDivider: false,
+                  backgroundImage: AssetImage('lib/assets/images/card3.png'),
+                  icon: GFAvatar(
+                    backgroundImage:
+                        AssetImage('lib/assets/images/avatar6.png'),
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                GFTypography(
+                  text: 'GF Header Typo3',
+                  type: GFTypographyType.typo3,
+                  backgroundImage: AssetImage('lib/assets/images/card2.png'),
+                ),
                 SizedBox(
                   height: 15,
                 ),

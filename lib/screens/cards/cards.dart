@@ -11,7 +11,7 @@ import 'package:getflutter/components/list_tile/gf_list_tile.dart';
 import 'package:getflutter/components/avatar/gf_avatar.dart';
 import 'package:getflutter/position/gf_position.dart';
 import 'package:getflutter/components/button/gf_icon_button.dart';
-import 'package:getflutter/types/gf_type.dart';
+import 'package:getflutter/types/gf_button_type.dart';
 import 'package:flutter/cupertino.dart';
 
 class CardPage extends StatefulWidget {
@@ -42,14 +42,14 @@ class _CardPageState extends State<CardPage>
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: getGFColor(GFColor.dark),
+          backgroundColor: GFColors.getGFColor(GFColor.dark),
           leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
             child: Icon(
               CupertinoIcons.back,
-              color: getGFColor(GFColor.success),
+              color: GFColors.getGFColor(GFColor.success),
             ),
           ),
           title: Text(
@@ -58,10 +58,10 @@ class _CardPageState extends State<CardPage>
           ),
           centerTitle: true,
         ),
-        body: Column(children: <Widget>[
+        body: ListView(children: <Widget>[
           Container(
             height: 40,
-            margin: EdgeInsets.only(top: 20),
+            margin: EdgeInsets.only(top: 20, left: 25, right: 25),
             child: GFSegmentTabs(
               tabController: tabController,
 //              height: 38.0,
@@ -83,15 +83,15 @@ class _CardPageState extends State<CardPage>
                   ),
                 ),
               ],
-              tabBarColor: getGFColor(GFColor.light),
+              tabBarColor: GFColors.getGFColor(GFColor.light),
               indicatorSize: TabBarIndicatorSize.tab,
-              labelColor: getGFColor(GFColor.white),
-              unselectedLabelColor: getGFColor(GFColor.dark),
+              labelColor: GFColors.getGFColor(GFColor.white),
+              unselectedLabelColor: GFColors.getGFColor(GFColor.dark),
               indicator: BoxDecoration(
                 color: Colors.black,
                 border: Border(
                   bottom: BorderSide(
-                    color: getGFColor(GFColor.success),
+                    color: GFColors.getGFColor(GFColor.success),
                     width: 3.0,
                   ),
                 ),
@@ -136,11 +136,12 @@ class _CardPageState extends State<CardPage>
                                   child: fav
                                       ? Icon(
                                           Icons.favorite,
-                                          color: getGFColor(GFColor.danger),
+                                          color: GFColors.getGFColor(
+                                              GFColor.danger),
                                         )
                                       : Icon(Icons.favorite_border),
                                 ),
-                                type: GFType.transparent,
+                                type: GFButtonType.transparent,
                               ),
                             ),
                             content: Text(
@@ -186,11 +187,12 @@ class _CardPageState extends State<CardPage>
                                   child: fav1
                                       ? Icon(
                                           Icons.favorite,
-                                          color: getGFColor(GFColor.danger),
+                                          color: GFColors.getGFColor(
+                                              GFColor.danger),
                                         )
                                       : Icon(Icons.favorite_border),
                                 ),
-                                type: GFType.transparent,
+                                type: GFButtonType.transparent,
                               ),
                             ),
                             content: Text(
@@ -203,7 +205,7 @@ class _CardPageState extends State<CardPage>
                                   onPressed: null,
                                   child: Text("Read More"),
                                   icon: Icon(Icons.keyboard_arrow_right),
-                                  type: GFType.transparent,
+                                  type: GFButtonType.transparent,
                                   position: GFPosition.end,
                                 ),
                               ],
@@ -223,7 +225,6 @@ class _CardPageState extends State<CardPage>
                             titlePosition: GFPosition.end,
                             title: GFListTile(
                               titleText: 'Card Title',
-
                             ),
                             content: Text(
                               "Some quick example text to build on the card",
@@ -253,7 +254,6 @@ class _CardPageState extends State<CardPage>
                             titlePosition: GFPosition.end,
                             title: GFListTile(
                               titleText: 'Card Title',
-
                             ),
                             content: Text(
                               "Some quick example text to build on the card",
@@ -309,11 +309,12 @@ class _CardPageState extends State<CardPage>
                                   child: fav2
                                       ? Icon(
                                           Icons.favorite,
-                                          color: getGFColor(GFColor.danger),
+                                          color: GFColors.getGFColor(
+                                              GFColor.danger),
                                         )
                                       : Icon(Icons.favorite_border),
                                 ),
-                                type: GFType.transparent,
+                                type: GFButtonType.transparent,
                               ),
                             ),
                             content: Text(
@@ -349,7 +350,7 @@ class _CardPageState extends State<CardPage>
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(
-                              padding: EdgeInsets.only(bottom: 10),
+                              padding: EdgeInsets.only(bottom: 20, top: 10),
                               children: <Widget>[
                                 GFIconButton(
                                     color: Color(0xFF3B5998),
@@ -387,8 +388,8 @@ class _CardPageState extends State<CardPage>
                                 AssetImage('lib/assets/images/image.png'),
                             title: GFListTile(
                               avatar: GFAvatar(
-                                backgroundImage:
-                                    AssetImage('lib/assets/images/avatar10.png'),
+                                backgroundImage: AssetImage(
+                                    'lib/assets/images/avatar10.png'),
                               ),
                               title: Text(
                                 'Card Title',
@@ -455,7 +456,7 @@ class _CardPageState extends State<CardPage>
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(
-                             padding: EdgeInsets.only(bottom: 10),
+                              padding: EdgeInsets.only(bottom: 20),
                               children: <Widget>[
                                 GFIconButton(
                                     color: Color(0xFF3B5998),

@@ -19,7 +19,7 @@ class _ButtonTypesState extends State<ButtonTypes> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: getGFColor(GFColor.dark),
+          backgroundColor: GFColors.getGFColor(GFColor.dark),
           leading: InkWell(
               onTap: () {
                 Navigator.pop(context);
@@ -28,7 +28,7 @@ class _ButtonTypesState extends State<ButtonTypes> {
               child: Container(
                 child: Icon(
                   CupertinoIcons.back,
-                  color: getGFColor(GFColor.success),
+                  color: GFColors.getGFColor(GFColor.success),
                 ),
               )),
           title: Text(
@@ -55,21 +55,22 @@ class _ButtonTypesState extends State<ButtonTypes> {
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(7)),
-                      color: getGFColor(GFColor.dark),
+                      color: GFColors.getGFColor(GFColor.dark),
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
                             blurRadius: 5.0)
                       ]),
                   child: GFListTile(
-                      color: getGFColor(GFColor.dark),
+                      color: GFColors.getGFColor(GFColor.dark),
                       title: Text(
                         'Standard Buttons',
-                        style: TextStyle(color: getGFColor(GFColor.white)),
+                        style: TextStyle(
+                            color: GFColors.getGFColor(GFColor.white)),
                       ),
                       icon: Icon(
                         CupertinoIcons.forward,
-                        color: getGFColor(GFColor.success),
+                        color: GFColors.getGFColor(GFColor.success),
                       )),
                 )),
             GestureDetector(
@@ -85,21 +86,22 @@ class _ButtonTypesState extends State<ButtonTypes> {
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(7)),
-                      color: getGFColor(GFColor.dark),
+                      color: GFColors.getGFColor(GFColor.dark),
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
                             blurRadius: 5.0)
                       ]),
                   child: GFListTile(
-                      color: getGFColor(GFColor.dark),
+                      color: GFColors.getGFColor(GFColor.dark),
                       title: Text(
                         'Pills Buttons',
-                        style: TextStyle(color: getGFColor(GFColor.white)),
+                        style: TextStyle(
+                            color: GFColors.getGFColor(GFColor.white)),
                       ),
                       icon: Icon(
                         CupertinoIcons.forward,
-                        color: getGFColor(GFColor.success),
+                        color: GFColors.getGFColor(GFColor.success),
                       )),
                 )),
             GestureDetector(
@@ -115,21 +117,22 @@ class _ButtonTypesState extends State<ButtonTypes> {
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(7)),
-                      color: getGFColor(GFColor.dark),
+                      color: GFColors.getGFColor(GFColor.dark),
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
                             blurRadius: 5.0)
                       ]),
                   child: GFListTile(
-                      color: getGFColor(GFColor.dark),
+                      color: GFColors.getGFColor(GFColor.dark),
                       title: Text(
                         'Square Buttons',
-                        style: TextStyle(color: getGFColor(GFColor.white)),
+                        style: TextStyle(
+                            color: GFColors.getGFColor(GFColor.white)),
                       ),
                       icon: Icon(
                         CupertinoIcons.forward,
-                        color: getGFColor(GFColor.success),
+                        color: GFColors.getGFColor(GFColor.success),
                       )),
                 )),
             GestureDetector(
@@ -145,21 +148,22 @@ class _ButtonTypesState extends State<ButtonTypes> {
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(7)),
-                      color: getGFColor(GFColor.dark),
+                      color: GFColors.getGFColor(GFColor.dark),
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
                             blurRadius: 5.0)
                       ]),
                   child: GFListTile(
-                      color: getGFColor(GFColor.dark),
+                      color: GFColors.getGFColor(GFColor.dark),
                       title: Text(
                         'Shadow Buttons',
-                        style: TextStyle(color: getGFColor(GFColor.white)),
+                        style: TextStyle(
+                            color: GFColors.getGFColor(GFColor.white)),
                       ),
                       icon: Icon(
                         CupertinoIcons.forward,
-                        color: getGFColor(GFColor.success),
+                        color: GFColors.getGFColor(GFColor.success),
                       )),
                 )),
             GestureDetector(
@@ -175,21 +179,22 @@ class _ButtonTypesState extends State<ButtonTypes> {
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(7)),
-                      color: getGFColor(GFColor.dark),
+                      color: GFColors.getGFColor(GFColor.dark),
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
                             blurRadius: 5.0)
                       ]),
                   child: GFListTile(
-                      color: getGFColor(GFColor.dark),
+                      color: GFColors.getGFColor(GFColor.dark),
                       title: Text(
                         'Icons Buttons',
-                        style: TextStyle(color: getGFColor(GFColor.white)),
+                        style: TextStyle(
+                            color: GFColors.getGFColor(GFColor.white)),
                       ),
                       icon: Icon(
                         CupertinoIcons.forward,
-                        color: getGFColor(GFColor.success),
+                        color: GFColors.getGFColor(GFColor.success),
                       )),
                 )),
             GestureDetector(
@@ -206,21 +211,22 @@ class _ButtonTypesState extends State<ButtonTypes> {
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(7)),
-                      color: getGFColor(GFColor.dark),
+                      color: GFColors.getGFColor(GFColor.dark),
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
                             blurRadius: 5.0)
                       ]),
                   child: GFListTile(
-                      color: getGFColor(GFColor.dark),
+                      color: GFColors.getGFColor(GFColor.dark),
                       title: Text(
                         'Social Buttons',
-                        style: TextStyle(color: getGFColor(GFColor.white)),
+                        style: TextStyle(
+                            color: GFColors.getGFColor(GFColor.white)),
                       ),
                       icon: Icon(
                         CupertinoIcons.forward,
-                        color: getGFColor(GFColor.success),
+                        color: GFColors.getGFColor(GFColor.success),
                       )),
                 )),
           ],

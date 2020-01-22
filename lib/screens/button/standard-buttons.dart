@@ -4,7 +4,7 @@ import 'package:getflutter/components/typography/gf_typography.dart';
 import 'package:getflutter/components/button/gf_button.dart';
 import 'package:getflutter/size/gf_size.dart';
 import 'package:getflutter/types/gf_typography_type.dart';
-import 'package:getflutter/types/gf_type.dart';
+import 'package:getflutter/types/gf_button_type.dart';
 import 'package:getflutter/shape/gf_button_shape.dart';
 import 'package:getflutter/colors/gf_color.dart';
 import 'package:getflutter/components/card/gf_card.dart';
@@ -16,7 +16,8 @@ class StandardButtons extends StatefulWidget {
   _StandardButtonsState createState() => _StandardButtonsState();
 }
 
-class _StandardButtonsState extends State<StandardButtons> with SingleTickerProviderStateMixin {
+class _StandardButtonsState extends State<StandardButtons>
+    with SingleTickerProviderStateMixin {
   TabController tabController;
 
   @override
@@ -34,1277 +35,1311 @@ class _StandardButtonsState extends State<StandardButtons> with SingleTickerProv
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: getGFColor(GFColor.dark),
-        leading: InkWell(
+        appBar: AppBar(
+          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
-          child:  Icon(CupertinoIcons.back, color: getGFColor(GFColor.success), ),),
-        title: Text(
-          'Standard Buttons',
-          style: TextStyle(fontSize: 17),
+            child: Icon(
+              CupertinoIcons.back,
+              color: GFColors.getGFColor(GFColor.success),
+            ),
+          ),
+          title: Text(
+            'Standard Buttons',
+            style: TextStyle(fontSize: 17),
+          ),
+          centerTitle: true,
         ),
-        centerTitle: true,
-      ),
-      body:
-
-     Column(
-       children: <Widget>[
-         Container(
-           height: 40,
-           margin: EdgeInsets.only(top:20),
-           child:  GFSegmentTabs(
-             tabController: tabController,
+        body: ListView(
+          children: <Widget>[
+            Container(
+              height: 40,
+              margin: EdgeInsets.only(top: 20, left: 25, right: 25),
+              child: GFSegmentTabs(
+                tabController: tabController,
 //              height: 38.0,
-              width: 280.0,
-             initialIndex: 0,
-             length: 3,
-             tabs: <Widget>[
-               Text(
-                 "Solid",
-               ),
-               Tab(
-                 child: Text(
-                   "Outline",
-                 ),
-               ),
-               Tab(
-                 child: Text(
-                   "Outline 2x",
-                 ),
-               ),
-             ],
-               tabBarColor: getGFColor(GFColor.light),
-               indicatorSize: TabBarIndicatorSize.tab,
-               labelColor: getGFColor(GFColor.white),
-               unselectedLabelColor: getGFColor(GFColor.dark),
-               indicator: BoxDecoration(
-                 color: getGFColor(GFColor.dark),
-                 border: Border(bottom: BorderSide(color: getGFColor(GFColor.success), width: 3.0,),),
-//                borderRadius: BorderRadius.circular(2.0)
-               ),
-               indicatorPadding: EdgeInsets.all(8.0),
-               indicatorWeight: 2.0,
-               border: Border.all(color: Colors.white, width: 2.0),
-           ),
-//
-//            
-         ),
-         
-         Container(
-           height: MediaQuery.of(context).size.height-140,
-           child: GFTabBarView(
-                controller: tabController,
-                height: 400.0,
-                children: <Widget>[
-                  Container(
-//              color: Colors.red,
-                    child: ListView(
-                      children: <Widget>[
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 30),
-                          child: GFTypography(
-                            text: 'Default',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
-                          ),
-                        ),
-                        GFCard(
-                          content: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    shape: GFButtonShape.standard,
-                                    child: Text("Primary",
-                                        style: TextStyle(
-                                            color: getGFColor(GFColor.white))),
-                                    color: GFColor.primary,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text("Secondary",
-                                        style: TextStyle(
-                                            color: getGFColor(GFColor.white))),
-                                    color: GFColor.secondary,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Success",
-                                    ),
-                                    color: GFColor.success,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Warning",
-                                    ),
-                                    color: GFColor.warning,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text("Danger",
-                                        style: TextStyle(
-                                            color: getGFColor(GFColor.white))),
-                                    color: GFColor.danger,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Info",
-                                    ),
-                                    color: GFColor.info,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Light",
-                                    ),
-                                    color: GFColor.light,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Dark",
-                                      style:
-                                      TextStyle(color: getGFColor(GFColor.white)),
-                                    ),
-                                    color: GFColor.dark,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Link",
-                                    ),
-                                    type: GFType.solid,
-                                    color: GFColor.transparent,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 10),
-                          child: GFTypography(
-                            text: 'Disabled State',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
-                          ),
-                        ),
-                        GFCard(
-                          content: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: null,
-                                    shape: GFButtonShape.standard,
-                                    child: Text("Primary",
-                                        style: TextStyle(
-                                            color: getGFColor(GFColor.white))),
-                                    color: GFColor.primary,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text("Secondary",
-                                        style: TextStyle(
-                                            color: getGFColor(GFColor.white))),
-                                    color: GFColor.secondary,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Success",
-                                    ),
-                                    color: GFColor.success,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Warning",
-                                    ),
-                                    color: GFColor.warning,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text("Danger",
-                                        style: TextStyle(
-                                            color: getGFColor(GFColor.white))),
-                                    color: GFColor.danger,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Info",
-                                    ),
-                                    color: GFColor.info,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Light",
-                                    ),
-                                    color: GFColor.light,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Dark",
-                                      style:
-                                      TextStyle(color: getGFColor(GFColor.white)),
-                                    ),
-                                    color: GFColor.dark,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Link",
-                                    ),
-                                    type: GFType.solid,
-                                    color: GFColor.transparent,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 10),
-                          child: GFTypography(
-                            text: 'Transparent Buttons',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
-                          ),
-                        ),
-                        GFCard(
-                          content: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Primary",
-                                    ),
-                                    type: GFType.transparent,
-                                    textColor: GFColor.primary,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Secondary",
-                                    ),
-                                    type: GFType.transparent,
-                                    textColor: GFColor.secondary,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Success",
-                                    ),
-                                    type: GFType.transparent,
-                                    textColor: GFColor.success,
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Warning",
-                                    ),
-                                    type: GFType.transparent,
-                                    textColor: GFColor.warning,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Danger",
-                                    ),
-                                    type: GFType.transparent,
-                                    textColor: GFColor.danger,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Info",
-                                    ),
-                                    type: GFType.transparent,
-                                    textColor: GFColor.info,
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Light",
-                                    ),
-                                    type: GFType.transparent,
-                                    textColor: GFColor.light,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Dark",
-                                    ),
-                                    type: GFType.transparent,
-                                    textColor: GFColor.dark,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Link",
-                                    ),
-                                    type: GFType.transparent,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 10),
-                          child: GFTypography(
-                            text: 'Button Sizes',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
-                          ),
-                        ),
-                        GFCard(
-                          content: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text("Large",
-                                        style: TextStyle(
-                                            color: getGFColor(GFColor.white))),
-                                    color: GFColor.primary,
-                                    size: GFSize.large,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text("Normal",
-                                        style: TextStyle(
-                                            color: getGFColor(GFColor.white))),
-                                    color: GFColor.primary,
-                                    size: GFSize.medium,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text("Small",
-                                        style: TextStyle(
-                                            color: getGFColor(GFColor.white))),
-                                    color: GFColor.primary,
-                                    size: GFSize.small,
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 10),
-                          child: GFTypography(
-                            text: 'Block Buttons',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
-                          ),
-                        ),
-                        GFCard(
-                          content: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              GFButton(
-                                onPressed: () {},
-                                blockButton: true,
-                                child: Text("Large",
-                                    style:
-                                    TextStyle(color: getGFColor(GFColor.white))),
-                                color: GFColor.primary,
-                                size: GFSize.large,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              GFButton(
-                                onPressed: () {},
-                                blockButton: true,
-                                child: Text("Normal",
-                                    style:
-                                    TextStyle(color: getGFColor(GFColor.white))),
-                                color: GFColor.primary,
-                                size: GFSize.medium,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              GFButton(
-                                onPressed: () {},
-                                blockButton: true,
-                                child: Text("Small",
-                                    style:
-                                    TextStyle(color: getGFColor(GFColor.white))),
-                                color: GFColor.primary,
-                                size: GFSize.small,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                            ],
-                          ),
-                        ),
-
-
-
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 10),
-                          child: GFTypography(
-                            text: 'Full Width Buttons',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
-                          ),
-                        ),
-                         Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              GFButton(
-                                onPressed: () {},
-                                child: Text("Large",
-                                    style:
-                                    TextStyle(color: getGFColor(GFColor.white))),
-                                color: GFColor.primary,
-                                size: GFSize.large,
-                                fullWidthButton: true,
-
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              GFButton(
-                                onPressed: () {},
-                                child: Text("Normal",
-                                    style:
-                                    TextStyle(color: getGFColor(GFColor.white))),
-                                color: GFColor.primary,
-                                size: GFSize.medium,
-                                fullWidthButton: true,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              GFButton(
-                                onPressed: () {},
-                                child: Text("Small",
-                                    style:
-                                    TextStyle(color: getGFColor(GFColor.white))),
-                                color: GFColor.primary,
-                                size: GFSize.small,
-                                fullWidthButton: true,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                            ],
-                          ),
-
-
-                      ],
+                width: 280.0,
+                initialIndex: 0,
+                length: 3,
+                tabs: <Widget>[
+                  Text(
+                    "Solid",
+                  ),
+                  Tab(
+                    child: Text(
+                      "Outline",
                     ),
                   ),
+                  Tab(
+                    child: Text(
+                      "Outline 2x",
+                    ),
+                  ),
+                ],
+                tabBarColor: GFColors.getGFColor(GFColor.light),
+                indicatorSize: TabBarIndicatorSize.tab,
+                labelColor: GFColors.getGFColor(GFColor.white),
+                unselectedLabelColor: GFColors.getGFColor(GFColor.dark),
+                indicator: BoxDecoration(
+                  color: GFColors.getGFColor(GFColor.dark),
+                  border: Border(
+                    bottom: BorderSide(
+                      color: GFColors.getGFColor(GFColor.success),
+                      width: 3.0,
+                    ),
+                  ),
+//                borderRadius: BorderRadius.circular(2.0)
+                ),
+                indicatorPadding: EdgeInsets.all(8.0),
+                indicatorWeight: 2.0,
+                border: Border.all(color: Colors.white, width: 2.0),
+              ),
+//
+//
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height - 140,
+              child: GFTabBarView(
+                  controller: tabController,
+                  height: 400.0,
+                  children: <Widget>[
+                    Container(
+//              color: Colors.red,
+                      child: ListView(
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 30),
+                            child: GFTypography(
+                              text: 'Default',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCard(
+                            content: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      shape: GFButtonShape.standard,
+                                      child: Text("Primary",
+                                          style: TextStyle(
+                                              color: GFColors.getGFColor(
+                                                  GFColor.white))),
+                                      color: GFColor.primary,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text("Secondary",
+                                          style: TextStyle(
+                                              color: GFColors.getGFColor(
+                                                  GFColor.white))),
+                                      color: GFColor.secondary,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Success",
+                                      ),
+                                      color: GFColor.success,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Warning",
+                                      ),
+                                      color: GFColor.warning,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text("Danger",
+                                          style: TextStyle(
+                                              color: GFColors.getGFColor(
+                                                  GFColor.white))),
+                                      color: GFColor.danger,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Info",
+                                      ),
+                                      color: GFColor.info,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Light",
+                                      ),
+                                      color: GFColor.light,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Dark",
+                                        style: TextStyle(
+                                            color: GFColors.getGFColor(
+                                                GFColor.white)),
+                                      ),
+                                      color: GFColor.dark,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Link",
+                                      ),
+                                      type: GFButtonType.solid,
+                                      color: GFColor.transparent,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 10),
+                            child: GFTypography(
+                              text: 'Disabled State',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCard(
+                            content: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: null,
+                                      shape: GFButtonShape.standard,
+                                      child: Text("Primary",
+                                          style: TextStyle(
+                                              color: GFColors.getGFColor(
+                                                  GFColor.white))),
+                                      color: GFColor.primary,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text("Secondary",
+                                          style: TextStyle(
+                                              color: GFColors.getGFColor(
+                                                  GFColor.white))),
+                                      color: GFColor.secondary,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Success",
+                                      ),
+                                      color: GFColor.success,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Warning",
+                                      ),
+                                      color: GFColor.warning,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text("Danger",
+                                          style: TextStyle(
+                                              color: GFColors.getGFColor(
+                                                  GFColor.white))),
+                                      color: GFColor.danger,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Info",
+                                      ),
+                                      color: GFColor.info,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Light",
+                                      ),
+                                      color: GFColor.light,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Dark",
+                                        style: TextStyle(
+                                            color: GFColors.getGFColor(
+                                                GFColor.white)),
+                                      ),
+                                      color: GFColor.dark,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Link",
+                                      ),
+                                      type: GFButtonType.solid,
+                                      color: GFColor.transparent,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 10),
+                            child: GFTypography(
+                              text: 'Transparent Buttons',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCard(
+                            content: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Primary",
+                                      ),
+                                      type: GFButtonType.transparent,
+                                      textColor: GFColor.primary,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Secondary",
+                                      ),
+                                      type: GFButtonType.transparent,
+                                      textColor: GFColor.secondary,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Success",
+                                      ),
+                                      type: GFButtonType.transparent,
+                                      textColor: GFColor.success,
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Warning",
+                                      ),
+                                      type: GFButtonType.transparent,
+                                      textColor: GFColor.warning,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Danger",
+                                      ),
+                                      type: GFButtonType.transparent,
+                                      textColor: GFColor.danger,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Info",
+                                      ),
+                                      type: GFButtonType.transparent,
+                                      textColor: GFColor.info,
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Light",
+                                      ),
+                                      type: GFButtonType.transparent,
+                                      textColor: GFColor.light,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Dark",
+                                      ),
+                                      type: GFButtonType.transparent,
+                                      textColor: GFColor.dark,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Link",
+                                      ),
+                                      type: GFButtonType.transparent,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 10),
+                            child: GFTypography(
+                              text: 'Button Sizes',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCard(
+                            content: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text("Large",
+                                          style: TextStyle(
+                                              color: GFColors.getGFColor(
+                                                  GFColor.white))),
+                                      color: GFColor.primary,
+                                      size: GFSize.large,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text("Normal",
+                                          style: TextStyle(
+                                              color: GFColors.getGFColor(
+                                                  GFColor.white))),
+                                      color: GFColor.primary,
+                                      size: GFSize.medium,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text("Small",
+                                          style: TextStyle(
+                                              color: GFColors.getGFColor(
+                                                  GFColor.white))),
+                                      color: GFColor.primary,
+                                      size: GFSize.small,
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 10),
+                            child: GFTypography(
+                              text: 'Block Buttons',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCard(
+                            content: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                GFButton(
+                                  onPressed: () {},
+                                  blockButton: true,
+                                  child: Text("Large",
+                                      style: TextStyle(
+                                          color: GFColors.getGFColor(
+                                              GFColor.white))),
+                                  color: GFColor.primary,
+                                  size: GFSize.large,
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                GFButton(
+                                  onPressed: () {},
+                                  blockButton: true,
+                                  child: Text("Normal",
+                                      style: TextStyle(
+                                          color: GFColors.getGFColor(
+                                              GFColor.white))),
+                                  color: GFColor.primary,
+                                  size: GFSize.medium,
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                GFButton(
+                                  onPressed: () {},
+                                  blockButton: true,
+                                  child: Text("Small",
+                                      style: TextStyle(
+                                          color: GFColors.getGFColor(
+                                              GFColor.white))),
+                                  color: GFColor.primary,
+                                  size: GFSize.small,
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 10),
+                            child: GFTypography(
+                              text: 'Full Width Buttons',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              SizedBox(
+                                height: 10,
+                              ),
+                              GFButton(
+                                onPressed: () {},
+                                child: Text("Large",
+                                    style: TextStyle(
+                                        color: GFColors.getGFColor(
+                                            GFColor.white))),
+                                color: GFColor.primary,
+                                size: GFSize.large,
+                                fullWidthButton: true,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              GFButton(
+                                onPressed: () {},
+                                child: Text("Normal",
+                                    style: TextStyle(
+                                        color: GFColors.getGFColor(
+                                            GFColor.white))),
+                                color: GFColor.primary,
+                                size: GFSize.medium,
+                                fullWidthButton: true,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              GFButton(
+                                onPressed: () {},
+                                child: Text("Small",
+                                    style: TextStyle(
+                                        color: GFColors.getGFColor(
+                                            GFColor.white))),
+                                color: GFColor.primary,
+                                size: GFSize.small,
+                                fullWidthButton: true,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
 
 //tab 2
-                  Container(
+                    Container(
 //              color: Colors.red,
-                    child: ListView(
-                      children: <Widget>[
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 30),
-                          child: GFTypography(
-                            text: 'Default',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
+                      child: ListView(
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 30),
+                            child: GFTypography(
+                              text: 'Default',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
                           ),
-                        ),
-                        GFCard(
-                          content: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Primary",
-                                    ),
-                                    type: GFType.outline,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text("Secondary"),
-                                    type: GFType.outline,
-                                    color: GFColor.secondary,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Success",
-                                    ),
-                                    type: GFType.outline,
-                                    color: GFColor.success,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Warning",
-                                    ),
-                                    type: GFType.outline,
-                                    color: GFColor.warning,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Danger",
-                                    ),
-                                    type: GFType.outline,
-                                    color: GFColor.danger,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Info",
-                                    ),
-                                    type: GFType.outline,
-                                    color: GFColor.info,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Light",
-                                    ),
-                                    type: GFType.outline,
-                                    color: GFColor.light,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Dark",
-                                    ),
-                                    type: GFType.outline,
-                                    color: GFColor.dark,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Link",
-                                    ),
-                                    type: GFType.transparent,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 10),
-                          child: GFTypography(
-                            text: 'Disabled State',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
-                          ),
-                        ),
-                        GFCard(
-                          content: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Primary",
-                                    ),
-                                    type: GFType.outline,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text("Secondary"),
-                                    type: GFType.outline,
-                                    color: GFColor.secondary,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Success",
-                                    ),
-                                    type: GFType.outline,
-                                    color: GFColor.success,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Warning",
-                                    ),
-                                    type: GFType.outline,
-                                    color: GFColor.warning,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Danger",
-                                    ),
-                                    type: GFType.outline,
-                                    color: GFColor.danger,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Info",
-                                    ),
-                                    type: GFType.outline,
-                                    color: GFColor.info,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Light",
-                                    ),
-                                    type: GFType.outline,
-                                    color: GFColor.light,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Dark",
-                                    ),
-                                    type: GFType.outline,
-                                    color: GFColor.dark,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Link",
-                                    ),
-                                    type: GFType.transparent,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 10),
-                          child: GFTypography(
-                            text: 'Button Sizes',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
-                          ),
-                        ),
-                        GFCard(
-                          content: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Large",
-                                    ),
-                                    color: GFColor.primary,
-                                    size: GFSize.large,
-                                    type: GFType.outline,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Normal",
-                                    ),
-                                    color: GFColor.primary,
-                                    size: GFSize.medium,
-                                    type: GFType.outline,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Small",
-                                    ),
-                                    color: GFColor.primary,
-                                    size: GFSize.small,
-                                    type: GFType.outline,
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 10),
-                          child: GFTypography(
-                            text: 'Block Buttons',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
-                          ),
-                        ),
-                        GFCard(
-                          content: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              GFButton(
-                                onPressed: () {},
-                                blockButton: true,
-                                child: Text(
-                                  "Large",
+                          GFCard(
+                            content: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10,
                                 ),
-                                color: GFColor.primary,
-                                size: GFSize.large,
-                                type: GFType.outline,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              GFButton(
-                                onPressed: () {},
-                                blockButton: true,
-                                child: Text(
-                                  "Normal",
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Primary",
+                                      ),
+                                      type: GFButtonType.outline,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text("Secondary"),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.secondary,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Success",
+                                      ),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.success,
+                                    ),
+                                  ],
                                 ),
-                                color: GFColor.primary,
-                                size: GFSize.medium,
-                                type: GFType.outline,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              GFButton(
-                                onPressed: () {},
-                                blockButton: true,
-                                child: Text(
-                                  "Small",
+                                SizedBox(
+                                  height: 10,
                                 ),
-                                color: GFColor.primary,
-                                size: GFSize.small,
-                                type: GFType.outline,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                            ],
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Warning",
+                                      ),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.warning,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Danger",
+                                      ),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.danger,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Info",
+                                      ),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.info,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Light",
+                                      ),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.light,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Dark",
+                                      ),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.dark,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Link",
+                                      ),
+                                      type: GFButtonType.transparent,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 10),
+                            child: GFTypography(
+                              text: 'Disabled State',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCard(
+                            content: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Primary",
+                                      ),
+                                      type: GFButtonType.outline,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text("Secondary"),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.secondary,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Success",
+                                      ),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.success,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Warning",
+                                      ),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.warning,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Danger",
+                                      ),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.danger,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Info",
+                                      ),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.info,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Light",
+                                      ),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.light,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Dark",
+                                      ),
+                                      type: GFButtonType.outline,
+                                      color: GFColor.dark,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Link",
+                                      ),
+                                      type: GFButtonType.transparent,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 10),
+                            child: GFTypography(
+                              text: 'Button Sizes',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCard(
+                            content: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Large",
+                                      ),
+                                      color: GFColor.primary,
+                                      size: GFSize.large,
+                                      type: GFButtonType.outline,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Normal",
+                                      ),
+                                      color: GFColor.primary,
+                                      size: GFSize.medium,
+                                      type: GFButtonType.outline,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Small",
+                                      ),
+                                      color: GFColor.primary,
+                                      size: GFSize.small,
+                                      type: GFButtonType.outline,
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 10),
+                            child: GFTypography(
+                              text: 'Block Buttons',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCard(
+                            content: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                GFButton(
+                                  onPressed: () {},
+                                  blockButton: true,
+                                  child: Text(
+                                    "Large",
+                                  ),
+                                  color: GFColor.primary,
+                                  size: GFSize.large,
+                                  type: GFButtonType.outline,
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                GFButton(
+                                  onPressed: () {},
+                                  blockButton: true,
+                                  child: Text(
+                                    "Normal",
+                                  ),
+                                  color: GFColor.primary,
+                                  size: GFSize.medium,
+                                  type: GFButtonType.outline,
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                GFButton(
+                                  onPressed: () {},
+                                  blockButton: true,
+                                  child: Text(
+                                    "Small",
+                                  ),
+                                  color: GFColor.primary,
+                                  size: GFSize.small,
+                                  type: GFButtonType.outline,
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
 
 //tab 3
-                  Container(
+                    Container(
 //              color: Colors.red,
-                    child: ListView(
-                      children: <Widget>[
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 30),
-                          child: GFTypography(
-                            text: 'Default',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
+                      child: ListView(
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 30),
+                            child: GFTypography(
+                              text: 'Default',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
                           ),
-                        ),
-                        GFCard(
-                          content: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Primary",
-                                    ),
-                                    type: GFType.outline2x,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text("Secondary"),
-                                    type: GFType.outline2x,
-                                    color: GFColor.secondary,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Success",
-                                    ),
-                                    type: GFType.outline2x,
-                                    color: GFColor.success,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Warning",
-                                    ),
-                                    type: GFType.outline2x,
-                                    color: GFColor.warning,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Danger",
-                                    ),
-                                    type: GFType.outline2x,
-                                    color: GFColor.danger,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Info",
-                                    ),
-                                    type: GFType.outline2x,
-                                    color: GFColor.info,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Light",
-                                    ),
-                                    type: GFType.outline2x,
-                                    color: GFColor.light,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Dark",
-                                    ),
-                                    type: GFType.outline2x,
-                                    color: GFColor.dark,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Link",
-                                    ),
-                                    type: GFType.transparent,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 10),
-                          child: GFTypography(
-                            text: 'Disabled State',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
-                          ),
-                        ),
-                        GFCard(
-                          content: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Primary",
-                                    ),
-                                    type: GFType.outline2x,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text("Secondary"),
-                                    type: GFType.outline2x,
-                                    color: GFColor.secondary,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Success",
-                                    ),
-                                    type: GFType.outline2x,
-                                    color: GFColor.success,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Warning",
-                                    ),
-                                    type: GFType.outline2x,
-                                    color: GFColor.warning,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Danger",
-                                    ),
-                                    type: GFType.outline2x,
-                                    color: GFColor.danger,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Info",
-                                    ),
-                                    type: GFType.outline2x,
-                                    color: GFColor.info,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Light",
-                                    ),
-                                    type: GFType.outline2x,
-                                    color: GFColor.light,
-                                  ),
-                                  GFButton(
-                                    onPressed: null,
-                                    child: Text(
-                                      "Dark",
-                                    ),
-                                    type: GFType.outline2x,
-                                    color: GFColor.dark,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Link",
-                                    ),
-                                    type: GFType.transparent,
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 10),
-                          child: GFTypography(
-                            text: 'Button Sizes',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
-                          ),
-                        ),
-                        GFCard(
-                          content: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Large",
-                                    ),
-                                    color: GFColor.primary,
-                                    size: GFSize.large,
-                                    type: GFType.outline2x,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Normal",
-                                    ),
-                                    color: GFColor.primary,
-                                    size: GFSize.medium,
-                                    type: GFType.outline2x,
-                                  ),
-                                  GFButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Small",
-                                    ),
-                                    color: GFColor.primary,
-                                    size: GFSize.small,
-                                    type: GFType.outline2x,
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, top: 10),
-                          child: GFTypography(
-                            text: 'Block Buttons',
-                            type: GFTypographyType.typo5,
-                            dividerWidth: 25,
-                            dividerColor: Color(0xFF19CA4B),
-                          ),
-                        ),
-                        GFCard(
-                          content: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 10,
-                              ),
-                              GFButton(
-                                onPressed: () {},
-                                blockButton: true,
-                                child: Text(
-                                  "Large",
+                          GFCard(
+                            content: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10,
                                 ),
-                                color: GFColor.primary,
-                                size: GFSize.large,
-                                type: GFType.outline2x,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              GFButton(
-                                onPressed: () {},
-                                blockButton: true,
-                                child: Text(
-                                  "Normal",
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Primary",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text("Secondary"),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.secondary,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Success",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.success,
+                                    ),
+                                  ],
                                 ),
-                                color: GFColor.primary,
-                                size: GFSize.medium,
-                                type: GFType.outline2x,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              GFButton(
-                                onPressed: () {},
-                                blockButton: true,
-                                child: Text(
-                                  "Small",
+                                SizedBox(
+                                  height: 10,
                                 ),
-                                color: GFColor.primary,
-                                size: GFSize.small,
-                                type: GFType.outline2x,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                            ],
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Warning",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.warning,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Danger",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.danger,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Info",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.info,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Light",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.light,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Dark",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.dark,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Link",
+                                      ),
+                                      type: GFButtonType.transparent,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 10),
+                            child: GFTypography(
+                              text: 'Disabled State',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCard(
+                            content: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Primary",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text("Secondary"),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.secondary,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Success",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.success,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Warning",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.warning,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Danger",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.danger,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Info",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.info,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Light",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.light,
+                                    ),
+                                    GFButton(
+                                      onPressed: null,
+                                      child: Text(
+                                        "Dark",
+                                      ),
+                                      type: GFButtonType.outline2x,
+                                      color: GFColor.dark,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Link",
+                                      ),
+                                      type: GFButtonType.transparent,
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 10),
+                            child: GFTypography(
+                              text: 'Button Sizes',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCard(
+                            content: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Large",
+                                      ),
+                                      color: GFColor.primary,
+                                      size: GFSize.large,
+                                      type: GFButtonType.outline2x,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Normal",
+                                      ),
+                                      color: GFColor.primary,
+                                      size: GFSize.medium,
+                                      type: GFButtonType.outline2x,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Small",
+                                      ),
+                                      color: GFColor.primary,
+                                      size: GFSize.small,
+                                      type: GFButtonType.outline2x,
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 10),
+                            child: GFTypography(
+                              text: 'Block Buttons',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCard(
+                            content: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                GFButton(
+                                  onPressed: () {},
+                                  blockButton: true,
+                                  child: Text(
+                                    "Large",
+                                  ),
+                                  color: GFColor.primary,
+                                  size: GFSize.large,
+                                  type: GFButtonType.outline2x,
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                GFButton(
+                                  onPressed: () {},
+                                  blockButton: true,
+                                  child: Text(
+                                    "Normal",
+                                  ),
+                                  color: GFColor.primary,
+                                  size: GFSize.medium,
+                                  type: GFButtonType.outline2x,
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                GFButton(
+                                  onPressed: () {},
+                                  blockButton: true,
+                                  child: Text(
+                                    "Small",
+                                  ),
+                                  color: GFColor.primary,
+                                  size: GFSize.small,
+                                  type: GFButtonType.outline2x,
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-
-
-                ]
-            ),
-         )
-       ],
-     )
-    );
+                  ]),
+            )
+          ],
+        ));
   }
 }
-
-
-

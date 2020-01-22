@@ -30,14 +30,14 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: getGFColor(GFColor.dark),
+          backgroundColor: GFColors.getGFColor(GFColor.dark),
           leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
             child: Icon(
               CupertinoIcons.back,
-              color: getGFColor(GFColor.success),
+              color: GFColors.getGFColor(GFColor.success),
             ),
           ),
           title: Text(
@@ -46,10 +46,10 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
           ),
           centerTitle: true,
         ),
-        body: Column(children: <Widget>[
+        body: ListView(children: <Widget>[
           Container(
             height: 40,
-            margin: EdgeInsets.only(top: 20),
+            margin: EdgeInsets.only(top: 20, left: 25, right: 25),
             child: GFSegmentTabs(
               tabController: tabController,
 //              height: 38.0,
@@ -71,15 +71,15 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                   ),
                 ),
               ],
-              tabBarColor: getGFColor(GFColor.light),
+              tabBarColor: GFColors.getGFColor(GFColor.light),
               indicatorSize: TabBarIndicatorSize.tab,
-              labelColor: getGFColor(GFColor.white),
-              unselectedLabelColor: getGFColor(GFColor.dark),
+              labelColor: GFColors.getGFColor(GFColor.white),
+              unselectedLabelColor: GFColors.getGFColor(GFColor.dark),
               indicator: BoxDecoration(
                 color: Colors.black,
                 border: Border(
                   bottom: BorderSide(
-                    color: getGFColor(GFColor.success),
+                    color: GFColors.getGFColor(GFColor.success),
                     width: 3.0,
                   ),
                 ),
@@ -246,7 +246,8 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                                     child: Text(
                                       'Light Overlay',
                                       style: TextStyle(
-                                          color: getGFColor(GFColor.white)),
+                                          color: GFColors.getGFColor(
+                                              GFColor.white)),
                                     ),
                                   ),
                                   colorFilter: new ColorFilter.mode(
@@ -269,7 +270,8 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                                       child: Text(
                                     'Medium Overlay',
                                     style: TextStyle(
-                                        color: getGFColor(GFColor.white)),
+                                        color:
+                                            GFColors.getGFColor(GFColor.white)),
                                   )),
                                   colorFilter: new ColorFilter.mode(
                                       Colors.black.withOpacity(0.40),
@@ -291,7 +293,8 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                                       child: Text(
                                     'Strong Overlay',
                                     style: TextStyle(
-                                        color: getGFColor(GFColor.white)),
+                                        color:
+                                            GFColors.getGFColor(GFColor.white)),
                                   )),
                                   colorFilter: new ColorFilter.mode(
                                       Colors.black.withOpacity(0.60),

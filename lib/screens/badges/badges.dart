@@ -10,7 +10,7 @@ import 'package:getflutter/components/button/gf_icon_button.dart';
 import 'package:getflutter/shape/gf_badge_shape.dart';
 import 'package:getflutter/size/gf_size.dart';
 import 'package:getflutter/types/gf_typography_type.dart';
-import 'package:getflutter/types/gf_type.dart';
+import 'package:getflutter/types/gf_button_type.dart';
 import 'package:flutter/cupertino.dart';
 
 class BadgesPage extends StatefulWidget {
@@ -29,10 +29,10 @@ class _BadgesPageState extends State<BadgesPage> {
           },
           child: Icon(
             CupertinoIcons.back,
-            color: getGFColor(GFColor.success),
+            color: GFColors.getGFColor(GFColor.success),
           ),
         ),
-        backgroundColor: getGFColor(GFColor.dark),
+        backgroundColor: GFColors.getGFColor(GFColor.dark),
         title: Text(
           'Badges',
           style: TextStyle(fontSize: 17),
@@ -62,6 +62,7 @@ class _BadgesPageState extends State<BadgesPage> {
                     Expanded(
                       child: GFButtonBadge(
                         icon: GFBadge(
+                          size: GFSize.medium,
                           text: '6',
                           shape: GFBadgeShape.pills,
                         ),
@@ -173,7 +174,8 @@ class _BadgesPageState extends State<BadgesPage> {
                         ),
                         onPressed: () {},
                         text: 'Dark',
-                        textStyle: TextStyle(color: getGFColor(GFColor.white)),
+                        textStyle: TextStyle(
+                            color: GFColors.getGFColor(GFColor.white)),
                         color: GFColor.dark,
                       ),
                     ),
@@ -218,68 +220,63 @@ class _BadgesPageState extends State<BadgesPage> {
                   children: <Widget>[
                     GFIconBadge(
                         child: GFIconButton(
-                            type: GFType.transparent,
+                            type: GFButtonType.transparent,
                             onPressed: () {},
                             icon: SvgPicture.asset(
                               'lib/assets/icons/primary.svg',
-                              color: getGFColor(GFColor.primary),
+                              color: GFColors.getGFColor(GFColor.primary),
                             )),
                         counterChild: GFBadge(
                           text: '12',
                           shape: GFBadgeShape.circle,
-                          size: GFSize.small,
                         )),
                     GFIconBadge(
                         child: GFIconButton(
-                            type: GFType.transparent,
+                            type: GFButtonType.transparent,
                             onPressed: () {},
                             icon: SvgPicture.asset(
                               'lib/assets/icons/secondary.svg',
-                              color: getGFColor(GFColor.secondary),
+                              color: GFColors.getGFColor(GFColor.secondary),
                             )),
                         counterChild: GFBadge(
                           text: '12',
                           shape: GFBadgeShape.circle,
-                          size: GFSize.small,
                         )),
                     GFIconBadge(
                         child: GFIconButton(
-                            type: GFType.transparent,
+                            type: GFButtonType.transparent,
                             onPressed: () {},
                             icon: SvgPicture.asset(
                               'lib/assets/icons/success.svg',
-                              color: getGFColor(GFColor.success),
+                              color: GFColors.getGFColor(GFColor.success),
                             )),
                         counterChild: GFBadge(
                           text: '12',
                           shape: GFBadgeShape.circle,
-                          size: GFSize.small,
                         )),
                     GFIconBadge(
                         child: GFIconButton(
-                            type: GFType.transparent,
+                            type: GFButtonType.transparent,
                             onPressed: () {},
                             icon: SvgPicture.asset(
                               'lib/assets/icons/warning.svg',
-                              color: getGFColor(GFColor.warning),
+                              color: GFColors.getGFColor(GFColor.warning),
                             )),
                         counterChild: GFBadge(
                           text: '12',
                           shape: GFBadgeShape.circle,
-                          size: GFSize.small,
                         )),
                     GFIconBadge(
                         child: GFIconButton(
-                            type: GFType.transparent,
+                            type: GFButtonType.transparent,
                             onPressed: () {},
                             icon: SvgPicture.asset(
                               'lib/assets/icons/danger.svg',
-                              color: getGFColor(GFColor.danger),
+                              color: GFColors.getGFColor(GFColor.danger),
                             )),
                         counterChild: GFBadge(
                           text: '12',
                           shape: GFBadgeShape.circle,
-                          size: GFSize.small,
                         )),
                   ],
                 ),
@@ -287,43 +284,40 @@ class _BadgesPageState extends State<BadgesPage> {
                   children: <Widget>[
                     GFIconBadge(
                         child: GFIconButton(
-                            type: GFType.transparent,
+                            type: GFButtonType.transparent,
                             onPressed: () {},
                             icon: SvgPicture.asset(
                               'lib/assets/icons/info.svg',
-                              color: getGFColor(GFColor.info),
+                              color: GFColors.getGFColor(GFColor.info),
                             )),
                         counterChild: GFBadge(
                           text: '12',
                           shape: GFBadgeShape.standard,
-                          size: GFSize.small,
                         )),
                     GFIconBadge(
                         child: GFIconButton(
-                            type: GFType.transparent,
+                            type: GFButtonType.transparent,
                             onPressed: () {},
                             icon: SvgPicture.asset(
                               'lib/assets/icons/light.svg',
-                              color: getGFColor(GFColor.light),
+                              color: GFColors.getGFColor(GFColor.light),
                             )),
                         counterChild: GFBadge(
                           text: '12',
                           shape: GFBadgeShape.square,
-                          size: GFSize.small,
                         )),
                     GFIconBadge(
                         child: GFIconButton(
-                            type: GFType.transparent,
+                            type: GFButtonType.transparent,
                             onPressed: () {},
                             icon: SvgPicture.asset(
                               'lib/assets/icons/dark.svg',
-                              color: getGFColor(GFColor.dark),
+                              color: GFColors.getGFColor(GFColor.dark),
                             )),
                         counterChild: GFBadge(
-                          text: '12',
-                          shape: GFBadgeShape.pills,
-                          size: GFSize.small,
-                        )),
+                            text: '124',
+                            shape: GFBadgeShape.pills,
+                            size: 25.0)),
                   ],
                 )
               ],

@@ -9,7 +9,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+<<<<<<< HEAD
+  cupertino_icons: ^0.1.2
+  getflutter:
+    path: ../
+=======
   getflutter: 1.0.0-dev.7
+>>>>>>> b880779be8fd4ca44ed472ce9b989ba6d135ba0c
   flutter_svg: ^0.15.0
   cupertino_icons: ^0.1.2
 
