@@ -7,7 +7,6 @@ import 'package:getflutter_app/screens/toast/toasts.dart';
 import 'package:getflutter_app/screens/typography/typography.dart';
 import 'package:flutter/material.dart';
 import 'package:getflutter/colors/gf_color.dart';
-
 import '../screens/badges/badges.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'images/images.dart';

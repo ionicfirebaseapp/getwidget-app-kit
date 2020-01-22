@@ -1,5 +1,6 @@
 name: getflutter_app
 description: A GetFlutter Demo App
+
 version: 1.0.2+3
 
 environment:
@@ -8,17 +9,24 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+<<<<<<< HEAD
   cupertino_icons: ^0.1.2
   getflutter:
     path: ../
+=======
+  getflutter: 1.0.0-dev.7
+>>>>>>> b880779be8fd4ca44ed472ce9b989ba6d135ba0c
   flutter_svg: ^0.15.0
+  cupertino_icons: ^0.1.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-flutter:
-  uses-material-design: true
 
+flutter:
+
+  
+  uses-material-design: true
   assets:
     - lib/assets/icons/buttons.svg
     - lib/assets/icons/primary.svg
@@ -77,3 +85,5 @@ flutter:
     - lib/assets/images/avatar10.png
     - lib/assets/images/avatar11.png
     - lib/assets/images/avatar12.png
+
+ 
