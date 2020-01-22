@@ -57,7 +57,7 @@ class _AvatarState extends State<Avatar> {
                   children: <Widget>[
                     GFAvatar(
                       backgroundImage:
-                          AssetImage('lib/assets/images/three.png'),
+                          AssetImage('lib/assets/images/avatar5.png'),
                     ),
                     GFAvatar(
                       backgroundImage: AssetImage('lib/assets/images/img.png'),
@@ -78,22 +78,22 @@ class _AvatarState extends State<Avatar> {
                   children: <Widget>[
                     GFAvatar(
                       backgroundImage:
-                          AssetImage('lib/assets/images/three1.png'),
+                          AssetImage('lib/assets/images/avatar6.png'),
                       shape: GFAvatarShape.standard,
                     ),
                     GFAvatar(
                       backgroundImage:
-                          AssetImage('lib/assets/images/three6.png'),
+                          AssetImage('lib/assets/images/avatar11.png'),
                       shape: GFAvatarShape.standard,
                     ),
                     GFAvatar(
                       backgroundImage:
-                          AssetImage('lib/assets/images/three4.png'),
+                          AssetImage('lib/assets/images/avatar9.png'),
                       shape: GFAvatarShape.standard,
                     ),
                     GFAvatar(
                       backgroundImage:
-                          AssetImage('lib/assets/images/three7.png'),
+                          AssetImage('lib/assets/images/avatar12.png'),
                       shape: GFAvatarShape.standard,
                     ),
                   ],
@@ -106,23 +106,23 @@ class _AvatarState extends State<Avatar> {
                   children: <Widget>[
                     GFAvatar(
                       backgroundImage: AssetImage(
-                        'lib/assets/images/three5.png',
+                        'lib/assets/images/avatar10.png',
                       ),
                       shape: GFAvatarShape.square,
                     ),
                     GFAvatar(
                       backgroundImage:
-                          AssetImage('lib/assets/images/three7.png'),
+                          AssetImage('lib/assets/images/avatar12.png'),
                       shape: GFAvatarShape.square,
                     ),
                     GFAvatar(
                       backgroundImage:
-                          AssetImage('lib/assets/images/three6.png'),
+                          AssetImage('lib/assets/images/avatar11.png'),
                       shape: GFAvatarShape.square,
                     ),
                     GFAvatar(
                       backgroundImage:
-                          AssetImage('lib/assets/images/three1.png'),
+                          AssetImage('lib/assets/images/avatar6.png'),
                       shape: GFAvatarShape.square,
                     ),
                   ],

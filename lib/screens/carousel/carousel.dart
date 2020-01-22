@@ -15,11 +15,11 @@ import 'package:flutter/cupertino.dart';
 
 
 final List<String> imageList = [
-  "lib/assets/images/car.png",
+  "lib/assets/images/card5.png",
   "lib/assets/images/image.png",
   "lib/assets/images/image1.png",
   "lib/assets/images/image2.png",
-  "lib/assets/images/car4.png",
+  "lib/assets/images/card4.png",
 ];
 
 final List<String> assetImg = [

@@ -51,7 +51,6 @@ class _TypographyPageState extends State<TypographyPage> {
                 GFTypography(
                   text: 'GF Header Typo1',
                   type: GFTypographyType.typo1,
-                  icon: Icon(Icons.send),
                   showDivider: false,
                 ),
                 SizedBox(
@@ -101,7 +100,7 @@ class _TypographyPageState extends State<TypographyPage> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 15, top: 30),
+            padding: EdgeInsets.only(left: 15, ),
             child: GFTypography(
               text: 'Opacity',
               type: GFTypographyType.typo5,
