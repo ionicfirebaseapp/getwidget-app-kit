@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:getflutter/colors/gf_color.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
-// import 'package:getflutter/components/button/gf_button.dart';
-// import 'package:getflutter/components/button/gf_button_bar.dart';
-// import 'package:getflutter/components/card/gf_card.dart';
 import 'package:getflutter/components/image/gf_image_overlay.dart';
 import 'package:getflutter/types/gf_typography_type.dart';
 import 'package:getflutter/components/typography/gf_typography.dart';
@@ -12,7 +8,6 @@ import 'package:getflutter/components/tabs/gf_segment_tabs.dart';
 import 'package:getflutter/components/carousel/gf_carousel.dart';
 import 'package:getflutter/components/carousel/gf_items_carousel.dart';
 import 'package:flutter/cupertino.dart';
-
 
 final List<String> imageList = [
   "lib/assets/images/card5.png",
@@ -23,12 +18,10 @@ final List<String> imageList = [
 ];
 
 final List<String> assetImg = [
-      "lib/assets/images/red.png",
-      "lib/assets/images/purple.png",
-      "lib/assets/images/orange.png",
-      "lib/assets/images/red.png",
-
-
+  "lib/assets/images/red.png",
+  "lib/assets/images/purple.png",
+  "lib/assets/images/orange.png",
+  "lib/assets/images/red.png",
 ];
 
 class Carousel extends StatefulWidget {
@@ -36,7 +29,8 @@ class Carousel extends StatefulWidget {
   _CarouselState createState() => _CarouselState();
 }
 
-class _CarouselState extends State<Carousel>  with SingleTickerProviderStateMixin {
+class _CarouselState extends State<Carousel>
+    with SingleTickerProviderStateMixin {
   TabController tabController;
 
   @override
@@ -55,25 +49,28 @@ class _CarouselState extends State<Carousel>  with SingleTickerProviderStateMixi
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: getGFColor(GFColor.dark),
+        backgroundColor: GFColors.getGFColor(GFColor.dark),
         leading: InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-          child:  Icon(CupertinoIcons.back, color: getGFColor(GFColor.success), ),),
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            CupertinoIcons.back,
+            color: GFColors.getGFColor(GFColor.success),
+          ),
+        ),
         title: Text(
           'Carousel',
           style: TextStyle(fontSize: 17),
         ),
         centerTitle: true,
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
           Container(
             height: 40,
-            margin: EdgeInsets.only(top:20),
-            child:
-            GFSegmentTabs(
+            margin: EdgeInsets.only(top: 20, left: 25, right: 25),
+            child: GFSegmentTabs(
               tabController: tabController,
 //              height: 38.0,
               width: 280.0,
@@ -88,16 +85,19 @@ class _CarouselState extends State<Carousel>  with SingleTickerProviderStateMixi
                     "Image",
                   ),
                 ),
-
-
               ],
-              tabBarColor: getGFColor(GFColor.light),
+              tabBarColor: GFColors.getGFColor(GFColor.light),
               indicatorSize: TabBarIndicatorSize.tab,
-              labelColor: getGFColor(GFColor.white),
-              unselectedLabelColor: getGFColor(GFColor.dark),
+              labelColor: GFColors.getGFColor(GFColor.white),
+              unselectedLabelColor: GFColors.getGFColor(GFColor.dark),
               indicator: BoxDecoration(
                 color: Colors.black,
-                border: Border(bottom: BorderSide(color: getGFColor(GFColor.success), width: 3.0,),),
+                border: Border(
+                  bottom: BorderSide(
+                    color: GFColors.getGFColor(GFColor.success),
+                    width: 3.0,
+                  ),
+                ),
 //                borderRadius: BorderRadius.circular(2.0)
               ),
               indicatorPadding: EdgeInsets.all(8.0),
@@ -105,291 +105,388 @@ class _CarouselState extends State<Carousel>  with SingleTickerProviderStateMixi
               border: Border.all(color: Colors.white, width: 2.0),
             ),
           ),
-
-    Container(
-    height: MediaQuery.of(context).size.height-140,
-    child: GFTabBarView(
-    controller: tabController,
-    height: 400.0,
-    children: <Widget>[
-      Container(
-        child: ListView(
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
-              child: GFTypography(
-                text: 'Full Width',
-                type: GFTypographyType.typo5,
-                dividerWidth: 25,
-                dividerColor: Color(0xFF19CA4B),
-              ),
-            ),
-            GFCarousel(
-              autoPlay: true,
-              pagination: true,
-              viewportFraction: 1.0,
-              activeIndicator: getGFColor(GFColor.success),
-              passiveIndicator: getGFColor(GFColor.dark),
-              aspectRatio: 2.0,
-              items: assetImg.map(
-                    (url) {
-
-                  return   GFImageOverlay(
+          Container(
+              height: MediaQuery.of(context).size.height - 140,
+              child: GFTabBarView(
+                  controller: tabController,
+                  height: 400.0,
+                  children: <Widget>[
+                    Container(
+                      child: ListView(
+                        children: <Widget>[
+                          Padding(
+                            padding:
+                                EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                            child: GFTypography(
+                              text: 'Full Width',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCarousel(
+                            autoPlay: true,
+                            pagination: true,
+                            viewportFraction: 1.0,
+                            activeIndicator:
+                                GFColors.getGFColor(GFColor.success),
+                            passiveIndicator: GFColors.getGFColor(GFColor.dark),
+                            aspectRatio: 2.0,
+                            items: assetImg.map(
+                              (url) {
+                                return GFImageOverlay(
 //                    height: 200,
-boxFit: BoxFit.fitWidth,
-color: Colors.transparent,
+                                  boxFit: BoxFit.fitWidth,
+                                  color: Colors.transparent,
 //                        width: 300,
-                    margin: EdgeInsets.only(left: 15, right: 15, bottom:30,),
-                    borderRadius: BorderRadius.all(Radius.circular(4)),
-                    child: Padding(padding: EdgeInsets.only(top:30, left: 0),
-                        child:
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Text('Title', style: TextStyle(color: getGFColor(GFColor.white)),),
-                            Padding(padding: EdgeInsets.only(left: 30, right: 30, top: 30), child:
-                            Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
-                                ' sed do eiusmod tempor dolor sit amet, consectetur', textAlign:TextAlign.center, style: TextStyle( color: getGFColor(GFColor.light)),))
-                          ],
-                        )),
+                                  margin: EdgeInsets.only(
+                                    left: 15,
+                                    right: 15,
+                                    bottom: 30,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(4)),
+                                  child: Padding(
+                                      padding:
+                                          EdgeInsets.only(top: 30, left: 0),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            'Title',
+                                            style: TextStyle(
+                                                color: GFColors.getGFColor(
+                                                    GFColor.white)),
+                                          ),
+                                          Padding(
+                                              padding: EdgeInsets.only(
+                                                  left: 30, right: 30, top: 30),
+                                              child: Text(
+                                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
+                                                ' sed do eiusmod tempor dolor sit amet, consectetur',
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                    color: GFColors.getGFColor(
+                                                        GFColor.light)),
+                                              ))
+                                        ],
+                                      )),
 //                    colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.60), BlendMode.darken),
-                    image: AssetImage(url),
-                  );
-                },
-              ).toList(),
-              onPageChanged: (index) {
-                setState(() {
-                  
-                });
-              },
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
-              child: GFTypography(
-                text: 'Multiple Items',
-                type: GFTypographyType.typo5,
-                dividerWidth: 25,
-                dividerColor: Color(0xFF19CA4B),
-              ),
-            ),
-            GFItemsCarousel(
-              rowCount: 3,
-
-              children: assetImg.map(
-                    (url) {
-                  return  GFImageOverlay(
-                    height: 400,
-                    width: 300,
-                    margin: EdgeInsets.only(left: 15, right: 5),
-                    borderRadius: BorderRadius.all(Radius.circular(4)),
-                    child: Padding(padding: EdgeInsets.only(left: 10),
-                        child:
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: <Widget>[
-                            Text('Title', style: TextStyle(color: getGFColor(GFColor.white)),),
-                            Padding(padding: EdgeInsets.only( right: 5,), child:
-                            Text('Lorem ipsum dolor sit amet, ', style: TextStyle(fontSize: 10, color: getGFColor(GFColor.light)),))
-                          ],
-                        )),
-                    image: AssetImage(url),
-                  );
-                },
-              ).toList(),
-            ),
-
-            Padding(
-              padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
-              child: GFTypography(
-                text: 'Full Size',
-                type: GFTypographyType.typo5,
-                dividerWidth: 25,
-                dividerColor: Color(0xFF19CA4B),
-              ),
-            ),
-
-            GFCarousel(
-              autoPlay: true,
-              pagination: true,
-              viewportFraction: 1.0,
-              activeIndicator: getGFColor(GFColor.success),
-              passiveIndicator: getGFColor(GFColor.white),
-              aspectRatio: 2.0,
-              items: assetImg.map(
-                    (url) {
-
-                  return   GFImageOverlay(
-                    height: 200,
+                                  image: AssetImage(url),
+                                );
+                              },
+                            ).toList(),
+                            onPageChanged: (index) {
+                              setState(() {});
+                            },
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                            child: GFTypography(
+                              text: 'Multiple Items',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFItemsCarousel(
+                            rowCount: 3,
+                            children: assetImg.map(
+                              (url) {
+                                return GFImageOverlay(
+                                  height: 400,
+                                  width: 300,
+                                  margin: EdgeInsets.only(left: 15, right: 5),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(4)),
+                                  child: Padding(
+                                      padding: EdgeInsets.only(left: 10),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: <Widget>[
+                                          Text(
+                                            'Title',
+                                            style: TextStyle(
+                                                color: GFColors.getGFColor(
+                                                    GFColor.white)),
+                                          ),
+                                          Padding(
+                                              padding: EdgeInsets.only(
+                                                right: 5,
+                                              ),
+                                              child: Text(
+                                                'Lorem ipsum dolor sit amet, ',
+                                                style: TextStyle(
+                                                    fontSize: 10,
+                                                    color: GFColors.getGFColor(
+                                                        GFColor.light)),
+                                              ))
+                                        ],
+                                      )),
+                                  image: AssetImage(url),
+                                );
+                              },
+                            ).toList(),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                            child: GFTypography(
+                              text: 'Full Size',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCarousel(
+                            autoPlay: true,
+                            pagination: true,
+                            viewportFraction: 1.0,
+                            activeIndicator:
+                                GFColors.getGFColor(GFColor.success),
+                            passiveIndicator:
+                                GFColors.getGFColor(GFColor.white),
+                            aspectRatio: 2.0,
+                            items: assetImg.map(
+                              (url) {
+                                return GFImageOverlay(
+                                  height: 200,
 //                        width: 300,
-                    margin: EdgeInsets.only(left: 15, right: 15),
-                    borderRadius: BorderRadius.all(Radius.circular(4)),
-                    child: Padding(padding: EdgeInsets.only(top:30, left: 0),
-                        child:
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Text('Title', style: TextStyle(color: getGFColor(GFColor.white)),),
-                            Padding(padding: EdgeInsets.only(left: 30, right: 30, top: 30), child:
-                            Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
-                                ' sed do eiusmod tempor dolor sit amet, consectetur', textAlign:TextAlign.center, style: TextStyle( color: getGFColor(GFColor.light)),))
-                          ],
-                        )),
-                    image: AssetImage(url),
-                  );
-                },
-              ).toList(),
-              onPageChanged: (index) {
-                setState(() {
-                  
-                });
-              },
-            ),
-
-            SizedBox(height: 20,)
-          ],
-        ),
-      )
-,
-
-      Container(
-        child: ListView(
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
-              child: GFTypography(
-                text: 'Full Width',
-                type: GFTypographyType.typo5,
-                dividerWidth: 25,
-                dividerColor: Color(0xFF19CA4B),
-              ),
-            ),
-            GFCarousel(
-              autoPlay: true,
-              pagination: true,
-              viewportFraction: 1.0,
-              activeIndicator: getGFColor(GFColor.success),
-              passiveIndicator: getGFColor(GFColor.dark),
-              aspectRatio: 2.0,
-              items: imageList.map(
-                    (url) {
-
-                      return   GFImageOverlay(
-                        height: 200,
+                                  margin: EdgeInsets.only(left: 15, right: 15),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(4)),
+                                  child: Padding(
+                                      padding:
+                                          EdgeInsets.only(top: 30, left: 0),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            'Title',
+                                            style: TextStyle(
+                                                color: GFColors.getGFColor(
+                                                    GFColor.white)),
+                                          ),
+                                          Padding(
+                                              padding: EdgeInsets.only(
+                                                  left: 30, right: 30, top: 30),
+                                              child: Text(
+                                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
+                                                ' sed do eiusmod tempor dolor sit amet, consectetur',
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                    color: GFColors.getGFColor(
+                                                        GFColor.light)),
+                                              ))
+                                        ],
+                                      )),
+                                  image: AssetImage(url),
+                                );
+                              },
+                            ).toList(),
+                            onPageChanged: (index) {
+                              setState(() {});
+                            },
+                          ),
+                          SizedBox(
+                            height: 20,
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      child: ListView(
+                        children: <Widget>[
+                          Padding(
+                            padding:
+                                EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                            child: GFTypography(
+                              text: 'Full Width',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCarousel(
+                            autoPlay: true,
+                            pagination: true,
+                            viewportFraction: 1.0,
+                            activeIndicator:
+                                GFColors.getGFColor(GFColor.success),
+                            passiveIndicator: GFColors.getGFColor(GFColor.dark),
+                            aspectRatio: 2.0,
+                            items: imageList.map(
+                              (url) {
+                                return GFImageOverlay(
+                                  height: 200,
 //                        width: 300,
-                      margin: EdgeInsets.only(left: 15, right: 15, bottom:30,),
-                        borderRadius: BorderRadius.all(Radius.circular(4)),
-                        child: Padding(padding: EdgeInsets.only(top:30, left: 0),
-                            child:
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Text('Title', style: TextStyle(color: getGFColor(GFColor.white)),),
-                           Padding(padding: EdgeInsets.only(left: 30, right: 30, top: 30), child:
-                           Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
-                               ' sed do eiusmod tempor dolor sit amet, consectetur', textAlign:TextAlign.center, style: TextStyle( color: getGFColor(GFColor.light)),))
-                          ],
-                        )),
-                        image: AssetImage(url),
-                      );
-                },
-              ).toList(),
-              onPageChanged: (index) {
-                setState(() {
-                  
-                });
-              },
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
-              child: GFTypography(
-                text: 'Multiple Items',
-                type: GFTypographyType.typo5,
-                dividerWidth: 25,
-                dividerColor: Color(0xFF19CA4B),
-              ),
-            ),
-            GFItemsCarousel(
-              rowCount: 3,
-
-              children: imageList.map(
-                    (url) {
-                  return  GFImageOverlay(
-                    height: 400,
-                        width: 300,
-                    margin: EdgeInsets.only(left: 15, right: 5),
-                    borderRadius: BorderRadius.all(Radius.circular(4)),
-                    child: Padding(padding: EdgeInsets.only(left: 10),
-                        child:
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: <Widget>[
-                            Text('Title', style: TextStyle(color: getGFColor(GFColor.white)),),
-                            Padding(padding: EdgeInsets.only( right: 5,), child:
-                            Text('Lorem ipsum dolor sit amet, ', style: TextStyle(fontSize: 10, color: getGFColor(GFColor.light)),))
-                          ],
-                        )),
-                    image: AssetImage(url),
-                  );
-                },
-              ).toList(),
-            ),
-
-            Padding(
-              padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
-              child: GFTypography(
-                text: 'Full Size',
-                type: GFTypographyType.typo5,
-                dividerWidth: 25,
-                dividerColor: Color(0xFF19CA4B),
-              ),
-            ),
-
-            GFCarousel(
-              autoPlay: true,
-              pagination: true,
-              viewportFraction: 1.0,
-              activeIndicator: getGFColor(GFColor.success),
-              passiveIndicator: getGFColor(GFColor.white),
-              aspectRatio: 2.0,
-              items: imageList.map(
-                    (url) {
-
-                  return   GFImageOverlay(
-                    height: 200,
+                                  margin: EdgeInsets.only(
+                                    left: 15,
+                                    right: 15,
+                                    bottom: 30,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(4)),
+                                  child: Padding(
+                                      padding:
+                                          EdgeInsets.only(top: 30, left: 0),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            'Title',
+                                            style: TextStyle(
+                                                color: GFColors.getGFColor(
+                                                    GFColor.white)),
+                                          ),
+                                          Padding(
+                                              padding: EdgeInsets.only(
+                                                  left: 30, right: 30, top: 30),
+                                              child: Text(
+                                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
+                                                ' sed do eiusmod tempor dolor sit amet, consectetur',
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                    color: GFColors.getGFColor(
+                                                        GFColor.light)),
+                                              ))
+                                        ],
+                                      )),
+                                  image: AssetImage(url),
+                                );
+                              },
+                            ).toList(),
+                            onPageChanged: (index) {
+                              setState(() {});
+                            },
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                            child: GFTypography(
+                              text: 'Multiple Items',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFItemsCarousel(
+                            rowCount: 3,
+                            children: imageList.map(
+                              (url) {
+                                return GFImageOverlay(
+                                  height: 400,
+                                  width: 300,
+                                  margin: EdgeInsets.only(left: 15, right: 5),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(4)),
+                                  child: Padding(
+                                      padding: EdgeInsets.only(left: 10),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: <Widget>[
+                                          Text(
+                                            'Title',
+                                            style: TextStyle(
+                                                color: GFColors.getGFColor(
+                                                    GFColor.white)),
+                                          ),
+                                          Padding(
+                                              padding: EdgeInsets.only(
+                                                right: 5,
+                                              ),
+                                              child: Text(
+                                                'Lorem ipsum dolor sit amet, ',
+                                                style: TextStyle(
+                                                    fontSize: 10,
+                                                    color: GFColors.getGFColor(
+                                                        GFColor.light)),
+                                              ))
+                                        ],
+                                      )),
+                                  image: AssetImage(url),
+                                );
+                              },
+                            ).toList(),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                            child: GFTypography(
+                              text: 'Full Size',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          GFCarousel(
+                            autoPlay: true,
+                            pagination: true,
+                            viewportFraction: 1.0,
+                            activeIndicator:
+                                GFColors.getGFColor(GFColor.success),
+                            passiveIndicator:
+                                GFColors.getGFColor(GFColor.white),
+                            aspectRatio: 2.0,
+                            items: imageList.map(
+                              (url) {
+                                return GFImageOverlay(
+                                  height: 200,
 //                        width: 300,
-                    margin: EdgeInsets.only(left: 15, right: 15),
-                    borderRadius: BorderRadius.all(Radius.circular(4)),
-                    child: Padding(padding: EdgeInsets.only(top:30, left: 0),
-                        child:
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Text('Title', style: TextStyle(color: getGFColor(GFColor.white)),),
-                            Padding(padding: EdgeInsets.only(left: 30, right: 30, top: 30), child:
-                            Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
-                                ' sed do eiusmod tempor dolor sit amet, consectetur', textAlign:TextAlign.center, style: TextStyle( color: getGFColor(GFColor.light)),))
-                          ],
-                        )),
-                    image: AssetImage(url),
-                  );
-                },
-              ).toList(),
-              onPageChanged: (index) {
-                setState(() {
-                  
-                });
-              },
-            ),
-
-            SizedBox(height: 20,)
-          ],
-        ),
-      )
-
-    ]))
-
+                                  margin: EdgeInsets.only(left: 15, right: 15),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(4)),
+                                  child: Padding(
+                                      padding:
+                                          EdgeInsets.only(top: 30, left: 0),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            'Title',
+                                            style: TextStyle(
+                                                color: GFColors.getGFColor(
+                                                    GFColor.white)),
+                                          ),
+                                          Padding(
+                                              padding: EdgeInsets.only(
+                                                  left: 30, right: 30, top: 30),
+                                              child: Text(
+                                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
+                                                ' sed do eiusmod tempor dolor sit amet, consectetur',
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                    color: GFColors.getGFColor(
+                                                        GFColor.light)),
+                                              ))
+                                        ],
+                                      )),
+                                  image: AssetImage(url),
+                                );
+                              },
+                            ).toList(),
+                            onPageChanged: (index) {
+                              setState(() {});
+                            },
+                          ),
+                          SizedBox(
+                            height: 20,
+                          )
+                        ],
+                      ),
+                    )
+                  ]))
         ],
       ),
     );

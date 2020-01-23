@@ -17,7 +17,7 @@ class _TogglesState extends State<Toggles> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: getGFColor(GFColor.dark),
+        backgroundColor: GFColors.getGFColor(GFColor.dark),
         title: Text(
           'Toggle',
           style: TextStyle(fontSize: 14),
@@ -104,14 +104,14 @@ class _TogglesState extends State<Toggles> {
                         value: null,
                         type: GFToggleType.android,
                         boxShape: BoxShape.rectangle,
-                        enabledTrackColor: getGFColor(GFColor.warning),
+                        enabledTrackColor: GFColors.getGFColor(GFColor.warning),
                       ),
                       GFToggle(
                         onChanged: null,
                         value: null,
                         type: GFToggleType.ios,
                         boxShape: BoxShape.rectangle,
-                        enabledTrackColor: getGFColor(GFColor.info),
+                        enabledTrackColor: GFColors.getGFColor(GFColor.info),
                         borderRadius: BorderRadius.all(Radius.circular(0)),
                       ),
                       GFToggle(
@@ -121,7 +121,7 @@ class _TogglesState extends State<Toggles> {
                         boxShape: BoxShape.rectangle,
                         enabledText: 'ON',
                         disabledText: 'OFF',
-                        enabledTrackColor: getGFColor(GFColor.danger),
+                        enabledTrackColor: GFColors.getGFColor(GFColor.danger),
                         borderRadius: BorderRadius.all(Radius.circular(0)),
                       )
                     ],

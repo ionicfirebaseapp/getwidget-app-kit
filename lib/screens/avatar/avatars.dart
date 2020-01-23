@@ -3,7 +3,6 @@ import 'package:getflutter/colors/gf_color.dart';
 import 'package:getflutter/components/avatar/gf_avatar.dart';
 import 'package:getflutter/components/card/gf_card.dart';
 import 'package:getflutter/shape/gf_avatar_shape.dart';
-// import 'package:getflutter/size/gf_size.dart';
 import 'package:getflutter/types/gf_typography_type.dart';
 import 'package:getflutter/components/typography/gf_typography.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,21 +13,21 @@ class Avatar extends StatefulWidget {
 }
 
 class _AvatarState extends State<Avatar> {
+  bool showToast = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: getGFColor(GFColor.dark),
+        backgroundColor: GFColors.getGFColor(GFColor.dark),
         leading: InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Container(
-              child: Icon(
-                CupertinoIcons.back,
-                color: getGFColor(GFColor.success),
-              ),
-            )),
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            CupertinoIcons.back,
+            color: GFColors.getGFColor(GFColor.success),
+          ),
+        ),
         title: Text(
           'Avatar',
           style: TextStyle(fontSize: 17),

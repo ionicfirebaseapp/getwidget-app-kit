@@ -18,12 +18,16 @@ class _ShadowButtonsState extends State<ShadowButtons> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: getGFColor(GFColor.dark),
+        backgroundColor: GFColors.getGFColor(GFColor.dark),
         leading: InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child:  Icon(CupertinoIcons.back, color: getGFColor(GFColor.success), ),),
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            CupertinoIcons.back,
+            color: GFColors.getGFColor(GFColor.success),
+          ),
+        ),
         title: Text(
           'Shadow Buttons',
           style: TextStyle(fontSize: 17),
@@ -35,9 +39,9 @@ class _ShadowButtonsState extends State<ShadowButtons> {
 //        tabBarColor: Color(0xFFD3E9ED),
 //        initialIndex: 0,
 //        length: 3,
-//        indicatorColor: getGFColor(GFColor.info),
-//        unselectedLabelColor: getGFColor(GFColor.danger),
-//        labelColor: getGFColor(GFColor.warning),
+//        indicatorColor: GFColors.getGFColor(GFColor.info),
+//        unselectedLabelColor: GFColors.getGFColor(GFColor.danger),
+//        labelColor: GFColors.getGFColor(GFColor.warning),
 //        tabs: <Widget>[
 //          GFButton(
 //            onPressed: (){},
@@ -59,7 +63,7 @@ class _ShadowButtonsState extends State<ShadowButtons> {
 //          GFButton(
 //            onPressed: null,
 //            text: 'Outline 2x',
-//            textStyle: TextStyle(fontSize: 12, color: getGFColor(GFColor.dark)),
+//            textStyle: TextStyle(fontSize: 12, color: GFColors.getGFColor(GFColor.dark)),
 //            type: GFType.outline2x,
 //          ),
 //        ],
@@ -170,7 +174,7 @@ class _ShadowButtonsState extends State<ShadowButtons> {
 //                              child: Text(
 //                                "Dark",
 //                                style:
-//                                TextStyle(color: getGFColor(GFColor.white)),
+//                                TextStyle(color: GFColors.getGFColor(GFColor.white)),
 //                              ),
 //                              buttonBoxShadow: true,
 //                              color: GFColor.dark,
@@ -276,7 +280,7 @@ class _ShadowButtonsState extends State<ShadowButtons> {
 //                          blockButton: true,
 //                          child: Text("Large",
 //                              style: TextStyle(
-//                                  color: getGFColor(GFColor.white))),
+//                                  color: GFColors.getGFColor(GFColor.white))),
 //                          color: GFColor.primary,
 //                          size: GFSize.large,
 //                          buttonBoxShadow: true,
@@ -291,7 +295,7 @@ class _ShadowButtonsState extends State<ShadowButtons> {
 //                          blockButton: true,
 //                          child: Text("Normal",
 //                              style: TextStyle(
-//                                  color: getGFColor(GFColor.white))),
+//                                  color: GFColors.getGFColor(GFColor.white))),
 //                          color: GFColor.primary,
 //                          size: GFSize.medium,
 //                          buttonBoxShadow: true,
@@ -307,7 +311,7 @@ class _ShadowButtonsState extends State<ShadowButtons> {
 //                          blockButton: true,
 //                          child: Text("Small",
 //                              style: TextStyle(
-//                                  color: getGFColor(GFColor.white))),
+//                                  color: GFColors.getGFColor(GFColor.white))),
 //                          color: GFColor.primary,
 //                          size: GFSize.small,
 //                          buttonBoxShadow: true,
@@ -906,7 +910,8 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                         onPressed: () {},
                         child: Text(
                           "Dark",
-                          style: TextStyle(color: getGFColor(GFColor.white)),
+                          style: TextStyle(
+                              color: GFColors.getGFColor(GFColor.white)),
                         ),
                         buttonBoxShadow: true,
                         color: GFColor.dark,
@@ -1003,7 +1008,8 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                     onPressed: () {},
                     blockButton: true,
                     child: Text("Large",
-                        style: TextStyle(color: getGFColor(GFColor.white))),
+                        style: TextStyle(
+                            color: GFColors.getGFColor(GFColor.white))),
                     color: GFColor.primary,
                     size: GFSize.large,
                     buttonBoxShadow: true,
@@ -1015,7 +1021,8 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                     onPressed: () {},
                     blockButton: true,
                     child: Text("Normal",
-                        style: TextStyle(color: getGFColor(GFColor.white))),
+                        style: TextStyle(
+                            color: GFColors.getGFColor(GFColor.white))),
                     color: GFColor.primary,
                     size: GFSize.medium,
                     buttonBoxShadow: true,
@@ -1027,7 +1034,8 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                     onPressed: () {},
                     blockButton: true,
                     child: Text("Small",
-                        style: TextStyle(color: getGFColor(GFColor.white))),
+                        style: TextStyle(
+                            color: GFColors.getGFColor(GFColor.white))),
                     color: GFColor.primary,
                     size: GFSize.small,
                     buttonBoxShadow: true,

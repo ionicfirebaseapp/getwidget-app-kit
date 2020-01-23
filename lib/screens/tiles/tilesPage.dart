@@ -18,7 +18,7 @@ class _TilesPageState extends State<TilesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: getGFColor(GFColor.dark),
+        backgroundColor: GFColors.getGFColor(GFColor.dark),
         leading: InkWell(
             onTap: () {
               Navigator.pop(context);
@@ -26,7 +26,7 @@ class _TilesPageState extends State<TilesPage> {
             child: Container(
               child: Icon(
                 CupertinoIcons.back,
-                color: getGFColor(GFColor.success),
+                color: GFColors.getGFColor(GFColor.success),
               ),
             )),
         title: Text(
@@ -49,7 +49,8 @@ class _TilesPageState extends State<TilesPage> {
           GFCard(
             content: GFListTile(
               titleText: 'Title',
-              subtitleText: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+              subtitleText:
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing',
               icon: Icon(Icons.favorite),
             ),
           ),
@@ -61,7 +62,7 @@ class _TilesPageState extends State<TilesPage> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 15,top:5),
+            padding: EdgeInsets.only(left: 15, top: 5),
             child: GFTypography(
               text: 'With Avatar',
               type: GFTypographyType.typo5,
@@ -75,7 +76,8 @@ class _TilesPageState extends State<TilesPage> {
                 backgroundImage: AssetImage('lib/assets/images/avatar5.png'),
               ),
               titleText: 'Title',
-              subtitleText: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+              subtitleText:
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing',
             ),
           ),
           GFCard(
