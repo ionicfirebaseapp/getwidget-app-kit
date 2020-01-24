@@ -53,7 +53,6 @@ class _ToastsState extends State<Toasts> {
               color: GFColor.success,
             ),
             autoDismiss: true,
-//            duration: Duration(seconds: 6),
           ),
           SizedBox(
             height: 15,
@@ -61,7 +60,6 @@ class _ToastsState extends State<Toasts> {
           GFToast(
             text: 'Pass true to autoDismiss property to use this effect !',
             autoDismiss: true,
-//            duration: Duration(seconds: 8),
           ),
           Padding(
             padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),

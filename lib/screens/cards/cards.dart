@@ -53,7 +53,6 @@ class _CardPageState extends State<CardPage>
             margin: EdgeInsets.only(top: 20, left: 25, right: 25),
             child: GFSegmentTabs(
               tabController: tabController,
-//              height: 38.0,
               width: 280.0,
               initialIndex: 0,
               length: 3,
