@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/colors/gf_color.dart';
-import 'package:getflutter/components/image/gf_image_overlay.dart';
-import 'package:getflutter/types/gf_typography_type.dart';
-import 'package:getflutter/components/typography/gf_typography.dart';
-import 'package:getflutter/components/tabs/gf_tabBarView.dart';
-import 'package:getflutter/components/tabs/gf_segment_tabs.dart';
-import 'package:getflutter/components/carousel/gf_carousel.dart';
-import 'package:getflutter/components/carousel/gf_items_carousel.dart';
+import 'package:getflutter/getflutter.dart';
 import 'package:flutter/cupertino.dart';
 
 final List<String> imageList = [
@@ -163,8 +156,7 @@ class _CarouselState extends State<Carousel>
                                               padding: EdgeInsets.only(
                                                   left: 30, right: 30, top: 30),
                                               child: Text(
-                                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
-                                                ' sed do eiusmod tempor dolor sit amet, consectetur',
+                                                'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
                                                 textAlign: TextAlign.center,
                                                 style: TextStyle(
                                                     color: GFColors.getGFColor(
@@ -220,7 +212,7 @@ class _CarouselState extends State<Carousel>
                                                 right: 5,
                                               ),
                                               child: Text(
-                                                'Lorem ipsum dolor sit amet, ',
+                                                'Open source UI library ',
                                                 style: TextStyle(
                                                     fontSize: 10,
                                                     color: GFColors.getGFColor(
@@ -277,8 +269,7 @@ class _CarouselState extends State<Carousel>
                                               padding: EdgeInsets.only(
                                                   left: 30, right: 30, top: 30),
                                               child: Text(
-                                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
-                                                ' sed do eiusmod tempor dolor sit amet, consectetur',
+                                                'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
                                                 textAlign: TextAlign.center,
                                                 style: TextStyle(
                                                     color: GFColors.getGFColor(
@@ -350,8 +341,7 @@ class _CarouselState extends State<Carousel>
                                               padding: EdgeInsets.only(
                                                   left: 30, right: 30, top: 30),
                                               child: Text(
-                                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
-                                                ' sed do eiusmod tempor dolor sit amet, consectetur',
+                                                'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
                                                 textAlign: TextAlign.center,
                                                 style: TextStyle(
                                                     color: GFColors.getGFColor(
@@ -406,7 +396,7 @@ class _CarouselState extends State<Carousel>
                                                 right: 5,
                                               ),
                                               child: Text(
-                                                'Lorem ipsum dolor sit amet, ',
+                                                'Open source UI library ',
                                                 style: TextStyle(
                                                     fontSize: 10,
                                                     color: GFColors.getGFColor(
@@ -463,8 +453,7 @@ class _CarouselState extends State<Carousel>
                                               padding: EdgeInsets.only(
                                                   left: 30, right: 30, top: 30),
                                               child: Text(
-                                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
-                                                ' sed do eiusmod tempor dolor sit amet, consectetur',
+                                                'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
                                                 textAlign: TextAlign.center,
                                                 style: TextStyle(
                                                     color: GFColors.getGFColor(

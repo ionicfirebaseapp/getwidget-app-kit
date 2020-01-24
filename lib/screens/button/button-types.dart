@@ -1,13 +1,12 @@
 import 'standard-buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:getflutter/colors/gf_color.dart';
-import 'package:getflutter/components/list_tile/gf_list_tile.dart';
 import 'pill-buttons.dart';
 import 'square-buttons.dart';
 import 'icon-buttons.dart';
 import 'social-buttons.dart';
 import 'shadow-buttons.dart';
+import 'package:getflutter/getflutter.dart';
 
 class ButtonTypes extends StatefulWidget {
   @override
