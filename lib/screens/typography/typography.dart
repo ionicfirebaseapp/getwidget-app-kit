@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/colors/gf_color.dart';
-import 'package:getflutter/components/avatar/gf_avatar.dart';
-import 'package:getflutter/components/typography/gf_typography.dart';
-import 'package:getflutter/types/gf_typography_type.dart';
-import 'package:getflutter/components/card/gf_card.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:getflutter/getflutter.dart';
 
 class TypographyPage extends StatefulWidget {
   @override

@@ -1,17 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:getflutter/colors/gf_color.dart';
-import 'package:getflutter/components/button/gf_button.dart';
-import 'package:getflutter/components/button/gf_button_bar.dart';
-import 'package:getflutter/components/card/gf_card.dart';
-import 'package:getflutter/shape/gf_icon_button_shape.dart';
-import 'package:getflutter/components/tabs/gf_tabBarView.dart';
-import 'package:getflutter/components/tabs/gf_segment_tabs.dart';
-import 'package:getflutter/components/list_tile/gf_list_tile.dart';
-import 'package:getflutter/components/avatar/gf_avatar.dart';
-import 'package:getflutter/position/gf_position.dart';
-import 'package:getflutter/components/button/gf_icon_button.dart';
-import 'package:getflutter/types/gf_button_type.dart';
+import 'package:getflutter/getflutter.dart';
 import 'package:flutter/cupertino.dart';
 
 class CardPage extends StatefulWidget {
@@ -317,8 +306,7 @@ class _CardPageState extends State<CardPage>
                               ),
                             ),
                             content: Text(
-                              "Flutter Flutter is Google's mobile UI framework for crafting"
-                              "Flutter Flutter is Google's mobile UI framework for crafting",
+                             'GetFlutter is an open source library that comes with pre-build 1000+ UI components',
                               style: TextStyle(color: Colors.grey),
                             ),
                           ),
@@ -405,10 +393,7 @@ class _CardPageState extends State<CardPage>
 //                                    )
                             ),
                             content: Text(
-                              "Flutter "
-                              "Flutter is Google's mobile UI framework for crafting"
-                              " high-quality native interfaces on iOS and Android in "
-                              "Flutter ",
+                             'GetFlutter is an open source library that comes with pre-build 1000+ UI components',
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(
@@ -448,10 +433,7 @@ class _CardPageState extends State<CardPage>
 //                                    )
                             ),
                             content: Text(
-                              "Flutter "
-                              "Flutter is Google's mobile UI framework for crafting"
-                              " high-quality native interfaces on iOS and Android in "
-                              "Flutter ",
+                              'GetFlutter is an open source library that comes with pre-build 1000+ UI components',
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(

@@ -4,6 +4,7 @@ import 'package:getflutter_app/screens/carousel/carousel.dart';
 import 'package:getflutter_app/screens/tabs/tabsPage.dart';
 import 'package:getflutter_app/screens/tiles/tilesPage.dart';
 import 'package:getflutter_app/screens/toast/toasts.dart';
+import 'package:getflutter_app/screens/toggle/toggles.dart';
 import 'package:getflutter_app/screens/typography/typography.dart';
 import 'package:flutter/material.dart';
 import 'package:getflutter/colors/gf_color.dart';
@@ -818,7 +819,7 @@ class _HomePageState extends State<HomePage> {
                           context,
                           MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  TypographyPage()),
+                                  Toggles()),
                         );
                       },
                       child: Container(
@@ -841,9 +842,10 @@ class _HomePageState extends State<HomePage> {
                               height: 10,
                             ),
 //                            Image.asset('lib/assets/icons/menu.png'),
-                            SvgPicture.asset('lib/assets/icons/typography.svg'),
+                          Icon(Icons.repeat, color: GFColors.getGFColor(GFColor.success), size: 30,),
+//                            SvgPicture.asset('lib/assets/icons/typography.svg'),
                             Text(
-                              'Typography',
+                              'Toggle',
                               style: TextStyle(
                                   fontSize: 20,
                                   color: GFColors.getGFColor(
@@ -886,8 +888,8 @@ class _HomePageState extends State<HomePage> {
                           SizedBox(
                             height: 10,
                           ),
-//                          Image.asset('lib/assets/icons/tabs.png'),
-                          SvgPicture.asset('lib/assets/icons/tabs.svg'),
+                          Icon(Icons.notifications, color: GFColors.getGFColor(GFColor.success), size: 30,),
+//                          SvgPicture.asset('lib/assets/icons/tabs.svg'),
 //                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
                           Text(
                             'Toast',
@@ -903,9 +905,59 @@ class _HomePageState extends State<HomePage> {
                   ))
                 ],
               ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Expanded(child:  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                TypographyPage()),
+                      );
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(top: 23),
+                      decoration: BoxDecoration(
+//                     color:GFColors.getGFColor( GFColor.dark,),
+                          color: Color(0xFF333333),
+                          borderRadius: BorderRadius.all(Radius.circular(7)),
+                          boxShadow: [
+                            new BoxShadow(
+                                color: Colors.black.withOpacity(0.61),
+                                blurRadius: 8.0,
+                                spreadRadius: 0.0),
+                          ]),
+                      height: 160,
+                      width: MediaQuery.of(context).size.width,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          SizedBox(
+                            height: 10,
+                          ),
+//                            Image.asset('lib/assets/icons/menu.png'),
+                          SvgPicture.asset('lib/assets/icons/typography.svg'),
+                          Text(
+                            'Typography',
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: GFColors.getGFColor(
+                                  GFColor.white,
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
+
+                  ),)
+                ],
+              ),
               SizedBox(
                 height: 20,
-              ),
+              )
             ],
           ),
         ));

@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:getflutter/components/card/gf_card.dart';
-import 'package:getflutter/components/typography/gf_typography.dart';
-import 'package:getflutter/components/toggle/gf_toggle.dart';
-import 'package:getflutter/types/gf_typography_type.dart';
-import 'package:getflutter/types/gf_toggle_type.dart';
-import 'package:getflutter/colors/gf_color.dart';
+import 'package:getflutter/getflutter.dart';
+import 'package:flutter/cupertino.dart';
 
 class Toggles extends StatefulWidget {
   @override
@@ -18,58 +13,86 @@ class _TogglesState extends State<Toggles> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: GFColors.getGFColor(GFColor.dark),
+        leading: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              child: Icon(
+                CupertinoIcons.back,
+                color: GFColors.getGFColor(GFColor.success),
+              ),
+            )),
         title: Text(
           'Toggle',
-          style: TextStyle(fontSize: 14),
+          style: TextStyle(fontSize: 17),
         ),
+        centerTitle: true,
       ),
       body: Container(
-        margin: EdgeInsets.all(20),
         child: Column(
           children: <Widget>[
-            GFCard(
-              content: Column(
-                children: <Widget>[
-                  GFTypography(
-                    text: 'Android',
-                    type: GFTypographyType.typo6,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  GFToggle(
-                    onChanged: null,
-                    value: null,
-                    type: GFToggleType.android,
-                  )
-                ],
+            Padding(
+              padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
+              child: GFTypography(
+                text: 'Basic',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
               ),
             ),
             GFCard(
               content: Column(
                 children: <Widget>[
-                  GFTypography(
-                    text: 'IOS',
-                    type: GFTypographyType.typo6,
-                  ),
                   SizedBox(
                     height: 10,
                   ),
                   GFToggle(
-                    onChanged: null,
-                    value: null,
+                    onChanged: (val){
+                              print('on change val $val');
+                    },
+                    value: true,
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 15, top: 10),
+              child: GFTypography(
+                text: 'IOS',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
+            ),
+            GFCard(
+              content: Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 10,
+                  ),
+                  GFToggle(
+                    onChanged: (v){
+                      print('ios val $v');
+                    },
+                    value: false,
                     type: GFToggleType.ios,
                   )
                 ],
               ),
             ),
+            Padding(
+              padding: EdgeInsets.only(left: 15, top: 10),
+              child: GFTypography(
+                text: 'Square',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
+            ),
             GFCard(
               content: Column(
                 children: <Widget>[
-                  GFTypography(
-                    text: 'Square',
-                    type: GFTypographyType.typo6,
-                  ),
                   SizedBox(
                     height: 10,
                   ),
@@ -81,13 +104,18 @@ class _TogglesState extends State<Toggles> {
                 ],
               ),
             ),
+            Padding(
+              padding: EdgeInsets.only(left: 15, top: 10),
+              child: GFTypography(
+                text: 'Custom',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
+            ),
             GFCard(
               content: Column(
                 children: <Widget>[
-                  GFTypography(
-                    text: 'Custom',
-                    type: GFTypographyType.typo6,
-                  ),
                   SizedBox(
                     height: 10,
                   ),
@@ -115,7 +143,9 @@ class _TogglesState extends State<Toggles> {
                         borderRadius: BorderRadius.all(Radius.circular(0)),
                       ),
                       GFToggle(
-                        onChanged: null,
+                        onChanged: (val){
+                          print('on change val $val');
+                        },
                         value: null,
                         type: GFToggleType.ios,
                         boxShape: BoxShape.rectangle,

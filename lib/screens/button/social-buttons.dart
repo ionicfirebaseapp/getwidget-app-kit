@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/colors/gf_color.dart';
-import 'package:getflutter/components/typography/gf_typography.dart';
-import 'package:getflutter/types/gf_typography_type.dart';
-import 'package:getflutter/components/button/gf_button.dart';
-import 'package:getflutter/components/button/gf_icon_button.dart';
-import 'package:getflutter/components/card/gf_card.dart';
-import 'package:getflutter/shape/gf_icon_button_shape.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:getflutter/getflutter.dart';
 
 class SocialButtons extends StatefulWidget {
   @override
@@ -65,7 +59,9 @@ class _SocialButtonsState extends State<SocialButtons> {
                           child: Text(
                             "FB",
                           ),
-                          icon: SvgPicture.asset('lib/assets/icons/fb.svg')),
+                          icon: SvgPicture.asset('lib/assets/icons/fb.svg'),
+//                        size: GFSize.small,
+                        ),
                     ),
                     SizedBox(
                       width: 6,

@@ -1,11 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:getflutter/colors/gf_color.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:getflutter/components/button/gf_button.dart';
-import 'package:getflutter/components/toast/gf_toast.dart';
-import 'package:getflutter/components/typography/gf_typography.dart';
 import 'package:getflutter/getflutter.dart';
-import 'package:getflutter/types/gf_toast_type.dart';
+
 
 class Toasts extends StatefulWidget {
   @override
@@ -34,7 +32,8 @@ class _ToastsState extends State<Toasts> {
         ),
         centerTitle: true,
       ),
-      body: ListView(
+      body:
+      ListView(
         children: <Widget>[
           Padding(
             padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
@@ -75,7 +74,7 @@ class _ToastsState extends State<Toasts> {
             text: 'Paired Succesfully !',
             button: GFButton(
               onPressed: () {},
-              text: 'Close',
+              text: 'OK',
               type: GFButtonType.transparent,
               color: GFColor.success,
             ),
@@ -91,12 +90,11 @@ class _ToastsState extends State<Toasts> {
                 'This item already has the label “travel”. You can add a new label. !',
             button: GFButton(
               onPressed: () {},
-              text: 'Close',
+              text: 'OK',
               type: GFButtonType.transparent,
               color: GFColor.success,
             ),
             autoDismiss: false,
-            alignment: Alignment.topLeft,
           ),
           Padding(
             padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
@@ -111,7 +109,7 @@ class _ToastsState extends State<Toasts> {
             text: 'Paired Succesfully !',
             button: GFButton(
               onPressed: () {},
-              text: 'Close',
+              text: 'OK',
               type: GFButtonType.transparent,
               color: GFColor.success,
             ),
@@ -127,7 +125,7 @@ class _ToastsState extends State<Toasts> {
                 'This item already has the label “travel”. You can add a new label. !',
             button: GFButton(
               onPressed: () {},
-              text: 'Close',
+              text: 'OK',
               type: GFButtonType.transparent,
               color: GFColor.success,
             ),
@@ -148,7 +146,7 @@ class _ToastsState extends State<Toasts> {
             text: 'Paired Succesfully !',
             button: GFButton(
               onPressed: () {},
-              text: 'Close',
+              text: 'OK',
               type: GFButtonType.transparent,
               color: GFColor.success,
             ),
@@ -163,7 +161,7 @@ class _ToastsState extends State<Toasts> {
                 'This item already has the label “travel”. You can add a new label. !',
             button: GFButton(
               onPressed: () {},
-              text: 'Close',
+              text: 'OK',
               type: GFButtonType.transparent,
               color: GFColor.success,
             ),
@@ -175,6 +173,7 @@ class _ToastsState extends State<Toasts> {
           ),
         ],
       ),
+
     );
   }
 }

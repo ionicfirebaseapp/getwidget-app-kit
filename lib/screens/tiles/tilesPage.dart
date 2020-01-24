@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/colors/gf_color.dart';
-import 'package:getflutter/components/avatar/gf_avatar.dart';
-import 'package:getflutter/components/card/gf_card.dart';
-import 'package:getflutter/components/list_tile/gf_list_tile.dart';
-import 'package:getflutter/components/typography/gf_typography.dart';
-import 'package:getflutter/shape/gf_avatar_shape.dart';
-import 'package:getflutter/types/gf_typography_type.dart';
+import 'package:getflutter/getflutter.dart';
 import 'package:flutter/cupertino.dart';
 
 class TilesPage extends StatefulWidget {
@@ -50,7 +44,7 @@ class _TilesPageState extends State<TilesPage> {
             content: GFListTile(
               titleText: 'Title',
               subtitleText:
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing',
+                  'Open source UI library',
               icon: Icon(Icons.favorite),
             ),
           ),
@@ -77,7 +71,7 @@ class _TilesPageState extends State<TilesPage> {
               ),
               titleText: 'Title',
               subtitleText:
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing',
+                  'Open source UI library',
             ),
           ),
           GFCard(

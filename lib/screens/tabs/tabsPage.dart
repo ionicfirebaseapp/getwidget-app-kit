@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/colors/gf_color.dart';
-import 'package:getflutter/components/tabs/gf_tabBar.dart';
-import 'package:getflutter/components/tabs/gf_tabBarView.dart';
-import 'package:getflutter/components/tabs/gf_segment_tabs.dart';
+import 'package:getflutter/getflutter.dart';
 import 'package:flutter/cupertino.dart';
 
 class TabsPage extends StatefulWidget {
