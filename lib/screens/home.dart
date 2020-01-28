@@ -1,3 +1,5 @@
+import 'package:getflutter_app/screens/accordian/accordian.dart';
+import 'package:getflutter_app/screens/alert/alert.dart';
 import 'package:getflutter_app/screens/button/button-types.dart';
 import 'package:getflutter_app/screens/cards/cards.dart';
 import 'package:getflutter_app/screens/carousel/carousel.dart';
@@ -915,6 +917,110 @@ class _HomePageState extends State<HomePage> {
                         context,
                         MaterialPageRoute(
                             builder: (BuildContext context) =>
+                                AlertPage()),
+                      );
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(top: 23),
+                      decoration: BoxDecoration(
+//                     color:GFColors.getGFColor( GFColor.dark,),
+                          color: Color(0xFF333333),
+                          borderRadius: BorderRadius.all(Radius.circular(7)),
+                          boxShadow: [
+                            new BoxShadow(
+                                color: Colors.black.withOpacity(0.61),
+                                blurRadius: 8.0,
+                                spreadRadius: 0.0),
+                          ]),
+                      height: 160,
+                      width: MediaQuery.of(context).size.width,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          SizedBox(
+                            height: 10,
+                          ),
+                           Icon(Icons.add_alert, size: 30, color:  GFColors.getGFColor(
+                             GFColor.success,
+                           )),
+//                          SvgPicture.asset('lib/assets/icons/typography.svg'),
+                          Text(
+                            'Alert',
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: GFColors.getGFColor(
+                                  GFColor.white,
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
+
+                  ),),
+
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Expanded(child:  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                Accordion()),
+                      );
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(top: 23),
+                      decoration: BoxDecoration(
+//                     color:GFColors.getGFColor( GFColor.dark,),
+                          color: Color(0xFF333333),
+                          borderRadius: BorderRadius.all(Radius.circular(7)),
+                          boxShadow: [
+                            new BoxShadow(
+                                color: Colors.black.withOpacity(0.61),
+                                blurRadius: 8.0,
+                                spreadRadius: 0.0),
+                          ]),
+                      height: 160,
+                      width: MediaQuery.of(context).size.width,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          SizedBox(
+                            height: 10,
+                          ),
+                           Icon(Icons.list, color: GFColors.getGFColor(GFColor.success), size: 30,),
+//                            Image.asset('lib/assets/icons/menu.png'),
+//                          SvgPicture.asset('lib/assets/icons/typography.svg'),
+                          Text(
+                            'Accordion',
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: GFColors.getGFColor(
+                                  GFColor.white,
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
+
+                  ),)
+                ],
+              ),
+//              SizedBox(
+//                height: 10,
+//              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Expanded(child:  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) =>
                                 TypographyPage()),
                       );
                     },
@@ -952,7 +1058,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
 
-                  ),)
+                  ),),
                 ],
               ),
               SizedBox(

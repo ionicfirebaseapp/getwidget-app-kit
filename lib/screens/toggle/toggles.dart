@@ -97,7 +97,9 @@ class _TogglesState extends State<Toggles> {
                     height: 10,
                   ),
                   GFToggle(
-                    onChanged: null,
+                    onChanged: (val){
+                      print('on change val $val');
+                    },
                     value: null,
                     type: GFToggleType.square,
                   )
@@ -123,19 +125,25 @@ class _TogglesState extends State<Toggles> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       GFToggle(
-                        onChanged: null,
+                        onChanged: (val){
+                          print('on change val $val');
+                        },
                         value: null,
                         type: GFToggleType.custom,
                       ),
                       GFToggle(
-                        onChanged: null,
+                        onChanged: (val){
+                          print('on change val $val');
+                        },
                         value: null,
                         type: GFToggleType.android,
                         boxShape: BoxShape.rectangle,
                         enabledTrackColor: GFColors.getGFColor(GFColor.warning),
                       ),
                       GFToggle(
-                        onChanged: null,
+                        onChanged: (val){
+                          print('on change val $val');
+                        },
                         value: null,
                         type: GFToggleType.ios,
                         boxShape: BoxShape.rectangle,

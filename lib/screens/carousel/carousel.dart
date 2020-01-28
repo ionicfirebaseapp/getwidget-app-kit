@@ -17,6 +17,28 @@ final List<String> assetImg = [
   "lib/assets/images/red.png",
 ];
 
+final List<Color> gradientColor  =[
+const Color(0xffF0417C),
+const Color(0xFFFF3636),
+
+ ];
+
+List <Gradient> gcolors=[
+  LinearGradient(colors: [
+    const Color(0xffF0417C),
+    const Color(0xFFFF3636),
+  ]),
+  LinearGradient(colors: [
+    const Color(0xffFFD633),
+    const Color(0xFFFF8F33),
+  ])
+];
+
+final List<Color> gradientColors  =[
+  const Color(0xffFFD633),
+  const Color(0xFFFF8F33),
+];
+
 class Carousel extends StatefulWidget {
   @override
   _CarouselState createState() => _CarouselState();
@@ -125,13 +147,20 @@ class _CarouselState extends State<Carousel>
                                 GFColors.getGFColor(GFColor.success),
                             passiveIndicator: GFColors.getGFColor(GFColor.dark),
                             aspectRatio: 2.0,
-                            items: assetImg.map(
-                              (url) {
-                                return GFImageOverlay(
-//                    height: 200,
-                                  boxFit: BoxFit.fitWidth,
-                                  color: Colors.transparent,
-//                        width: 300,
+                            items: gradientColor.map(
+                              (u) {
+                                return GFCard(
+                                 gradient: LinearGradient(
+                                      begin: FractionalOffset.topLeft,
+                                      end: FractionalOffset.bottomRight,
+                                      colors:
+                                        gradientColor
+
+
+//
+//                                        const Color(0xffFFD633),
+//                                        const Color(0xFFFF8F33),
+                                      ),
                                   margin: EdgeInsets.only(
                                     left: 15,
                                     right: 15,
@@ -139,7 +168,7 @@ class _CarouselState extends State<Carousel>
                                   ),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(4)),
-                                  child: Padding(
+                                  content: Padding(
                                       padding:
                                           EdgeInsets.only(top: 30, left: 0),
                                       child: Column(
@@ -165,7 +194,7 @@ class _CarouselState extends State<Carousel>
                                         ],
                                       )),
 //                    colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.60), BlendMode.darken),
-                                  image: AssetImage(url),
+
                                 );
                               },
                             ).toList(),
@@ -187,19 +216,26 @@ class _CarouselState extends State<Carousel>
                             rowCount: 3,
                             children: assetImg.map(
                               (url) {
-                                return GFImageOverlay(
-                                  height: 400,
-                                  width: 300,
+                                return GFCard(
+                                  gradient: LinearGradient(
+                                      begin: FractionalOffset.topCenter,
+                                      end: FractionalOffset.bottomCenter,
+                                      colors:
+                                        gradientColors
+//
+//                                        const Color(0xffFFD633),
+//                                        const Color(0xFFFF8F33),
+                                      ),
+//                                  height: 400,
+//                                  width: 300,
                                   margin: EdgeInsets.only(left: 15, right: 5),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(4)),
-                                  child: Padding(
-                                      padding: EdgeInsets.only(left: 10),
-                                      child: Column(
+                                  content: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceAround,
+                                            MainAxisAlignment.spaceBetween,
                                         children: <Widget>[
                                           Text(
                                             'Title',
@@ -210,17 +246,19 @@ class _CarouselState extends State<Carousel>
                                           Padding(
                                               padding: EdgeInsets.only(
                                                 right: 5,
+                                                top:10
                                               ),
                                               child: Text(
-                                                'Open source UI library ',
+                                                'GetFlutter is an open source library that comes with pre-build 1000+ UI components ',
                                                 style: TextStyle(
                                                     fontSize: 10,
                                                     color: GFColors.getGFColor(
                                                         GFColor.light)),
                                               ))
                                         ],
-                                      )),
-                                  image: AssetImage(url),
+                                      ),
+
+//                                  image: AssetImage(url),
                                 );
                               },
                             ).toList(),
@@ -246,13 +284,20 @@ class _CarouselState extends State<Carousel>
                             aspectRatio: 2.0,
                             items: assetImg.map(
                               (url) {
-                                return GFImageOverlay(
+                                return GFCard(
+                                  gradient: LinearGradient(
+                                      begin: FractionalOffset.bottomLeft,
+                                      end: FractionalOffset.topRight,
+                                      colors: [
+                                        const Color(0xff33B5E5),
+                                        const Color(0xFF39FFF8),
+                                      ]),
                                   height: 200,
 //                        width: 300,
                                   margin: EdgeInsets.only(left: 15, right: 15),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(4)),
-                                  child: Padding(
+                                  content: Padding(
                                       padding:
                                           EdgeInsets.only(top: 30, left: 0),
                                       child: Column(
@@ -277,7 +322,7 @@ class _CarouselState extends State<Carousel>
                                               ))
                                         ],
                                       )),
-                                  image: AssetImage(url),
+//                                  image: AssetImage(url),
                                 );
                               },
                             ).toList(),
