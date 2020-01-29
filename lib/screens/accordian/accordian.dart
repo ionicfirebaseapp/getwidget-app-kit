@@ -12,6 +12,7 @@ class _AccordionState extends State<Accordion> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: GFColors.getGFColor(GFColor.white),
       appBar: AppBar(
         backgroundColor: GFColors.getGFColor(GFColor.dark),
         leading: InkWell(
@@ -41,6 +42,18 @@ class _AccordionState extends State<Accordion> {
             ),
           ),
           GFAccordion(
+              titleborderColor: Border(
+                top: BorderSide(color: Colors.black38),
+                left: BorderSide(color: Colors.black38),
+                right: BorderSide(color: Colors.black38),
+
+              ),
+              contentBorderColor:Border(
+                top: BorderSide(color: Colors.black38),
+                bottom: BorderSide(color: Colors.black38),
+                left: BorderSide(color: Colors.black38),
+                right: BorderSide(color: Colors.black38),
+              ),
             title: 'GF Accordion',
             content: 'GetFlutter is an open source library that comes with pre-build 1000+ UI components.'
                 ' The library is built to make flutter development faster and more enjoyable.'
@@ -55,6 +68,18 @@ class _AccordionState extends State<Accordion> {
             ),
           ),
           GFAccordion(
+              titleborderColor: Border(
+                top: BorderSide(color: Colors.black38),
+                left: BorderSide(color: Colors.black38),
+                right: BorderSide(color: Colors.black38),
+
+              ),
+              contentBorderColor:Border(
+                top: BorderSide(color: Colors.black38),
+                bottom: BorderSide(color: Colors.black38),
+                left: BorderSide(color: Colors.black38),
+                right: BorderSide(color: Colors.black38),
+              ),
             title: 'GF Accordion',
             content: 'GetFlutter is an open source library that comes with pre-build 1000+ UI components.'
     ' The library is built to make flutter development faster and more enjoyable.',
@@ -73,6 +98,18 @@ class _AccordionState extends State<Accordion> {
             ),
           ),
           GFAccordion(
+            titleborderColor: Border(
+              top: BorderSide(color: Colors.black38),
+              left: BorderSide(color: Colors.black38),
+              right: BorderSide(color: Colors.black38),
+
+            ),
+              contentBorderColor:Border(
+                top: BorderSide(color: Colors.black38),
+                bottom: BorderSide(color: Colors.black38),
+                left: BorderSide(color: Colors.black38),
+                right: BorderSide(color: Colors.black38),
+              ),
               title: 'GF Accordion',
               content: 'GetFlutter is an open source library that comes with pre-build 1000+ UI components.'
               ' The library is built to make flutter development faster and more enjoyable.',

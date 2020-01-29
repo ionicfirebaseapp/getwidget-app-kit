@@ -14,6 +14,7 @@ import '../screens/badges/badges.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'images/images.dart';
 import 'avatar/avatars.dart';
+import 'package:getflutter/getflutter.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -24,6 +25,123 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: GFDrawer(
+//          colorFilter: new ColorFilter.mode(
+//              Colors.black.withOpacity(0.6), BlendMode.darken),
+//          backgroundImage: NetworkImage(
+//              "https://cdn.pixabay.com/photo/2017/12/03/18/04/christmas-balls-2995437_960_720.jpg"),
+//          gradient: LinearGradient(
+//            begin: Alignment.topRight,
+//            end: Alignment.bottomLeft,
+//            stops: [0.1, 0.5, 0.7, 0.9],
+//            colors: [
+//              Colors.teal[800],
+//              Colors.teal[600],
+//              Colors.teal[400],
+//              Colors.teal[200],
+//            ],
+//          ),
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              Container(
+                height: 250,
+//                decoration: BoxDecoration(
+//                  gradient: LinearGradient(
+//                      begin: Alignment.topCenter,
+//            end: Alignment.bottomCenter,
+//                      colors: [
+//                    Color(0xFFD685FF),
+//                    Color(0xFF7466CC)
+//                  ])
+//                ),
+                child:
+                    GFDrawerHeader(
+
+                      decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Color(0xFFD685FF),
+                                Color(0xFF7466CC)
+                              ])
+                      ),
+                      otherAccountsPictures: <Widget>[
+                        GFAvatar(
+//
+                         backgroundImage: AssetImage('lib/assets/images/avatar5.png'),
+                        ),
+                        GFAvatar(
+                          backgroundImage: AssetImage('lib/assets/images/avatar7.png'),
+                        ),
+                        
+                      InkWell(
+                        onTap: (){
+                          Navigator.of(context).pop();
+                        },
+                        child:  Icon(Icons.close),
+                      )
+//                        SizedBox(
+//                          height: 40,
+//                        ),
+                      ],
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          GFAvatar(
+                           radius: 40,
+                            backgroundImage: AssetImage('lib/assets/images/avatar6.png',),
+                          ),
+                          SizedBox(height: 5,),
+                          Text('John Doe', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),),
+                          Text('John@gmail.com'),
+                        ],
+                      ),
+                    ),
+                   color: Colors.white,
+              ),
+
+              Container(
+                padding: EdgeInsets.only(left: 50),
+                height: MediaQuery.of(context).size.height-300,
+                color: Colors.white,
+                child: Column(
+//                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    GFListTile(
+                      avatar: Icon(Icons.notifications),
+                      titleText:'Notifications'
+                    ),
+                    GFListTile(
+                        avatar: Icon(Icons.comment),
+                        titleText:'Reviews'
+                    ),
+                    GFListTile(
+                        avatar: Icon(Icons.credit_card),
+                        titleText:'Payments'
+                    ),
+                    GFListTile(
+                        avatar: Icon(Icons.settings),
+                        titleText:'Settings'
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                height: 50,
+                child:  GFButton(onPressed: (){},
+                  child: Text('Logout', style: TextStyle(fontSize: 20, color: GFColors.getGFColor(GFColor.dark),)),
+                  icon: Icon(Icons.power_settings_new, color: GFColors.getGFColor(GFColor.danger),),
+                  fullWidthButton: true,
+                  color: GFColor.light,
+                ),
+              )
+
+            ],
+          ),
+        ),
         appBar: AppBar(
           backgroundColor: GFColors.getGFColor(GFColor.dark),
           title: SvgPicture.asset('lib/assets/icons/gflogo.svg'),
@@ -843,9 +961,8 @@ class _HomePageState extends State<HomePage> {
                             SizedBox(
                               height: 10,
                             ),
-//                            Image.asset('lib/assets/icons/menu.png'),
-                          Icon(Icons.repeat, color: GFColors.getGFColor(GFColor.success), size: 30,),
-//                            SvgPicture.asset('lib/assets/icons/typography.svg'),
+//
+                            SvgPicture.asset('lib/assets/icons/toggle.svg'),
                             Text(
                               'Toggle',
                               style: TextStyle(
@@ -890,8 +1007,8 @@ class _HomePageState extends State<HomePage> {
                           SizedBox(
                             height: 10,
                           ),
-                          Icon(Icons.notifications, color: GFColors.getGFColor(GFColor.success), size: 30,),
-//                          SvgPicture.asset('lib/assets/icons/tabs.svg'),
+//                          Icon(Icons.notifications, color: GFColors.getGFColor(GFColor.success), size: 30,),
+                          SvgPicture.asset('lib/assets/icons/toast.svg'),
 //                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
                           Text(
                             'Toast',
@@ -940,10 +1057,8 @@ class _HomePageState extends State<HomePage> {
                           SizedBox(
                             height: 10,
                           ),
-                           Icon(Icons.add_alert, size: 30, color:  GFColors.getGFColor(
-                             GFColor.success,
-                           )),
-//                          SvgPicture.asset('lib/assets/icons/typography.svg'),
+
+                          SvgPicture.asset('lib/assets/icons/alert.svg'),
                           Text(
                             'Alert',
                             style: TextStyle(
@@ -990,9 +1105,9 @@ class _HomePageState extends State<HomePage> {
                           SizedBox(
                             height: 10,
                           ),
-                           Icon(Icons.list, color: GFColors.getGFColor(GFColor.success), size: 30,),
-//                            Image.asset('lib/assets/icons/menu.png'),
-//                          SvgPicture.asset('lib/assets/icons/typography.svg'),
+//                           Icon(Icons.list, color: GFColors.getGFColor(GFColor.success), size: 30,),
+
+                          SvgPicture.asset('lib/assets/icons/accordion.svg'),
                           Text(
                             'Accordion',
                             style: TextStyle(
