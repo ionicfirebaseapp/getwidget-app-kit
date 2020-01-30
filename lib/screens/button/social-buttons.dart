@@ -53,15 +53,15 @@ class _SocialButtonsState extends State<SocialButtons> {
                   children: <Widget>[
                     Expanded(
                       child: GFButton(
-                          buttonBoxShadow: true,
-                          color: Color(0xFF3B5998),
-                          onPressed: () {},
-                          child: Text(
-                            "FB",
-                          ),
-                          icon: SvgPicture.asset('lib/assets/icons/fb.svg'),
-//                        size: GFSize.small,
+                        buttonBoxShadow: true,
+                        color: Color(0xFF3B5998),
+                        onPressed: () {},
+                        child: Text(
+                          "FB",
                         ),
+                        icon: SvgPicture.asset('lib/assets/icons/fb.svg'),
+//                        size: GFSize.small,
+                      ),
                     ),
                     SizedBox(
                       width: 6,

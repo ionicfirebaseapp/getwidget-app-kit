@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:getflutter/colors/gf_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getflutter/getflutter.dart';
-
 
 class Toasts extends StatefulWidget {
   @override
@@ -32,8 +30,7 @@ class _ToastsState extends State<Toasts> {
         ),
         centerTitle: true,
       ),
-      body:
-      ListView(
+      body: ListView(
         children: <Widget>[
           Padding(
             padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
@@ -173,7 +170,6 @@ class _ToastsState extends State<Toasts> {
           ),
         ],
       ),
-
     );
   }
 }

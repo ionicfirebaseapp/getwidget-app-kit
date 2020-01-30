@@ -93,10 +93,13 @@ class _AlertPageState extends State<AlertPage> {
 
               roundedalert
                   ? GFAlert(
+                      alignment: Alignment.center,
+//                width: 200,
                       title: 'Welcome !',
                       content:
                           'Get Flutter is one of the largest Flutter open-source UI library for mobile or web apps with  1000+ pre-built reusable widgets.',
                       type: GFAlertType.rounded,
+
                       bottombar: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: <Widget>[

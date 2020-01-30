@@ -306,7 +306,7 @@ class _CardPageState extends State<CardPage>
                               ),
                             ),
                             content: Text(
-                             'GetFlutter is an open source library that comes with pre-build 1000+ UI components',
+                              'GetFlutter is an open source library that comes with pre-build 1000+ UI components',
                               style: TextStyle(color: Colors.grey),
                             ),
                           ),
@@ -393,7 +393,7 @@ class _CardPageState extends State<CardPage>
 //                                    )
                             ),
                             content: Text(
-                             'GetFlutter is an open source library that comes with pre-build 1000+ UI components',
+                              'GetFlutter is an open source library that comes with pre-build 1000+ UI components',
                               style: TextStyle(color: Colors.grey),
                             ),
                             buttonBar: GFButtonBar(

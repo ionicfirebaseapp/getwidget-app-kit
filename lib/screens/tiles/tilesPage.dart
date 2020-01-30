@@ -43,8 +43,7 @@ class _TilesPageState extends State<TilesPage> {
           GFCard(
             content: GFListTile(
               titleText: 'Title',
-              subtitleText:
-                  'Open source UI library',
+              subtitleText: 'Open source UI library',
               icon: Icon(Icons.favorite),
             ),
           ),
@@ -70,8 +69,7 @@ class _TilesPageState extends State<TilesPage> {
                 backgroundImage: AssetImage('lib/assets/images/avatar5.png'),
               ),
               titleText: 'Title',
-              subtitleText:
-                  'Open source UI library',
+              subtitleText: 'Open source UI library',
             ),
           ),
           GFCard(
