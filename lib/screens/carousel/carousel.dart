@@ -17,13 +17,12 @@ final List<String> assetImg = [
   "lib/assets/images/red.png",
 ];
 
-final List<Color> gradientColor  =[
-const Color(0xffF0417C),
-const Color(0xFFFF3636),
+final List<Color> gradientColor = [
+  const Color(0xffF0417C),
+  const Color(0xFFFF3636),
+];
 
- ];
-
-List <Gradient> gcolors=[
+List<Gradient> gcolors = [
   LinearGradient(colors: [
     const Color(0xffF0417C),
     const Color(0xFFFF3636),
@@ -34,7 +33,7 @@ List <Gradient> gcolors=[
   ])
 ];
 
-final List<Color> gradientColors  =[
+final List<Color> gradientColors = [
   const Color(0xffFFD633),
   const Color(0xFFFF8F33),
 ];
@@ -150,12 +149,10 @@ class _CarouselState extends State<Carousel>
                             items: gradientColor.map(
                               (u) {
                                 return GFCard(
-                                 gradient: LinearGradient(
+                                  gradient: LinearGradient(
                                       begin: FractionalOffset.topLeft,
                                       end: FractionalOffset.bottomRight,
-                                      colors:
-                                        gradientColor
-
+                                      colors: gradientColor
 
 //
 //                                        const Color(0xffFFD633),
@@ -194,7 +191,6 @@ class _CarouselState extends State<Carousel>
                                         ],
                                       )),
 //                    colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.60), BlendMode.darken),
-
                                 );
                               },
                             ).toList(),
@@ -220,8 +216,7 @@ class _CarouselState extends State<Carousel>
                                   gradient: LinearGradient(
                                       begin: FractionalOffset.topCenter,
                                       end: FractionalOffset.bottomCenter,
-                                      colors:
-                                        gradientColors
+                                      colors: gradientColors
 //
 //                                        const Color(0xffFFD633),
 //                                        const Color(0xFFFF8F33),
@@ -232,31 +227,29 @@ class _CarouselState extends State<Carousel>
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(4)),
                                   content: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: <Widget>[
-                                          Text(
-                                            'Title',
-                                            style: TextStyle(
-                                                color: GFColors.getGFColor(
-                                                    GFColor.white)),
-                                          ),
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                right: 5,
-                                                top:10
-                                              ),
-                                              child: Text(
-                                                'GetFlutter is an open source library that comes with pre-build 1000+ UI components ',
-                                                style: TextStyle(
-                                                    fontSize: 10,
-                                                    color: GFColors.getGFColor(
-                                                        GFColor.light)),
-                                              ))
-                                        ],
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      Text(
+                                        'Title',
+                                        style: TextStyle(
+                                            color: GFColors.getGFColor(
+                                                GFColor.white)),
                                       ),
+                                      Padding(
+                                          padding: EdgeInsets.only(
+                                              right: 5, top: 10),
+                                          child: Text(
+                                            'GetFlutter is an open source library that comes with pre-build 1000+ UI components ',
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                color: GFColors.getGFColor(
+                                                    GFColor.light)),
+                                          ))
+                                    ],
+                                  ),
 
 //                                  image: AssetImage(url),
                                 );

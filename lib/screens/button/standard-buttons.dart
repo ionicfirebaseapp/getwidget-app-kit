@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getflutter/getflutter.dart';
 
-
 class StandardButtons extends StatefulWidget {
   @override
   _StandardButtonsState createState() => _StandardButtonsState();

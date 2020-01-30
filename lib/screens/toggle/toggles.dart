@@ -48,8 +48,8 @@ class _TogglesState extends State<Toggles> {
                     height: 10,
                   ),
                   GFToggle(
-                    onChanged: (val){
-                              print('on change val $val');
+                    onChanged: (val) {
+                      print('on change val $val');
                     },
                     value: true,
                   )
@@ -72,7 +72,7 @@ class _TogglesState extends State<Toggles> {
                     height: 10,
                   ),
                   GFToggle(
-                    onChanged: (v){
+                    onChanged: (v) {
                       print('ios val $v');
                     },
                     value: false,
@@ -97,7 +97,7 @@ class _TogglesState extends State<Toggles> {
                     height: 10,
                   ),
                   GFToggle(
-                    onChanged: (val){
+                    onChanged: (val) {
                       print('on change val $val');
                     },
                     value: null,
@@ -125,14 +125,14 @@ class _TogglesState extends State<Toggles> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       GFToggle(
-                        onChanged: (val){
+                        onChanged: (val) {
                           print('on change val $val');
                         },
                         value: null,
                         type: GFToggleType.custom,
                       ),
                       GFToggle(
-                        onChanged: (val){
+                        onChanged: (val) {
                           print('on change val $val');
                         },
                         value: null,
@@ -141,7 +141,7 @@ class _TogglesState extends State<Toggles> {
                         enabledTrackColor: GFColors.getGFColor(GFColor.warning),
                       ),
                       GFToggle(
-                        onChanged: (val){
+                        onChanged: (val) {
                           print('on change val $val');
                         },
                         value: null,
@@ -151,7 +151,7 @@ class _TogglesState extends State<Toggles> {
                         borderRadius: BorderRadius.all(Radius.circular(0)),
                       ),
                       GFToggle(
-                        onChanged: (val){
+                        onChanged: (val) {
                           print('on change val $val');
                         },
                         value: null,
