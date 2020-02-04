@@ -5,7 +5,6 @@ import 'package:getflutter_app/screens/button/button-types.dart';
 import 'package:getflutter_app/screens/cards/cards.dart';
 import 'package:getflutter_app/screens/carousel/carousel.dart';
 import 'package:getflutter_app/screens/loader/loaders.dart';
-import 'package:getflutter_app/screens/tabs/tabsPage.dart';
 import 'package:getflutter_app/screens/tiles/tilesPage.dart';
 import 'package:getflutter_app/screens/toast/toasts.dart';
 import 'package:getflutter_app/screens/toggle/toggles.dart';

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:getflutter/getflutter.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:getflutter_app/screens/tabs/bottom-label-tab.dart';
+import 'package:getflutter_app/screens/tabs/botton-icon-tab.dart';
+import 'package:getflutter_app/screens/tabs/labeled-tabs.dart';
 import 'segment-tabs.dart';
+import 'icon-tabs.dart';
 
 class TabTypes extends StatefulWidget {
   @override
@@ -59,7 +63,7 @@ class _TabTypesState extends State<TabTypes> {
                 child: GFListTile(
                     color: GFColors.getGFColor(GFColor.dark),
                     title: Text(
-                      'Segment Tabs',
+                      'Segmented Tabs',
                       style: TextStyle(
                           color: GFColors.getGFColor(GFColor.white)),
                     ),
@@ -74,7 +78,7 @@ class _TabTypesState extends State<TabTypes> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => SegmentTabsPage()
+                      builder: (BuildContext context) => IconTabs()
                   ),
                 );
               },
@@ -92,7 +96,106 @@ class _TabTypesState extends State<TabTypes> {
                 child: GFListTile(
                     color: GFColors.getGFColor(GFColor.dark),
                     title: Text(
-                      'Segment Tabs',
+                      'Icon Tabs',
+                      style: TextStyle(
+                          color: GFColors.getGFColor(GFColor.white)),
+                    ),
+                    icon: Icon(
+                      CupertinoIcons.forward,
+                      color: GFColors.getGFColor(GFColor.success),
+                    )),
+              )),
+
+          GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => LabeledTabs()
+                  ),
+                );
+              },
+              child: Container(
+                margin: EdgeInsets.only(left: 15, right: 15, top: 20),
+                padding: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(7)),
+                    color: GFColors.getGFColor(GFColor.dark),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black.withOpacity(0.40),
+                          blurRadius: 5.0)
+                    ]),
+                child: GFListTile(
+                    color: GFColors.getGFColor(GFColor.dark),
+                    title: Text(
+                      'Labeled Tabs',
+                      style: TextStyle(
+                          color: GFColors.getGFColor(GFColor.white)),
+                    ),
+                    icon: Icon(
+                      CupertinoIcons.forward,
+                      color: GFColors.getGFColor(GFColor.success),
+                    )),
+              )),
+
+          GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => BottomIconTab()
+                  ),
+                );
+              },
+              child: Container(
+                margin: EdgeInsets.only(left: 15, right: 15, top: 20),
+                padding: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(7)),
+                    color: GFColors.getGFColor(GFColor.dark),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black.withOpacity(0.40),
+                          blurRadius: 5.0)
+                    ]),
+                child: GFListTile(
+                    color: GFColors.getGFColor(GFColor.dark),
+                    title: Text(
+                      'Bottom Icon Tabs',
+                      style: TextStyle(
+                          color: GFColors.getGFColor(GFColor.white)),
+                    ),
+                    icon: Icon(
+                      CupertinoIcons.forward,
+                      color: GFColors.getGFColor(GFColor.success),
+                    )),
+              )),
+
+          GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => BottomLabelTab()
+                  ),
+                );
+              },
+              child: Container(
+                margin: EdgeInsets.only(left: 15, right: 15, top: 20),
+                padding: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(7)),
+                    color: GFColors.getGFColor(GFColor.dark),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black.withOpacity(0.40),
+                          blurRadius: 5.0)
+                    ]),
+                child: GFListTile(
+                    color: GFColors.getGFColor(GFColor.dark),
+                    title: Text(
+                      'Bottom Labeled Tabs',
                       style: TextStyle(
                           color: GFColors.getGFColor(GFColor.white)),
                     ),
