@@ -10,6 +10,7 @@ import 'package:getflutter_app/screens/button/social-buttons.dart';
 import 'package:getflutter_app/screens/button/square-buttons.dart';
 import 'package:getflutter_app/screens/button/standard-buttons.dart';
 import 'package:getflutter_app/screens/drawer/webview.dart';
+import 'package:getflutter_app/screens/tabs/tab-types.dart';
 import '../accordian/accordian.dart';
 import '../alert/alert.dart';
 import '../avatar/avatars.dart';
@@ -18,7 +19,6 @@ import '../button/button-types.dart';
 import '../cards/cards.dart';
 import '../carousel/carousel.dart';
 import '../images/images.dart';
-import '../tabs/tabsPage.dart';
 import '../tiles/tilesPage.dart';
 import '../toast/toasts.dart';
 import '../toggle/toggles.dart';
@@ -494,7 +494,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               context,
                               MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      TabsPage()),
+                                      TabTypes()),
                             );
                           },
                           child: GFListTile(

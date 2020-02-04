@@ -66,6 +66,7 @@ flutter:
     - lib/assets/icons/tiles.svg
     - lib/assets/icons/typography.svg
     - lib/assets/icons/accordion.svg
+    - lib/assets/icons/appbar.svg
     - lib/assets/icons/alert.svg
     - lib/assets/icons/toast.svg
     - lib/assets/icons/toggle.svg

@@ -91,9 +91,15 @@ packages:
   getflutter:
     dependency: "direct main"
     description:
+<<<<<<< HEAD
       name: getflutter
       url: "https://pub.dartlang.org"
     source: hosted
+=======
+      path: ".."
+      relative: true
+    source: path
+>>>>>>> 3db4f3af20d7917894ae2a1e1b68bca6ff7b5bc7
     version: "1.0.3"
   image:
     dependency: transitive

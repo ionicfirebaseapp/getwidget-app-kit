@@ -6,7 +6,6 @@ import 'package:getflutter_app/screens/cards/cards.dart';
 import 'package:getflutter_app/screens/carousel/carousel.dart';
 import 'package:getflutter_app/screens/drawer/drawer.dart';
 import 'package:getflutter_app/screens/loader/loaders.dart';
-import 'package:getflutter_app/screens/tabs/tabsPage.dart';
 import 'package:getflutter_app/screens/tiles/tilesPage.dart';
 import 'package:getflutter_app/screens/toast/toasts.dart';
 import 'package:getflutter_app/screens/toggle/toggles.dart';
@@ -18,6 +17,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'images/images.dart';
 import 'avatar/avatars.dart';
 import 'package:getflutter/getflutter.dart';
+import 'appbar/appbar.dart';
+import 'appbar/app-home.dart';
+import '../screens/tabs/tab-types.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -595,7 +597,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (BuildContext context) => TabsPage()),
+                            builder: (BuildContext context) => TabTypes()),
                       );
                     },
                     child: Container(
@@ -1065,12 +1067,11 @@ class _HomePageState extends State<HomePage> {
                   Expanded(
                     child: GestureDetector(
                       onTap: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //       builder: (BuildContext context) =>
-                        //           Loaders()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => AppHome()),
+                        );
                       },
                       child: Container(
                         margin: EdgeInsets.only(top: 23),
@@ -1093,9 +1094,9 @@ class _HomePageState extends State<HomePage> {
                               height: 10,
                             ),
 //                            Image.asset('lib/assets/icons/menu.png'),
-                            SvgPicture.asset('lib/assets/icons/typography.svg'),
+                            SvgPicture.asset('lib/assets/icons/appbar.svg'),
                             Text(
-                              'Loaders',
+                              'Appbar',
                               style: TextStyle(
                                   fontSize: 20,
                                   color: GFColors.getGFColor(
