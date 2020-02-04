@@ -4,6 +4,7 @@ import 'package:getflutter_app/screens/alert/alert.dart';
 import 'package:getflutter_app/screens/button/button-types.dart';
 import 'package:getflutter_app/screens/cards/cards.dart';
 import 'package:getflutter_app/screens/carousel/carousel.dart';
+import 'package:getflutter_app/screens/drawer/drawer.dart';
 import 'package:getflutter_app/screens/loader/loaders.dart';
 import 'package:getflutter_app/screens/tiles/tilesPage.dart';
 import 'package:getflutter_app/screens/toast/toasts.dart';
@@ -29,130 +30,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: GFDrawer(
-//          colorFilter: new ColorFilter.mode(
-//              Colors.black.withOpacity(0.6), BlendMode.darken),
-//          backgroundImage: NetworkImage(
-//              "https://cdn.pixabay.com/photo/2017/12/03/18/04/christmas-balls-2995437_960_720.jpg"),
-//          gradient: LinearGradient(
-//            begin: Alignment.topRight,
-//            end: Alignment.bottomLeft,
-//            stops: [0.1, 0.5, 0.7, 0.9],
-//            colors: [
-//              Colors.teal[800],
-//              Colors.teal[600],
-//              Colors.teal[400],
-//              Colors.teal[200],
-//            ],
-//          ),
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              Container(
-                decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [Color(0xFFD685FF), Color(0xFF7466CC)])),
-                height: 250,
-                child: GFDrawerHeader(
-                  closeButton: InkWell(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Icon(
-                      CupertinoIcons.back,
-                      color: GFColors.getGFColor(GFColors.SUCCESS),
-                    ),
-                  ),
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [Color(0xFFD685FF), Color(0xFF7466CC)])),
-                  otherAccountsPictures: <Widget>[
-                    GFAvatar(
-//
-                      backgroundImage:
-                          AssetImage('lib/assets/images/avatar5.png'),
-                    ),
-                    GFAvatar(
-                      backgroundImage:
-                          AssetImage('lib/assets/images/avatar7.png'),
-                    ),
-
-//                        SizedBox(
-//                          height: 40,
-//                        ),
-                  ],
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      GFAvatar(
-                        radius: 40,
-                        backgroundImage: AssetImage(
-                          'lib/assets/images/avatar6.png',
-                        ),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'John Doe',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w500),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text('John@gmail.com'),
-                    ],
-                  ),
-                ),
-//                   color: Colors.red,
-              ),
-              Container(
-                padding: EdgeInsets.only(
-                  left: 50,
-                ),
-                height: MediaQuery.of(context).size.height - 300,
-                color: Colors.white,
-                child: Column(
-//                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    GFListTile(
-                        avatar: Icon(Icons.notifications),
-                        titleText: 'Notifications'),
-                    GFListTile(
-                        avatar: Icon(Icons.comment), titleText: 'Reviews'),
-                    GFListTile(
-                        avatar: Icon(Icons.credit_card), titleText: 'Payments'),
-                    GFListTile(
-                        avatar: Icon(Icons.settings), titleText: 'Settings'),
-                  ],
-                ),
-              ),
-              Container(
-                height: 50,
-                child: GFButton(
-                  onPressed: () {},
-                  child: Text('Logout',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: GFColors.getGFColor(GFColor.dark),
-                      )),
-                  icon: Icon(
-                    Icons.power_settings_new,
-                    color: GFColors.getGFColor(GFColor.danger),
-                  ),
-                  fullWidthButton: true,
-                  color: GFColor.light,
-                ),
-              )
-            ],
-          ),
-        ),
+        drawer: DrawerPage(),
         appBar: AppBar(
           backgroundColor: GFColors.getGFColor(GFColor.dark),
           title: SvgPicture.asset('lib/assets/icons/gflogo.svg'),
@@ -1183,19 +1061,16 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-
                   SizedBox(
                     width: 20,
                   ),
-
                   Expanded(
                     child: GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  AppHome()),
+                              builder: (BuildContext context) => AppHome()),
                         );
                       },
                       child: Container(
