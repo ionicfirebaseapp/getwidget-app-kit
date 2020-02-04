@@ -17,6 +17,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'images/images.dart';
 import 'avatar/avatars.dart';
 import 'package:getflutter/getflutter.dart';
+import 'appbar/appbar.dart';
+import 'appbar/app-home.dart';
+import '../screens/tabs/tab-types.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -717,7 +720,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (BuildContext context) => TabsPage()),
+                            builder: (BuildContext context) => TabTypes()),
                       );
                     },
                     child: Container(
@@ -1193,7 +1196,7 @@ class _HomePageState extends State<HomePage> {
                           context,
                           MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  Loaders()),
+                                  AppHome()),
                         );
                       },
                       child: Container(
@@ -1219,7 +1222,7 @@ class _HomePageState extends State<HomePage> {
 //                            Image.asset('lib/assets/icons/menu.png'),
                             SvgPicture.asset('lib/assets/icons/typography.svg'),
                             Text(
-                              'Loaders',
+                              'Appbar',
                               style: TextStyle(
                                   fontSize: 20,
                                   color: GFColors.getGFColor(
