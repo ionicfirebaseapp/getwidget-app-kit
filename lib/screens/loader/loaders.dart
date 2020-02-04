@@ -30,33 +30,7 @@ class _LoadersState extends State<Loaders> {
         ),
         centerTitle: true,
       ),
-      body: Column(
-        children: <Widget>[
-          SizedBox(
-            height: 30,
-          ),
-GFLoader(
-//  dotIcon: Icon(Icons.insert_emoticon),
-  duration: Duration(seconds: 2),
-),
-          SizedBox(
-            height: 30,
-          ),
-          GFLoader(
-            loaderType: LoaderDotType.square,
-//  dotIcon: Icon(Icons.insert_emoticon),
-            duration: Duration(seconds: 3),
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          GFLoader(
-            loaderType: LoaderDotType.diamond,
-//  dotIcon: Icon(Icons.insert_emoticon),
-            duration: Duration(seconds: 5),
-          )
-        ],
-      ),
+      body: GFLoader()
     );
   }
 }
