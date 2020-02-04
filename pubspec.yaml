@@ -9,9 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  getflutter:
-    path: ../
+  getflutter: 1.0.3
   flutter_svg: ^0.15.0
+  easy_web_view: ^1.0.1
   cupertino_icons: ^0.1.2
 
 dev_dependencies:
@@ -70,6 +70,7 @@ flutter:
     - lib/assets/icons/toast.svg
     - lib/assets/icons/toggle.svg
     - lib/assets/icons/gflogo.svg
+    - lib/assets/images/gflogo.png
     - lib/assets/images/avatar1.png
     - lib/assets/images/avatar2.png
     - lib/assets/images/avatar3.png
