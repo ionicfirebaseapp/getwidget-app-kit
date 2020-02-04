@@ -4,6 +4,7 @@ import 'package:getflutter_app/screens/alert/alert.dart';
 import 'package:getflutter_app/screens/button/button-types.dart';
 import 'package:getflutter_app/screens/cards/cards.dart';
 import 'package:getflutter_app/screens/carousel/carousel.dart';
+import 'package:getflutter_app/screens/loader/loaders.dart';
 import 'package:getflutter_app/screens/tabs/tabsPage.dart';
 import 'package:getflutter_app/screens/tiles/tilesPage.dart';
 import 'package:getflutter_app/screens/toast/toasts.dart';
@@ -1169,6 +1170,56 @@ class _HomePageState extends State<HomePage> {
                             SvgPicture.asset('lib/assets/icons/typography.svg'),
                             Text(
                               'Typography',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: GFColors.getGFColor(
+                                    GFColor.white,
+                                  )),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  SizedBox(
+                    width: 20,
+                  ),
+
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  Loaders()),
+                        );
+                      },
+                      child: Container(
+                        margin: EdgeInsets.only(top: 23),
+                        decoration: BoxDecoration(
+//                     color:GFColors.getGFColor( GFColor.dark,),
+                            color: Color(0xFF333333),
+                            borderRadius: BorderRadius.all(Radius.circular(7)),
+                            boxShadow: [
+                              new BoxShadow(
+                                  color: Colors.black.withOpacity(0.61),
+                                  blurRadius: 8.0,
+                                  spreadRadius: 0.0),
+                            ]),
+                        height: 160,
+                        width: MediaQuery.of(context).size.width,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            SizedBox(
+                              height: 10,
+                            ),
+//                            Image.asset('lib/assets/icons/menu.png'),
+                            SvgPicture.asset('lib/assets/icons/typography.svg'),
+                            Text(
+                              'Loaders',
                               style: TextStyle(
                                   fontSize: 20,
                                   color: GFColors.getGFColor(

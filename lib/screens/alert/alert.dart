@@ -38,6 +38,7 @@ class _AlertPageState extends State<AlertPage> {
       body: GFFloatingWidget(
 //        horizontalPosition: 40,
           verticalPosition: 20,
+
           showblurness: ((showalert) || (roundedalert) || (fullWidthalert)),
           blurnessColor: Colors.black.withOpacity(0.22),
           child: Column(
