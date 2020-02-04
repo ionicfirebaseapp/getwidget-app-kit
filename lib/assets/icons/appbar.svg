@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+  <g id="appbar" transform="translate(9403 980)">
+    <rect id="Rectangle_1304" data-name="Rectangle 1304" width="35" height="35" transform="translate(-9403 -980)" fill="none"/>
+    <g id="Group_2126" data-name="Group 2126">
+      <g id="Rectangle_1305" data-name="Rectangle 1305" transform="translate(-9397 -980)" fill="none" stroke="#19ca4b" stroke-width="2">
+        <rect width="23" height="35" rx="5" stroke="none"/>
+        <rect x="1" y="1" width="21" height="33" rx="4" fill="none"/>
+      </g>
+      <path id="Subtraction_38" data-name="Subtraction 38" d="M20,6H0V2A2,2,0,0,1,2,0H18a2,2,0,0,1,2,2V6ZM18.056,3.6a.3.3,0,1,0,.277.3A.29.29,0,0,0,18.056,3.6Zm-1.111,0a.3.3,0,1,0,.278.3A.29.29,0,0,0,16.944,3.6Zm-9.977,0a.3.3,0,1,0,0,.6h6.066a.3.3,0,1,0,0-.6ZM2.5,3.6a.3.3,0,1,0,.277.3A.29.29,0,0,0,2.5,3.6Z" transform="translate(-9395.58 -978)" fill="#19ca4b"/>
+    </g>
+  </g>
+</svg>
