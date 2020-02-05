@@ -33,6 +33,7 @@ class _DrawerPageState extends State<DrawerPage> {
   @override
   Widget build(BuildContext context) {
     return GFDrawer(
+      color: Colors.white,
 //          colorFilter: new ColorFilter.mode(
 //              Colors.black.withOpacity(0.6), BlendMode.darken),
 //          backgroundImage: NetworkImage(
@@ -106,12 +107,18 @@ class _DrawerPageState extends State<DrawerPage> {
                   ),
                   Text(
                     'GetFlutter',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white),
                   ),
                   SizedBox(
                     height: 5,
                   ),
-                  Text('info@getflutter.dev'),
+                  Text(
+                    'info@getflutter.dev',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ],
               ),
             ),
@@ -126,51 +133,38 @@ class _DrawerPageState extends State<DrawerPage> {
             child: Column(
 //                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                //  GFListTile(avatar: Icon(Icons.comment), titleText: 'Documents'),
                 GFAccordion(
-                    child: Row(children: <Widget>[
-                      Icon(
-                        Icons.featured_play_list,
-                        color: Colors.black,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8.0),
-                        child: Text(
-                          "Components",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16.0,
-                            color: Colors.black,
-                            fontFamily: 'SfUiDLight',
-                          ),
-                        ),
-                      )
-                    ]),
+                    title: 'Components',
+                    expandedTitlebackgroundColor: Colors.white,
+                    textStyle: TextStyle(color: Colors.black87, fontSize: 16),
                     contentChild: Padding(
-                      padding: const EdgeInsets.only(left: 0.0),
+                      padding: const EdgeInsets.all(0),
                       child: Column(children: <Widget>[
                         GFAccordion(
-                            child: Row(children: <Widget>[
-                              Icon(
-                                Icons.featured_play_list,
-                                color: Colors.black,
+                            margin: EdgeInsets.all(0),
+                            expandedTitlebackgroundColor: Colors.white,
+                            // title: 'Buttons',
+                            child: Row(children: [
+                              SvgPicture.asset(
+                                'lib/assets/icons/buttons.svg',
+                                height: 17,
+                                width: 17,
+                                color: Colors.black87,
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 8.0),
                                 child: Text(
                                   "Buttons",
                                   style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 16.0,
-                                    color: Colors.black,
-                                    fontFamily: 'SfUiDLight',
+                                    fontSize: 14.0,
+                                    color: Colors.black87,
                                   ),
                                 ),
                               )
                             ]),
-                            // contentbackgroundColor: Colors.grey,
+                            textStyle: TextStyle(fontSize: 15),
                             contentChild: Padding(
-                              padding: const EdgeInsets.only(left: 25.0),
+                              padding: const EdgeInsets.only(left: 10.0),
                               child: Column(children: <Widget>[
                                 InkWell(
                                   onTap: () {
@@ -182,12 +176,11 @@ class _DrawerPageState extends State<DrawerPage> {
                                     );
                                   },
                                   child: GFListTile(
-                                    avatar: Icon(Icons.format_list_bulleted),
+                                    // avatar: Icon(Icons.format_list_bulleted),
                                     title: Text(
                                       'Standard',
                                       style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black54,
                                       ),
                                     ),
                                   ),
@@ -202,12 +195,10 @@ class _DrawerPageState extends State<DrawerPage> {
                                     );
                                   },
                                   child: GFListTile(
-                                    avatar: Icon(Icons.format_list_bulleted),
                                     title: Text(
                                       'Pills',
                                       style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black54,
                                       ),
                                     ),
                                   ),
@@ -222,12 +213,10 @@ class _DrawerPageState extends State<DrawerPage> {
                                     );
                                   },
                                   child: GFListTile(
-                                    avatar: Icon(Icons.grade),
                                     title: Text(
                                       'Square',
                                       style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black54,
                                       ),
                                     ),
                                   ),
@@ -242,12 +231,10 @@ class _DrawerPageState extends State<DrawerPage> {
                                     );
                                   },
                                   child: GFListTile(
-                                    avatar: Icon(Icons.grade),
                                     title: Text(
                                       'Shadow',
                                       style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black54,
                                       ),
                                     ),
                                   ),
@@ -262,12 +249,10 @@ class _DrawerPageState extends State<DrawerPage> {
                                     );
                                   },
                                   child: GFListTile(
-                                    avatar: Icon(Icons.more_horiz),
                                     title: Text(
                                       'Icons',
                                       style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black54,
                                       ),
                                     ),
                                   ),
@@ -282,64 +267,16 @@ class _DrawerPageState extends State<DrawerPage> {
                                     );
                                   },
                                   child: GFListTile(
-                                    avatar: Icon(Icons.more_horiz),
                                     title: Text(
-                                      'Social',
+                                      'Social Buttons',
                                       style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black54,
                                       ),
                                     ),
                                   ),
                                 ),
                               ]),
                             )),
-
-                        // InkWell(
-                        //   onTap: () {
-                        //     Navigator.push(
-                        //       context,
-                        //       MaterialPageRoute(
-                        //           builder: (BuildContext context) =>
-                        //               ButtonTypes()),
-                        //     );
-                        //   },
-                        //   child: GFListTile(
-                        //
-                        //     title: Text(
-                        //       'Buttons',
-                        //       style: TextStyle(
-                        //         color: Colors.black,
-                        //         fontWeight: FontWeight.w500,
-                        //       ),
-                        //     ),
-                        //     avatar: SvgPicture.asset(
-                        //       'lib/assets/icons/buttons.svg',
-                        //       height: 22,
-                        //       width: 22,
-                        //       color: Colors.black,
-                        //     ),
-
-                        //     // SvgPicture.asset(
-                        //     //   'lib/assets/icons/buttons.svg',
-                        //     //   height: 22,
-                        //     //   width: 22,
-                        //     //   color: Colors.black,
-                        //     // ),
-                        //     // Padding(
-                        //     //   padding: const EdgeInsets.only(left: 8.0),
-                        //     //   child: Text(
-                        //     //     "Buttons",
-                        //     //     style: TextStyle(
-                        //     //       fontWeight: FontWeight.w500,
-                        //     //       fontSize: 16.0,
-                        //     //       color: Colors.black,
-                        //     //       fontFamily: 'SfUiDLight',
-                        //     //     ),
-                        //     //   ),
-                        //     // )
-                        //   ),
-                        // ),
                         InkWell(
                           onTap: () {
                             Navigator.push(
@@ -353,15 +290,14 @@ class _DrawerPageState extends State<DrawerPage> {
                             title: Text(
                               'Badge',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
                               ),
                             ),
                             avatar: SvgPicture.asset(
                               'lib/assets/icons/badges.svg',
-                              height: 22,
-                              width: 22,
-                              color: Colors.black,
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
                             ),
                           ),
                         ),
@@ -377,15 +313,14 @@ class _DrawerPageState extends State<DrawerPage> {
                             title: Text(
                               'Avatar',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
                               ),
                             ),
                             avatar: SvgPicture.asset(
                               'lib/assets/icons/avatars.svg',
-                              height: 22,
-                              width: 22,
-                              color: Colors.black,
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
                             ),
                           ),
                         ),
@@ -401,15 +336,14 @@ class _DrawerPageState extends State<DrawerPage> {
                             title: Text(
                               'Images',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
                               ),
                             ),
                             avatar: SvgPicture.asset(
                               'lib/assets/icons/images.svg',
-                              height: 22,
-                              width: 22,
-                              color: Colors.black,
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
                             ),
                           ),
                         ),
@@ -426,15 +360,14 @@ class _DrawerPageState extends State<DrawerPage> {
                             title: Text(
                               'Cards',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
                               ),
                             ),
                             avatar: SvgPicture.asset(
                               'lib/assets/icons/cards.svg',
-                              height: 22,
-                              width: 22,
-                              color: Colors.black,
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
                             ),
                           ),
                         ),
@@ -451,15 +384,14 @@ class _DrawerPageState extends State<DrawerPage> {
                             title: Text(
                               'Carousels',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
                               ),
                             ),
                             avatar: SvgPicture.asset(
                               'lib/assets/icons/carousels.svg',
-                              height: 22,
-                              width: 22,
-                              color: Colors.black,
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
                             ),
                           ),
                         ),
@@ -476,15 +408,14 @@ class _DrawerPageState extends State<DrawerPage> {
                             title: Text(
                               'Tiles',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
                               ),
                             ),
                             avatar: SvgPicture.asset(
                               'lib/assets/icons/tiles.svg',
-                              height: 22,
-                              width: 22,
-                              color: Colors.black,
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
                             ),
                           ),
                         ),
@@ -501,15 +432,14 @@ class _DrawerPageState extends State<DrawerPage> {
                             title: Text(
                               'Tabs',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
                               ),
                             ),
                             avatar: SvgPicture.asset(
                               'lib/assets/icons/tabs.svg',
-                              height: 22,
-                              width: 22,
-                              color: Colors.black,
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
                             ),
                           ),
                         ),
@@ -525,15 +455,14 @@ class _DrawerPageState extends State<DrawerPage> {
                             title: Text(
                               'Toggle',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
                               ),
                             ),
                             avatar: SvgPicture.asset(
                               'lib/assets/icons/toggle.svg',
-                              height: 22,
-                              width: 22,
-                              color: Colors.black,
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
                             ),
                           ),
                         ),
@@ -549,15 +478,14 @@ class _DrawerPageState extends State<DrawerPage> {
                             title: Text(
                               'Toast',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
                               ),
                             ),
                             avatar: SvgPicture.asset(
                               'lib/assets/icons/toast.svg',
-                              height: 22,
-                              width: 22,
-                              color: Colors.black,
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
                             ),
                           ),
                         ),
@@ -574,15 +502,14 @@ class _DrawerPageState extends State<DrawerPage> {
                             title: Text(
                               'Alert',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
                               ),
                             ),
                             avatar: SvgPicture.asset(
                               'lib/assets/icons/alert.svg',
-                              height: 22,
-                              width: 22,
-                              color: Colors.black,
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
                             ),
                           ),
                         ),
@@ -599,15 +526,14 @@ class _DrawerPageState extends State<DrawerPage> {
                             title: Text(
                               'Accordion',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
                               ),
                             ),
                             avatar: SvgPicture.asset(
                               'lib/assets/icons/accordion.svg',
-                              height: 22,
-                              width: 22,
-                              color: Colors.black,
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
                             ),
                           ),
                         ),
@@ -624,47 +550,19 @@ class _DrawerPageState extends State<DrawerPage> {
                             title: Text(
                               'Typography',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
+                                color: Colors.black87,
                               ),
                             ),
                             avatar: SvgPicture.asset(
                               'lib/assets/icons/typography.svg',
-                              height: 22,
-                              width: 22,
-                              color: Colors.black,
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
                             ),
                           ),
                         ),
-                        // InkWell(
-                        //   onTap: () {
-                        //     // Navigator.push(
-                        //     //   context,
-                        //     //   MaterialPageRoute(
-                        //     //       builder: (BuildContext context) =>
-                        //     //           Loaders()),
-                        //     // );
-                        //   },
-                        //   child: GFListTile(
-                        //
-                        //     title: Text(
-                        //       'Loaders',
-                        //       style: TextStyle(
-                        //         color: Colors.black,
-                        //         fontWeight: FontWeight.w500,
-                        //       ),
-                        //     ),
-                        //     avatar: SvgPicture.asset(
-                        //       'lib/assets/icons/typography.svg',
-                        //       height: 22,
-                        //       width: 22,
-                        //       color: Colors.black,
-                        //     ),
-                        //   ),
-                        // ),
                       ]),
                     )),
-
                 InkWell(
                   onTap: () {
                     Navigator.push(
@@ -675,9 +573,12 @@ class _DrawerPageState extends State<DrawerPage> {
                     );
                   },
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
+                    padding: const EdgeInsets.only(left: 2.0),
                     child: GFListTile(
-                        avatar: Icon(Icons.comment), titleText: 'Documents'),
+                      title: Text('Documents',
+                          style:
+                              TextStyle(fontSize: 16, color: Colors.black87)),
+                    ),
                   ),
                 ),
                 InkWell(
@@ -690,11 +591,12 @@ class _DrawerPageState extends State<DrawerPage> {
                     );
                   },
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
-                    child: GFListTile(
-                        avatar: Icon(Icons.featured_play_list),
-                        titleText: 'Features'),
-                  ),
+                      padding: const EdgeInsets.only(left: 2.0),
+                      child: GFListTile(
+                        title: Text('Features',
+                            style:
+                                TextStyle(fontSize: 16, color: Colors.black87)),
+                      )),
                 ),
               ],
             ),

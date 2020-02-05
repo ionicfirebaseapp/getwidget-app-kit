@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:getflutter/getflutter.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:getflutter_app/screens/tabs/bottom-label-tab.dart';
-import 'package:getflutter_app/screens/tabs/botton-icon-tab.dart';
-import 'package:getflutter_app/screens/tabs/labeled-tabs.dart';
+import 'bottom-label-tab.dart';
+import 'botton-icon-tab.dart';
+import 'labeled-tabs.dart';
 import 'segment-tabs.dart';
 import 'icon-tabs.dart';
 
