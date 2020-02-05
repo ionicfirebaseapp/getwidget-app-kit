@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:getflutter_app/screens/accordian/accordian.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import '../screens/drawer/drawer.dart';
+import '../screens/accordian/accordian.dart';
 import 'package:getflutter_app/screens/alert/alert.dart';
 import 'package:getflutter_app/screens/button/button-types.dart';
 import 'package:getflutter_app/screens/cards/cards.dart';
@@ -11,15 +13,26 @@ import 'package:getflutter_app/screens/toast/toasts.dart';
 import 'package:getflutter_app/screens/toggle/toggles.dart';
 import 'package:getflutter_app/screens/typography/typography.dart';
 import 'package:flutter/material.dart';
+import '../screens/accordian/accordian.dart';
+import '../screens/alert/alert.dart';
+import '../screens/button/button-types.dart';
+import '../screens/cards/cards.dart';
+import '../screens/carousel/carousel.dart';
+import '../screens/loader/loaders.dart';
+import '../screens/tiles/tilesPage.dart';
+import '../screens/toast/toasts.dart';
+import '../screens/toggle/toggles.dart';
+import '../screens/typography/typography.dart';
 import 'package:getflutter/colors/gf_color.dart';
 import '../screens/badges/badges.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'images/images.dart';
 import 'avatar/avatars.dart';
 import 'package:getflutter/getflutter.dart';
 import 'appbar/appbar.dart';
 import 'appbar/app-home.dart';
 import '../screens/tabs/tab-types.dart';
+import '../screens/searchbar/seachbar.dart';
+import 'package:getflutter/getflutter.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -165,7 +178,7 @@ class _HomePageState extends State<HomePage> {
 //                            height: 10,
 //                          ),
 //                          Image.asset('lib/assets/icons/card.png'),
-////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
 //                          Text(
 //                            'Cards',
 //                            style: TextStyle(
@@ -345,7 +358,7 @@ class _HomePageState extends State<HomePage> {
 //                            height: 10,
 //                          ),
 //                          Image.asset('lib/assets/icons/items.png'),
-////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
 //                          Text(
 //                            'Items',
 //                            style: TextStyle(
@@ -437,7 +450,7 @@ class _HomePageState extends State<HomePage> {
                           ),
 //                          Image.asset('lib/assets/icons/card.png'),
                           SvgPicture.asset('lib/assets/icons/cards.svg'),
-//                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
                           Text(
                             'Cards',
                             style: TextStyle(
@@ -527,7 +540,7 @@ class _HomePageState extends State<HomePage> {
 //                            height: 10,
 //                          ),
 //                          Image.asset('lib/assets/icons/menu.png'),
-////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
 //                          Text(
 //                            'Menu',
 //                            style: TextStyle(
@@ -621,7 +634,7 @@ class _HomePageState extends State<HomePage> {
                           ),
 //                          Image.asset('lib/assets/icons/tabs.png'),
                           SvgPicture.asset('lib/assets/icons/tabs.svg'),
-//                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
                           Text(
                             'Tabs',
                             style: TextStyle(
@@ -712,7 +725,7 @@ class _HomePageState extends State<HomePage> {
 //                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 //                        children: <Widget>[
 //                          Image.asset('lib/assets/icons/toggle.png'),
-////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
 //                          Text(
 //                            'Toggle',
 //                            style: TextStyle(
@@ -803,7 +816,7 @@ class _HomePageState extends State<HomePage> {
 //                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 //                        children: <Widget>[
 //                          Image.asset('lib/assets/icons/avatar.png'),
-////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
 //                          Text(
 //                            'Avatars',
 //                            style: TextStyle(
@@ -897,7 +910,7 @@ class _HomePageState extends State<HomePage> {
                           ),
 //                          Icon(Icons.notifications, color: GFColors.getGFColor(GFColor.success), size: 30,),
                           SvgPicture.asset('lib/assets/icons/toast.svg'),
-//                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
                           Text(
                             'Toast',
                             style: TextStyle(
@@ -1023,7 +1036,7 @@ class _HomePageState extends State<HomePage> {
                           context,
                           MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  TypographyPage()),
+                                  SearchbarPage()),
                         );
                       },
                       child: Container(
@@ -1047,9 +1060,9 @@ class _HomePageState extends State<HomePage> {
                               height: 10,
                             ),
 //                            Image.asset('lib/assets/icons/menu.png'),
-                            SvgPicture.asset('lib/assets/icons/typography.svg'),
+                            SvgPicture.asset('lib/assets/icons/search-bar.svg'),
                             Text(
-                              'Typography',
+                              'Searchbar',
                               style: TextStyle(
                                   fontSize: 20,
                                   color: GFColors.getGFColor(
@@ -1110,9 +1123,60 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  TypographyPage()),
+                        );
+                      },
+                      child: Container(
+                        margin: EdgeInsets.only(top: 23),
+                        decoration: BoxDecoration(
+//                     color:GFColors.getGFColor( GFColor.dark,),
+                            color: Color(0xFF333333),
+                            borderRadius: BorderRadius.all(Radius.circular(7)),
+                            boxShadow: [
+                              new BoxShadow(
+                                  color: Colors.black.withOpacity(0.61),
+                                  blurRadius: 8.0,
+                                  spreadRadius: 0.0),
+                            ]),
+                        height: 160,
+                        width: MediaQuery.of(context).size.width,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            SizedBox(
+                              height: 10,
+                            ),
+//                            Image.asset('lib/assets/icons/menu.png'),
+                            SvgPicture.asset('lib/assets/icons/typography.svg'),
+                            Text(
+                              'Typography',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: GFColors.getGFColor(
+                                    GFColor.white,
+                                  )),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               SizedBox(
                 height: 20,
-              )
+              ),
             ],
           ),
         ));
