@@ -77,7 +77,7 @@ class _SearchbarPageState extends State<SearchbarPage> {
 //              ),
                 onItemSelected: (item) {
                   setState(() {
-                    print('ssssssss $item');
+                    print('$item');
                   });
                 }),
           ],

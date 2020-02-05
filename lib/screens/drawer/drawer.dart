@@ -142,6 +142,7 @@ class _DrawerPageState extends State<DrawerPage> {
                       child: Column(children: <Widget>[
                         GFAccordion(
                             margin: EdgeInsets.all(0),
+                            titlePadding: EdgeInsets.only(left: 7, top: 10, bottom: 10, right: 0),
                             expandedTitlebackgroundColor: Colors.white,
                             // title: 'Buttons',
                             child: Row(children: [
@@ -152,7 +153,7 @@ class _DrawerPageState extends State<DrawerPage> {
                                 color: Colors.black87,
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 8.0),
+                                padding: const EdgeInsets.only(left: 9.0),
                                 child: Text(
                                   "Buttons",
                                   style: TextStyle(
