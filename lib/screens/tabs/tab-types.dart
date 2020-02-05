@@ -45,8 +45,7 @@ class _TabTypesState extends State<TabTypes> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => SegmentTabsPage()
-                  ),
+                      builder: (BuildContext context) => SegmentTabsPage()),
                 );
               },
               child: Container(
@@ -64,22 +63,20 @@ class _TabTypesState extends State<TabTypes> {
                     color: GFColors.getGFColor(GFColor.dark),
                     title: Text(
                       'Segmented Tabs',
-                      style: TextStyle(
-                          color: GFColors.getGFColor(GFColor.white)),
+                      style:
+                          TextStyle(color: GFColors.getGFColor(GFColor.white)),
                     ),
                     icon: Icon(
                       CupertinoIcons.forward,
                       color: GFColors.getGFColor(GFColor.success),
                     )),
               )),
-
           GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => IconTabs()
-                  ),
+                      builder: (BuildContext context) => IconTabs()),
                 );
               },
               child: Container(
@@ -97,22 +94,20 @@ class _TabTypesState extends State<TabTypes> {
                     color: GFColors.getGFColor(GFColor.dark),
                     title: Text(
                       'Icon Tabs',
-                      style: TextStyle(
-                          color: GFColors.getGFColor(GFColor.white)),
+                      style:
+                          TextStyle(color: GFColors.getGFColor(GFColor.white)),
                     ),
                     icon: Icon(
                       CupertinoIcons.forward,
                       color: GFColors.getGFColor(GFColor.success),
                     )),
               )),
-
           GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => LabeledTabs()
-                  ),
+                      builder: (BuildContext context) => LabeledTabs()),
                 );
               },
               child: Container(
@@ -130,22 +125,20 @@ class _TabTypesState extends State<TabTypes> {
                     color: GFColors.getGFColor(GFColor.dark),
                     title: Text(
                       'Labeled Tabs',
-                      style: TextStyle(
-                          color: GFColors.getGFColor(GFColor.white)),
+                      style:
+                          TextStyle(color: GFColors.getGFColor(GFColor.white)),
                     ),
                     icon: Icon(
                       CupertinoIcons.forward,
                       color: GFColors.getGFColor(GFColor.success),
                     )),
               )),
-
           GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => BottomIconTab()
-                  ),
+                      builder: (BuildContext context) => BottomIconTab()),
                 );
               },
               child: Container(
@@ -163,22 +156,20 @@ class _TabTypesState extends State<TabTypes> {
                     color: GFColors.getGFColor(GFColor.dark),
                     title: Text(
                       'Bottom Icon Tabs',
-                      style: TextStyle(
-                          color: GFColors.getGFColor(GFColor.white)),
+                      style:
+                          TextStyle(color: GFColors.getGFColor(GFColor.white)),
                     ),
                     icon: Icon(
                       CupertinoIcons.forward,
                       color: GFColors.getGFColor(GFColor.success),
                     )),
               )),
-
           GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => BottomLabelTab()
-                  ),
+                      builder: (BuildContext context) => BottomLabelTab()),
                 );
               },
               child: Container(
@@ -196,8 +187,8 @@ class _TabTypesState extends State<TabTypes> {
                     color: GFColors.getGFColor(GFColor.dark),
                     title: Text(
                       'Bottom Labeled Tabs',
-                      style: TextStyle(
-                          color: GFColors.getGFColor(GFColor.white)),
+                      style:
+                          TextStyle(color: GFColors.getGFColor(GFColor.white)),
                     ),
                     icon: Icon(
                       CupertinoIcons.forward,

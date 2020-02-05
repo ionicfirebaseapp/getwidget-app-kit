@@ -3,7 +3,6 @@ import 'package:getflutter/getflutter.dart';
 import 'package:getflutter_app/screens/appbar/searchbar.dart';
 import 'package:flutter/cupertino.dart';
 
-
 class Appbar extends StatefulWidget {
   @override
   _AppbarState createState() => _AppbarState();
@@ -33,7 +32,6 @@ class _AppbarState extends State<Appbar> {
             color: GFColors.getGFColor(GFColor.success),
           ),
         ),
-
         backgroundColor: Colors.teal,
         title: const Text('UI Kit'),
         actions: <Widget>[
@@ -47,7 +45,6 @@ class _AppbarState extends State<Appbar> {
           ),
         ],
       ),
-
     );
   }
 }
