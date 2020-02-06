@@ -30,36 +30,36 @@ class _LoadersState extends State<Loaders> {
           centerTitle: true,
         ),
         body: Column(
-          children: <Widget>[
-            const SizedBox(
+          children: const <Widget>[
+             SizedBox(
               height: 30,
             ),
 
-            const GFLoader(
+             GFLoader(
                 //  dotIcon: Icon(Icons.insert_emoticon),
 //   duration: Duration(seconds: 2),
                 ),
-            const SizedBox(
+             SizedBox(
               height: 30,
             ),
             GFLoader(
               loaderSizeOne: 20,
-              loaderSizeTwo: 15.0,
+              loaderSizeTwo: 15,
               loaderSizeThree: 10,
-              loaderType: LoaderDotType.square,
+              type: LoaderDotType.square,
 
 //   dotIcon: Icon(Icons.insert_emoticon),
 
 //             duration: Duration(seconds: 3),
             ),
-            const SizedBox(
+            SizedBox(
               height: 30,
             ),
             GFLoader(
               loaderSizeOne: 20,
-              loaderSizeTwo: 15.0,
+              loaderSizeTwo: 15,
               loaderSizeThree: 10,
-              loaderType: LoaderDotType.icon,
+              type: LoaderDotType.icon,
               loaderIconOne: Icon(Icons.insert_emoticon),
               loaderIconTwo: Icon(Icons.insert_emoticon),
               loaderIconThree: Icon(Icons.email),
