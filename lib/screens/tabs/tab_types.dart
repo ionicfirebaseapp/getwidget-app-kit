@@ -1,23 +1,21 @@
-import 'standard-buttons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'pill-buttons.dart';
-import 'square-buttons.dart';
-import 'icon-buttons.dart';
-import 'social-buttons.dart';
-import 'shadow-buttons.dart';
 import 'package:getflutter/getflutter.dart';
+import 'package:flutter/cupertino.dart';
+import 'bottom_label_tab.dart';
+import 'botton_icon_tab.dart';
+import 'icon_tabs.dart';
+import 'labeled_tabs.dart';
+import 'segment_tabs.dart';
 
-class ButtonTypes extends StatefulWidget {
+class TabTypes extends StatefulWidget {
   @override
-  _ButtonTypesState createState() => _ButtonTypesState();
+  _TabTypesState createState() => _TabTypesState();
 }
 
-class _ButtonTypesState extends State<ButtonTypes> {
+class _TabTypesState extends State<TabTypes> {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
+  Widget build(BuildContext context) => Scaffold(
+        appBar: GFAppBar(
           backgroundColor: GFColors.getGFColor(GFColor.dark),
           leading: InkWell(
               onTap: () {
@@ -30,15 +28,15 @@ class _ButtonTypesState extends State<ButtonTypes> {
                   color: GFColors.getGFColor(GFColor.success),
                 ),
               )),
-          title: Text(
-            'Buttons',
+          title: const Text(
+            'Tabs',
             style: TextStyle(fontSize: 17),
           ),
           centerTitle: true,
         ),
         body: ListView(
           children: <Widget>[
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             GestureDetector(
@@ -46,24 +44,24 @@ class _ButtonTypesState extends State<ButtonTypes> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (BuildContext context) => StandardButtons()),
+                        builder: (BuildContext context) => SegmentTabsPage()),
                   );
                 },
                 child: Container(
-                  margin: EdgeInsets.only(left: 15, right: 15, top: 20),
-                  padding: EdgeInsets.all(5),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(7)),
+                      borderRadius: const BorderRadius.all(Radius.circular(7)),
                       color: GFColors.getGFColor(GFColor.dark),
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
-                            blurRadius: 5.0)
+                            blurRadius: 5)
                       ]),
                   child: GFListTile(
                       color: GFColors.getGFColor(GFColor.dark),
                       title: Text(
-                        'Standard Buttons',
+                        'Segmented Tabs',
                         style: TextStyle(
                             color: GFColors.getGFColor(GFColor.white)),
                       ),
@@ -77,24 +75,24 @@ class _ButtonTypesState extends State<ButtonTypes> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (BuildContext context) => PillsButtons()),
+                        builder: (BuildContext context) => IconTabs()),
                   );
                 },
                 child: Container(
-                  margin: EdgeInsets.only(left: 15, right: 15, top: 20),
-                  padding: EdgeInsets.all(5),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(7)),
+                      borderRadius: const BorderRadius.all(Radius.circular(7)),
                       color: GFColors.getGFColor(GFColor.dark),
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
-                            blurRadius: 5.0)
+                            blurRadius: 5)
                       ]),
                   child: GFListTile(
                       color: GFColors.getGFColor(GFColor.dark),
                       title: Text(
-                        'Pills Buttons',
+                        'Icon Tabs',
                         style: TextStyle(
                             color: GFColors.getGFColor(GFColor.white)),
                       ),
@@ -108,24 +106,24 @@ class _ButtonTypesState extends State<ButtonTypes> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (BuildContext context) => SquareButtons()),
+                        builder: (BuildContext context) => LabeledTabs()),
                   );
                 },
                 child: Container(
-                  margin: EdgeInsets.only(left: 15, right: 15, top: 20),
-                  padding: EdgeInsets.all(5),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(7)),
+                      borderRadius: const BorderRadius.all(Radius.circular(7)),
                       color: GFColors.getGFColor(GFColor.dark),
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
-                            blurRadius: 5.0)
+                            blurRadius: 5)
                       ]),
                   child: GFListTile(
                       color: GFColors.getGFColor(GFColor.dark),
                       title: Text(
-                        'Square Buttons',
+                        'Labeled Tabs',
                         style: TextStyle(
                             color: GFColors.getGFColor(GFColor.white)),
                       ),
@@ -139,24 +137,24 @@ class _ButtonTypesState extends State<ButtonTypes> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (BuildContext context) => ShadowButtons()),
+                        builder: (BuildContext context) => BottomIconTab()),
                   );
                 },
                 child: Container(
-                  margin: EdgeInsets.only(left: 15, right: 15, top: 20),
-                  padding: EdgeInsets.all(5),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(7)),
+                      borderRadius: const BorderRadius.all(Radius.circular(7)),
                       color: GFColors.getGFColor(GFColor.dark),
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
-                            blurRadius: 5.0)
+                            blurRadius: 5)
                       ]),
                   child: GFListTile(
                       color: GFColors.getGFColor(GFColor.dark),
                       title: Text(
-                        'Shadow Buttons',
+                        'Bottom Icon Tabs',
                         style: TextStyle(
                             color: GFColors.getGFColor(GFColor.white)),
                       ),
@@ -170,56 +168,24 @@ class _ButtonTypesState extends State<ButtonTypes> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (BuildContext context) => IconButtons()),
+                        builder: (BuildContext context) => BottomLabelTab()),
                   );
                 },
                 child: Container(
-                  margin: EdgeInsets.only(left: 15, right: 15, top: 20),
-                  padding: EdgeInsets.all(5),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(7)),
+                      borderRadius: const BorderRadius.all(Radius.circular(7)),
                       color: GFColors.getGFColor(GFColor.dark),
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
-                            blurRadius: 5.0)
+                            blurRadius: 5)
                       ]),
                   child: GFListTile(
                       color: GFColors.getGFColor(GFColor.dark),
                       title: Text(
-                        'Icons Buttons',
-                        style: TextStyle(
-                            color: GFColors.getGFColor(GFColor.white)),
-                      ),
-                      icon: Icon(
-                        CupertinoIcons.forward,
-                        color: GFColors.getGFColor(GFColor.success),
-                      )),
-                )),
-            GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => SocialButtons()),
-                  );
-                },
-                child: Container(
-                  margin:
-                      EdgeInsets.only(left: 15, right: 15, top: 20, bottom: 20),
-                  padding: EdgeInsets.all(5),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(7)),
-                      color: GFColors.getGFColor(GFColor.dark),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.black.withOpacity(0.40),
-                            blurRadius: 5.0)
-                      ]),
-                  child: GFListTile(
-                      color: GFColors.getGFColor(GFColor.dark),
-                      title: Text(
-                        'Social Buttons',
+                        'Bottom Labeled Tabs',
                         style: TextStyle(
                             color: GFColors.getGFColor(GFColor.white)),
                       ),
@@ -229,6 +195,6 @@ class _ButtonTypesState extends State<ButtonTypes> {
                       )),
                 )),
           ],
-        ));
-  }
+        ),
+      );
 }

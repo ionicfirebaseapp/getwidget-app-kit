@@ -10,166 +10,164 @@ class Toasts extends StatefulWidget {
 
 class _ToastsState extends State<Toasts> {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: GFColors.getGFColor(GFColor.dark),
-        leading: InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Container(
-              child: Icon(
-                CupertinoIcons.back,
-                color: GFColors.getGFColor(GFColor.success),
-              ),
-            )),
-        title: Text(
-          'Toasts',
-          style: TextStyle(fontSize: 17),
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          leading: InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                child: Icon(
+                  CupertinoIcons.back,
+                  color: GFColors.getGFColor(GFColor.success),
+                ),
+              )),
+          title: const Text(
+            'Toasts',
+            style: TextStyle(fontSize: 17),
+          ),
+          centerTitle: true,
         ),
-        centerTitle: true,
-      ),
-      body: ListView(
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
-            child: GFTypography(
-              text: 'Animated Toasts (Auto Dismissable)',
-              type: GFTypographyType.typo5,
-              dividerWidth: 25,
-              dividerColor: Color(0xFF19CA4B),
+        body: ListView(
+          children: <Widget>[
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
+              child: GFTypography(
+                text: 'Animated Toasts (Auto Dismissable)',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
             ),
-          ),
-          GFToast(
-            text: 'Auto Dismissable after the given duration !',
-            button: GFButton(
-              onPressed: () {},
-              text: 'OK',
-              type: GFButtonType.transparent,
-              color: GFColor.success,
+            GFToast(
+              text: 'Auto Dismissable after the given duration !',
+              button: GFButton(
+                onPressed: () {},
+                text: 'OK',
+                type: GFButtonType.transparent,
+                color: GFColor.success,
+              ),
+              autoDismiss: true,
             ),
-            autoDismiss: true,
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          GFToast(
-            text: 'Pass true to autoDismiss property to use this effect !',
-            autoDismiss: true,
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
-            child: GFTypography(
-              text: 'Basic Toasts',
-              type: GFTypographyType.typo5,
-              dividerWidth: 25,
-              dividerColor: Color(0xFF19CA4B),
+            const SizedBox(
+              height: 15,
             ),
-          ),
-          GFToast(
-            text: 'Paired Succesfully !',
-            button: GFButton(
-              onPressed: () {},
-              text: 'OK',
-              type: GFButtonType.transparent,
-              color: GFColor.success,
+            const GFToast(
+              text: 'Pass true to autoDismiss property to use this effect !',
+              autoDismiss: true,
             ),
-            autoDismiss: false,
-            duration: Duration(milliseconds: 300),
-            alignment: Alignment.topLeft,
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          GFToast(
-            text:
-                'This item already has the label “travel”. You can add a new label. !',
-            button: GFButton(
-              onPressed: () {},
-              text: 'OK',
-              type: GFButtonType.transparent,
-              color: GFColor.success,
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
+              child: GFTypography(
+                text: 'Basic Toasts',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
             ),
-            autoDismiss: false,
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
-            child: GFTypography(
-              text: 'Rounded Toasts',
-              type: GFTypographyType.typo5,
-              dividerWidth: 25,
-              dividerColor: Color(0xFF19CA4B),
+            GFToast(
+              text: 'Paired Succesfully !',
+              button: GFButton(
+                onPressed: () {},
+                text: 'OK',
+                type: GFButtonType.transparent,
+                color: GFColor.success,
+              ),
+              autoDismiss: false,
+              duration: const Duration(milliseconds: 300),
+              alignment: Alignment.topLeft,
             ),
-          ),
-          GFToast(
-            text: 'Paired Succesfully !',
-            button: GFButton(
-              onPressed: () {},
-              text: 'OK',
-              type: GFButtonType.transparent,
-              color: GFColor.success,
+            const SizedBox(
+              height: 15,
             ),
-            type: GFToastType.rounded,
-            autoDismiss: false,
-            alignment: Alignment.topLeft,
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          GFToast(
-            text:
-                'This item already has the label “travel”. You can add a new label. !',
-            button: GFButton(
-              onPressed: () {},
-              text: 'OK',
-              type: GFButtonType.transparent,
-              color: GFColor.success,
+            GFToast(
+              text:
+                  'This item already has the label “travel”. You can add a new label. !',
+              button: GFButton(
+                onPressed: () {},
+                text: 'OK',
+                type: GFButtonType.transparent,
+                color: GFColor.success,
+              ),
+              autoDismiss: false,
             ),
-            autoDismiss: false,
-            type: GFToastType.rounded,
-            alignment: Alignment.topLeft,
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
-            child: GFTypography(
-              text: 'Full Width Toasts',
-              type: GFTypographyType.typo5,
-              dividerWidth: 25,
-              dividerColor: Color(0xFF19CA4B),
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
+              child: GFTypography(
+                text: 'Rounded Toasts',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
             ),
-          ),
-          GFToast(
-            text: 'Paired Succesfully !',
-            button: GFButton(
-              onPressed: () {},
-              text: 'OK',
-              type: GFButtonType.transparent,
-              color: GFColor.success,
+            GFToast(
+              text: 'Paired Succesfully !',
+              button: GFButton(
+                onPressed: () {},
+                text: 'OK',
+                type: GFButtonType.transparent,
+                color: GFColor.success,
+              ),
+              type: GFToastType.rounded,
+              autoDismiss: false,
+              alignment: Alignment.topLeft,
             ),
-            type: GFToastType.fullWidth,
-            autoDismiss: false,
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          GFToast(
-            text:
-                'This item already has the label “travel”. You can add a new label. !',
-            button: GFButton(
-              onPressed: () {},
-              text: 'OK',
-              type: GFButtonType.transparent,
-              color: GFColor.success,
+            const SizedBox(
+              height: 15,
             ),
-            autoDismiss: false,
-            type: GFToastType.fullWidth,
-          ),
-          SizedBox(
-            height: 20,
-          ),
-        ],
-      ),
-    );
-  }
+            GFToast(
+              text:
+                  'This item already has the label “travel”. You can add a new label. !',
+              button: GFButton(
+                onPressed: () {},
+                text: 'OK',
+                type: GFButtonType.transparent,
+                color: GFColor.success,
+              ),
+              autoDismiss: false,
+              type: GFToastType.rounded,
+              alignment: Alignment.topLeft,
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
+              child: GFTypography(
+                text: 'Full Width Toasts',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
+            ),
+            GFToast(
+              text: 'Paired Succesfully !',
+              button: GFButton(
+                onPressed: () {},
+                text: 'OK',
+                type: GFButtonType.transparent,
+                color: GFColor.success,
+              ),
+              type: GFToastType.fullWidth,
+              autoDismiss: false,
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            GFToast(
+              text:
+                  'This item already has the label “travel”. You can add a new label. !',
+              button: GFButton(
+                onPressed: () {},
+                text: 'OK',
+                type: GFButtonType.transparent,
+                color: GFColor.success,
+              ),
+              autoDismiss: false,
+              type: GFToastType.fullWidth,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+          ],
+        ),
+      );
 }

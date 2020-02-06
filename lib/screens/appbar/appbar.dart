@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:getflutter/getflutter.dart';
-import 'package:getflutter_app/screens/appbar/searchbar.dart';
 import 'package:flutter/cupertino.dart';
 
 class Appbar extends StatefulWidget {
@@ -20,31 +19,29 @@ class _AppbarState extends State<Appbar> {
     'Xamarin2',
   ];
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: GFAppBar(
-        leading: InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Icon(
-            CupertinoIcons.back,
-            color: GFColors.getGFColor(GFColor.white),
-          ),
-        ),
-        backgroundColor: GFColors.getGFColor(GFColor.dark),
-        title: const Text('UI Kit'),
-        actions: <Widget>[
-          GFIconButton(
-            icon: Icon(
-              Icons.favorite,
-              color: Colors.white,
+  Widget build(BuildContext context) => Scaffold(
+        appBar: GFAppBar(
+          leading: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              CupertinoIcons.back,
+              color: GFColors.getGFColor(GFColor.white),
             ),
-            onPressed: () {},
-            type: GFButtonType.transparent,
           ),
-        ],
-      ),
-    );
-  }
+          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          title: const Text('UI Kit'),
+          actions: <Widget>[
+            GFIconButton(
+              icon: Icon(
+                Icons.favorite,
+                color: Colors.white,
+              ),
+              onPressed: () {},
+              type: GFButtonType.transparent,
+            ),
+          ],
+        ),
+      );
 }
