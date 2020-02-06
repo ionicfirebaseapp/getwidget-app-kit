@@ -1172,6 +1172,54 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  Loaders()),
+                        );
+                      },
+                      child: Container(
+                        margin: EdgeInsets.only(top: 23),
+                        decoration: BoxDecoration(
+//                     color:GFColors.getGFColor( GFColor.dark,),
+                            color: Color(0xFF333333),
+                            borderRadius: BorderRadius.all(Radius.circular(7)),
+                            boxShadow: [
+                              new BoxShadow(
+                                  color: Colors.black.withOpacity(0.61),
+                                  blurRadius: 8.0,
+                                  spreadRadius: 0.0),
+                            ]),
+                        height: 160,
+                        width: MediaQuery.of(context).size.width,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            SizedBox(
+                              height: 10,
+                            ),
+//                            Image.asset('lib/assets/icons/menu.png'),
+                            SvgPicture.asset('lib/assets/icons/loader.svg'),
+                            Text(
+                              'Loaders',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: GFColors.getGFColor(
+                                    GFColor.white,
+                                  )),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(
