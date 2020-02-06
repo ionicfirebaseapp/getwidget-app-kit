@@ -34,7 +34,7 @@ class _LoadersState extends State<Loaders> {
             const SizedBox(
               height: 30,
             ),
-            const Text('vbjhnkml'),
+
             const GFLoader(
                 //  dotIcon: Icon(Icons.insert_emoticon),
 //   duration: Duration(seconds: 2),
@@ -43,8 +43,11 @@ class _LoadersState extends State<Loaders> {
               height: 30,
             ),
             GFLoader(
+              loaderSizeOne: 20,
+              loaderSizeTwo: 15.0,
+              loaderSizeThree: 10,
               loaderType: LoaderDotType.square,
-              loaderIcon: Icon(Icons.add_circle_outline),
+
 //   dotIcon: Icon(Icons.insert_emoticon),
 
 //             duration: Duration(seconds: 3),
@@ -52,11 +55,19 @@ class _LoadersState extends State<Loaders> {
             const SizedBox(
               height: 30,
             ),
-            const GFLoader(
-              loaderType: LoaderDotType.diamond,
-              //  dotIcon: Icon(Icons.insert_emoticon),
-//             duration: Duration(seconds: 5),
-            )
+            GFLoader(
+              loaderSizeOne: 20,
+              loaderSizeTwo: 15.0,
+              loaderSizeThree: 10,
+              loaderType: LoaderDotType.icon,
+              loaderIconOne: Icon(Icons.insert_emoticon),
+              loaderIconTwo: Icon(Icons.insert_emoticon),
+              loaderIconThree: Icon(Icons.email),
+//   dotIcon: Icon(Icons.insert_emoticon),
+
+             duration: Duration(seconds: 3),
+            ),
+
           ],
         ),
       );
