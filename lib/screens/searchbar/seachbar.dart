@@ -38,7 +38,8 @@ class _SearchbarPageState extends State<SearchbarPage> {
           ),
           centerTitle: true,
         ),
-        body: Column(
+        body: ListView(
+          physics: const ScrollPhysics(),
           children: <Widget>[
             const Padding(
               padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
@@ -57,6 +58,54 @@ class _SearchbarPageState extends State<SearchbarPage> {
                 //       ),
                 //       borderRadius: BorderRadius.circular(50)),
                 // ),
+                searchList: list,
+//              hideSearchBoxWhenItemSelected: false,
+//              overlaySearchListHeight: 100.0,
+                searchQueryBuilder: (query, list) => list
+                    .where((item) =>
+                        item.toLowerCase().contains(query.toLowerCase()))
+                    .toList(),
+                overlaySearchListItemBuilder: (item) => Container(
+                      padding: const EdgeInsets.all(8),
+                      child: Text(
+                        item,
+                        style: const TextStyle(fontSize: 18),
+                      ),
+                    ),
+//              noItemsFoundWidget: Container(
+//                color: Colors.green,
+//                child: Text("no items found..."),
+//              ),
+                onItemSelected: (item) {
+                  setState(() {
+                    print('$item');
+                  });
+                }),
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
+              child: GFTypography(
+                text: 'Customised SearchBar',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
+            ),
+            GFSearchBar(
+                searchBoxInputDecoration: InputDecoration(
+                  labelText: 'Type Here',
+                  labelStyle: TextStyle(color: Colors.black26),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Colors.greenAccent),
+                    borderRadius: BorderRadius.circular(25),
+                  ),
+                  prefixIcon: Icon(
+                    Icons.search,
+                    color: Colors.black26,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black12),
+                      borderRadius: BorderRadius.circular(50)),
+                ),
                 searchList: list,
 //              hideSearchBoxWhenItemSelected: false,
 //              overlaySearchListHeight: 100.0,

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+  <g id="loader" transform="translate(9127 1215)">
+    <rect id="Rectangle_1309" data-name="Rectangle 1309" width="35" height="35" transform="translate(-9127 -1215)" fill="none"/>
+    <g id="Icon_feather-loader" data-name="Icon feather-loader" transform="translate(-9128 -1216)">
+      <path id="Path_486" data-name="Path 486" d="M18,3V9" transform="translate(0.5)" fill="none" stroke="#19ca4b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_487" data-name="Path 487" d="M18,27v6" transform="translate(0.5 1)" fill="none" stroke="#19ca4b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_488" data-name="Path 488" d="M7.395,7.395,11.64,11.64" fill="none" stroke="#19ca4b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_489" data-name="Path 489" d="M24.36,24.36,28.6,28.6" transform="translate(1 1)" fill="none" stroke="#19ca4b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_490" data-name="Path 490" d="M3,18H9" transform="translate(0 0.5)" fill="none" stroke="#19ca4b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_491" data-name="Path 491" d="M27,18h6" transform="translate(1 0.5)" fill="none" stroke="#19ca4b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_492" data-name="Path 492" d="M7.395,28.6,11.64,24.36" transform="translate(0 1)" fill="none" stroke="#19ca4b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_493" data-name="Path 493" d="M24.36,11.64,28.6,7.395" transform="translate(1)" fill="none" stroke="#19ca4b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

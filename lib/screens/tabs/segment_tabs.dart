@@ -7,7 +7,8 @@ class SegmentTabsPage extends StatefulWidget {
   _SegmentTabsPageState createState() => _SegmentTabsPageState();
 }
 
-class _SegmentTabsPageState extends State<SegmentTabsPage> with SingleTickerProviderStateMixin {
+class _SegmentTabsPageState extends State<SegmentTabsPage>
+    with SingleTickerProviderStateMixin {
   TabController tabController;
 
   @override
@@ -21,9 +22,9 @@ class _SegmentTabsPageState extends State<SegmentTabsPage> with SingleTickerProv
     tabController.dispose();
     super.dispose();
   }
+
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
+  Widget build(BuildContext context) => Scaffold(
       appBar: GFAppBar(
         backgroundColor: GFColors.getGFColor(GFColor.dark),
         leading: InkWell(
@@ -37,35 +38,35 @@ class _SegmentTabsPageState extends State<SegmentTabsPage> with SingleTickerProv
                 color: GFColors.getGFColor(GFColor.success),
               ),
             )),
-        title: Text(
+        title: const Text(
           'Segmented Tabs',
           style: TextStyle(fontSize: 17),
         ),
         centerTitle: true,
       ),
-      body:  ListView(
+      body: ListView(
         children: <Widget>[
           Container(
             height: 40,
-            margin: EdgeInsets.only(top: 20, left: 25, right: 25),
+            margin: const EdgeInsets.only(top: 20, left: 25, right: 25),
             child: GFSegmentTabs(
               tabController: tabController,
 //              height: 38.0,
-              width: 280.0,
+              width: 280,
               initialIndex: 0,
               length: 3,
-              tabs: <Widget>[
+              tabs: const <Widget>[
                 Text(
-                  "Tab 1",
+                  'Tab 1',
                 ),
                 Tab(
                   child: Text(
-                    "Tab 2",
+                    'Tab 2',
                   ),
                 ),
                 Tab(
                   child: Text(
-                    "Tab 3",
+                    'Tab 3',
                   ),
                 ),
               ],
@@ -78,39 +79,34 @@ class _SegmentTabsPageState extends State<SegmentTabsPage> with SingleTickerProv
                 border: Border(
                   bottom: BorderSide(
                     color: GFColors.getGFColor(GFColor.success),
-                    width: 3.0,
+                    width: 3,
                   ),
                 ),
 //                borderRadius: BorderRadius.circular(2.0)
               ),
-              indicatorPadding: EdgeInsets.all(8.0),
-              indicatorWeight: 2.0,
-              border: Border.all(color: Colors.white, width: 2.0),
+              indicatorPadding: const EdgeInsets.all(8),
+              indicatorWeight: 2,
+              border: Border.all(color: Colors.white, width: 2),
             ),
 //
 //
           ),
-
           Container(
-            height: MediaQuery.of(context).size.height-140,
-            child: GFTabBarView(
+              height: MediaQuery.of(context).size.height - 140,
+              child: GFTabBarView(
                 controller: tabController,
-              children: <Widget>[
-                Center(
-                  child: Text('Tab 1'),
-                ),
-                Center(
-                  child: Text('Tab 2'),
-                ),
-                Center(
-                  child: Text('Tab 3'),
-                )
-              ],
-            )
-          )
+                children: const <Widget>[
+                  Center(
+                    child: Text('Tab 1'),
+                  ),
+                  Center(
+                    child: Text('Tab 2'),
+                  ),
+                  Center(
+                    child: Text('Tab 3'),
+                  )
+                ],
+              ))
         ],
-      )
-
-    );
-  }
+      ));
 }
