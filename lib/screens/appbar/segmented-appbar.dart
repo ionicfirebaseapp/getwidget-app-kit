@@ -25,7 +25,7 @@ class _SegmentedAppbarState extends State<SegmentedAppbar> with TickerProviderSt
     return Scaffold(
 
       appBar: GFAppBar(
-        backgroundColor: Colors.teal,
+        backgroundColor: GFColors.getGFColor(GFColor.dark),
         title:   GFSegmentTabs(
               tabController: tabController,
           tabBarColor: GFColors.getGFColor(GFColor.light),

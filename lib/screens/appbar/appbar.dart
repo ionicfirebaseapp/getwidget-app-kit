@@ -29,10 +29,10 @@ class _AppbarState extends State<Appbar> {
           },
           child: Icon(
             CupertinoIcons.back,
-            color: GFColors.getGFColor(GFColor.success),
+            color: GFColors.getGFColor(GFColor.white),
           ),
         ),
-        backgroundColor: Colors.teal,
+        backgroundColor: GFColors.getGFColor(GFColor.dark),
         title: const Text('UI Kit'),
         actions: <Widget>[
           GFIconButton(

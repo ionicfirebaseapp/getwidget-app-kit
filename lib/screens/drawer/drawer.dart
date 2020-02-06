@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:getflutter/components/accordian/gf_accordian.dart';
 import 'package:getflutter/getflutter.dart';
+import 'package:getflutter_app/screens/appbar/app-home.dart';
+import 'package:getflutter_app/screens/appbar/appbar.dart';
+import 'package:getflutter_app/screens/appbar/searchbar.dart';
 import 'package:getflutter_app/screens/button/icon-buttons.dart';
 import 'package:getflutter_app/screens/button/pill-buttons.dart';
 import 'package:getflutter_app/screens/button/shadow-buttons.dart';
@@ -10,6 +13,7 @@ import 'package:getflutter_app/screens/button/social-buttons.dart';
 import 'package:getflutter_app/screens/button/square-buttons.dart';
 import 'package:getflutter_app/screens/button/standard-buttons.dart';
 import 'package:getflutter_app/screens/drawer/webview.dart';
+import 'package:getflutter_app/screens/searchbar/seachbar.dart';
 import 'package:getflutter_app/screens/tabs/tab-types.dart';
 import '../accordian/accordian.dart';
 import '../alert/alert.dart';
@@ -532,6 +536,54 @@ class _DrawerPageState extends State<DrawerPage> {
                             ),
                             avatar: SvgPicture.asset(
                               'lib/assets/icons/accordion.svg',
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      SearchbarPage()),
+                            );
+                          },
+                          child: GFListTile(
+                            title: Text(
+                              'SearchBar',
+                              style: TextStyle(
+                                color: Colors.black87,
+                              ),
+                            ),
+                            avatar: SvgPicture.asset(
+                              'lib/assets/icons/search-bar.svg',
+                              height: 17,
+                              width: 17,
+                              color: Colors.black87,
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      AppHome()),
+                            );
+                          },
+                          child: GFListTile(
+                            title: Text(
+                              'Appbar',
+                              style: TextStyle(
+                                color: Colors.black87,
+                              ),
+                            ),
+                            avatar: SvgPicture.asset(
+                              'lib/assets/icons/appbar.svg',
                               height: 17,
                               width: 17,
                               color: Colors.black87,
