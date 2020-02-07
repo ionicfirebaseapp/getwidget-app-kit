@@ -31,84 +31,7 @@ class _LoadersState extends State<Loaders> {
         ),
         body: ListView(
           children:  <Widget>[
-            const SizedBox(
-              height: 30,
-            ),
-           const  GFLoader(
-                //  dotIcon: Icon(Icons.insert_emoticon),
-//   duration: Duration(seconds: 2),
-                ),
-            const SizedBox(
-              height: 30,
-            ),
-           const  GFLoader(
-              size: GFSize.medium,
-              type: GFLoaderType.square
-            ),
-           const SizedBox(
-              height: 30,
-            ),
-            const GFLoader(
-                size: GFSize.large,
-                type: GFLoaderType.custom,
-//                child: IconData(1)
-            ),
-            SizedBox(
-              height: 30,
-            ),
-//            GFLoader(
-//             size: GFSize.large,
-//              type: GFLoaderType.custom,
-//              loaderIconOne: Icon(Icons.insert_emoticon),
-//              loaderIconTwo: Icon(Icons.insert_emoticon),
-//              loaderIconThree: Icon(Icons.email),
-////   dotIcon: Icon(Icons.insert_emoticon),
-//
-//              duration: Duration(seconds: 3),
-//            ),
-            const SizedBox(
-              height: 30,
-            ),
-            const GFLoader(
-              size: GFSize.small,
-              type: GFLoaderType.android,
-//androidLoaderColor:const AlwaysStoppedAnimation<Color>(Colors.red),
 
-
-
-//   dotIcon: Icon(Icons.insert_emoticon),
-
-              duration: Duration(seconds: 3),
-            ),
-
-            const SizedBox(
-              height: 30,
-            ),
-            const GFLoader(
-//              size: GFSize.large,
-              type: GFLoaderType.ios,
-//androidLoaderColor:const AlwaysStoppedAnimation<Color>(Colors.red),
-
-
-
-//   dotIcon: Icon(Icons.insert_emoticon),
-
-              duration: Duration(seconds: 3),
-            ),
-    const GFLoader(
-  type: GFLoaderType.custom,
-size: GFSize.large,
-//  child: Text('cfgvbhjnk', style: TextStyle(color: Colors.redAccent),),
-//child: Text('bjnkj')
-child: Image(image: AssetImage('lib/assets/gif/loader.gif'), width: 90,),
-
-),
-//SizedBox(
-//  height: 20,
-//),
-           const  GFLoader(
-
-            ),
 
              const Padding(
               padding: EdgeInsets.only(left: 15, top: 30),
@@ -323,10 +246,26 @@ child: Image(image: AssetImage('lib/assets/gif/loader.gif'), width: 90,),
 
                       ],
                     ),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const <Widget>[
+                        GFLoader(
+                          type: GFLoaderType.custom,
+                          duration: Duration(seconds: 4),
+                          size: GFSize.medium,
+                          loaderIconOne: Text('Please'),
+                          loaderIconTwo: Text('Wait'),
+                          loaderIconThree: Text('a sec'),
+                        ),
+                      ],
+                    ),
                     const SizedBox(height: 25,),
                   ],
                 )
             ),
+
+
           ],
         ),
       );
