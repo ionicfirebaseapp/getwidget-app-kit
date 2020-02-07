@@ -83,11 +83,24 @@ class _LoadersState extends State<Loaders> {
             SizedBox(
               height: 30,
             ),
+            GFLoader(
+//              size: GFSize.large,
+              type: GFLoaderType.ios,
+//androidLoaderColor:const AlwaysStoppedAnimation<Color>(Colors.red),
+
+
+
+//   dotIcon: Icon(Icons.insert_emoticon),
+
+              duration: Duration(seconds: 3),
+            ),
 GFLoader(
   type: GFLoaderType.custom,
 //  child: Text('cfgvbhjnk', style: TextStyle(color: Colors.redAccent),),
-child: Icon(Icons.favorite),
+//child: Text('bjnkj')
+child: Image(image: AssetImage('lib/assets/gif/loader.gif'))
 )
+
 //            GFLoader(
 //              size: GFSize.large,
 //              type: GFLoaderType.ios,
