@@ -252,15 +252,14 @@ class _LoadersState extends State<Loaders> {
                       children: const <Widget>[
                         GFLoader(
                           type: GFLoaderType.custom,
-                          duration: Duration(seconds: 4),
-                          size: GFSize.medium,
                           loaderIconOne: Text('Please'),
                           loaderIconTwo: Text('Wait'),
-                          loaderIconThree: Text('a sec'),
+                          loaderIconThree: Text('a moment'),
                         ),
                       ],
                     ),
                     const SizedBox(height: 25,),
+
                   ],
                 )
             ),
