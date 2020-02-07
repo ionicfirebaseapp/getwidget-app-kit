@@ -622,7 +622,7 @@ class _DrawerPageState extends State<DrawerPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (BuildContext context) => const WebView(
+                            builder: (BuildContext context) => const WebViews(
                                 url: 'https://docs.getflutter.dev/')),
                       );
                     },
@@ -640,7 +640,7 @@ class _DrawerPageState extends State<DrawerPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (BuildContext context) => const WebView(
+                            builder: (BuildContext context) => const WebViews(
                                 url: 'https://www.getflutter.dev/features')),
                       );
                     },
