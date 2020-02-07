@@ -12,7 +12,7 @@ import 'cards/cards.dart';
 import 'carousel/carousel.dart';
 import 'drawer/drawer.dart';
 import 'images/images.dart';
-import 'loader/loaders.dart';
+// import 'loader/loaders.dart';
 import 'searchbar/seachbar.dart';
 import 'tabs/tab_types.dart';
 import 'tiles/tiles_page.dart';
@@ -1171,54 +1171,54 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) => Loaders()),
-                      );
-                    },
-                    child: Container(
-                      margin: const EdgeInsets.only(top: 23),
-                      decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
-                          color: const Color(0xFF333333),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(7)),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black.withOpacity(0.61),
-                                blurRadius: 8,
-                                spreadRadius: 0),
-                          ]),
-                      height: 160,
-                      width: MediaQuery.of(context).size.width,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          const SizedBox(
-                            height: 10,
-                          ),
-//                            Image.asset('lib/assets/icons/menu.png'),
-                          SvgPicture.asset('lib/assets/icons/loader.svg'),
-                          Text(
-                            'Loaders',
-                            style: TextStyle(
-                                fontSize: 20,
-                                color: GFColors.getGFColor(
-                                  GFColor.white,
-                                )),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+                // const SizedBox(
+                //   width: 10,
+                // ),
+//                 Expanded(
+//                   child: GestureDetector(
+//                     onTap: () {
+//                       Navigator.push(
+//                         context,
+//                         MaterialPageRoute(
+//                             builder: (BuildContext context) => Loaders()),
+//                       );
+//                     },
+//                     child: Container(
+//                       margin: const EdgeInsets.only(top: 23),
+//                       decoration: BoxDecoration(
+// //                     color:GFColors.getGFColor( GFColor.dark,),
+//                           color: const Color(0xFF333333),
+//                           borderRadius:
+//                               const BorderRadius.all(Radius.circular(7)),
+//                           boxShadow: [
+//                             BoxShadow(
+//                                 color: Colors.black.withOpacity(0.61),
+//                                 blurRadius: 8,
+//                                 spreadRadius: 0),
+//                           ]),
+//                       height: 160,
+//                       width: MediaQuery.of(context).size.width,
+//                       child: Column(
+//                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                         children: <Widget>[
+//                           const SizedBox(
+//                             height: 10,
+//                           ),
+// //                            Image.asset('lib/assets/icons/menu.png'),
+//                           SvgPicture.asset('lib/assets/icons/loader.svg'),
+//                           Text(
+//                             'Loaders',
+//                             style: TextStyle(
+//                                 fontSize: 20,
+//                                 color: GFColors.getGFColor(
+//                                   GFColor.white,
+//                                 )),
+//                           )
+//                         ],
+//                       ),
+//                     ),
+//                   ),
+//                 ),
               ],
             ),
             const SizedBox(
