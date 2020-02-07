@@ -9,10 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  getflutter:
-    path: ../
+  getflutter: ^1.0.4
   flutter_svg: ^0.15.0
-  easy_web_view: ^1.0.1
+  webview_flutter: ^0.3.19+6
   cupertino_icons: ^0.1.2
 
 dev_dependencies:

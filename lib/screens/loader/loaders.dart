@@ -31,15 +31,14 @@
 //         ),
 //         body: Column(
 //           children: const <Widget>[
-//              SizedBox(
+//             SizedBox(
 //               height: 30,
 //             ),
-
-//              GFLoader(
+//             GFLoader(
 //                 //  dotIcon: Icon(Icons.insert_emoticon),
 // //   duration: Duration(seconds: 2),
 //                 ),
-//              SizedBox(
+//             SizedBox(
 //               height: 30,
 //             ),
 //             GFLoader(
@@ -65,9 +64,8 @@
 //               loaderIconThree: Icon(Icons.email),
 // //   dotIcon: Icon(Icons.insert_emoticon),
 
-//              duration: Duration(seconds: 3),
+//               duration: Duration(seconds: 3),
 //             ),
-
 //           ],
 //         ),
 //       );
