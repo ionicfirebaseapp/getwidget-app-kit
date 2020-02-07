@@ -42,38 +42,37 @@ class _LoadersState extends State<Loaders> {
               height: 30,
             ),
             GFLoader(
-              loaderSizeOne: 20,
-              loaderSizeTwo: 15,
-              loaderSizeThree: 10,
-              type: GFLoaderType.square,
-
-//   dotIcon: Icon(Icons.insert_emoticon),
-
-//             duration: Duration(seconds: 3),
+              size: GFSize.medium,
+              type: GFLoaderType.square
             ),
             SizedBox(
               height: 30,
             ),
             GFLoader(
-              loaderSizeOne: 20,
-              loaderSizeTwo: 15,
-              loaderSizeThree: 10,
-              type: GFLoaderType.icon,
-              loaderIconOne: Icon(Icons.insert_emoticon),
-              loaderIconTwo: Icon(Icons.insert_emoticon),
-              loaderIconThree: Icon(Icons.email),
-//   dotIcon: Icon(Icons.insert_emoticon),
-
-              duration: Duration(seconds: 3),
+                size: GFSize.medium,
+                type: GFLoaderType.custom
             ),
             SizedBox(
               height: 30,
             ),
+//            GFLoader(
+//             size: GFSize.large,
+//              type: GFLoaderType.custom,
+//              loaderIconOne: Icon(Icons.insert_emoticon),
+//              loaderIconTwo: Icon(Icons.insert_emoticon),
+//              loaderIconThree: Icon(Icons.email),
+////   dotIcon: Icon(Icons.insert_emoticon),
+//
+//              duration: Duration(seconds: 3),
+//            ),
+            SizedBox(
+              height: 30,
+            ),
             GFLoader(
-              loaderSizeOne: 20,
-              loaderSizeTwo: 15,
-              loaderSizeThree: 10,
+              size: GFSize.large,
               type: GFLoaderType.android,
+//androidLoaderColor:const AlwaysStoppedAnimation<Color>(Colors.red),
+
 
 
 //   dotIcon: Icon(Icons.insert_emoticon),
@@ -81,6 +80,25 @@ class _LoadersState extends State<Loaders> {
               duration: Duration(seconds: 3),
             ),
 
+            SizedBox(
+              height: 30,
+            ),
+GFLoader(
+  type: GFLoaderType.custom,
+//  child: Text('cfgvbhjnk', style: TextStyle(color: Colors.redAccent),),
+child: Icon(Icons.favorite),
+)
+//            GFLoader(
+//              size: GFSize.large,
+//              type: GFLoaderType.ios,
+////              androidLoaderColor:const AlwaysStoppedAnimation<Color>(Colors.red),
+////loaderSize: 20.0,
+//            loaderstrokeWidth: 10,
+//
+////   dotIcon: Icon(Icons.insert_emoticon),
+//
+//              duration: Duration(seconds: 3),
+//            ),
 
           ],
         ),
