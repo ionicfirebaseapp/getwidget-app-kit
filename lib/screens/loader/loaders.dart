@@ -45,7 +45,7 @@ class _LoadersState extends State<Loaders> {
               loaderSizeOne: 20,
               loaderSizeTwo: 15,
               loaderSizeThree: 10,
-              type: LoaderDotType.square,
+              type: GFLoaderType.square,
 
 //   dotIcon: Icon(Icons.insert_emoticon),
 
@@ -58,7 +58,7 @@ class _LoadersState extends State<Loaders> {
               loaderSizeOne: 20,
               loaderSizeTwo: 15,
               loaderSizeThree: 10,
-              type: LoaderDotType.icon,
+              type: GFLoaderType.icon,
               loaderIconOne: Icon(Icons.insert_emoticon),
               loaderIconTwo: Icon(Icons.insert_emoticon),
               loaderIconThree: Icon(Icons.email),
@@ -66,6 +66,22 @@ class _LoadersState extends State<Loaders> {
 
               duration: Duration(seconds: 3),
             ),
+            SizedBox(
+              height: 30,
+            ),
+            GFLoader(
+              loaderSizeOne: 20,
+              loaderSizeTwo: 15,
+              loaderSizeThree: 10,
+              type: GFLoaderType.android,
+
+
+//   dotIcon: Icon(Icons.insert_emoticon),
+
+              duration: Duration(seconds: 3),
+            ),
+
+
           ],
         ),
       );
