@@ -151,20 +151,20 @@ class _LoadersState extends State<Loaders> {
                     const SizedBox(height: 25,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children:const <Widget>[
+                      children: const <Widget>[
                         GFLoader(
                           type: GFLoaderType.circle,
                           size: GFSize.small,
                         ),
-                        GFLoader(
+                         GFLoader(
                           type: GFLoaderType.circle,
                           size: GFSize.medium,
                         ),
-                        GFLoader(
+                         GFLoader(
                           type: GFLoaderType.circle,
                           size: GFSize.large,
                         ),
-                        GFLoader(
+                         GFLoader(
                           type: GFLoaderType.circle,
                           size: 60,
                         ),
