@@ -32,13 +32,10 @@ class _WebViewsState extends State<WebViews> {
           ),
         ),
       ),
-      body: Builder(builder: (BuildContext context) {
-        return WebView(
-          initialUrl: widget.url,
-          javascriptMode: JavascriptMode.unrestricted,
-          onWebViewCreated: (WebViewController webViewController) {
-            _controller.complete(webViewController);
-          },
-        );
-      }));
+      body: Builder(
+          builder: (BuildContext context) => WebView(
+                initialUrl: widget.url,
+                javascriptMode: JavascriptMode.unrestricted,
+                onWebViewCreated: _controller.complete,
+              )));
 }
