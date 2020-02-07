@@ -54,13 +54,13 @@ class _LoadersState extends State<Loaders> {
 
                      ),
                      GFLoader(
-                       androidLoaderColor:const AlwaysStoppedAnimation<Color>(Colors.red),
+                       androidLoaderColor: AlwaysStoppedAnimation<Color>(Colors.red),
                      ),
                      GFLoader(
-                       androidLoaderColor:const AlwaysStoppedAnimation<Color>(Colors.amber),
+                       androidLoaderColor: AlwaysStoppedAnimation<Color>(Colors.amber),
                      ),
                      GFLoader(
-                       androidLoaderColor:const AlwaysStoppedAnimation<Color>(Colors.green),
+                       androidLoaderColor: AlwaysStoppedAnimation<Color>(Colors.green),
                      ),
                    ],
                  ),
@@ -74,17 +74,17 @@ class _LoadersState extends State<Loaders> {
                        size: GFSize.small,
                      ),
                      GFLoader(
-                       androidLoaderColor:const AlwaysStoppedAnimation<Color>(Colors.red),
+                       androidLoaderColor:AlwaysStoppedAnimation<Color>(Colors.red),
                        loaderstrokeWidth: 2,
                        size: GFSize.medium,
                      ),
                      GFLoader(
-                       androidLoaderColor:const AlwaysStoppedAnimation<Color>(Colors.amber),
+                       androidLoaderColor: AlwaysStoppedAnimation<Color>(Colors.amber),
                        loaderstrokeWidth: 2,
                        size: GFSize.large,
                      ),
                      GFLoader(
-                       androidLoaderColor:const AlwaysStoppedAnimation<Color>(Colors.green),
+                       androidLoaderColor: AlwaysStoppedAnimation<Color>(Colors.green),
                        loaderstrokeWidth: 2,
                        size: 60,
                      ),
