@@ -1,7 +1,7 @@
 name: getflutter_app
 description: A GetFlutter Demo App
 
-version: 1.0.4+5
+version: 1.0.7+8
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -9,7 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  getflutter: ^1.0.4
+  getflutter:
+    path: ../
   flutter_svg: ^0.15.0
   webview_flutter: ^0.3.19+6
   cupertino_icons: ^0.1.2
@@ -86,3 +87,5 @@ flutter:
     - lib/assets/images/avatar10.png
     - lib/assets/images/avatar11.png
     - lib/assets/images/avatar12.png
+    - lib/assets/gif/loader.gif
+    - lib/assets/gif/loader1.gif
