@@ -32,9 +32,6 @@ class _FloatingWidgetState extends State<FloatingWidget> {
          body: GFFloatingWidget(
            verticalPosition: MediaQuery.of(context).size.height* 0.2,
            horizontalPosition: MediaQuery.of(context).size.width* 0.8,
-//showblurness: showFloatingWidget,
-//blurnessColor: Colors.black.withOpacity(0.65),
-//child: Text('ki'),
            child: showFloatingWidget?  Column(
              children: const  <Widget>[
                GFIconBadge(
