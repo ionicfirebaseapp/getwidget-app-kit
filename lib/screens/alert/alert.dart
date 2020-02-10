@@ -35,6 +35,7 @@ class _AlertPageState extends State<AlertPage> {
 
         body: GFFloatingWidget(
             verticalPosition: 150,
+//            horizontalPosition: 0.0,
             showblurness: showblur,
 //blurnessColor: Colors.black54,
 
@@ -62,10 +63,12 @@ class _AlertPageState extends State<AlertPage> {
                               setState(() {
                                 showblur = true;
                                 alertWidget = GFAlert(
+//                                  width: 320,
                                   backgroundColor: Colors.white,
                                   title: 'Welcome !',
                                   content:
-                                      'Get Flutter is one of the largest Flutter open-source UI library for mobile or web apps with  1000+ pre-built reusable widgets.',
+                                      'Get Flutter is one of the largest Flutter open-source UI library '
+                                          'for mobile or web apps with  1000+ pre-built reusable widgets.',
                                   bottombar: Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: <Widget>[
@@ -129,6 +132,7 @@ class _AlertPageState extends State<AlertPage> {
                             setState(() {
                               showblur = true;
                               alertWidget = GFAlert(
+//                                width: 320,
                                 alignment: Alignment.center,
                                 backgroundColor: Colors.white,
                                 title: 'Welcome !',
