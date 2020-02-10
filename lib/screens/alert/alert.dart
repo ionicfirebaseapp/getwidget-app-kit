@@ -43,6 +43,7 @@ class _AlertPageState extends State<AlertPage> {
             child: alertWidget,
             body: ListView(
               children: <Widget>[
+
                 const Padding(
                   padding: EdgeInsets.only(left: 15, top: 30),
                   child: GFTypography(
@@ -247,6 +248,71 @@ class _AlertPageState extends State<AlertPage> {
                               );
                             });
                           }),
+                    )),
+
+                const Padding(
+                  padding: EdgeInsets.only(left: 15, top: 30),
+                  child: GFTypography(
+                    text: 'Custom Alert',
+                    type: GFTypographyType.typo5,
+                    dividerWidth: 25,
+                    dividerColor: Color(0xFF19CA4B),
+                  ),
+                ),
+                Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        GFButton(
+                            text: 'Tap to View',
+                            onPressed: () {
+                              setState(() {
+                                showblur = true;
+                                alertWidget = GFAlert(
+                                  alignment: Alignment.center,
+//                                  width: 320,
+                                  backgroundColor: Colors.white,
+                                  child: Icon(Icons.favorite_border, size: 70, color: GFColors.getGFColor(GFColor.danger),),
+//
+                                  contentChild: const Text('Add your favourites to your whislist, you can remove'
+                                      ' it whenever you feel to.', style: TextStyle( fontSize: 20),),
+                                  bottombar: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: <Widget>[
+                                      GFButton(
+                                        onPressed: () {
+                                          setState(() {
+                                            alertWidget = null;
+                                            showblur = false;
+                                          });
+                                        },
+                                        color: GFColor.info,
+//
+                                       text: 'Add',
+                                      ),
+                                      const SizedBox(
+                                        width: 5,
+                                      ),
+                                      GFButton(
+                                        color: GFColors.getGFColor(
+                                GFColor.danger),
+
+                                        onPressed: () {
+                                          setState(() {
+                                            alertWidget = null;
+                                            showblur = false;
+                                          });
+                                        },
+//
+                                        text: 'Cancel',
+                                      )
+                                    ],
+                                  ),
+                                );
+                              });
+                            }),
+                      ],
                     )),
               ],
             )),
