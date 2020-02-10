@@ -1159,7 +1159,8 @@ class _HomePageState extends State<HomePage> {
                             height: 10,
                           ),
 //                            Image.asset('lib/assets/icons/menu.png'),
-                          SvgPicture.asset('lib/assets/icons/typography.svg'),
+//                          SvgPicture.asset('lib/assets/icons/typography.svg'),
+                        Icon(Icons.mobile_screen_share, color: GFColors.getGFColor(GFColor.success), size: 30,),
                           Text(
                             'Floating Widget',
                             style: TextStyle(
