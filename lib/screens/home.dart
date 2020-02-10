@@ -1138,7 +1138,7 @@ class _HomePageState extends State<HomePage> {
                         context,
                         MaterialPageRoute(
                             builder: (BuildContext context) =>
-                               FloatingWidget()),
+                               RatingPage()),
                       );
                     },
                     child: Container(
@@ -1163,10 +1163,10 @@ class _HomePageState extends State<HomePage> {
                             height: 10,
                           ),
 //                            Image.asset('lib/assets/icons/menu.png'),
-//                          SvgPicture.asset('lib/assets/icons/typography.svg'),
-                        Icon(Icons.mobile_screen_share, color: GFColors.getGFColor(GFColor.success), size: 30,),
+                          SvgPicture.asset('lib/assets/icons/rating.svg'),
+//                        Icon(Icons.mobile_screen_share, color: GFColors.getGFColor(GFColor.success), size: 30,),
                           Text(
-                            'Floating Widget',
+                            'Rating',
                             style: TextStyle(
                                 fontSize: 20,
                                 color: GFColors.getGFColor(
@@ -1231,55 +1231,55 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                RatingPage()),
-                      );
-                    },
-                    child: Container(
-                      margin: const EdgeInsets.only(top: 23),
-                      decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
-                          color: const Color(0xFF333333),
-                          borderRadius:
-                          const BorderRadius.all(Radius.circular(7)),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black.withOpacity(0.61),
-                                blurRadius: 8,
-                                spreadRadius: 0),
-                          ]),
-                      height: 160,
-                      width: MediaQuery.of(context).size.width,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          const SizedBox(
-                            height: 10,
-                          ),
-//                            Image.asset('lib/assets/icons/menu.png'),
-                          SvgPicture.asset('lib/assets/icons/rating.svg'),
-                          Text(
-                            'Rating',
-                            style: TextStyle(
-                                fontSize: 20,
-                                color: GFColors.getGFColor(
-                                  GFColor.white,
-                                )),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
+//                Expanded(
+//                  child: GestureDetector(
+//                    onTap: () {
+//                      Navigator.push(
+//                        context,
+//                        MaterialPageRoute(
+//                            builder: (BuildContext context) =>
+//                                RatingPage()),
+//                      );
+//                    },
+//                    child: Container(
+//                      margin: const EdgeInsets.only(top: 23),
+//                      decoration: BoxDecoration(
+////                     color:GFColors.getGFColor( GFColor.dark,),
+//                          color: const Color(0xFF333333),
+//                          borderRadius:
+//                          const BorderRadius.all(Radius.circular(7)),
+//                          boxShadow: [
+//                            BoxShadow(
+//                                color: Colors.black.withOpacity(0.61),
+//                                blurRadius: 8,
+//                                spreadRadius: 0),
+//                          ]),
+//                      height: 160,
+//                      width: MediaQuery.of(context).size.width,
+//                      child: Column(
+//                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                        children: <Widget>[
+//                          const SizedBox(
+//                            height: 10,
+//                          ),
+////                            Image.asset('lib/assets/icons/menu.png'),
+//                          SvgPicture.asset('lib/assets/icons/rating.svg'),
+//                          Text(
+//                            'Rating',
+//                            style: TextStyle(
+//                                fontSize: 20,
+//                                color: GFColors.getGFColor(
+//                                  GFColor.white,
+//                                )),
+//                          )
+//                        ],
+//                      ),
+//                    ),
+//                  ),
+//                ),
+//                SizedBox(
+//                  width: 20,
+//                ),
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
