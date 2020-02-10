@@ -14,12 +14,14 @@ import 'drawer/drawer.dart';
 import 'floating_widget/floating_widget.dart';
 import 'images/images.dart';
 import 'loader/loaders.dart';
+import 'progress_indicator/progress_indicator.dart';
 import 'searchbar/seachbar.dart';
 import 'tabs/tab_types.dart';
 import 'tiles/tiles_page.dart';
 import 'toast/toasts.dart';
 import 'toggle/toggles.dart';
 import 'typography/typography.dart';
+
 
 
 class HomePage extends StatefulWidget {
@@ -1262,6 +1264,57 @@ class _HomePageState extends State<HomePage> {
                           SvgPicture.asset('lib/assets/icons/typography.svg'),
                           Text(
                             'Typography',
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: GFColors.getGFColor(
+                                  GFColor.white,
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                ProgressIndicators()),
+                      );
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      margin: const EdgeInsets.only(top: 23),
+                      decoration: BoxDecoration(
+//                     color:GFColors.getGFColor( GFColor.dark,),
+                          color: const Color(0xFF333333),
+                          borderRadius:
+                          const BorderRadius.all(Radius.circular(7)),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.black.withOpacity(0.61),
+                                blurRadius: 8,
+                                spreadRadius: 0),
+                          ]),
+                      height: 160,
+                      width: MediaQuery.of(context).size.width,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          const SizedBox(
+                            height: 10,
+                          ),
+//                            Image.asset('lib/assets/icons/menu.png'),
+                          SvgPicture.asset('lib/assets/icons/typography.svg'),
+                          Text(
+                            'Progress Bar',
                             style: TextStyle(
                                 fontSize: 20,
                                 color: GFColors.getGFColor(
