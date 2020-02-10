@@ -63,6 +63,7 @@ flutter:
     - lib/assets/icons/cards.svg
     - lib/assets/icons/carousels.svg
     - lib/assets/icons/images.svg
+    - lib/assets/icons/rating.svg
     - lib/assets/icons/tabs.svg
     - lib/assets/icons/tiles.svg
     - lib/assets/icons/typography.svg

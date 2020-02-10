@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getflutter/getflutter.dart';
 
-class ProgressIndicators extends StatefulWidget {
+class ProgressBar extends StatefulWidget {
   @override
-  _ProgressIndicatorsState createState() => _ProgressIndicatorsState();
+  _ProgressBarState createState() => _ProgressBarState();
 }
 
-class _ProgressIndicatorsState extends State<ProgressIndicators> {
+class _ProgressBarState extends State<ProgressBar> {
   @override
   Widget build(BuildContext context) =>
       Scaffold(
@@ -28,5 +28,10 @@ class _ProgressIndicatorsState extends State<ProgressIndicators> {
           ),
           centerTitle: true,
         ),
+
+        body: LinearProgressIndicator(
+
+        ),
+
       );
 }

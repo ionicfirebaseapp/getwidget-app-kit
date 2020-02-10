@@ -54,7 +54,7 @@ class _FloatingWidgetState extends State<FloatingWidget> {
                const Padding(
                  padding: EdgeInsets.only(left: 15, top: 20, bottom: 40),
                  child: GFTypography(
-                   text: 'Basic Floating Widget',
+                   text: 'Floating Widget',
                    type: GFTypographyType.typo5,
                    dividerWidth: 25,
                    dividerColor: Color(0xFF19CA4B),

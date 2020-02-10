@@ -15,12 +15,14 @@ import 'floating_widget/floating_widget.dart';
 import 'images/images.dart';
 import 'loader/loaders.dart';
 import 'progress_indicator/progress_indicator.dart';
+import 'rating/rating.dart';
 import 'searchbar/seachbar.dart';
 import 'tabs/tab_types.dart';
 import 'tiles/tiles_page.dart';
 import 'toast/toasts.dart';
 import 'toggle/toggles.dart';
 import 'typography/typography.dart';
+
 
 
 
@@ -1236,7 +1238,7 @@ class _HomePageState extends State<HomePage> {
                         context,
                         MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                TypographyPage()),
+                                RatingPage()),
                       );
                     },
                     child: Container(
@@ -1261,9 +1263,9 @@ class _HomePageState extends State<HomePage> {
                             height: 10,
                           ),
 //                            Image.asset('lib/assets/icons/menu.png'),
-                          SvgPicture.asset('lib/assets/icons/typography.svg'),
+                          SvgPicture.asset('lib/assets/icons/rating.svg'),
                           Text(
-                            'Typography',
+                            'Rating',
                             style: TextStyle(
                                 fontSize: 20,
                                 color: GFColors.getGFColor(
@@ -1285,7 +1287,7 @@ class _HomePageState extends State<HomePage> {
                         context,
                         MaterialPageRoute(
                             builder: (BuildContext context) =>
-                                ProgressIndicators()),
+                                TypographyPage()),
                       );
                     },
                     child: Container(
@@ -1314,7 +1316,7 @@ class _HomePageState extends State<HomePage> {
 //                            Image.asset('lib/assets/icons/menu.png'),
                           SvgPicture.asset('lib/assets/icons/typography.svg'),
                           Text(
-                            'Progress Bar',
+                            'Typography',
                             style: TextStyle(
                                 fontSize: 20,
                                 color: GFColors.getGFColor(
