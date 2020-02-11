@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:getflutter/getflutter.dart';
 import 'package:flutter/cupertino.dart';
-import 'messenger_floating.dart';
 import 'fab_floating.dart';
+import 'messenger_floating.dart';
 
 class FloatingWidgetHome extends StatefulWidget {
   @override
@@ -11,19 +11,17 @@ class FloatingWidgetHome extends StatefulWidget {
 
 class _FloatingWidgetHomeState extends State<FloatingWidgetHome> {
   bool showFloatingWidget = false;
-
   @override
-  Widget build(BuildContext context) =>
-       Scaffold(
+  Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
             child: Icon(
               CupertinoIcons.back,
-              color: GFColors.getGFColor(GFColor.success),
+              color: GFColors.SUCCESS,
             ),
           ),
           title: const Text(
@@ -32,21 +30,17 @@ class _FloatingWidgetHomeState extends State<FloatingWidgetHome> {
           ),
           centerTitle: true,
         ),
-         body: ListView(
-           children: <Widget>[
-
+        body: ListView(
+          children: <Widget>[
             Container(
               height: 200,
-              child:  MessengerFloatingWidget(),
+              child: MessengerFloatingWidget(),
             ),
-             Container(
-               height: MediaQuery.of(context).size.height*0.55,
-               child:  FabFloatingWidget(),
-             ),
-
-
-           ],
-         )
-
+            Container(
+              height: MediaQuery.of(context).size.height * 0.55,
+              child: FabFloatingWidget(),
+            ),
+          ],
+        ),
       );
 }

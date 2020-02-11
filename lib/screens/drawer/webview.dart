@@ -19,7 +19,7 @@ class _WebViewsState extends State<WebViews> {
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
-        backgroundColor: GFColors.getGFColor(GFColor.dark),
+        backgroundColor: GFColors.DARK,
         title: SvgPicture.asset('lib/assets/icons/gflogo.svg'),
         centerTitle: true,
         leading: InkWell(
@@ -28,7 +28,7 @@ class _WebViewsState extends State<WebViews> {
           },
           child: Icon(
             CupertinoIcons.back,
-            color: GFColors.getGFColor(GFColor.success),
+            color: GFColors.SUCCESS,
           ),
         ),
       ),

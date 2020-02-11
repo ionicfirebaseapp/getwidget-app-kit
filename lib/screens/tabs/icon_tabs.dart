@@ -26,16 +26,15 @@ class _IconTabsState extends State<IconTabs>
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: GFAppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
               onTap: () {
                 Navigator.pop(context);
               },
-//          child: SvgPicture.asset('lib/assets/icons/back.svg',),
               child: Container(
                 child: Icon(
                   CupertinoIcons.back,
-                  color: GFColors.getGFColor(GFColor.success),
+                  color: GFColors.SUCCESS,
                 ),
               )),
           title: const Text(
@@ -44,16 +43,8 @@ class _IconTabsState extends State<IconTabs>
           ),
           centerTitle: true,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+        body: ListView(
           children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                  color: GFColors.getGFColor(GFColor.danger),
-                  border: Border(
-                      top: BorderSide(
-                          color: GFColors.getGFColor(GFColor.light)))),
-            ),
             GFTabBar(
               initialIndex: 0,
               length: 4,
@@ -73,12 +64,10 @@ class _IconTabsState extends State<IconTabs>
                 ),
               ],
               indicatorColor: Colors.teal,
-
-//        indicatorSize: TabBarIndicatorSize.label,
-              labelColor: GFColors.getGFColor(GFColor.success),
+              labelColor: GFColors.SUCCESS,
               labelPadding: const EdgeInsets.all(8),
-              tabBarColor: GFColors.getGFColor(GFColor.white),
-              unselectedLabelColor: GFColors.getGFColor(GFColor.light),
+              tabBarColor: GFColors.WHITE,
+              unselectedLabelColor: GFColors.LIGHT,
               labelStyle: TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 13,
@@ -93,40 +82,41 @@ class _IconTabsState extends State<IconTabs>
               ),
             ),
             Container(
-                height: MediaQuery.of(context).size.height - 159,
-                child: GFTabBarView(
-                  controller: tabController,
-                  children: <Widget>[
-                    Center(
-                      child: Icon(
-                        Icons.home,
-                        size: 150,
-                        color: Colors.grey.withOpacity(0.44),
-                      ),
+              height: MediaQuery.of(context).size.height - 159,
+              child: GFTabBarView(
+                controller: tabController,
+                children: <Widget>[
+                  Center(
+                    child: Icon(
+                      Icons.home,
+                      size: 150,
+                      color: Colors.grey.withOpacity(0.44),
                     ),
-                    Center(
-                      child: Icon(
-                        Icons.music_note,
-                        size: 150,
-                        color: Colors.grey.withOpacity(0.44),
-                      ),
+                  ),
+                  Center(
+                    child: Icon(
+                      Icons.music_note,
+                      size: 150,
+                      color: Colors.grey.withOpacity(0.44),
                     ),
-                    Center(
-                      child: Icon(
-                        Icons.games,
-                        size: 150,
-                        color: Colors.grey.withOpacity(0.44),
-                      ),
+                  ),
+                  Center(
+                    child: Icon(
+                      Icons.games,
+                      size: 150,
+                      color: Colors.grey.withOpacity(0.44),
                     ),
-                    Center(
-                      child: Icon(
-                        Icons.notifications,
-                        size: 150,
-                        color: Colors.grey.withOpacity(0.44),
-                      ),
-                    )
-                  ],
-                ))
+                  ),
+                  Center(
+                    child: Icon(
+                      Icons.notifications,
+                      size: 150,
+                      color: Colors.grey.withOpacity(0.44),
+                    ),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       );

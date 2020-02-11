@@ -11,14 +11,14 @@ class _TypographyPageState extends State<TypographyPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
             child: Icon(
               CupertinoIcons.back,
-              color: GFColors.getGFColor(GFColor.success),
+              color: GFColors.SUCCESS,
             ),
           ),
           title: const Text(
@@ -113,38 +113,42 @@ class _TypographyPageState extends State<TypographyPage> {
                     height: 15,
                   ),
                   const GFTypography(
-                      text: 'GF Header Typo1',
-                      type: GFTypographyType.typo1,
-                      showDivider: false,
-                      textColor: Colors.black87),
+                    text: 'GF Header Typo1',
+                    type: GFTypographyType.typo1,
+                    showDivider: false,
+                    textColor: Colors.black87,
+                  ),
                   const SizedBox(
                     height: 15,
                   ),
                   GFTypography(
-                      text: 'GF Header Typo2',
-                      type: GFTypographyType.typo2,
-                      showDivider: false,
-                      textColor: Colors.black54),
+                    text: 'GF Header Typo2',
+                    type: GFTypographyType.typo2,
+                    showDivider: false,
+                    textColor: Colors.black54,
+                  ),
                   const SizedBox(
                     height: 15,
                   ),
                   GFTypography(
-                      text: 'GF Header Typo3',
-                      type: GFTypographyType.typo3,
-                      showDivider: false,
-                      textColor: Colors.black45),
+                    text: 'GF Header Typo3',
+                    type: GFTypographyType.typo3,
+                    showDivider: false,
+                    textColor: Colors.black45,
+                  ),
                   const SizedBox(
                     height: 15,
                   ),
                   GFTypography(
-                      text: 'GF Header Typo4',
-                      type: GFTypographyType.typo4,
-                      showDivider: false,
-                      textColor: Colors.black38),
+                    text: 'GF Header Typo4',
+                    type: GFTypographyType.typo4,
+                    showDivider: false,
+                    textColor: Colors.black38,
+                  ),
                   const SizedBox(
                     height: 15,
                   ),
-                  GFTypography(
+                  const GFTypography(
                       text: 'GF Header Typo5',
                       type: GFTypographyType.typo5,
                       showDivider: false,

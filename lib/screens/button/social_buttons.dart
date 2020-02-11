@@ -12,14 +12,14 @@ class _SocialButtonsState extends State<SocialButtons> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
             child: Icon(
               CupertinoIcons.back,
-              color: GFColors.getGFColor(GFColor.success),
+              color: GFColors.SUCCESS,
             ),
           ),
           title: const Text(
@@ -55,11 +55,8 @@ class _SocialButtonsState extends State<SocialButtons> {
                           buttonBoxShadow: true,
                           color: const Color(0xFF3B5998),
                           onPressed: () {},
-                          child: const Text(
-                            'FB',
-                          ),
+                          child: const Text('FB'),
                           icon: SvgPicture.asset('lib/assets/icons/fb.svg'),
-//                        size: GFSize.small,
                         ),
                       ),
                       const SizedBox(
@@ -81,9 +78,7 @@ class _SocialButtonsState extends State<SocialButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: const Text(
-                            'Whatsap',
-                          ),
+                          child: const Text('Whatsap'),
                           icon:
                               SvgPicture.asset('lib/assets/icons/whatsapp.svg'),
                           color: const Color(0xFF25D366),
@@ -101,9 +96,7 @@ class _SocialButtonsState extends State<SocialButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: const Text(
-                            'Google +',
-                          ),
+                          child: const Text('Google +'),
                           icon: SvgPicture.asset('lib/assets/icons/google.svg'),
                           color: const Color(0xFFDD4B39),
                           buttonBoxShadow: true,
@@ -115,9 +108,7 @@ class _SocialButtonsState extends State<SocialButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: const Text(
-                            'Dribble',
-                          ),
+                          child: const Text('Dribble'),
                           icon:
                               SvgPicture.asset('lib/assets/icons/dribble.svg'),
                           color: const Color(0xFFEA4C89),
@@ -130,9 +121,7 @@ class _SocialButtonsState extends State<SocialButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: const Text(
-                            'LinkedIn',
-                          ),
+                          child: const Text('LinkedIn'),
                           icon:
                               SvgPicture.asset('lib/assets/icons/linkedin.svg'),
                           color: const Color(0xFF0E76A8),
@@ -150,9 +139,7 @@ class _SocialButtonsState extends State<SocialButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: const Text(
-                            'Youtube',
-                          ),
+                          child: const Text('Youtube'),
                           icon:
                               SvgPicture.asset('lib/assets/icons/youtube.svg'),
                           color: const Color(0xFFC4302B),
@@ -165,10 +152,9 @@ class _SocialButtonsState extends State<SocialButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             'Slack',
-                            style: TextStyle(
-                                color: GFColors.getGFColor(GFColor.white)),
+                            style: TextStyle(color: GFColors.WHITE),
                           ),
                           icon: SvgPicture.asset('lib/assets/icons/slack.svg'),
                           color: const Color(0XFF2EB67D),
@@ -181,9 +167,7 @@ class _SocialButtonsState extends State<SocialButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: const Text(
-                            'Pinterest',
-                          ),
+                          child: const Text('Pinterest'),
                           icon: SvgPicture.asset(
                               'lib/assets/icons/pinterest.svg'),
                           color: const Color(0XFFC8232C),
