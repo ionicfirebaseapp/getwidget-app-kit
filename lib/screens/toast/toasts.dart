@@ -43,7 +43,7 @@ class _ToastsState extends State<Toasts> {
          child: showFloatingToast? GFToast(
            backgroundColor: Colors.white,
            text:
-           'You have succesfully viewed how the floating alert works!!',
+           'You have succesfully viewed how the floating toast works!!',
            textStyle: TextStyle(color: Colors.black87),
            button: GFButton(
              onPressed: () {
