@@ -53,19 +53,10 @@ class _FabFloatingWidgetState extends State<FabFloatingWidget> with TickerProvid
 //                  iconSize: 80,
               size: 100.0,
 
-//                  size: showfabFloatingWidget?120:90,
                   onPressed: () {
                     setState(() {
                       showfabFloatingWidget=!showfabFloatingWidget;
                     });
-//                      if(showfabFloatingWidget = !showfabFloatingWidget){
-//                        controller.forward();
-//
-//                      }
-//                      if(showfabFloatingWidget = false){
-//                        controller.forward();
-//
-//                      }
                     switch (controller.status) {
                       case AnimationStatus.completed:
                         controller.forward(from:1);

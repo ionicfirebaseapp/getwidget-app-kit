@@ -93,7 +93,7 @@ class _IconTabsState extends State<IconTabs>
               ),
             ),
             Container(
-                height: MediaQuery.of(context).size.height - 159,
+                height: MediaQuery.of(context).size.height-159,
                 child: GFTabBarView(
                   controller: tabController,
                   children: <Widget>[
