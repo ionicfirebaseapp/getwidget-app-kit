@@ -31,7 +31,6 @@ class _LabeledTabsState extends State<LabeledTabs>
               onTap: () {
                 Navigator.pop(context);
               },
-//          child: SvgPicture.asset('lib/assets/icons/back.svg',),
               child: Container(
                 child: Icon(
                   CupertinoIcons.back,
@@ -115,11 +114,8 @@ class _LabeledTabsState extends State<LabeledTabs>
                 ),
               ],
               indicatorColor: Colors.teal,
-
-//        indicatorSize: TabBarIndicatorSize.label,
               labelColor: GFColors.SUCCESS,
               labelPadding: const EdgeInsets.all(8),
-
               tabBarColor: GFColors.WHITE,
               unselectedLabelColor: GFColors.LIGHT,
               labelStyle: TextStyle(
@@ -128,7 +124,6 @@ class _LabeledTabsState extends State<LabeledTabs>
                 color: Colors.white,
                 fontFamily: 'OpenSansBold',
               ),
-
               unselectedLabelStyle: TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 13,
@@ -137,40 +132,41 @@ class _LabeledTabsState extends State<LabeledTabs>
               ),
             ),
             Container(
-                height: MediaQuery.of(context).size.height - 159,
-                child: GFTabBarView(
-                  controller: tabController,
-                  children: <Widget>[
-                    Center(
-                      child: Icon(
-                        Icons.home,
-                        size: 150,
-                        color: Colors.grey.withOpacity(0.44),
-                      ),
+              height: MediaQuery.of(context).size.height - 159,
+              child: GFTabBarView(
+                controller: tabController,
+                children: <Widget>[
+                  Center(
+                    child: Icon(
+                      Icons.home,
+                      size: 150,
+                      color: Colors.grey.withOpacity(0.44),
                     ),
-                    Center(
-                      child: Icon(
-                        Icons.music_note,
-                        size: 150,
-                        color: Colors.grey.withOpacity(0.44),
-                      ),
+                  ),
+                  Center(
+                    child: Icon(
+                      Icons.music_note,
+                      size: 150,
+                      color: Colors.grey.withOpacity(0.44),
                     ),
-                    Center(
-                      child: Icon(
-                        Icons.games,
-                        size: 150,
-                        color: Colors.grey.withOpacity(0.44),
-                      ),
+                  ),
+                  Center(
+                    child: Icon(
+                      Icons.games,
+                      size: 150,
+                      color: Colors.grey.withOpacity(0.44),
                     ),
-                    Center(
-                      child: Icon(
-                        Icons.notifications,
-                        size: 150,
-                        color: Colors.grey.withOpacity(0.44),
-                      ),
-                    )
-                  ],
-                ))
+                  ),
+                  Center(
+                    child: Icon(
+                      Icons.notifications,
+                      size: 150,
+                      color: Colors.grey.withOpacity(0.44),
+                    ),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       );

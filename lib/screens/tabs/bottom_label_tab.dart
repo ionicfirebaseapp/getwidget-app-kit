@@ -141,7 +141,6 @@ class _BottomLabelTabState extends State<BottomLabelTab>
               ),
             ],
             indicatorColor: GFColors.SUCCESS,
-//        indicatorSize: TabBarIndicatorSize.label,
             labelColor: GFColors.SUCCESS,
             labelPadding: const EdgeInsets.all(8),
             tabBarColor: GFColors.DARK,
@@ -152,7 +151,7 @@ class _BottomLabelTabState extends State<BottomLabelTab>
               color: Colors.white,
               fontFamily: 'OpenSansBold',
             ),
-            unselectedLabelStyle: TextStyle(
+            unselectedLabelStyle: const TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 13,
               color: Colors.black,

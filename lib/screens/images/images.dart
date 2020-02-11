@@ -24,70 +24,63 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-      appBar: AppBar(
-        backgroundColor: GFColors.DARK,
-        leading: InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Icon(
-            CupertinoIcons.back,
-            color: GFColors.SUCCESS,
-          ),
-        ),
-        title: const Text(
-          'Images',
-          style: TextStyle(fontSize: 17),
-        ),
-        centerTitle: true,
-      ),
-      body: ListView(children: <Widget>[
-        Container(
-          height: 40,
-          margin: const EdgeInsets.only(top: 20, left: 25, right: 25),
-          child: GFSegmentTabs(
-            tabController: tabController,
-//              height: 38.0,
-            width: 280,
-            initialIndex: 0,
-            length: 3,
-            tabs: const <Widget>[
-              Text(
-                'Basic',
-              ),
-              Tab(
-                child: Text(
-                  'Circular',
-                ),
-              ),
-              Tab(
-                child: Text(
-                  'Overlays',
-                ),
-              ),
-            ],
-            tabBarColor: GFColors.LIGHT,
-            indicatorSize: TabBarIndicatorSize.tab,
-            labelColor: GFColors.WHITE,
-            unselectedLabelColor: GFColors.DARK,
-            indicator: BoxDecoration(
-              color: Colors.black,
-              border: Border(
-                bottom: BorderSide(
-                  color: GFColors.SUCCESS,
-                  width: 3,
-                ),
-              ),
-//                borderRadius: BorderRadius.circular(2.0)
+        appBar: AppBar(
+          backgroundColor: GFColors.DARK,
+          leading: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              CupertinoIcons.back,
+              color: GFColors.SUCCESS,
             ),
-            indicatorPadding: const EdgeInsets.all(8),
-            indicatorWeight: 2,
-            border: Border.all(color: Colors.white, width: 2),
           ),
+          title: const Text(
+            'Images',
+            style: TextStyle(fontSize: 17),
+          ),
+          centerTitle: true,
         ),
-        Container(
-            height: MediaQuery.of(context).size.height - 140,
-            child: GFTabBarView(
+        body: ListView(
+          children: <Widget>[
+            Container(
+              height: 40,
+              margin: const EdgeInsets.only(top: 20, left: 25, right: 25),
+              child: GFSegmentTabs(
+                tabController: tabController,
+                width: 280,
+                initialIndex: 0,
+                length: 3,
+                tabs: const <Widget>[
+                  Text('Basic'),
+                  Tab(
+                    child: Text('Circular'),
+                  ),
+                  Tab(
+                    child: Text('Overlays'),
+                  ),
+                ],
+                tabBarColor: GFColors.LIGHT,
+                indicatorSize: TabBarIndicatorSize.tab,
+                labelColor: GFColors.WHITE,
+                unselectedLabelColor: GFColors.DARK,
+                indicator: BoxDecoration(
+                  color: Colors.black,
+                  border: Border(
+                    bottom: BorderSide(
+                      color: GFColors.SUCCESS,
+                      width: 3,
+                    ),
+                  ),
+                ),
+                indicatorPadding: const EdgeInsets.all(8),
+                indicatorWeight: 2,
+                border: Border.all(color: Colors.white, width: 2),
+              ),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height - 140,
+              child: GFTabBarView(
                 controller: tabController,
                 height: 400,
                 children: <Widget>[
@@ -136,7 +129,6 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                       ],
                     ),
                   ),
-
                   Container(
                     child: Column(
                       children: <Widget>[
@@ -151,12 +143,13 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                                 image: AssetImage('lib/assets/images/img.png'),
                               ),
                               GFImageOverlay(
-                                  height: 140,
-                                  width: 140,
-                                  shape: BoxShape.circle,
-                                  image: AssetImage(
-                                    'lib/assets/images/img1.png',
-                                  ))
+                                height: 140,
+                                width: 140,
+                                shape: BoxShape.circle,
+                                image: AssetImage(
+                                  'lib/assets/images/img1.png',
+                                ),
+                              )
                             ],
                           ),
                         ),
@@ -176,55 +169,6 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                       ],
                     ),
                   ),
-
-//      Container(
-//        child:  ListView(
-//          children: <Widget>[
-//            GFCard(
-//              content:Row(
-//                mainAxisAlignment:MainAxisAlignment.center,
-//                children: <Widget>[
-//                  GFImageOverlay(
-//                    height: 250,
-//                    width: 250,
-//                    shape: BoxShape.circle,
-//                    image: AssetImage('lib/assets/images/image1.png'),)
-//
-//                ],
-//              ),
-//            ),
-//
-//            GFCard(
-//              content:Row(
-//                mainAxisAlignment:MainAxisAlignment.center,
-//                children: <Widget>[
-//                  GFImageOverlay(
-//                    height: 250,
-//                    width: 250,
-//                    shape: BoxShape.circle,
-//                    image: AssetImage('lib/assets/images/image1.png'),)
-//
-//                ],
-//              ),
-//            ),
-//
-//            GFCard(
-//              content:Row(
-//                mainAxisAlignment:MainAxisAlignment.center,
-//                children: <Widget>[
-//                  GFImageOverlay(
-//                    height: 250,
-//                    width: 250,
-//                    shape: BoxShape.circle,
-//                    image: AssetImage('lib/assets/images/image1.png'),)
-//
-//                ],
-//              ),
-//            ),
-//
-//          ],
-//        ),
-//      ),
                   Container(
                     child: ListView(
                       children: <Widget>[
@@ -295,6 +239,10 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                       ],
                     ),
                   )
-                ]))
-      ]));
+                ],
+              ),
+            )
+          ],
+        ),
+      );
 }

@@ -71,7 +71,6 @@ class _RatingPageState extends State<RatingPage> {
               color: GFColors.DANGER,
             ),
             size: GFSize.SMALL,
-//              halfFilledIcon:Icon(Icons.favorite_border, color: Colors.amber,),
             value: _iconRating,
             onChanged: (value) {
               setState(() {
@@ -147,7 +146,7 @@ class _RatingPageState extends State<RatingPage> {
               child: Icon(Icons.insert_emoticon),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           )
         ],

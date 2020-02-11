@@ -51,16 +51,7 @@ class _SearchbarPageState extends State<SearchbarPage> {
               ),
             ),
             GFSearchBar(
-                // searchBoxInputDecoration: InputDecoration(
-                //   enabledBorder: OutlineInputBorder(
-                //       borderSide: BorderSide(
-                //         color: Colors.teal,
-                //       ),
-                //       borderRadius: BorderRadius.circular(50)),
-                // ),
                 searchList: list,
-//              hideSearchBoxWhenItemSelected: false,
-//              overlaySearchListHeight: 100.0,
                 searchQueryBuilder: (query, list) => list
                     .where((item) =>
                         item.toLowerCase().contains(query.toLowerCase()))
@@ -72,10 +63,6 @@ class _SearchbarPageState extends State<SearchbarPage> {
                         style: const TextStyle(fontSize: 18),
                       ),
                     ),
-//              noItemsFoundWidget: Container(
-//                color: Colors.green,
-//                child: Text("no items found..."),
-//              ),
                 onItemSelected: (item) {
                   setState(() {
                     print('$item');
@@ -107,8 +94,6 @@ class _SearchbarPageState extends State<SearchbarPage> {
                       borderRadius: BorderRadius.circular(50)),
                 ),
                 searchList: list,
-//              hideSearchBoxWhenItemSelected: false,
-//              overlaySearchListHeight: 100.0,
                 searchQueryBuilder: (query, list) => list
                     .where((item) =>
                         item.toLowerCase().contains(query.toLowerCase()))
@@ -120,10 +105,6 @@ class _SearchbarPageState extends State<SearchbarPage> {
                         style: const TextStyle(fontSize: 18),
                       ),
                     ),
-//              noItemsFoundWidget: Container(
-//                color: Colors.green,
-//                child: Text("no items found..."),
-//              ),
                 onItemSelected: (item) {
                   setState(() {
                     print('$item');

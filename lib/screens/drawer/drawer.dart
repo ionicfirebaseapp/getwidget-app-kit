@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:getflutter/components/accordian/gf_accordian.dart';
 import 'package:getflutter/getflutter.dart';
 import 'package:getflutter_app/screens/appbar/app_home.dart';
 import 'package:getflutter_app/screens/button/icon_buttons.dart';
@@ -13,17 +12,17 @@ import 'package:getflutter_app/screens/button/standard_buttons.dart';
 import 'package:getflutter_app/screens/drawer/webview.dart';
 import 'package:getflutter_app/screens/searchbar/seachbar.dart';
 import 'package:getflutter_app/screens/tabs/tab_types.dart';
-import '../accordian/accordian.dart';
-import '../alert/alert.dart';
-import '../avatar/avatars.dart';
-import '../badges/badges.dart';
-import '../cards/cards.dart';
-import '../carousel/carousel.dart';
-import '../images/images.dart';
-import '../tiles/tiles_page.dart';
-import '../toast/toasts.dart';
-import '../toggle/toggles.dart';
-import '../typography/typography.dart';
+import 'package:getflutter_app/screens/accordian/accordian.dart';
+import 'package:getflutter_app/screens/alert/alert.dart';
+import 'package:getflutter_app/screens/avatar/avatars.dart';
+import 'package:getflutter_app/screens/badges/badges.dart';
+import 'package:getflutter_app/screens/cards/cards.dart';
+import 'package:getflutter_app/screens/carousel/carousel.dart';
+import 'package:getflutter_app/screens/images/images.dart';
+import 'package:getflutter_app/screens/tiles/tiles_page.dart';
+import 'package:getflutter_app/screens/toast/toasts.dart';
+import 'package:getflutter_app/screens/toggle/toggles.dart';
+import 'package:getflutter_app/screens/typography/typography.dart';
 
 class DrawerPage extends StatefulWidget {
   @override
@@ -34,21 +33,6 @@ class _DrawerPageState extends State<DrawerPage> {
   @override
   Widget build(BuildContext context) => GFDrawer(
         color: Colors.white,
-//          colorFilter: new ColorFilter.mode(
-//              Colors.black.withOpacity(0.6), BlendMode.darken),
-//          backgroundImage: NetworkImage(
-//              "https://cdn.pixabay.com/photo/2017/12/03/18/04/christmas-balls-2995437_960_720.jpg"),
-//          gradient: LinearGradient(
-//            begin: Alignment.topRight,
-//            end: Alignment.bottomLeft,
-//            stops: [0.1, 0.5, 0.7, 0.9],
-//            colors: [
-//              Colors.teal[800],
-//              Colors.teal[600],
-//              Colors.teal[400],
-//              Colors.teal[200],
-//            ],
-//          ),
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
@@ -66,31 +50,25 @@ class _DrawerPageState extends State<DrawerPage> {
                   },
                   child: Icon(
                     CupertinoIcons.back,
-                    color: GFColors.getGFColor(GFColors.SUCCESS),
+                    color: GFColors.SUCCESS,
                   ),
                 ),
                 decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: const [Color(0xFFD685FF), Color(0xFF7466CC)])),
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: const [Color(0xFFD685FF), Color(0xFF7466CC)],
+                  ),
+                ),
                 otherAccountsPictures: <Widget>[
                   GFAvatar(
                     backgroundColor: Colors.green,
-
                     child: const Text('G'),
-                    // backgroundImage: AssetImage('lib/assets/images/avatar5.png'),
                   ),
                   GFAvatar(
                     backgroundColor: Colors.black,
-
                     child: const Text('F'),
-                    // backgroundImage: AssetImage('lib/assets/images/avatar7.png'),
                   ),
-
-//                        SizedBox(
-//                          height: 40,
-//                        ),
                 ],
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -122,16 +100,13 @@ class _DrawerPageState extends State<DrawerPage> {
                   ],
                 ),
               ),
-//                   color: Colors.red,
             ),
             Container(
               padding: const EdgeInsets.only(
                 left: 10,
               ),
-              // height: MediaQuery.of(context).size.height - 300,
               color: Colors.white,
               child: Column(
-//                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   GFAccordion(
                       title: 'Components',
@@ -141,144 +116,143 @@ class _DrawerPageState extends State<DrawerPage> {
                         padding: const EdgeInsets.all(0),
                         child: Column(children: <Widget>[
                           GFAccordion(
-                              margin: const EdgeInsets.all(0),
-                              titlePadding: const EdgeInsets.only(
-                                  left: 7, top: 10, bottom: 10, right: 0),
-                              expandedTitlebackgroundColor: Colors.white,
-                              // title: 'Buttons',
-                              child: Row(children: [
-                                SvgPicture.asset(
-                                  'lib/assets/icons/buttons.svg',
-                                  height: 17,
-                                  width: 17,
-                                  color: Colors.black87,
+                            margin: const EdgeInsets.all(0),
+                            titlePadding: const EdgeInsets.only(
+                                left: 7, top: 10, bottom: 10, right: 0),
+                            expandedTitlebackgroundColor: Colors.white,
+                            child: Row(children: [
+                              SvgPicture.asset(
+                                'lib/assets/icons/buttons.svg',
+                                height: 17,
+                                width: 17,
+                                color: Colors.black87,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 9),
+                                child: Text(
+                                  'Buttons',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.black87,
+                                  ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 9),
-                                  child: Text(
-                                    'Buttons',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black87,
+                              )
+                            ]),
+                            textStyle: const TextStyle(fontSize: 15),
+                            contentChild: Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Column(children: <Widget>[
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              StandardButtons()),
+                                    );
+                                  },
+                                  child: GFListTile(
+                                    title: Text(
+                                      'Standard',
+                                      style: TextStyle(
+                                        color: Colors.black54,
+                                      ),
                                     ),
                                   ),
-                                )
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              PillsButtons()),
+                                    );
+                                  },
+                                  child: GFListTile(
+                                    title: Text(
+                                      'Pills',
+                                      style: TextStyle(
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              SquareButtons()),
+                                    );
+                                  },
+                                  child: GFListTile(
+                                    title: Text(
+                                      'Square',
+                                      style: TextStyle(
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              ShadowButtons()),
+                                    );
+                                  },
+                                  child: GFListTile(
+                                    title: Text(
+                                      'Shadow',
+                                      style: TextStyle(
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              IconButtons()),
+                                    );
+                                  },
+                                  child: GFListTile(
+                                    title: Text(
+                                      'Icons',
+                                      style: TextStyle(
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              SocialButtons()),
+                                    );
+                                  },
+                                  child: GFListTile(
+                                    title: Text(
+                                      'Social Buttons',
+                                      style: TextStyle(
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               ]),
-                              textStyle: const TextStyle(fontSize: 15),
-                              contentChild: Padding(
-                                padding: const EdgeInsets.only(left: 10),
-                                child: Column(children: <Widget>[
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (BuildContext context) =>
-                                                StandardButtons()),
-                                      );
-                                    },
-                                    child: GFListTile(
-                                      // avatar: Icon(Icons.format_list_bulleted),
-                                      title: Text(
-                                        'Standard',
-                                        style: TextStyle(
-                                          color: Colors.black54,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (BuildContext context) =>
-                                                PillsButtons()),
-                                      );
-                                    },
-                                    child: GFListTile(
-                                      title: Text(
-                                        'Pills',
-                                        style: TextStyle(
-                                          color: Colors.black54,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (BuildContext context) =>
-                                                SquareButtons()),
-                                      );
-                                    },
-                                    child: GFListTile(
-                                      title: Text(
-                                        'Square',
-                                        style: TextStyle(
-                                          color: Colors.black54,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (BuildContext context) =>
-                                                ShadowButtons()),
-                                      );
-                                    },
-                                    child: GFListTile(
-                                      title: Text(
-                                        'Shadow',
-                                        style: TextStyle(
-                                          color: Colors.black54,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (BuildContext context) =>
-                                                IconButtons()),
-                                      );
-                                    },
-                                    child: GFListTile(
-                                      title: Text(
-                                        'Icons',
-                                        style: TextStyle(
-                                          color: Colors.black54,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (BuildContext context) =>
-                                                SocialButtons()),
-                                      );
-                                    },
-                                    child: GFListTile(
-                                      title: Text(
-                                        'Social Buttons',
-                                        style: TextStyle(
-                                          color: Colors.black54,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ]),
-                              )),
+                            ),
+                          ),
                           InkWell(
                             onTap: () {
                               Navigator.push(
@@ -622,8 +596,9 @@ class _DrawerPageState extends State<DrawerPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (BuildContext context) => const WebViews(
-                                url: 'https://docs.getflutter.dev/')),
+                          builder: (BuildContext context) => const WebViews(
+                              url: 'https://docs.getflutter.dev/'),
+                        ),
                       );
                     },
                     child: Padding(
@@ -640,8 +615,9 @@ class _DrawerPageState extends State<DrawerPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (BuildContext context) => const WebViews(
-                                url: 'https://www.getflutter.dev/features')),
+                          builder: (BuildContext context) => const WebViews(
+                              url: 'https://www.getflutter.dev/features'),
+                        ),
                       );
                     },
                     child: Padding(
@@ -655,23 +631,6 @@ class _DrawerPageState extends State<DrawerPage> {
                 ],
               ),
             ),
-            // Container(
-            //   height: 50,
-            //   child: GFButton(
-            //     onPressed: () {},
-            //     child: Text('Logout',
-            //         style: TextStyle(
-            //           fontSize: 20,
-            //           color: GFColors.DARK,
-            //         )),
-            //     icon: Icon(
-            //       Icons.power_settings_new,
-            //       color: GFColors.DANGER,
-            //     ),
-            //     fullWidthButton: true,
-            //     color: GFColors.LIGHT,
-            //   ),
-            // )
           ],
         ),
       );

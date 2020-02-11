@@ -27,6 +27,6 @@ class _ProgressBarState extends State<ProgressBar> {
           ),
           centerTitle: true,
         ),
-        body: LinearProgressIndicator(),
+        body: const LinearProgressIndicator(),
       );
 }

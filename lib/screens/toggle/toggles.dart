@@ -201,9 +201,7 @@ class _TogglesState extends State<Toggles> {
               GFCard(
                 content: Column(
                   children: <Widget>[
-                    const SizedBox(
-                      height: 10,
-                    ),
+                    const SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[

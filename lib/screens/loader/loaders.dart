@@ -231,48 +231,48 @@ class _LoadersState extends State<Loaders> {
               ),
             ),
             GFCard(
-                content: Column(
-              children: <Widget>[
-                const SizedBox(
-                  height: 25,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const <Widget>[
-                    GFLoader(
-                      type: GFLoaderType.custom,
-//                          size: GFSize.LARGE,
-                      child: Image(
-                        image: AssetImage('lib/assets/gif/loader.gif'),
-                        width: 150,
+              content: Column(
+                children: <Widget>[
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const <Widget>[
+                      GFLoader(
+                        type: GFLoaderType.custom,
+                        child: Image(
+                          image: AssetImage('lib/assets/gif/loader.gif'),
+                          width: 150,
+                        ),
                       ),
-                    ),
-                    GFLoader(
-                      type: GFLoaderType.custom,
-                      size: GFSize.SMALL,
-                      child: Image(
-                        image: AssetImage('lib/assets/gif/loader1.gif'),
-                        width: 150,
+                      GFLoader(
+                        type: GFLoaderType.custom,
+                        size: GFSize.SMALL,
+                        child: Image(
+                          image: AssetImage('lib/assets/gif/loader1.gif'),
+                          width: 150,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const <Widget>[
-                    GFLoader(
-                      type: GFLoaderType.custom,
-                      loaderIconOne: Text('Please'),
-                      loaderIconTwo: Text('Wait'),
-                      loaderIconThree: Text('a moment'),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 25,
-                ),
-              ],
-            )),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const <Widget>[
+                      GFLoader(
+                        type: GFLoaderType.custom,
+                        loaderIconOne: Text('Please'),
+                        loaderIconTwo: Text('Wait'),
+                        loaderIconThree: Text('a moment'),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       );
