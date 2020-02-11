@@ -13,14 +13,14 @@ class _LoadersState extends State<Loaders> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
             child: Icon(
               CupertinoIcons.back,
-              color: GFColors.getGFColor(GFColor.success),
+              color: GFColors.SUCCESS,
             ),
           ),
           title: const Text(
@@ -72,19 +72,19 @@ class _LoadersState extends State<Loaders> {
                   children: const <Widget>[
                     GFLoader(
                       loaderstrokeWidth: 2,
-                      size: GFSize.small,
+                      size: GFSize.SMALL,
                     ),
                     GFLoader(
                       androidLoaderColor:
                           AlwaysStoppedAnimation<Color>(Colors.red),
                       loaderstrokeWidth: 2,
-                      size: GFSize.medium,
+                      size: GFSize.MEDIUM,
                     ),
                     GFLoader(
                       androidLoaderColor:
                           AlwaysStoppedAnimation<Color>(Colors.amber),
                       loaderstrokeWidth: 2,
-                      size: GFSize.large,
+                      size: GFSize.LARGE,
                     ),
                     GFLoader(
                       androidLoaderColor:
@@ -119,14 +119,14 @@ class _LoadersState extends State<Loaders> {
                   children: const <Widget>[
                     GFLoader(
                       type: GFLoaderType.ios,
-                      size: GFSize.small,
+                      size: GFSize.SMALL,
                     ),
                     GFLoader(
                       type: GFLoaderType.ios,
                     ),
                     GFLoader(
                       type: GFLoaderType.ios,
-                      size: GFSize.large,
+                      size: GFSize.LARGE,
                     ),
                     GFLoader(
                       type: GFLoaderType.ios,
@@ -159,15 +159,15 @@ class _LoadersState extends State<Loaders> {
                   children: const <Widget>[
                     GFLoader(
                       type: GFLoaderType.circle,
-                      size: GFSize.small,
+                      size: GFSize.SMALL,
                     ),
                     GFLoader(
                       type: GFLoaderType.circle,
-                      size: GFSize.medium,
+                      size: GFSize.MEDIUM,
                     ),
                     GFLoader(
                       type: GFLoaderType.circle,
-                      size: GFSize.large,
+                      size: GFSize.LARGE,
                     ),
                     GFLoader(
                       type: GFLoaderType.circle,
@@ -200,15 +200,15 @@ class _LoadersState extends State<Loaders> {
                   children: const <Widget>[
                     GFLoader(
                       type: GFLoaderType.square,
-                      size: GFSize.small,
+                      size: GFSize.SMALL,
                     ),
                     GFLoader(
                       type: GFLoaderType.square,
-                      size: GFSize.medium,
+                      size: GFSize.MEDIUM,
                     ),
                     GFLoader(
                       type: GFLoaderType.square,
-                      size: GFSize.large,
+                      size: GFSize.LARGE,
                     ),
                     GFLoader(
                       type: GFLoaderType.square,
@@ -231,48 +231,48 @@ class _LoadersState extends State<Loaders> {
               ),
             ),
             GFCard(
-                content: Column(
-              children: <Widget>[
-                const SizedBox(
-                  height: 25,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const <Widget>[
-                    GFLoader(
-                      type: GFLoaderType.custom,
-//                          size: GFSize.large,
-                      child: Image(
-                        image: AssetImage('lib/assets/gif/loader.gif'),
-                        width: 150,
+              content: Column(
+                children: <Widget>[
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const <Widget>[
+                      GFLoader(
+                        type: GFLoaderType.custom,
+                        child: Image(
+                          image: AssetImage('lib/assets/gif/loader.gif'),
+                          width: 150,
+                        ),
                       ),
-                    ),
-                    GFLoader(
-                      type: GFLoaderType.custom,
-                      size: GFSize.small,
-                      child: Image(
-                        image: AssetImage('lib/assets/gif/loader1.gif'),
-                        width: 150,
+                      GFLoader(
+                        type: GFLoaderType.custom,
+                        size: GFSize.SMALL,
+                        child: Image(
+                          image: AssetImage('lib/assets/gif/loader1.gif'),
+                          width: 150,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const <Widget>[
-                    GFLoader(
-                      type: GFLoaderType.custom,
-                      loaderIconOne: Text('Please'),
-                      loaderIconTwo: Text('Wait'),
-                      loaderIconThree: Text('a moment'),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 25,
-                ),
-              ],
-            )),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const <Widget>[
+                      GFLoader(
+                        type: GFLoaderType.custom,
+                        loaderIconOne: Text('Please'),
+                        loaderIconTwo: Text('Wait'),
+                        loaderIconThree: Text('a moment'),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       );

@@ -62,14 +62,14 @@ class _CarouselState extends State<Carousel>
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
             child: Icon(
               CupertinoIcons.back,
-              color: GFColors.getGFColor(GFColor.success),
+              color: GFColors.SUCCESS,
             ),
           ),
           title: const Text(
@@ -85,33 +85,27 @@ class _CarouselState extends State<Carousel>
               margin: const EdgeInsets.only(top: 20, left: 25, right: 25),
               child: GFSegmentTabs(
                 tabController: tabController,
-//              height: 38.0,
                 width: 280,
                 initialIndex: 0,
                 length: 2,
                 tabs: const <Widget>[
-                  Text(
-                    'Gradient',
-                  ),
+                  Text('Gradient'),
                   Tab(
-                    child: Text(
-                      'Image',
-                    ),
+                    child: Text('Image'),
                   ),
                 ],
-                tabBarColor: GFColors.getGFColor(GFColor.light),
+                tabBarColor: GFColors.LIGHT,
                 indicatorSize: TabBarIndicatorSize.tab,
-                labelColor: GFColors.getGFColor(GFColor.white),
-                unselectedLabelColor: GFColors.getGFColor(GFColor.dark),
-                indicator: BoxDecoration(
+                labelColor: GFColors.WHITE,
+                unselectedLabelColor: GFColors.DARK,
+                indicator: const BoxDecoration(
                   color: Colors.black,
                   border: Border(
                     bottom: BorderSide(
-                      color: GFColors.getGFColor(GFColor.success),
+                      color: GFColors.SUCCESS,
                       width: 3,
                     ),
                   ),
-//                borderRadius: BorderRadius.circular(2.0)
                 ),
                 indicatorPadding: const EdgeInsets.all(8),
                 indicatorWeight: 2,
@@ -119,425 +113,387 @@ class _CarouselState extends State<Carousel>
               ),
             ),
             Container(
-                height: MediaQuery.of(context).size.height - 140,
-                child: GFTabBarView(
-                    controller: tabController,
-                    height: 400,
-                    children: <Widget>[
-                      Container(
-                        child: ListView(
-                          children: <Widget>[
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 15, top: 30, bottom: 10),
-                              child: GFTypography(
-                                text: 'Full Width',
-                                type: GFTypographyType.typo5,
-                                dividerWidth: 25,
-                                dividerColor: Color(0xFF19CA4B),
-                              ),
-                            ),
-                            GFCarousel(
-                              autoPlay: true,
-                              pagination: true,
-                              viewportFraction: 1.0,
-                              activeIndicator:
-                                  GFColors.getGFColor(GFColor.success),
-                              passiveIndicator:
-                                  GFColors.getGFColor(GFColor.dark),
-                              aspectRatio: 2,
-                              items: gradientColor
-                                  .map(
-                                    (u) => GFCard(
-                                      gradient: LinearGradient(
-                                          begin: FractionalOffset.topLeft,
-                                          end: FractionalOffset.bottomRight,
-                                          colors: gradientColor
-
-//
-//                                        const Color(0xffFFD633),
-//                                        const Color(0xFFFF8F33),
+              height: MediaQuery.of(context).size.height - 140,
+              child: GFTabBarView(
+                controller: tabController,
+                height: 400,
+                children: <Widget>[
+                  Container(
+                    child: ListView(
+                      children: <Widget>[
+                        const Padding(
+                          padding:
+                              EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                          child: GFTypography(
+                            text: 'Full Width',
+                            type: GFTypographyType.typo5,
+                            dividerWidth: 25,
+                            dividerColor: Color(0xFF19CA4B),
+                          ),
+                        ),
+                        GFCarousel(
+                          autoPlay: true,
+                          pagination: true,
+                          viewportFraction: 1.0,
+                          activeIndicator: GFColors.SUCCESS,
+                          passiveIndicator: GFColors.DARK,
+                          aspectRatio: 2,
+                          items: gradientColor
+                              .map(
+                                (u) => GFCard(
+                                  gradient: LinearGradient(
+                                      begin: FractionalOffset.topLeft,
+                                      end: FractionalOffset.bottomRight,
+                                      colors: gradientColor),
+                                  margin: const EdgeInsets.only(
+                                    left: 15,
+                                    right: 15,
+                                    bottom: 30,
+                                  ),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(4)),
+                                  content: Padding(
+                                    padding:
+                                        const EdgeInsets.only(top: 30, left: 0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: const <Widget>[
+                                        Text(
+                                          'Title',
+                                          style: TextStyle(
+                                            color: GFColors.WHITE,
                                           ),
-                                      margin: const EdgeInsets.only(
-                                        left: 15,
-                                        right: 15,
-                                        bottom: 30,
-                                      ),
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(4)),
-                                      content: Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 30, left: 0),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: <Widget>[
-                                              Text(
-                                                'Title',
-                                                style: TextStyle(
-                                                    color: GFColors.getGFColor(
-                                                        GFColor.white)),
-                                              ),
-                                              Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 30,
-                                                          right: 30,
-                                                          top: 30),
-                                                  child: Text(
-                                                    'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
-                                                    textAlign: TextAlign.center,
-                                                    style: TextStyle(
-                                                        color:
-                                                            GFColors.getGFColor(
-                                                                GFColor.light)),
-                                                  ))
-                                            ],
-                                          )),
-//                    colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.60), BlendMode.darken),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 30, right: 30, top: 30),
+                                          child: Text(
+                                            'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              color: GFColors.LIGHT,
+                                            ),
+                                          ),
+                                        )
+                                      ],
                                     ),
-                                  )
-                                  .toList(),
-                              onPageChanged: (index) {
-                                setState(() {});
-                              },
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 15, top: 30, bottom: 10),
-                              child: GFTypography(
-                                text: 'Multiple Items',
-                                type: GFTypographyType.typo5,
-                                dividerWidth: 25,
-                                dividerColor: Color(0xFF19CA4B),
-                              ),
-                            ),
-                            GFItemsCarousel(
-                              rowCount: 3,
-                              children: assetImg
-                                  .map(
-                                    (url) => GFCard(
-                                      gradient: LinearGradient(
-                                          begin: FractionalOffset.topCenter,
-                                          end: FractionalOffset.bottomCenter,
-                                          colors: gradientColors
-//
-//                                        const Color(0xffFFD633),
-//                                        const Color(0xFFFF8F33),
+                                  ),
+                                ),
+                              )
+                              .toList(),
+                          onPageChanged: (index) {
+                            setState(() {});
+                          },
+                        ),
+                        const Padding(
+                          padding:
+                              EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                          child: GFTypography(
+                            text: 'Multiple Items',
+                            type: GFTypographyType.typo5,
+                            dividerWidth: 25,
+                            dividerColor: Color(0xFF19CA4B),
+                          ),
+                        ),
+                        GFItemsCarousel(
+                          rowCount: 3,
+                          children: assetImg
+                              .map(
+                                (url) => GFCard(
+                                  gradient: LinearGradient(
+                                    begin: FractionalOffset.topCenter,
+                                    end: FractionalOffset.bottomCenter,
+                                    colors: gradientColors,
+                                  ),
+                                  margin:
+                                      const EdgeInsets.only(left: 15, right: 5),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(4)),
+                                  content: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: const <Widget>[
+                                      Text(
+                                        'Title',
+                                        style: TextStyle(
+                                          color: GFColors.WHITE,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            EdgeInsets.only(right: 5, top: 10),
+                                        child: Text(
+                                          'GetFlutter is an open source library that comes with pre-build 1000+ UI components ',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            color: GFColors.LIGHT,
                                           ),
-//                                  height: 400,
-//                                  width: 300,
-                                      margin: const EdgeInsets.only(
-                                          left: 15, right: 5),
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(4)),
-                                      content: Column(
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              )
+                              .toList(),
+                        ),
+                        const Padding(
+                          padding:
+                              EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                          child: GFTypography(
+                            text: 'Full Size',
+                            type: GFTypographyType.typo5,
+                            dividerWidth: 25,
+                            dividerColor: Color(0xFF19CA4B),
+                          ),
+                        ),
+                        GFCarousel(
+                          autoPlay: true,
+                          pagination: true,
+                          viewportFraction: 1.0,
+                          activeIndicator: GFColors.SUCCESS,
+                          passiveIndicator: GFColors.WHITE,
+                          aspectRatio: 2,
+                          items: assetImg
+                              .map(
+                                (url) => GFCard(
+                                  gradient: LinearGradient(
+                                      begin: FractionalOffset.bottomLeft,
+                                      end: FractionalOffset.topRight,
+                                      colors: const [
+                                        Color(0xff33B5E5),
+                                        Color(0xFF39FFF8),
+                                      ]),
+                                  height: 200,
+                                  margin: const EdgeInsets.only(
+                                      left: 15, right: 15),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(4)),
+                                  content: Padding(
+                                    padding:
+                                        const EdgeInsets.only(top: 30, left: 0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: const <Widget>[
+                                        Text(
+                                          'Title',
+                                          style:
+                                              TextStyle(color: GFColors.WHITE),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 30, right: 30, top: 30),
+                                          child: Text(
+                                            'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                color: GFColors.LIGHT),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              )
+                              .toList(),
+                          onPageChanged: (index) {
+                            setState(() {});
+                          },
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    child: ListView(
+                      children: <Widget>[
+                        const Padding(
+                          padding:
+                              EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                          child: GFTypography(
+                            text: 'Full Width',
+                            type: GFTypographyType.typo5,
+                            dividerWidth: 25,
+                            dividerColor: Color(0xFF19CA4B),
+                          ),
+                        ),
+                        GFCarousel(
+                          autoPlay: true,
+                          pagination: true,
+                          viewportFraction: 1.0,
+                          activeIndicator: GFColors.SUCCESS,
+                          passiveIndicator: GFColors.DARK,
+                          aspectRatio: 2,
+                          items: imageList
+                              .map(
+                                (url) => GFImageOverlay(
+                                  height: 200,
+                                  margin: const EdgeInsets.only(
+                                    left: 15,
+                                    right: 15,
+                                    bottom: 30,
+                                  ),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(4)),
+                                  child: Padding(
+                                    padding:
+                                        const EdgeInsets.only(top: 30, left: 0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: const <Widget>[
+                                        Text(
+                                          'Title',
+                                          style:
+                                              TextStyle(color: GFColors.WHITE),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 30, right: 30, top: 30),
+                                          child: Text(
+                                            'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                color: GFColors.LIGHT),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  image: AssetImage(url),
+                                ),
+                              )
+                              .toList(),
+                          onPageChanged: (index) {
+                            setState(() {});
+                          },
+                        ),
+                        const Padding(
+                          padding:
+                              EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                          child: GFTypography(
+                            text: 'Multiple Items',
+                            type: GFTypographyType.typo5,
+                            dividerWidth: 25,
+                            dividerColor: Color(0xFF19CA4B),
+                          ),
+                        ),
+                        GFItemsCarousel(
+                          rowCount: 3,
+                          children: imageList
+                              .map(
+                                (url) => GFImageOverlay(
+                                  height: 400,
+                                  width: 300,
+                                  margin:
+                                      const EdgeInsets.only(left: 15, right: 5),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(4)),
+                                  child: Padding(
+                                      padding: const EdgeInsets.only(left: 10),
+                                      child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: <Widget>[
+                                            MainAxisAlignment.spaceAround,
+                                        children: const <Widget>[
                                           Text(
                                             'Title',
                                             style: TextStyle(
-                                                color: GFColors.getGFColor(
-                                                    GFColor.white)),
+                                                color: GFColors.WHITE),
                                           ),
                                           Padding(
-                                              padding: const EdgeInsets.only(
-                                                  right: 5, top: 10),
+                                              padding: EdgeInsets.only(
+                                                right: 5,
+                                              ),
                                               child: Text(
-                                                'GetFlutter is an open source library that comes with pre-build 1000+ UI components ',
+                                                'Open source UI library ',
                                                 style: TextStyle(
                                                     fontSize: 10,
-                                                    color: GFColors.getGFColor(
-                                                        GFColor.light)),
+                                                    color: GFColors.LIGHT),
                                               ))
                                         ],
-                                      ),
-
-//                                  image: AssetImage(url),
-                                    ),
-                                  )
-                                  .toList(),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 15, top: 30, bottom: 10),
-                              child: GFTypography(
-                                text: 'Full Size',
-                                type: GFTypographyType.typo5,
-                                dividerWidth: 25,
-                                dividerColor: Color(0xFF19CA4B),
-                              ),
-                            ),
-                            GFCarousel(
-                              autoPlay: true,
-                              pagination: true,
-                              viewportFraction: 1.0,
-                              activeIndicator:
-                                  GFColors.getGFColor(GFColor.success),
-                              passiveIndicator:
-                                  GFColors.getGFColor(GFColor.white),
-                              aspectRatio: 2,
-                              items: assetImg
-                                  .map(
-                                    (url) => GFCard(
-                                      gradient: LinearGradient(
-                                          begin: FractionalOffset.bottomLeft,
-                                          end: FractionalOffset.topRight,
-                                          colors: const [
-                                            Color(0xff33B5E5),
-                                            Color(0xFF39FFF8),
-                                          ]),
-                                      height: 200,
-//                        width: 300,
-                                      margin: const EdgeInsets.only(
-                                          left: 15, right: 15),
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(4)),
-                                      content: Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 30, left: 0),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: <Widget>[
-                                              Text(
-                                                'Title',
-                                                style: TextStyle(
-                                                    color: GFColors.getGFColor(
-                                                        GFColor.white)),
-                                              ),
-                                              Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 30,
-                                                          right: 30,
-                                                          top: 30),
-                                                  child: Text(
-                                                    'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
-                                                    textAlign: TextAlign.center,
-                                                    style: TextStyle(
-                                                        color:
-                                                            GFColors.getGFColor(
-                                                                GFColor.light)),
-                                                  ))
-                                            ],
-                                          )),
-//                                  image: AssetImage(url),
-                                    ),
-                                  )
-                                  .toList(),
-                              onPageChanged: (index) {
-                                setState(() {});
-                              },
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            )
-                          ],
+                                      )),
+                                  image: AssetImage(url),
+                                ),
+                              )
+                              .toList(),
                         ),
-                      ),
-                      Container(
-                        child: ListView(
-                          children: <Widget>[
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 15, top: 30, bottom: 10),
-                              child: GFTypography(
-                                text: 'Full Width',
-                                type: GFTypographyType.typo5,
-                                dividerWidth: 25,
-                                dividerColor: Color(0xFF19CA4B),
-                              ),
-                            ),
-                            GFCarousel(
-                              autoPlay: true,
-                              pagination: true,
-                              viewportFraction: 1.0,
-                              activeIndicator:
-                                  GFColors.getGFColor(GFColor.success),
-                              passiveIndicator:
-                                  GFColors.getGFColor(GFColor.dark),
-                              aspectRatio: 2,
-                              items: imageList
-                                  .map(
-                                    (url) => GFImageOverlay(
-                                      height: 200,
-//                        width: 300,
-                                      margin: const EdgeInsets.only(
-                                        left: 15,
-                                        right: 15,
-                                        bottom: 30,
-                                      ),
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(4)),
-                                      child: Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 30, left: 0),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: <Widget>[
-                                              Text(
-                                                'Title',
-                                                style: TextStyle(
-                                                    color: GFColors.getGFColor(
-                                                        GFColor.white)),
-                                              ),
-                                              Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 30,
-                                                          right: 30,
-                                                          top: 30),
-                                                  child: Text(
-                                                    'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
-                                                    textAlign: TextAlign.center,
-                                                    style: TextStyle(
-                                                        color:
-                                                            GFColors.getGFColor(
-                                                                GFColor.light)),
-                                                  ))
-                                            ],
-                                          )),
-                                      image: AssetImage(url),
-                                    ),
-                                  )
-                                  .toList(),
-                              onPageChanged: (index) {
-                                setState(() {});
-                              },
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 15, top: 30, bottom: 10),
-                              child: GFTypography(
-                                text: 'Multiple Items',
-                                type: GFTypographyType.typo5,
-                                dividerWidth: 25,
-                                dividerColor: Color(0xFF19CA4B),
-                              ),
-                            ),
-                            GFItemsCarousel(
-                              rowCount: 3,
-                              children: imageList
-                                  .map(
-                                    (url) => GFImageOverlay(
-                                      height: 400,
-                                      width: 300,
-                                      margin: const EdgeInsets.only(
-                                          left: 15, right: 5),
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(4)),
-                                      child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 10),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: <Widget>[
-                                              Text(
-                                                'Title',
-                                                style: TextStyle(
-                                                    color: GFColors.getGFColor(
-                                                        GFColor.white)),
-                                              ),
-                                              Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                    right: 5,
-                                                  ),
-                                                  child: Text(
-                                                    'Open source UI library ',
-                                                    style: TextStyle(
-                                                        fontSize: 10,
-                                                        color:
-                                                            GFColors.getGFColor(
-                                                                GFColor.light)),
-                                                  ))
-                                            ],
-                                          )),
-                                      image: AssetImage(url),
-                                    ),
-                                  )
-                                  .toList(),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 15, top: 30, bottom: 10),
-                              child: GFTypography(
-                                text: 'Full Size',
-                                type: GFTypographyType.typo5,
-                                dividerWidth: 25,
-                                dividerColor: Color(0xFF19CA4B),
-                              ),
-                            ),
-                            GFCarousel(
-                              autoPlay: true,
-                              pagination: true,
-                              viewportFraction: 1.0,
-                              activeIndicator:
-                                  GFColors.getGFColor(GFColor.success),
-                              passiveIndicator:
-                                  GFColors.getGFColor(GFColor.white),
-                              aspectRatio: 2,
-                              items: imageList
-                                  .map(
-                                    (url) => GFImageOverlay(
-                                      height: 200,
-//                        width: 300,
-                                      margin: const EdgeInsets.only(
-                                          left: 15, right: 15),
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(4)),
-                                      child: Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 30, left: 0),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: <Widget>[
-                                              Text(
-                                                'Title',
-                                                style: TextStyle(
-                                                    color: GFColors.getGFColor(
-                                                        GFColor.white)),
-                                              ),
-                                              Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 30,
-                                                          right: 30,
-                                                          top: 30),
-                                                  child: Text(
-                                                    'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
-                                                    textAlign: TextAlign.center,
-                                                    style: TextStyle(
-                                                        color:
-                                                            GFColors.getGFColor(
-                                                                GFColor.light)),
-                                                  ))
-                                            ],
-                                          )),
-                                      image: AssetImage(url),
-                                    ),
-                                  )
-                                  .toList(),
-                              onPageChanged: (index) {
-                                setState(() {});
-                              },
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            )
-                          ],
+                        const Padding(
+                          padding:
+                              EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                          child: GFTypography(
+                            text: 'Full Size',
+                            type: GFTypographyType.typo5,
+                            dividerWidth: 25,
+                            dividerColor: Color(0xFF19CA4B),
+                          ),
                         ),
-                      )
-                    ]))
+                        GFCarousel(
+                          autoPlay: true,
+                          pagination: true,
+                          viewportFraction: 1.0,
+                          activeIndicator: GFColors.SUCCESS,
+                          passiveIndicator: GFColors.WHITE,
+                          aspectRatio: 2,
+                          items: imageList
+                              .map(
+                                (url) => GFImageOverlay(
+                                  height: 200,
+                                  margin: const EdgeInsets.only(
+                                      left: 15, right: 15),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(4)),
+                                  child: Padding(
+                                    padding:
+                                        const EdgeInsets.only(top: 30, left: 0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: const <Widget>[
+                                        Text(
+                                          'Title',
+                                          style:
+                                              TextStyle(color: GFColors.WHITE),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                            left: 30,
+                                            right: 30,
+                                            top: 30,
+                                          ),
+                                          child: Text(
+                                            'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                color: GFColors.LIGHT),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  image: AssetImage(url),
+                                ),
+                              )
+                              .toList(),
+                          onPageChanged: (index) {
+                            setState(() {});
+                          },
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       );

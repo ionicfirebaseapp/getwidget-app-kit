@@ -11,7 +11,7 @@ class _TogglesState extends State<Toggles> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
               onTap: () {
                 Navigator.pop(context);
@@ -19,7 +19,7 @@ class _TogglesState extends State<Toggles> {
               child: Container(
                 child: Icon(
                   CupertinoIcons.back,
-                  color: GFColors.getGFColor(GFColor.success),
+                  color: GFColors.SUCCESS,
                 ),
               )),
           title: const Text(
@@ -56,23 +56,21 @@ class _TogglesState extends State<Toggles> {
                           value: true,
                         ),
                         GFToggle(
-                          enabledTrackColor:
-                              GFColors.getGFColor(GFColor.danger),
+                          enabledTrackColor: GFColors.DANGER,
                           onChanged: (val) {
                             print('on change val $val');
                           },
                           value: true,
                         ),
                         GFToggle(
-                          enabledTrackColor:
-                              GFColors.getGFColor(GFColor.warning),
+                          enabledTrackColor: GFColors.WARNING,
                           onChanged: (val) {
                             print('on change val $val');
                           },
                           value: true,
                         ),
                         GFToggle(
-                          enabledTrackColor: GFColors.getGFColor(GFColor.info),
+                          enabledTrackColor: GFColors.INFO,
                           onChanged: (val) {
                             print('on change val $val');
                           },
@@ -109,8 +107,7 @@ class _TogglesState extends State<Toggles> {
                           type: GFToggleType.ios,
                         ),
                         GFToggle(
-                          enabledTrackColor:
-                              GFColors.getGFColor(GFColor.danger),
+                          enabledTrackColor: GFColors.DANGER,
                           onChanged: (v) {
                             print('ios val $v');
                           },
@@ -118,8 +115,7 @@ class _TogglesState extends State<Toggles> {
                           type: GFToggleType.ios,
                         ),
                         GFToggle(
-                          enabledTrackColor:
-                              GFColors.getGFColor(GFColor.warning),
+                          enabledTrackColor: GFColors.WARNING,
                           onChanged: (v) {
                             print('ios val $v');
                           },
@@ -127,7 +123,7 @@ class _TogglesState extends State<Toggles> {
                           type: GFToggleType.ios,
                         ),
                         GFToggle(
-                          enabledTrackColor: GFColors.getGFColor(GFColor.info),
+                          enabledTrackColor: GFColors.INFO,
                           onChanged: (v) {
                             print('ios val $v');
                           },
@@ -165,8 +161,7 @@ class _TogglesState extends State<Toggles> {
                           type: GFToggleType.square,
                         ),
                         GFToggle(
-                          enabledTrackColor:
-                              GFColors.getGFColor(GFColor.danger),
+                          enabledTrackColor: GFColors.DANGER,
                           onChanged: (val) {
                             print('on change val $val');
                           },
@@ -174,8 +169,7 @@ class _TogglesState extends State<Toggles> {
                           type: GFToggleType.square,
                         ),
                         GFToggle(
-                          enabledTrackColor:
-                              GFColors.getGFColor(GFColor.warning),
+                          enabledTrackColor: GFColors.WARNING,
                           onChanged: (val) {
                             print('on change val $val');
                           },
@@ -183,7 +177,7 @@ class _TogglesState extends State<Toggles> {
                           type: GFToggleType.square,
                         ),
                         GFToggle(
-                          enabledTrackColor: GFColors.getGFColor(GFColor.info),
+                          enabledTrackColor: GFColors.INFO,
                           onChanged: (val) {
                             print('on change val $val');
                           },
@@ -207,9 +201,7 @@ class _TogglesState extends State<Toggles> {
               GFCard(
                 content: Column(
                   children: <Widget>[
-                    const SizedBox(
-                      height: 10,
-                    ),
+                    const SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -227,8 +219,7 @@ class _TogglesState extends State<Toggles> {
                           value: true,
                           type: GFToggleType.android,
                           boxShape: BoxShape.rectangle,
-                          enabledTrackColor:
-                              GFColors.getGFColor(GFColor.danger),
+                          enabledTrackColor: GFColors.DANGER,
                         ),
                         GFToggle(
                           onChanged: (val) {
@@ -237,8 +228,7 @@ class _TogglesState extends State<Toggles> {
                           value: true,
                           type: GFToggleType.ios,
                           boxShape: BoxShape.rectangle,
-                          enabledTrackColor:
-                              GFColors.getGFColor(GFColor.warning),
+                          enabledTrackColor: GFColors.WARNING,
                           borderRadius:
                               const BorderRadius.all(Radius.circular(0)),
                         ),
@@ -251,7 +241,7 @@ class _TogglesState extends State<Toggles> {
                           boxShape: BoxShape.rectangle,
                           enabledText: 'ON',
                           disabledText: 'OFF',
-                          enabledTrackColor: GFColors.getGFColor(GFColor.info),
+                          enabledTrackColor: GFColors.INFO,
                           borderRadius:
                               const BorderRadius.all(Radius.circular(0)),
                         )

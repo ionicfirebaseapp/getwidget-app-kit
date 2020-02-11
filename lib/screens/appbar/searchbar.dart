@@ -10,10 +10,9 @@ class _SearchbarState extends State<Searchbar> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: GFAppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           title: const Text('UI Kit'),
           searchBar: true,
-//        searchBarColorTheme: Colors.deepOrange,
           actions: <Widget>[
             GFIconButton(
               icon: Icon(

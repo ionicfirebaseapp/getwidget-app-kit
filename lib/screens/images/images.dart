@@ -24,276 +24,225 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-      appBar: AppBar(
-        backgroundColor: GFColors.getGFColor(GFColor.dark),
-        leading: InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Icon(
-            CupertinoIcons.back,
-            color: GFColors.getGFColor(GFColor.success),
-          ),
-        ),
-        title: const Text(
-          'Images',
-          style: TextStyle(fontSize: 17),
-        ),
-        centerTitle: true,
-      ),
-      body: ListView(children: <Widget>[
-        Container(
-          height: 40,
-          margin: const EdgeInsets.only(top: 20, left: 25, right: 25),
-          child: GFSegmentTabs(
-            tabController: tabController,
-//              height: 38.0,
-            width: 280,
-            initialIndex: 0,
-            length: 3,
-            tabs: const <Widget>[
-              Text(
-                'Basic',
-              ),
-              Tab(
-                child: Text(
-                  'Circular',
-                ),
-              ),
-              Tab(
-                child: Text(
-                  'Overlays',
-                ),
-              ),
-            ],
-            tabBarColor: GFColors.getGFColor(GFColor.light),
-            indicatorSize: TabBarIndicatorSize.tab,
-            labelColor: GFColors.getGFColor(GFColor.white),
-            unselectedLabelColor: GFColors.getGFColor(GFColor.dark),
-            indicator: BoxDecoration(
-              color: Colors.black,
-              border: Border(
-                bottom: BorderSide(
-                  color: GFColors.getGFColor(GFColor.success),
-                  width: 3,
-                ),
-              ),
-//                borderRadius: BorderRadius.circular(2.0)
+        appBar: AppBar(
+          backgroundColor: GFColors.DARK,
+          leading: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              CupertinoIcons.back,
+              color: GFColors.SUCCESS,
             ),
-            indicatorPadding: const EdgeInsets.all(8),
-            indicatorWeight: 2,
-            border: Border.all(color: Colors.white, width: 2),
           ),
+          title: const Text(
+            'Images',
+            style: TextStyle(fontSize: 17),
+          ),
+          centerTitle: true,
         ),
-        Container(
-            height: MediaQuery.of(context).size.height - 140,
-            child:
-                GFTabBarView(controller: tabController, height: 400, children: <
-                    Widget>[
-              Container(
-                child: ListView(
-                  children: <Widget>[
-                    GFCard(
-                      content: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const <Widget>[
-                          GFImageOverlay(
-                            height: 200,
-                            width: 300,
-                            image: AssetImage('lib/assets/images/image2.png'),
-                          )
-                        ],
-                      ),
+        body: ListView(
+          children: <Widget>[
+            Container(
+              height: 40,
+              margin: const EdgeInsets.only(top: 20, left: 25, right: 25),
+              child: GFSegmentTabs(
+                tabController: tabController,
+                width: 280,
+                initialIndex: 0,
+                length: 3,
+                tabs: const <Widget>[
+                  Text('Basic'),
+                  Tab(
+                    child: Text('Circular'),
+                  ),
+                  Tab(
+                    child: Text('Overlays'),
+                  ),
+                ],
+                tabBarColor: GFColors.LIGHT,
+                indicatorSize: TabBarIndicatorSize.tab,
+                labelColor: GFColors.WHITE,
+                unselectedLabelColor: GFColors.DARK,
+                indicator: const BoxDecoration(
+                  color: Colors.black,
+                  border: Border(
+                    bottom: BorderSide(
+                      color: GFColors.SUCCESS,
+                      width: 3,
                     ),
-                    GFCard(
-                      content: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const <Widget>[
-                          GFImageOverlay(
-                            height: 200,
-                            width: 300,
-                            image: AssetImage('lib/assets/images/image.png'),
-                          )
-                        ],
-                      ),
-                    ),
-                    GFCard(
-                      content: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const <Widget>[
-                          GFImageOverlay(
-                            height: 200,
-                            width: 300,
-                            image: AssetImage('lib/assets/images/image1.png'),
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
+                indicatorPadding: const EdgeInsets.all(8),
+                indicatorWeight: 2,
+                border: Border.all(color: Colors.white, width: 2),
               ),
-
-              Container(
-                child: Column(
-                  children: <Widget>[
-                    GFCard(
-                      content: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const <Widget>[
-                          GFImageOverlay(
-                            height: 140,
-                            width: 140,
-                            shape: BoxShape.circle,
-                            image: AssetImage('lib/assets/images/img.png'),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height - 140,
+              child: GFTabBarView(
+                controller: tabController,
+                height: 400,
+                children: <Widget>[
+                  Container(
+                    child: ListView(
+                      children: <Widget>[
+                        GFCard(
+                          content: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const <Widget>[
+                              GFImageOverlay(
+                                height: 200,
+                                width: 300,
+                                image:
+                                    AssetImage('lib/assets/images/image2.png'),
+                              )
+                            ],
                           ),
-                          GFImageOverlay(
-                              height: 140,
-                              width: 140,
-                              shape: BoxShape.circle,
-                              image: AssetImage(
-                                'lib/assets/images/img1.png',
-                              ))
-                        ],
-                      ),
-                    ),
-                    GFCard(
-                      content: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const <Widget>[
-                          GFImageOverlay(
-                            height: 200,
-                            width: 200,
-                            shape: BoxShape.circle,
-                            image: AssetImage('lib/assets/images/img2.png'),
+                        ),
+                        GFCard(
+                          content: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const <Widget>[
+                              GFImageOverlay(
+                                height: 200,
+                                width: 300,
+                                image:
+                                    AssetImage('lib/assets/images/image.png'),
+                              )
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                        GFCard(
+                          content: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const <Widget>[
+                              GFImageOverlay(
+                                height: 200,
+                                width: 300,
+                                image:
+                                    AssetImage('lib/assets/images/image1.png'),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-              ),
-
-//      Container(
-//        child:  ListView(
-//          children: <Widget>[
-//            GFCard(
-//              content:Row(
-//                mainAxisAlignment:MainAxisAlignment.center,
-//                children: <Widget>[
-//                  GFImageOverlay(
-//                    height: 250,
-//                    width: 250,
-//                    shape: BoxShape.circle,
-//                    image: AssetImage('lib/assets/images/image1.png'),)
-//
-//                ],
-//              ),
-//            ),
-//
-//            GFCard(
-//              content:Row(
-//                mainAxisAlignment:MainAxisAlignment.center,
-//                children: <Widget>[
-//                  GFImageOverlay(
-//                    height: 250,
-//                    width: 250,
-//                    shape: BoxShape.circle,
-//                    image: AssetImage('lib/assets/images/image1.png'),)
-//
-//                ],
-//              ),
-//            ),
-//
-//            GFCard(
-//              content:Row(
-//                mainAxisAlignment:MainAxisAlignment.center,
-//                children: <Widget>[
-//                  GFImageOverlay(
-//                    height: 250,
-//                    width: 250,
-//                    shape: BoxShape.circle,
-//                    image: AssetImage('lib/assets/images/image1.png'),)
-//
-//                ],
-//              ),
-//            ),
-//
-//          ],
-//        ),
-//      ),
-              Container(
-                child: ListView(
-                  children: <Widget>[
-                    GFCard(
-                      content: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          GFImageOverlay(
-                            height: 200,
-                            width: 300,
-                            child: Center(
-                              child: Text(
-                                'Light Overlay',
-                                style: TextStyle(
-                                    color: GFColors.getGFColor(GFColor.white)),
+                  ),
+                  Container(
+                    child: Column(
+                      children: <Widget>[
+                        GFCard(
+                          content: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const <Widget>[
+                              GFImageOverlay(
+                                height: 140,
+                                width: 140,
+                                shape: BoxShape.circle,
+                                image: AssetImage('lib/assets/images/img.png'),
                               ),
-                            ),
-                            colorFilter: ColorFilter.mode(
-                                Colors.black.withOpacity(0.20),
-                                BlendMode.darken),
-                            image: const AssetImage(
-                                'lib/assets/images/image1.png'),
+                              GFImageOverlay(
+                                height: 140,
+                                width: 140,
+                                shape: BoxShape.circle,
+                                image: AssetImage(
+                                  'lib/assets/images/img1.png',
+                                ),
+                              )
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                        GFCard(
+                          content: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const <Widget>[
+                              GFImageOverlay(
+                                height: 200,
+                                width: 200,
+                                shape: BoxShape.circle,
+                                image: AssetImage('lib/assets/images/img2.png'),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                    GFCard(
-                      content: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          GFImageOverlay(
-                            height: 200,
-                            width: 300,
-                            child: Center(
-                                child: Text(
-                              'Medium Overlay',
-                              style: TextStyle(
-                                  color: GFColors.getGFColor(GFColor.white)),
-                            )),
-                            colorFilter: ColorFilter.mode(
-                                Colors.black.withOpacity(0.40),
-                                BlendMode.darken),
-                            image: const AssetImage(
-                                'lib/assets/images/image1.png'),
+                  ),
+                  Container(
+                    child: ListView(
+                      children: <Widget>[
+                        GFCard(
+                          content: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              GFImageOverlay(
+                                height: 200,
+                                width: 300,
+                                child: const Center(
+                                  child: Text(
+                                    'Light Overlay',
+                                    style: TextStyle(color: GFColors.WHITE),
+                                  ),
+                                ),
+                                colorFilter: ColorFilter.mode(
+                                    Colors.black.withOpacity(0.20),
+                                    BlendMode.darken),
+                                image: const AssetImage(
+                                    'lib/assets/images/image1.png'),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                        GFCard(
+                          content: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              GFImageOverlay(
+                                height: 200,
+                                width: 300,
+                                child: const Center(
+                                    child: Text(
+                                  'Medium Overlay',
+                                  style: TextStyle(color: GFColors.WHITE),
+                                )),
+                                colorFilter: ColorFilter.mode(
+                                    Colors.black.withOpacity(0.40),
+                                    BlendMode.darken),
+                                image: const AssetImage(
+                                    'lib/assets/images/image1.png'),
+                              ),
+                            ],
+                          ),
+                        ),
+                        GFCard(
+                          content: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              GFImageOverlay(
+                                height: 200,
+                                width: 300,
+                                child: const Center(
+                                    child: Text(
+                                  'Strong Overlay',
+                                  style: TextStyle(color: GFColors.WHITE),
+                                )),
+                                colorFilter: ColorFilter.mode(
+                                    Colors.black.withOpacity(0.60),
+                                    BlendMode.darken),
+                                image: const AssetImage(
+                                    'lib/assets/images/image1.png'),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
                     ),
-                    GFCard(
-                      content: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          GFImageOverlay(
-                            height: 200,
-                            width: 300,
-                            child: Center(
-                                child: Text(
-                              'Strong Overlay',
-                              style: TextStyle(
-                                  color: GFColors.getGFColor(GFColor.white)),
-                            )),
-                            colorFilter: ColorFilter.mode(
-                                Colors.black.withOpacity(0.60),
-                                BlendMode.darken),
-                            image: const AssetImage(
-                                'lib/assets/images/image1.png'),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              )
-            ]))
-      ]));
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      );
 }

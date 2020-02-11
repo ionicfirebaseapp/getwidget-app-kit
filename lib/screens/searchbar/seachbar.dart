@@ -21,7 +21,7 @@ class _SearchbarPageState extends State<SearchbarPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: GFAppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
               onTap: () {
                 Navigator.pop(context);
@@ -29,7 +29,7 @@ class _SearchbarPageState extends State<SearchbarPage> {
               child: Container(
                 child: Icon(
                   CupertinoIcons.back,
-                  color: GFColors.getGFColor(GFColor.success),
+                  color: GFColors.SUCCESS,
                 ),
               )),
           title: const Text(
@@ -51,16 +51,7 @@ class _SearchbarPageState extends State<SearchbarPage> {
               ),
             ),
             GFSearchBar(
-                // searchBoxInputDecoration: InputDecoration(
-                //   enabledBorder: OutlineInputBorder(
-                //       borderSide: BorderSide(
-                //         color: Colors.teal,
-                //       ),
-                //       borderRadius: BorderRadius.circular(50)),
-                // ),
                 searchList: list,
-//              hideSearchBoxWhenItemSelected: false,
-//              overlaySearchListHeight: 100.0,
                 searchQueryBuilder: (query, list) => list
                     .where((item) =>
                         item.toLowerCase().contains(query.toLowerCase()))
@@ -72,10 +63,6 @@ class _SearchbarPageState extends State<SearchbarPage> {
                         style: const TextStyle(fontSize: 18),
                       ),
                     ),
-//              noItemsFoundWidget: Container(
-//                color: Colors.green,
-//                child: Text("no items found..."),
-//              ),
                 onItemSelected: (item) {
                   setState(() {
                     print('$item');
@@ -93,7 +80,7 @@ class _SearchbarPageState extends State<SearchbarPage> {
             GFSearchBar(
                 searchBoxInputDecoration: InputDecoration(
                   labelText: 'Type Here',
-                  labelStyle: TextStyle(color: Colors.black26),
+                  labelStyle: const TextStyle(color: Colors.black26),
                   focusedBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.greenAccent),
                     borderRadius: BorderRadius.circular(25),
@@ -107,8 +94,6 @@ class _SearchbarPageState extends State<SearchbarPage> {
                       borderRadius: BorderRadius.circular(50)),
                 ),
                 searchList: list,
-//              hideSearchBoxWhenItemSelected: false,
-//              overlaySearchListHeight: 100.0,
                 searchQueryBuilder: (query, list) => list
                     .where((item) =>
                         item.toLowerCase().contains(query.toLowerCase()))
@@ -120,10 +105,6 @@ class _SearchbarPageState extends State<SearchbarPage> {
                         style: const TextStyle(fontSize: 18),
                       ),
                     ),
-//              noItemsFoundWidget: Container(
-//                color: Colors.green,
-//                child: Text("no items found..."),
-//              ),
                 onItemSelected: (item) {
                   setState(() {
                     print('$item');
