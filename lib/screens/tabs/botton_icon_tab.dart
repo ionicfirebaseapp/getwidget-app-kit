@@ -26,14 +26,14 @@ class _BottomIconTabState extends State<BottomIconTab>
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
             child: Icon(
               CupertinoIcons.back,
-              color: GFColors.getGFColor(GFColor.success),
+              color: GFColors.SUCCESS,
             ),
           ),
           title: const Text(
@@ -96,12 +96,12 @@ class _BottomIconTabState extends State<BottomIconTab>
                 Icons.notifications,
               ),
             ],
-            indicatorColor: GFColors.getGFColor(GFColor.success),
+            indicatorColor: GFColors.SUCCESS,
 //        indicatorSize: TabBarIndicatorSize.label,
-            labelColor: GFColors.getGFColor(GFColor.success),
+            labelColor: GFColors.SUCCESS,
             labelPadding: const EdgeInsets.all(8),
-            tabBarColor: GFColors.getGFColor(GFColor.dark),
-            unselectedLabelColor: GFColors.getGFColor(GFColor.white),
+            tabBarColor: GFColors.DARK,
+            unselectedLabelColor: GFColors.WHITE,
             labelStyle: TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 13,

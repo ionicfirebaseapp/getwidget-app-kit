@@ -26,7 +26,7 @@ class _SegmentTabsPageState extends State<SegmentTabsPage>
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: GFAppBar(
-        backgroundColor: GFColors.getGFColor(GFColor.dark),
+        backgroundColor: GFColors.DARK,
         leading: InkWell(
             onTap: () {
               Navigator.pop(context);
@@ -35,7 +35,7 @@ class _SegmentTabsPageState extends State<SegmentTabsPage>
             child: Container(
               child: Icon(
                 CupertinoIcons.back,
-                color: GFColors.getGFColor(GFColor.success),
+                color: GFColors.SUCCESS,
               ),
             )),
         title: const Text(
@@ -70,15 +70,15 @@ class _SegmentTabsPageState extends State<SegmentTabsPage>
                   ),
                 ),
               ],
-              tabBarColor: GFColors.getGFColor(GFColor.light),
+              tabBarColor: GFColors.LIGHT,
               indicatorSize: TabBarIndicatorSize.tab,
-              labelColor: GFColors.getGFColor(GFColor.white),
-              unselectedLabelColor: GFColors.getGFColor(GFColor.dark),
+              labelColor: GFColors.WHITE,
+              unselectedLabelColor: GFColors.DARK,
               indicator: BoxDecoration(
-                color: GFColors.getGFColor(GFColor.dark),
+                color: GFColors.DARK,
                 border: Border(
                   bottom: BorderSide(
-                    color: GFColors.getGFColor(GFColor.success),
+                    color: GFColors.SUCCESS,
                     width: 3,
                   ),
                 ),

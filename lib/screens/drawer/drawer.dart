@@ -662,14 +662,14 @@ class _DrawerPageState extends State<DrawerPage> {
             //     child: Text('Logout',
             //         style: TextStyle(
             //           fontSize: 20,
-            //           color: GFColors.getGFColor(GFColor.dark),
+            //           color: GFColors.DARK,
             //         )),
             //     icon: Icon(
             //       Icons.power_settings_new,
-            //       color: GFColors.getGFColor(GFColor.danger),
+            //       color: GFColors.DANGER,
             //     ),
             //     fullWidthButton: true,
-            //     color: GFColor.light,
+            //     color: GFColors.LIGHT,
             //   ),
             // )
           ],

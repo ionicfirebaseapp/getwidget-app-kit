@@ -18,10 +18,10 @@ class _BadgesPageState extends State<BadgesPage> {
             },
             child: Icon(
               CupertinoIcons.back,
-              color: GFColors.getGFColor(GFColor.success),
+              color: GFColors.SUCCESS,
             ),
           ),
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           title: const Text(
             'Badges',
             style: TextStyle(fontSize: 17),
@@ -46,12 +46,11 @@ class _BadgesPageState extends State<BadgesPage> {
                     height: 10,
                   ),
                   Row(
-//                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Expanded(
                         child: GFButtonBadge(
                           icon: const GFBadge(
-                            size: GFSize.medium,
+                            size: GFSize.MEDIUM,
                             text: '6',
                             shape: GFBadgeShape.pills,
                           ),
@@ -70,7 +69,7 @@ class _BadgesPageState extends State<BadgesPage> {
                           ),
                           onPressed: () {},
                           text: 'Second',
-                          color: GFColor.secondary,
+                          color: GFColors.SECONDARY,
                         ),
                       ),
                       const SizedBox(
@@ -84,7 +83,7 @@ class _BadgesPageState extends State<BadgesPage> {
                           ),
                           onPressed: () {},
                           text: 'Success',
-                          color: GFColor.success,
+                          color: GFColors.SUCCESS,
                         ),
                       )
                     ],
@@ -93,7 +92,6 @@ class _BadgesPageState extends State<BadgesPage> {
                     height: 20,
                   ),
                   Row(
-//                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Expanded(
                         child: GFButtonBadge(
@@ -103,7 +101,7 @@ class _BadgesPageState extends State<BadgesPage> {
                           ),
                           onPressed: () {},
                           text: 'Warning',
-                          color: GFColor.warning,
+                          color: GFColors.WARNING,
                         ),
                       ),
                       const SizedBox(
@@ -117,7 +115,7 @@ class _BadgesPageState extends State<BadgesPage> {
                           ),
                           onPressed: () {},
                           text: 'Danger',
-                          color: GFColor.danger,
+                          color: GFColors.DANGER,
                         ),
                       ),
                       const SizedBox(
@@ -131,7 +129,7 @@ class _BadgesPageState extends State<BadgesPage> {
                           ),
                           onPressed: () {},
                           text: 'Info',
-                          color: GFColor.info,
+                          color: GFColors.INFO,
                         ),
                       )
                     ],
@@ -149,7 +147,7 @@ class _BadgesPageState extends State<BadgesPage> {
                           ),
                           onPressed: () {},
                           text: 'Light',
-                          color: GFColor.light,
+                          color: GFColors.LIGHT,
                         ),
                       ),
                       const SizedBox(
@@ -163,9 +161,8 @@ class _BadgesPageState extends State<BadgesPage> {
                           ),
                           onPressed: () {},
                           text: 'Dark',
-                          textStyle: TextStyle(
-                              color: GFColors.getGFColor(GFColor.white)),
-                          color: GFColor.dark,
+                          textStyle: const TextStyle(color: GFColors.WHITE),
+                          color: GFColors.DARK,
                         ),
                       ),
                       const SizedBox(
@@ -179,7 +176,7 @@ class _BadgesPageState extends State<BadgesPage> {
                           ),
                           onPressed: () {},
                           text: 'Link',
-                          color: GFColor.transparent,
+                          color: GFColors.TRANSPARENT,
                         ),
                       )
                     ],
@@ -213,7 +210,7 @@ class _BadgesPageState extends State<BadgesPage> {
                               onPressed: () {},
                               icon: SvgPicture.asset(
                                 'lib/assets/icons/primary.svg',
-                                color: GFColors.getGFColor(GFColor.primary),
+                                color: GFColors.PRIMARY,
                               )),
                           counterChild: const GFBadge(
                             text: '12',
@@ -225,7 +222,7 @@ class _BadgesPageState extends State<BadgesPage> {
                               onPressed: () {},
                               icon: SvgPicture.asset(
                                 'lib/assets/icons/secondary.svg',
-                                color: GFColors.getGFColor(GFColor.secondary),
+                                color: GFColors.SECONDARY,
                               )),
                           counterChild: const GFBadge(
                             text: '12',
@@ -237,7 +234,7 @@ class _BadgesPageState extends State<BadgesPage> {
                               onPressed: () {},
                               icon: SvgPicture.asset(
                                 'lib/assets/icons/success.svg',
-                                color: GFColors.getGFColor(GFColor.success),
+                                color: GFColors.SUCCESS,
                               )),
                           counterChild: const GFBadge(
                             text: '12',
@@ -249,24 +246,25 @@ class _BadgesPageState extends State<BadgesPage> {
                               onPressed: () {},
                               icon: SvgPicture.asset(
                                 'lib/assets/icons/warning.svg',
-                                color: GFColors.getGFColor(GFColor.warning),
+                                color: GFColors.WARNING,
                               )),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.circle,
                           )),
                       GFIconBadge(
-                          child: GFIconButton(
-                              type: GFButtonType.transparent,
-                              onPressed: () {},
-                              icon: SvgPicture.asset(
-                                'lib/assets/icons/danger.svg',
-                                color: GFColors.getGFColor(GFColor.danger),
-                              )),
-                          counterChild: const GFBadge(
-                            text: '12',
-                            shape: GFBadgeShape.circle,
-                          )),
+                        child: GFIconButton(
+                            type: GFButtonType.transparent,
+                            onPressed: () {},
+                            icon: SvgPicture.asset(
+                              'lib/assets/icons/danger.svg',
+                              color: GFColors.DANGER,
+                            )),
+                        counterChild: const GFBadge(
+                          text: '12',
+                          shape: GFBadgeShape.circle,
+                        ),
+                      ),
                     ],
                   ),
                   Row(
@@ -277,7 +275,7 @@ class _BadgesPageState extends State<BadgesPage> {
                               onPressed: () {},
                               icon: SvgPicture.asset(
                                 'lib/assets/icons/info.svg',
-                                color: GFColors.getGFColor(GFColor.info),
+                                color: GFColors.INFO,
                               )),
                           counterChild: const GFBadge(
                             text: '12',
@@ -289,24 +287,23 @@ class _BadgesPageState extends State<BadgesPage> {
                               onPressed: () {},
                               icon: SvgPicture.asset(
                                 'lib/assets/icons/light.svg',
-                                color: GFColors.getGFColor(GFColor.light),
+                                color: GFColors.LIGHT,
                               )),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.square,
                           )),
                       GFIconBadge(
-                          child: GFIconButton(
-                              type: GFButtonType.transparent,
-                              onPressed: () {},
-                              icon: SvgPicture.asset(
-                                'lib/assets/icons/dark.svg',
-                                color: GFColors.getGFColor(GFColor.dark),
-                              )),
-                          counterChild: const GFBadge(
-                              text: '124',
-                              shape: GFBadgeShape.pills,
-                              size: 25.0)),
+                        child: GFIconButton(
+                            type: GFButtonType.transparent,
+                            onPressed: () {},
+                            icon: SvgPicture.asset(
+                              'lib/assets/icons/dark.svg',
+                              color: GFColors.DARK,
+                            )),
+                        counterChild: const GFBadge(
+                            text: '124', shape: GFBadgeShape.pills, size: 25),
+                      ),
                     ],
                   )
                 ],

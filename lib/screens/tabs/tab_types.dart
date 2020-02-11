@@ -16,7 +16,7 @@ class _TabTypesState extends State<TabTypes> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: GFAppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
               onTap: () {
                 Navigator.pop(context);
@@ -25,7 +25,7 @@ class _TabTypesState extends State<TabTypes> {
               child: Container(
                 child: Icon(
                   CupertinoIcons.back,
-                  color: GFColors.getGFColor(GFColor.success),
+                  color: GFColors.SUCCESS,
                 ),
               )),
           title: const Text(
@@ -52,22 +52,21 @@ class _TabTypesState extends State<TabTypes> {
                   padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: const BorderRadius.all(Radius.circular(7)),
-                      color: GFColors.getGFColor(GFColor.dark),
+                      color: GFColors.DARK,
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
                             blurRadius: 5)
                       ]),
                   child: GFListTile(
-                      color: GFColors.getGFColor(GFColor.dark),
+                      color: GFColors.DARK,
                       title: Text(
                         'Segmented Tabs',
-                        style: TextStyle(
-                            color: GFColors.getGFColor(GFColor.white)),
+                        style: TextStyle(color: GFColors.WHITE),
                       ),
                       icon: Icon(
                         CupertinoIcons.forward,
-                        color: GFColors.getGFColor(GFColor.success),
+                        color: GFColors.SUCCESS,
                       )),
                 )),
             GestureDetector(
@@ -83,22 +82,21 @@ class _TabTypesState extends State<TabTypes> {
                   padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: const BorderRadius.all(Radius.circular(7)),
-                      color: GFColors.getGFColor(GFColor.dark),
+                      color: GFColors.DARK,
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
                             blurRadius: 5)
                       ]),
                   child: GFListTile(
-                      color: GFColors.getGFColor(GFColor.dark),
+                      color: GFColors.DARK,
                       title: Text(
                         'Icon Tabs',
-                        style: TextStyle(
-                            color: GFColors.getGFColor(GFColor.white)),
+                        style: TextStyle(color: GFColors.WHITE),
                       ),
                       icon: Icon(
                         CupertinoIcons.forward,
-                        color: GFColors.getGFColor(GFColor.success),
+                        color: GFColors.SUCCESS,
                       )),
                 )),
             GestureDetector(
@@ -114,22 +112,21 @@ class _TabTypesState extends State<TabTypes> {
                   padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: const BorderRadius.all(Radius.circular(7)),
-                      color: GFColors.getGFColor(GFColor.dark),
+                      color: GFColors.DARK,
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
                             blurRadius: 5)
                       ]),
                   child: GFListTile(
-                      color: GFColors.getGFColor(GFColor.dark),
+                      color: GFColors.DARK,
                       title: Text(
                         'Labeled Tabs',
-                        style: TextStyle(
-                            color: GFColors.getGFColor(GFColor.white)),
+                        style: TextStyle(color: GFColors.WHITE),
                       ),
                       icon: Icon(
                         CupertinoIcons.forward,
-                        color: GFColors.getGFColor(GFColor.success),
+                        color: GFColors.SUCCESS,
                       )),
                 )),
             GestureDetector(
@@ -145,22 +142,21 @@ class _TabTypesState extends State<TabTypes> {
                   padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: const BorderRadius.all(Radius.circular(7)),
-                      color: GFColors.getGFColor(GFColor.dark),
+                      color: GFColors.DARK,
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
                             blurRadius: 5)
                       ]),
                   child: GFListTile(
-                      color: GFColors.getGFColor(GFColor.dark),
+                      color: GFColors.DARK,
                       title: Text(
                         'Bottom Icon Tabs',
-                        style: TextStyle(
-                            color: GFColors.getGFColor(GFColor.white)),
+                        style: TextStyle(color: GFColors.WHITE),
                       ),
                       icon: Icon(
                         CupertinoIcons.forward,
-                        color: GFColors.getGFColor(GFColor.success),
+                        color: GFColors.SUCCESS,
                       )),
                 )),
             GestureDetector(
@@ -176,22 +172,21 @@ class _TabTypesState extends State<TabTypes> {
                   padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: const BorderRadius.all(Radius.circular(7)),
-                      color: GFColors.getGFColor(GFColor.dark),
+                      color: GFColors.DARK,
                       boxShadow: [
                         BoxShadow(
                             color: Colors.black.withOpacity(0.40),
                             blurRadius: 5)
                       ]),
                   child: GFListTile(
-                      color: GFColors.getGFColor(GFColor.dark),
+                      color: GFColors.DARK,
                       title: Text(
                         'Bottom Labeled Tabs',
-                        style: TextStyle(
-                            color: GFColors.getGFColor(GFColor.white)),
+                        style: TextStyle(color: GFColors.WHITE),
                       ),
                       icon: Icon(
                         CupertinoIcons.forward,
-                        color: GFColors.getGFColor(GFColor.success),
+                        color: GFColors.SUCCESS,
                       )),
                 )),
           ],

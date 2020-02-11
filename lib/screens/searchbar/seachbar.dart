@@ -21,7 +21,7 @@ class _SearchbarPageState extends State<SearchbarPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: GFAppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
               onTap: () {
                 Navigator.pop(context);
@@ -29,7 +29,7 @@ class _SearchbarPageState extends State<SearchbarPage> {
               child: Container(
                 child: Icon(
                   CupertinoIcons.back,
-                  color: GFColors.getGFColor(GFColor.success),
+                  color: GFColors.SUCCESS,
                 ),
               )),
           title: const Text(

@@ -11,7 +11,7 @@ class _TilesPageState extends State<TilesPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
               onTap: () {
                 Navigator.pop(context);
@@ -19,7 +19,7 @@ class _TilesPageState extends State<TilesPage> {
               child: Container(
                 child: Icon(
                   CupertinoIcons.back,
-                  color: GFColors.getGFColor(GFColor.success),
+                  color: GFColors.SUCCESS,
                 ),
               )),
           title: const Text(

@@ -16,151 +16,151 @@ class ButtonTypes extends StatefulWidget {
 class _ButtonTypesState extends State<ButtonTypes> {
   @override
   Widget build(BuildContext context) => Scaffold(
-      appBar: AppBar(
-        backgroundColor: GFColors.getGFColor(GFColor.dark),
-        leading: InkWell(
+        appBar: AppBar(
+          backgroundColor: GFColors.DARK,
+          leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
-//          child: SvgPicture.asset('lib/assets/icons/back.svg',),
             child: Container(
               child: Icon(
                 CupertinoIcons.back,
-                color: GFColors.getGFColor(GFColor.success),
+                color: GFColors.SUCCESS,
               ),
-            )),
-        title: const Text(
-          'Buttons',
-          style: TextStyle(fontSize: 17),
-        ),
-        centerTitle: true,
-      ),
-      body: ListView(
-        children: <Widget>[
-          const SizedBox(
-            height: 20,
+            ),
           ),
-          GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => StandardButtons()),
-                );
-              },
-              child: Container(
-                margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
-                padding: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(7)),
-                    color: GFColors.getGFColor(GFColor.dark),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black.withOpacity(0.40), blurRadius: 5)
-                    ]),
-                child: GFListTile(
-                    color: GFColors.getGFColor(GFColor.dark),
-                    title: Text(
-                      'Standard Buttons',
-                      style:
-                          TextStyle(color: GFColors.getGFColor(GFColor.white)),
-                    ),
-                    icon: Icon(
-                      CupertinoIcons.forward,
-                      color: GFColors.getGFColor(GFColor.success),
-                    )),
-              )),
-          GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => PillsButtons()),
-                );
-              },
-              child: Container(
-                margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
-                padding: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(7)),
-                    color: GFColors.getGFColor(GFColor.dark),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black.withOpacity(0.40), blurRadius: 5)
-                    ]),
-                child: GFListTile(
-                    color: GFColors.getGFColor(GFColor.dark),
-                    title: Text(
-                      'Pills Buttons',
-                      style:
-                          TextStyle(color: GFColors.getGFColor(GFColor.white)),
-                    ),
-                    icon: Icon(
-                      CupertinoIcons.forward,
-                      color: GFColors.getGFColor(GFColor.success),
-                    )),
-              )),
-          GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => SquareButtons()),
-                );
-              },
-              child: Container(
-                margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
-                padding: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(7)),
-                    color: GFColors.getGFColor(GFColor.dark),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black.withOpacity(0.40), blurRadius: 5)
-                    ]),
-                child: GFListTile(
-                    color: GFColors.getGFColor(GFColor.dark),
-                    title: Text(
-                      'Square Buttons',
-                      style:
-                          TextStyle(color: GFColors.getGFColor(GFColor.white)),
-                    ),
-                    icon: Icon(
-                      CupertinoIcons.forward,
-                      color: GFColors.getGFColor(GFColor.success),
-                    )),
-              )),
-          GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => ShadowButtons()),
-                );
-              },
-              child: Container(
-                margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
-                padding: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(7)),
-                    color: GFColors.getGFColor(GFColor.dark),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black.withOpacity(0.40), blurRadius: 5)
-                    ]),
-                child: GFListTile(
-                    color: GFColors.getGFColor(GFColor.dark),
-                    title: Text(
-                      'Shadow Buttons',
-                      style:
-                          TextStyle(color: GFColors.getGFColor(GFColor.white)),
-                    ),
-                    icon: Icon(
-                      CupertinoIcons.forward,
-                      color: GFColors.getGFColor(GFColor.success),
-                    )),
-              )),
-          GestureDetector(
+          title: const Text(
+            'Buttons',
+            style: TextStyle(fontSize: 17),
+          ),
+          centerTitle: true,
+        ),
+        body: ListView(
+          children: <Widget>[
+            const SizedBox(
+              height: 20,
+            ),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => StandardButtons()),
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
+                  padding: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.all(Radius.circular(7)),
+                      color: GFColors.DARK,
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black.withOpacity(0.40),
+                            blurRadius: 5)
+                      ]),
+                  child: GFListTile(
+                      color: GFColors.DARK,
+                      title: Text(
+                        'Standard Buttons',
+                        style: TextStyle(color: GFColors.WHITE),
+                      ),
+                      icon: Icon(
+                        CupertinoIcons.forward,
+                        color: GFColors.SUCCESS,
+                      )),
+                )),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => PillsButtons()),
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
+                  padding: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.all(Radius.circular(7)),
+                      color: GFColors.DARK,
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black.withOpacity(0.40),
+                            blurRadius: 5)
+                      ]),
+                  child: GFListTile(
+                      color: GFColors.DARK,
+                      title: Text(
+                        'Pills Buttons',
+                        style: TextStyle(color: GFColors.WHITE),
+                      ),
+                      icon: Icon(
+                        CupertinoIcons.forward,
+                        color: GFColors.SUCCESS,
+                      )),
+                )),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => SquareButtons()),
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
+                  padding: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.all(Radius.circular(7)),
+                      color: GFColors.DARK,
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black.withOpacity(0.40),
+                            blurRadius: 5)
+                      ]),
+                  child: GFListTile(
+                      color: GFColors.DARK,
+                      title: Text(
+                        'Square Buttons',
+                        style: TextStyle(color: GFColors.WHITE),
+                      ),
+                      icon: Icon(
+                        CupertinoIcons.forward,
+                        color: GFColors.SUCCESS,
+                      )),
+                )),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => ShadowButtons()),
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
+                  padding: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.all(Radius.circular(7)),
+                      color: GFColors.DARK,
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black.withOpacity(0.40),
+                            blurRadius: 5)
+                      ]),
+                  child: GFListTile(
+                      color: GFColors.DARK,
+                      title: Text(
+                        'Shadow Buttons',
+                        style: TextStyle(color: GFColors.WHITE),
+                      ),
+                      icon: Icon(
+                        CupertinoIcons.forward,
+                        color: GFColors.SUCCESS,
+                      )),
+                )),
+            GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
@@ -173,24 +173,25 @@ class _ButtonTypesState extends State<ButtonTypes> {
                 padding: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(7)),
-                    color: GFColors.getGFColor(GFColor.dark),
+                    color: GFColors.DARK,
                     boxShadow: [
                       BoxShadow(
                           color: Colors.black.withOpacity(0.40), blurRadius: 5)
                     ]),
                 child: GFListTile(
-                    color: GFColors.getGFColor(GFColor.dark),
-                    title: Text(
-                      'Icons Buttons',
-                      style:
-                          TextStyle(color: GFColors.getGFColor(GFColor.white)),
-                    ),
-                    icon: Icon(
-                      CupertinoIcons.forward,
-                      color: GFColors.getGFColor(GFColor.success),
-                    )),
-              )),
-          GestureDetector(
+                  color: GFColors.DARK,
+                  title: Text(
+                    'Icons Buttons',
+                    style: TextStyle(color: GFColors.WHITE),
+                  ),
+                  icon: Icon(
+                    CupertinoIcons.forward,
+                    color: GFColors.SUCCESS,
+                  ),
+                ),
+              ),
+            ),
+            GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
@@ -204,23 +205,25 @@ class _ButtonTypesState extends State<ButtonTypes> {
                 padding: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(7)),
-                    color: GFColors.getGFColor(GFColor.dark),
+                    color: GFColors.DARK,
                     boxShadow: [
                       BoxShadow(
                           color: Colors.black.withOpacity(0.40), blurRadius: 5)
                     ]),
                 child: GFListTile(
-                    color: GFColors.getGFColor(GFColor.dark),
-                    title: Text(
-                      'Social Buttons',
-                      style:
-                          TextStyle(color: GFColors.getGFColor(GFColor.white)),
-                    ),
-                    icon: Icon(
-                      CupertinoIcons.forward,
-                      color: GFColors.getGFColor(GFColor.success),
-                    )),
-              )),
-        ],
-      ));
+                  color: GFColors.DARK,
+                  title: Text(
+                    'Social Buttons',
+                    style: TextStyle(color: GFColors.WHITE),
+                  ),
+                  icon: Icon(
+                    CupertinoIcons.forward,
+                    color: GFColors.SUCCESS,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
 }

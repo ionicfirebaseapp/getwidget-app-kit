@@ -30,14 +30,14 @@ class _CardPageState extends State<CardPage>
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
-        backgroundColor: GFColors.getGFColor(GFColor.dark),
+        backgroundColor: GFColors.DARK,
         leading: InkWell(
           onTap: () {
             Navigator.pop(context);
           },
           child: Icon(
             CupertinoIcons.back,
-            color: GFColors.getGFColor(GFColor.success),
+            color: GFColors.SUCCESS,
           ),
         ),
         title: const Text(
@@ -70,15 +70,15 @@ class _CardPageState extends State<CardPage>
                 ),
               ),
             ],
-            tabBarColor: GFColors.getGFColor(GFColor.light),
+            tabBarColor: GFColors.LIGHT,
             indicatorSize: TabBarIndicatorSize.tab,
-            labelColor: GFColors.getGFColor(GFColor.white),
-            unselectedLabelColor: GFColors.getGFColor(GFColor.dark),
+            labelColor: GFColors.WHITE,
+            unselectedLabelColor: GFColors.DARK,
             indicator: BoxDecoration(
               color: Colors.black,
               border: Border(
                 bottom: BorderSide(
-                  color: GFColors.getGFColor(GFColor.success),
+                  color: GFColors.SUCCESS,
                   width: 3,
                 ),
               ),
@@ -122,7 +122,7 @@ class _CardPageState extends State<CardPage>
                             child: fav
                                 ? Icon(
                                     Icons.favorite,
-                                    color: GFColors.getGFColor(GFColor.danger),
+                                    color: GFColors.DANGER,
                                   )
                                 : Icon(Icons.favorite_border),
                           ),
@@ -171,7 +171,7 @@ class _CardPageState extends State<CardPage>
                             child: fav1
                                 ? Icon(
                                     Icons.favorite,
-                                    color: GFColors.getGFColor(GFColor.danger),
+                                    color: GFColors.DANGER,
                                   )
                                 : Icon(Icons.favorite_border),
                           ),
@@ -289,7 +289,7 @@ class _CardPageState extends State<CardPage>
                             child: fav2
                                 ? Icon(
                                     Icons.favorite,
-                                    color: GFColors.getGFColor(GFColor.danger),
+                                    color: GFColors.DANGER,
                                   )
                                 : Icon(Icons.favorite_border),
                           ),

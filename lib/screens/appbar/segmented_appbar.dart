@@ -24,39 +24,24 @@ class _SegmentedAppbarState extends State<SegmentedAppbar>
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: GFAppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           title: GFSegmentTabs(
             tabController: tabController,
-            tabBarColor: GFColors.getGFColor(GFColor.light),
-//          indicatorSize: TabBarIndicatorSize.tab,
-            labelColor: GFColors.getGFColor(GFColor.white),
-            unselectedLabelColor: GFColors.getGFColor(GFColor.dark),
+            tabBarColor: GFColors.LIGHT,
+            labelColor: GFColors.WHITE,
+            unselectedLabelColor: GFColors.DARK,
             indicator: BoxDecoration(
-              color: GFColors.getGFColor(GFColor.dark),
-//            border: Border(
-//              bottom: BorderSide(
-//                color: GFColors.getGFColor(GFColor.success),
-//                width: 3.0,
-//              ),
-//            ),
-//                borderRadius: BorderRadius.circular(2.0)
+              color: GFColors.DARK,
             ),
             indicatorPadding: const EdgeInsets.all(8),
             indicatorWeight: 2,
             border: Border.all(color: Colors.white, width: 1),
             initialIndex: 0,
-
             length: 3,
             tabs: const <Widget>[
-              Text(
-                'Tab1',
-              ),
-              Text(
-                'Tab2',
-              ),
-              Text(
-                'Tab3',
-              ),
+              Text('Tab1'),
+              Text('Tab2'),
+              Text('Tab3'),
             ],
           ),
         ),
@@ -70,7 +55,6 @@ class _SegmentedAppbarState extends State<SegmentedAppbar>
           Center(
             child: Text('Tab 3'),
           ),
-//   Container(child: Text('Tab 3'),),
         ]),
       );
 }

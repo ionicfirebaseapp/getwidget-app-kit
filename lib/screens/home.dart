@@ -23,9 +23,6 @@ import 'toast/toasts.dart';
 import 'toggle/toggles.dart';
 import 'typography/typography.dart';
 
-
-
-
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -36,7 +33,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) => Scaffold(
       drawer: DrawerPage(),
       appBar: AppBar(
-        backgroundColor: GFColors.getGFColor(GFColor.dark),
+        backgroundColor: GFColors.DARK,
         title: SvgPicture.asset('lib/assets/icons/gflogo.svg'),
         centerTitle: true,
       ),
@@ -63,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                       height: 160,
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(7)),
@@ -110,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(7)),
@@ -154,7 +151,7 @@ class _HomePageState extends State<HomePage> {
 //                    child: Container(
 //                      margin: EdgeInsets.only(top: 23),
 //                      decoration: BoxDecoration(
-////                     color:GFColors.getGFColor( GFColor.dark,),
+////                     color:GFColors.getGFColor( GFColors.DARK,),
 //                          color: Color(0xFF333333),
 //                          borderRadius: BorderRadius.all(Radius.circular(7)),
 //                          boxShadow: [
@@ -171,7 +168,7 @@ class _HomePageState extends State<HomePage> {
 //                            height: 10,
 //                          ),
 //                          Image.asset('lib/assets/icons/card.png'),
-//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.SUCCESS,),
 //                          Text(
 //                            'Cards',
 //                            style: TextStyle(
@@ -201,7 +198,7 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(7)),
@@ -246,7 +243,7 @@ class _HomePageState extends State<HomePage> {
 //                      child: Container(
 //                        margin: EdgeInsets.only(top: 23),
 //                        decoration: BoxDecoration(
-////                     color:GFColors.getGFColor( GFColor.dark,),
+////                     color:GFColors.getGFColor( GFColors.DARK,),
 //                            color: Color(0xFF333333),
 //                            borderRadius: BorderRadius.all(Radius.circular(7)),
 //                            boxShadow: [
@@ -291,7 +288,7 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(7)),
@@ -336,7 +333,7 @@ class _HomePageState extends State<HomePage> {
 //                    child: Container(
 //                      margin: EdgeInsets.only(top: 23),
 //                      decoration: BoxDecoration(
-////                     color:GFColors.getGFColor( GFColor.dark,),
+////                     color:GFColors.getGFColor( GFColors.DARK,),
 //                          color: Color(0xFF333333),
 //                          borderRadius: BorderRadius.all(Radius.circular(7)),
 //                          boxShadow: [
@@ -353,7 +350,7 @@ class _HomePageState extends State<HomePage> {
 //                            height: 10,
 //                          ),
 //                          Image.asset('lib/assets/icons/items.png'),
-//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.SUCCESS,),
 //                          Text(
 //                            'Items',
 //                            style: TextStyle(
@@ -384,7 +381,7 @@ class _HomePageState extends State<HomePage> {
 //                      child: Container(
 //                        margin: EdgeInsets.only(top: 23),
 //                        decoration: BoxDecoration(
-////                     color:GFColors.getGFColor( GFColor.dark,),
+////                     color:GFColors.getGFColor( GFColors.DARK,),
 //                            color: Color(0xFF333333),
 //                            borderRadius: BorderRadius.all(Radius.circular(7)),
 //                            boxShadow: [
@@ -427,7 +424,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     margin: const EdgeInsets.only(top: 23),
                     decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                         color: const Color(0xFF333333),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(7)),
@@ -446,7 +443,7 @@ class _HomePageState extends State<HomePage> {
                         ),
 //                          Image.asset('lib/assets/icons/card.png'),
                         SvgPicture.asset('lib/assets/icons/cards.svg'),
-////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.SUCCESS,),
                         Text(
                           'Cards',
                           style: TextStyle(
@@ -475,7 +472,7 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(7)),
@@ -520,7 +517,7 @@ class _HomePageState extends State<HomePage> {
 //                    child: Container(
 //                      margin: EdgeInsets.only(top: 23),
 //                      decoration: BoxDecoration(
-////                     color:GFColors.getGFColor( GFColor.dark,),
+////                     color:GFColors.getGFColor( GFColors.DARK,),
 //                          color: Color(0xFF333333),
 //                          borderRadius: BorderRadius.all(Radius.circular(7)),
 //                          boxShadow: [
@@ -537,7 +534,7 @@ class _HomePageState extends State<HomePage> {
 //                            height: 10,
 //                          ),
 //                          Image.asset('lib/assets/icons/menu.png'),
-//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.SUCCESS,),
 //                          Text(
 //                            'Menu',
 //                            style: TextStyle(
@@ -567,7 +564,7 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(7)),
@@ -614,7 +611,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     margin: const EdgeInsets.only(top: 23),
                     decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                         color: const Color(0xFF333333),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(7)),
@@ -633,7 +630,7 @@ class _HomePageState extends State<HomePage> {
                         ),
 //                          Image.asset('lib/assets/icons/tabs.png'),
                         SvgPicture.asset('lib/assets/icons/tabs.svg'),
-////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.SUCCESS,),
                         Text(
                           'Tabs',
                           style: TextStyle(
@@ -664,7 +661,7 @@ class _HomePageState extends State<HomePage> {
 //                      child: Container(
 //                        margin: EdgeInsets.only(top: 23),
 //                        decoration: BoxDecoration(
-////                     color:GFColors.getGFColor( GFColor.dark,),
+////                     color:GFColors.getGFColor( GFColors.DARK,),
 //                            color: Color(0xFF333333),
 //                            borderRadius: BorderRadius.all(Radius.circular(7)),
 //                            boxShadow: [
@@ -710,7 +707,7 @@ class _HomePageState extends State<HomePage> {
 //                    child: Container(
 //                      margin: EdgeInsets.only(top: 23),
 //                      decoration: BoxDecoration(
-////                     color:GFColors.getGFColor( GFColor.dark,),
+////                     color:GFColors.getGFColor( GFColors.DARK,),
 //                          color: Color(0xFF333333),
 //                          borderRadius: BorderRadius.all(Radius.circular(7)),
 //                          boxShadow: [
@@ -724,7 +721,7 @@ class _HomePageState extends State<HomePage> {
 //                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 //                        children: <Widget>[
 //                          Image.asset('lib/assets/icons/toggle.png'),
-//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.SUCCESS,),
 //                          Text(
 //                            'Toggle',
 //                            style: TextStyle(
@@ -755,7 +752,7 @@ class _HomePageState extends State<HomePage> {
 //                      child: Container(
 //                        margin: EdgeInsets.only(top: 23),
 //                        decoration: BoxDecoration(
-////                     color:GFColors.getGFColor( GFColor.dark,),
+////                     color:GFColors.getGFColor( GFColors.DARK,),
 //                            color: Color(0xFF333333),
 //                            borderRadius: BorderRadius.all(Radius.circular(7)),
 //                            boxShadow: [
@@ -801,7 +798,7 @@ class _HomePageState extends State<HomePage> {
 //                    child: Container(
 //                      margin: EdgeInsets.only(top: 23),
 //                      decoration: BoxDecoration(
-////                     color:GFColors.getGFColor( GFColor.dark,),
+////                     color:GFColors.getGFColor( GFColors.DARK,),
 //                          color: Color(0xFF333333),
 //                          borderRadius: BorderRadius.all(Radius.circular(7)),
 //                          boxShadow: [
@@ -815,7 +812,7 @@ class _HomePageState extends State<HomePage> {
 //                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 //                        children: <Widget>[
 //                          Image.asset('lib/assets/icons/avatar.png'),
-//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+//////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.SUCCESS,),
 //                          Text(
 //                            'Avatars',
 //                            style: TextStyle(
@@ -845,7 +842,7 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(7)),
@@ -892,7 +889,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     margin: const EdgeInsets.only(top: 23),
                     decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                         color: const Color(0xFF333333),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(7)),
@@ -909,9 +906,9 @@ class _HomePageState extends State<HomePage> {
                         const SizedBox(
                           height: 10,
                         ),
-//                          Icon(Icons.notifications, color: GFColors.getGFColor(GFColor.success), size: 30,),
+//                          Icon(Icons.notifications, color: GFColors.SUCCESS, size: 30,),
                         SvgPicture.asset('lib/assets/icons/toast.svg'),
-////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.getGFColor(GFColor.success),),
+////                      SvgPicture.asset('lib/assets/icons/buttons.svg', color: GFColors.SUCCESS,),
                         Text(
                           'Toast',
                           style: TextStyle(
@@ -942,7 +939,7 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(7)),
@@ -989,7 +986,7 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(7)),
@@ -1007,7 +1004,7 @@ class _HomePageState extends State<HomePage> {
                           const SizedBox(
                             height: 10,
                           ),
-//                           Icon(Icons.list, color: GFColors.getGFColor(GFColor.success), size: 30,),
+//                           Icon(Icons.list, color: GFColors.SUCCESS, size: 30,),
 
                           SvgPicture.asset('lib/assets/icons/accordion.svg'),
                           Text(
@@ -1044,7 +1041,7 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(7)),
@@ -1092,7 +1089,7 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(7)),
@@ -1137,14 +1134,13 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                               RatingPage()),
+                            builder: (BuildContext context) => RatingPage()),
                       );
                     },
                     child: Container(
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(7)),
@@ -1164,7 +1160,7 @@ class _HomePageState extends State<HomePage> {
                           ),
 //                            Image.asset('lib/assets/icons/menu.png'),
                           SvgPicture.asset('lib/assets/icons/rating.svg'),
-//                        Icon(Icons.mobile_screen_share, color: GFColors.getGFColor(GFColor.success), size: 30,),
+//                        Icon(Icons.mobile_screen_share, color: GFColors.SUCCESS, size: 30,),
                           Text(
                             'Rating',
                             style: TextStyle(
@@ -1193,7 +1189,7 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(7)),
@@ -1244,7 +1240,7 @@ class _HomePageState extends State<HomePage> {
 //                    child: Container(
 //                      margin: const EdgeInsets.only(top: 23),
 //                      decoration: BoxDecoration(
-////                     color:GFColors.getGFColor( GFColor.dark,),
+////                     color:GFColors.getGFColor( GFColors.DARK,),
 //                          color: const Color(0xFF333333),
 //                          borderRadius:
 //                          const BorderRadius.all(Radius.circular(7)),
@@ -1294,10 +1290,10 @@ class _HomePageState extends State<HomePage> {
                       alignment: Alignment.center,
                       margin: const EdgeInsets.only(top: 23),
                       decoration: BoxDecoration(
-//                     color:GFColors.getGFColor( GFColor.dark,),
+//                     color:GFColors.getGFColor( GFColors.DARK,),
                           color: const Color(0xFF333333),
                           borderRadius:
-                          const BorderRadius.all(Radius.circular(7)),
+                              const BorderRadius.all(Radius.circular(7)),
                           boxShadow: [
                             BoxShadow(
                                 color: Colors.black.withOpacity(0.61),
@@ -1328,13 +1324,11 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-
               ],
             ),
             const SizedBox(
               height: 20,
             )
-
           ],
         ),
       ));

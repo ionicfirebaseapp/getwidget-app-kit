@@ -62,14 +62,14 @@ class _CarouselState extends State<Carousel>
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
             onTap: () {
               Navigator.pop(context);
             },
             child: Icon(
               CupertinoIcons.back,
-              color: GFColors.getGFColor(GFColor.success),
+              color: GFColors.SUCCESS,
             ),
           ),
           title: const Text(
@@ -99,15 +99,15 @@ class _CarouselState extends State<Carousel>
                     ),
                   ),
                 ],
-                tabBarColor: GFColors.getGFColor(GFColor.light),
+                tabBarColor: GFColors.LIGHT,
                 indicatorSize: TabBarIndicatorSize.tab,
-                labelColor: GFColors.getGFColor(GFColor.white),
-                unselectedLabelColor: GFColors.getGFColor(GFColor.dark),
+                labelColor: GFColors.WHITE,
+                unselectedLabelColor: GFColors.DARK,
                 indicator: BoxDecoration(
                   color: Colors.black,
                   border: Border(
                     bottom: BorderSide(
-                      color: GFColors.getGFColor(GFColor.success),
+                      color: GFColors.SUCCESS,
                       width: 3,
                     ),
                   ),
@@ -141,10 +141,8 @@ class _CarouselState extends State<Carousel>
                               autoPlay: true,
                               pagination: true,
                               viewportFraction: 1.0,
-                              activeIndicator:
-                                  GFColors.getGFColor(GFColor.success),
-                              passiveIndicator:
-                                  GFColors.getGFColor(GFColor.dark),
+                              activeIndicator: GFColors.SUCCESS,
+                              passiveIndicator: GFColors.DARK,
                               aspectRatio: 2,
                               items: gradientColor
                                   .map(
@@ -190,7 +188,8 @@ class _CarouselState extends State<Carousel>
                                                     style: TextStyle(
                                                         color:
                                                             GFColors.getGFColor(
-                                                                GFColor.light)),
+                                                                GFColors
+                                                                    .LIGHT)),
                                                   ))
                                             ],
                                           )),
@@ -251,7 +250,7 @@ class _CarouselState extends State<Carousel>
                                                 style: TextStyle(
                                                     fontSize: 10,
                                                     color: GFColors.getGFColor(
-                                                        GFColor.light)),
+                                                        GFColors.LIGHT)),
                                               ))
                                         ],
                                       ),
@@ -275,10 +274,8 @@ class _CarouselState extends State<Carousel>
                               autoPlay: true,
                               pagination: true,
                               viewportFraction: 1.0,
-                              activeIndicator:
-                                  GFColors.getGFColor(GFColor.success),
-                              passiveIndicator:
-                                  GFColors.getGFColor(GFColor.white),
+                              activeIndicator: GFColors.SUCCESS,
+                              passiveIndicator: GFColors.WHITE,
                               aspectRatio: 2,
                               items: assetImg
                                   .map(
@@ -321,7 +318,8 @@ class _CarouselState extends State<Carousel>
                                                     style: TextStyle(
                                                         color:
                                                             GFColors.getGFColor(
-                                                                GFColor.light)),
+                                                                GFColors
+                                                                    .LIGHT)),
                                                   ))
                                             ],
                                           )),
@@ -356,10 +354,8 @@ class _CarouselState extends State<Carousel>
                               autoPlay: true,
                               pagination: true,
                               viewportFraction: 1.0,
-                              activeIndicator:
-                                  GFColors.getGFColor(GFColor.success),
-                              passiveIndicator:
-                                  GFColors.getGFColor(GFColor.dark),
+                              activeIndicator: GFColors.SUCCESS,
+                              passiveIndicator: GFColors.DARK,
                               aspectRatio: 2,
                               items: imageList
                                   .map(
@@ -398,7 +394,8 @@ class _CarouselState extends State<Carousel>
                                                     style: TextStyle(
                                                         color:
                                                             GFColors.getGFColor(
-                                                                GFColor.light)),
+                                                                GFColors
+                                                                    .LIGHT)),
                                                   ))
                                             ],
                                           )),
@@ -457,7 +454,8 @@ class _CarouselState extends State<Carousel>
                                                         fontSize: 10,
                                                         color:
                                                             GFColors.getGFColor(
-                                                                GFColor.light)),
+                                                                GFColors
+                                                                    .LIGHT)),
                                                   ))
                                             ],
                                           )),
@@ -480,10 +478,8 @@ class _CarouselState extends State<Carousel>
                               autoPlay: true,
                               pagination: true,
                               viewportFraction: 1.0,
-                              activeIndicator:
-                                  GFColors.getGFColor(GFColor.success),
-                              passiveIndicator:
-                                  GFColors.getGFColor(GFColor.white),
+                              activeIndicator: GFColors.SUCCESS,
+                              passiveIndicator: GFColors.WHITE,
                               aspectRatio: 2,
                               items: imageList
                                   .map(
@@ -519,7 +515,8 @@ class _CarouselState extends State<Carousel>
                                                     style: TextStyle(
                                                         color:
                                                             GFColors.getGFColor(
-                                                                GFColor.light)),
+                                                                GFColors
+                                                                    .LIGHT)),
                                                   ))
                                             ],
                                           )),

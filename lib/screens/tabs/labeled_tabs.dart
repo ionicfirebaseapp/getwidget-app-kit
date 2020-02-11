@@ -26,7 +26,7 @@ class _LabeledTabsState extends State<LabeledTabs>
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: GFAppBar(
-          backgroundColor: GFColors.getGFColor(GFColor.dark),
+          backgroundColor: GFColors.DARK,
           leading: InkWell(
               onTap: () {
                 Navigator.pop(context);
@@ -35,7 +35,7 @@ class _LabeledTabsState extends State<LabeledTabs>
               child: Container(
                 child: Icon(
                   CupertinoIcons.back,
-                  color: GFColors.getGFColor(GFColor.success),
+                  color: GFColors.SUCCESS,
                 ),
               )),
           title: const Text(
@@ -49,10 +49,8 @@ class _LabeledTabsState extends State<LabeledTabs>
           children: <Widget>[
             Container(
               decoration: BoxDecoration(
-                  color: GFColors.getGFColor(GFColor.danger),
-                  border: Border(
-                      top: BorderSide(
-                          color: GFColors.getGFColor(GFColor.light)))),
+                  color: GFColors.DANGER,
+                  border: Border(top: BorderSide(color: GFColors.LIGHT))),
             ),
             GFTabBar(
               initialIndex: 0,
@@ -119,11 +117,11 @@ class _LabeledTabsState extends State<LabeledTabs>
               indicatorColor: Colors.teal,
 
 //        indicatorSize: TabBarIndicatorSize.label,
-              labelColor: GFColors.getGFColor(GFColor.success),
+              labelColor: GFColors.SUCCESS,
               labelPadding: const EdgeInsets.all(8),
 
-              tabBarColor: GFColors.getGFColor(GFColor.white),
-              unselectedLabelColor: GFColors.getGFColor(GFColor.light),
+              tabBarColor: GFColors.WHITE,
+              unselectedLabelColor: GFColors.LIGHT,
               labelStyle: TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 13,
