@@ -29,39 +29,54 @@ class _FabFloatingWidgetState extends State<FabFloatingWidget> with TickerProvid
 
   bool showfabFloatingWidget = false;
 
+
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    controller.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) =>
       Scaffold(
                 body: GFFloatingWidget(
             verticalPosition: MediaQuery.of(context).size.height* 0.4,
-            horizontalPosition: MediaQuery.of(context).size.width* 0.45,
+            horizontalPosition: MediaQuery.of(context).size.width* 0.444,
 
-            child:  Column(
-              children:   <Widget>[
-                SizedBox(
-                  height: 20,
-                ),
-                GFIconButton(
-                    icon: showfabFloatingWidget ?Icon(Icons.close): Icon(Icons.add),
-                    shape: GFIconButtonShape.circle,
-                    color: showfabFloatingWidget? Colors.red:GFColors.getGFColor(GFColor.primary),
-                    size: 120,
-                    onPressed: () {
-                      setState(() {
-                        showfabFloatingWidget=!showfabFloatingWidget;
-                      });
-                      switch (controller.status) {
-                        case AnimationStatus.completed:
-                          controller.forward(from:1);
-                          break;
-                        case AnimationStatus.dismissed:
-                          controller.reverse(from:1);
-                          break;
-                        default:
-                      }
-                    }),
+            child:  Container(
+              margin: EdgeInsets.only(top:20),
+              child:   GFIconButton(
+                  icon: showfabFloatingWidget ?Icon(Icons.close): Icon(Icons.add),
+                  shape: GFIconButtonShape.circle,
+                  color:GFColors.getGFColor(GFColor.primary),
+//                  iconSize: 80,
+              size: 100.0,
 
-              ],
+//                  size: showfabFloatingWidget?120:90,
+                  onPressed: () {
+                    setState(() {
+                      showfabFloatingWidget=!showfabFloatingWidget;
+                    });
+//                      if(showfabFloatingWidget = !showfabFloatingWidget){
+//                        controller.forward();
+//
+//                      }
+//                      if(showfabFloatingWidget = false){
+//                        controller.forward();
+//
+//                      }
+                    switch (controller.status) {
+                      case AnimationStatus.completed:
+                        controller.forward(from:1);
+                        break;
+
+                      case AnimationStatus.dismissed:
+                        controller.reverse(from:1);
+                        break;
+                      default:
+                    }
+                  }),
             ),
             body: ListView(
 //             mainAxisAlignment: MainAxisAlignment.center,
@@ -76,45 +91,42 @@ class _FabFloatingWidgetState extends State<FabFloatingWidget> with TickerProvid
                   ),
                 ),
 
-                showfabFloatingWidget?SlideTransition(position: offset, child: Container(
-//                  height: 400,
-//                  width: 300,
-                  child:  Column(
+                showfabFloatingWidget?SlideTransition(position: offset, child:Column(
 
-                    children: <Widget>[
-                      GFButtonBar(
-                        direction:Axis.vertical,
-                        children: <Widget>[
-                          GFIconButton(
-                              icon: Icon(Icons.add),
-                              shape: GFIconButtonShape.circle,
-                              color: GFColors.getGFColor(GFColor.info),
-                              onPressed: () {
-                              }),
-                          GFIconButton(
-                              icon: Icon(Icons.share),
-                              shape: GFIconButtonShape.circle,
-                              color: GFColors.getGFColor(GFColor.success),
-                              onPressed: () {
-                              }),
-                          GFIconButton(
-                              icon: Icon(Icons.message),
-                              shape: GFIconButtonShape.circle,
-                              color: GFColors.getGFColor(GFColor.warning),
-                              onPressed: () {
-                              }),
-                          GFIconButton(
-                              icon: Icon(Icons.settings),
-                              shape: GFIconButtonShape.circle,
-                              onPressed: () {
-                              }),
+                  children: <Widget>[
+                    GFButtonBar(
+                      direction:Axis.vertical,
+                      children: <Widget>[
+                        GFIconButton(
+                            icon: Icon(Icons.add),
+                            shape: GFIconButtonShape.circle,
+                            color: GFColors.getGFColor(GFColor.info),
+                            onPressed: () {
+                            }),
+                        GFIconButton(
+                            icon: Icon(Icons.share),
+                            shape: GFIconButtonShape.circle,
+                            color: GFColors.getGFColor(GFColor.success),
+                            onPressed: () {
+                            }),
+                        GFIconButton(
+                            icon: Icon(Icons.message),
+                            shape: GFIconButtonShape.circle,
+                            color: GFColors.getGFColor(GFColor.warning),
+                            onPressed: () {
+                            }),
+                        GFIconButton(
+                            icon: Icon(Icons.settings),
+                            shape: GFIconButtonShape.circle,
+                            color: GFColors.getGFColor(GFColor.secondary),
+                            onPressed: () {
+                            }),
 
-                        ],
-                      )
+                      ],
+                    )
 
 
-                    ],
-                  ),
+                  ],
                 ),):Container(),
         ]))
 
