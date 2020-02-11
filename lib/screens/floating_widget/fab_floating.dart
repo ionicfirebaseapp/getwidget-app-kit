@@ -17,9 +17,11 @@ class _FabFloatingWidgetState extends State<FabFloatingWidget> with TickerProvid
     super.initState();
     animationController = AnimationController(duration: Duration(seconds: 2), vsync: this);
     controller = AnimationController(vsync: this, duration: Duration(milliseconds: 300));
-    offset = Tween<Offset>(begin:  Offset(0.0, -0.05), end: Offset.zero).animate(controller);
+    offset = Tween<Offset>(begin:  Offset(0.0, -0.04), end: Offset(0.0, 0.2)).animate(controller);
+//    offset = Tween<Offset>(begin: Offset.zero, end: Offset(0.0, 1.0))
+//        .animate(controller);
     Controller = AnimationController(vsync: this, duration: Duration(milliseconds: 300));
-    offset1 = Tween<Offset>(begin: Offset(1.0, 0.0), end: Offset.zero).animate(Controller);
+    offset1 = Tween<Offset>(begin:  Offset.zero, end: Offset(0.0, -0.05)).animate(Controller);
     animation =   Tween(begin: 1.0, end: 0.0).animate(CurvedAnimation(parent: animationController, curve: Curves.fastLinearToSlowEaseIn));
   }
   AnimationController controller, Controller;
@@ -50,7 +52,7 @@ class _FabFloatingWidgetState extends State<FabFloatingWidget> with TickerProvid
                       });
                       switch (controller.status) {
                         case AnimationStatus.completed:
-                          controller.forward(from: 1);
+                          controller.forward(from:1);
                           break;
                         case AnimationStatus.dismissed:
                           controller.reverse(from:1);
