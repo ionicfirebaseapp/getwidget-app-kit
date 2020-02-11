@@ -152,7 +152,7 @@ class _SocialButtonsState extends State<SocialButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             'Slack',
                             style: TextStyle(color: GFColors.WHITE),
                           ),

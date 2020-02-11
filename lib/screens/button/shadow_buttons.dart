@@ -125,7 +125,7 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                         ),
                         GFButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             'Dark',
                             style: TextStyle(color: GFColors.WHITE),
                           ),
@@ -223,7 +223,7 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                     GFButton(
                       onPressed: () {},
                       blockButton: true,
-                      child: Text('Large',
+                      child: const Text('Large',
                           style: TextStyle(color: GFColors.WHITE)),
                       color: GFColors.PRIMARY,
                       size: GFSize.LARGE,
@@ -235,7 +235,7 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                     GFButton(
                       onPressed: () {},
                       blockButton: true,
-                      child: Text('Normal',
+                      child: const Text('Normal',
                           style: TextStyle(color: GFColors.WHITE)),
                       color: GFColors.PRIMARY,
                       size: GFSize.MEDIUM,
@@ -247,7 +247,7 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                     GFButton(
                       onPressed: () {},
                       blockButton: true,
-                      child: Text('Small',
+                      child: const Text('Small',
                           style: TextStyle(color: GFColors.WHITE)),
                       color: GFColors.PRIMARY,
                       size: GFSize.SMALL,

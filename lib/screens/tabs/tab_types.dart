@@ -60,7 +60,7 @@ class _TabTypesState extends State<TabTypes> {
                       ]),
                   child: GFListTile(
                       color: GFColors.DARK,
-                      title: Text(
+                      title: const Text(
                         'Segmented Tabs',
                         style: TextStyle(color: GFColors.WHITE),
                       ),
@@ -89,7 +89,7 @@ class _TabTypesState extends State<TabTypes> {
                     ]),
                 child: GFListTile(
                   color: GFColors.DARK,
-                  title: Text(
+                  title: const Text(
                     'Icon Tabs',
                     style: TextStyle(color: GFColors.WHITE),
                   ),
@@ -121,7 +121,7 @@ class _TabTypesState extends State<TabTypes> {
                       ]),
                   child: GFListTile(
                       color: GFColors.DARK,
-                      title: Text(
+                      title: const Text(
                         'Labeled Tabs',
                         style: TextStyle(color: GFColors.WHITE),
                       ),
@@ -151,7 +151,7 @@ class _TabTypesState extends State<TabTypes> {
                       ]),
                   child: GFListTile(
                       color: GFColors.DARK,
-                      title: Text(
+                      title: const Text(
                         'Bottom Icon Tabs',
                         style: TextStyle(color: GFColors.WHITE),
                       ),
@@ -182,7 +182,7 @@ class _TabTypesState extends State<TabTypes> {
                     ]),
                 child: GFListTile(
                   color: GFColors.DARK,
-                  title: Text(
+                  title: const Text(
                     'Bottom Labeled Tabs',
                     style: TextStyle(color: GFColors.WHITE),
                   ),

@@ -112,14 +112,14 @@ class _StandardButtonsState extends State<StandardButtons>
                                     GFButton(
                                       onPressed: () {},
                                       shape: GFButtonShape.standard,
-                                      child: Text('Primary',
+                                      child: const Text('Primary',
                                           style:
                                               TextStyle(color: GFColors.WHITE)),
                                       color: GFColors.PRIMARY,
                                     ),
                                     GFButton(
                                       onPressed: () {},
-                                      child: Text('Secondary',
+                                      child: const Text('Secondary',
                                           style:
                                               TextStyle(color: GFColors.WHITE)),
                                       color: GFColors.SECONDARY,
@@ -145,7 +145,7 @@ class _StandardButtonsState extends State<StandardButtons>
                                     ),
                                     GFButton(
                                       onPressed: () {},
-                                      child: Text('Danger',
+                                      child: const Text('Danger',
                                           style:
                                               TextStyle(color: GFColors.WHITE)),
                                       color: GFColors.DANGER,
@@ -171,7 +171,7 @@ class _StandardButtonsState extends State<StandardButtons>
                                     ),
                                     GFButton(
                                       onPressed: () {},
-                                      child: Text(
+                                      child: const Text(
                                         'Dark',
                                         style: TextStyle(color: GFColors.WHITE),
                                       ),
@@ -211,7 +211,7 @@ class _StandardButtonsState extends State<StandardButtons>
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
-                                  children: <Widget>[
+                                  children: const <Widget>[
                                     GFButton(
                                       onPressed: null,
                                       shape: GFButtonShape.standard,
@@ -227,7 +227,7 @@ class _StandardButtonsState extends State<StandardButtons>
                                               TextStyle(color: GFColors.WHITE)),
                                       color: GFColors.SECONDARY,
                                     ),
-                                    const GFButton(
+                                    GFButton(
                                       onPressed: null,
                                       child: Text('Success'),
                                       color: GFColors.SUCCESS,
@@ -240,8 +240,8 @@ class _StandardButtonsState extends State<StandardButtons>
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
-                                  children: <Widget>[
-                                    const GFButton(
+                                  children: const <Widget>[
+                                    GFButton(
                                       onPressed: null,
                                       child: Text('Warning'),
                                       color: GFColors.WARNING,
@@ -253,7 +253,7 @@ class _StandardButtonsState extends State<StandardButtons>
                                               TextStyle(color: GFColors.WHITE)),
                                       color: GFColors.DANGER,
                                     ),
-                                    const GFButton(
+                                    GFButton(
                                       onPressed: null,
                                       child: Text('Info'),
                                       color: GFColors.INFO,
@@ -272,7 +272,7 @@ class _StandardButtonsState extends State<StandardButtons>
                                       child: Text('Light'),
                                       color: GFColors.LIGHT,
                                     ),
-                                    GFButton(
+                                    const GFButton(
                                       onPressed: null,
                                       child: Text(
                                         'Dark',
@@ -408,7 +408,7 @@ class _StandardButtonsState extends State<StandardButtons>
                                   children: <Widget>[
                                     GFButton(
                                       onPressed: () {},
-                                      child: Text('Large',
+                                      child: const Text('Large',
                                           style:
                                               TextStyle(color: GFColors.WHITE)),
                                       color: GFColors.PRIMARY,
@@ -416,7 +416,7 @@ class _StandardButtonsState extends State<StandardButtons>
                                     ),
                                     GFButton(
                                       onPressed: () {},
-                                      child: Text('Normal',
+                                      child: const Text('Normal',
                                           style:
                                               TextStyle(color: GFColors.WHITE)),
                                       color: GFColors.PRIMARY,
@@ -424,7 +424,7 @@ class _StandardButtonsState extends State<StandardButtons>
                                     ),
                                     GFButton(
                                       onPressed: () {},
-                                      child: Text('Small',
+                                      child: const Text('Small',
                                           style:
                                               TextStyle(color: GFColors.WHITE)),
                                       color: GFColors.PRIMARY,
@@ -458,7 +458,7 @@ class _StandardButtonsState extends State<StandardButtons>
                                 GFButton(
                                   onPressed: () {},
                                   blockButton: true,
-                                  child: Text('Large',
+                                  child: const Text('Large',
                                       style: TextStyle(color: GFColors.WHITE)),
                                   color: GFColors.PRIMARY,
                                   size: GFSize.LARGE,
@@ -469,7 +469,7 @@ class _StandardButtonsState extends State<StandardButtons>
                                 GFButton(
                                   onPressed: () {},
                                   blockButton: true,
-                                  child: Text('Normal',
+                                  child: const Text('Normal',
                                       style: TextStyle(color: GFColors.WHITE)),
                                   color: GFColors.PRIMARY,
                                   size: GFSize.MEDIUM,
@@ -480,7 +480,7 @@ class _StandardButtonsState extends State<StandardButtons>
                                 GFButton(
                                   onPressed: () {},
                                   blockButton: true,
-                                  child: Text('Small',
+                                  child: const Text('Small',
                                       style: TextStyle(color: GFColors.WHITE)),
                                   color: GFColors.PRIMARY,
                                   size: GFSize.SMALL,
@@ -509,7 +509,7 @@ class _StandardButtonsState extends State<StandardButtons>
                               ),
                               GFButton(
                                 onPressed: () {},
-                                child: Text('Large',
+                                child: const Text('Large',
                                     style: TextStyle(color: GFColors.WHITE)),
                                 color: GFColors.PRIMARY,
                                 size: GFSize.LARGE,
@@ -520,7 +520,7 @@ class _StandardButtonsState extends State<StandardButtons>
                               ),
                               GFButton(
                                 onPressed: () {},
-                                child: Text('Normal',
+                                child: const Text('Normal',
                                     style: TextStyle(color: GFColors.WHITE)),
                                 color: GFColors.PRIMARY,
                                 size: GFSize.MEDIUM,
@@ -531,7 +531,7 @@ class _StandardButtonsState extends State<StandardButtons>
                               ),
                               GFButton(
                                 onPressed: () {},
-                                child: Text('Small',
+                                child: const Text('Small',
                                     style: TextStyle(color: GFColors.WHITE)),
                                 color: GFColors.PRIMARY,
                                 size: GFSize.SMALL,

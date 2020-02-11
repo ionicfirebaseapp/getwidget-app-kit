@@ -148,7 +148,7 @@ class _TypographyPageState extends State<TypographyPage> {
                   const SizedBox(
                     height: 15,
                   ),
-                  GFTypography(
+                  const GFTypography(
                       text: 'GF Header Typo5',
                       type: GFTypographyType.typo5,
                       showDivider: false,

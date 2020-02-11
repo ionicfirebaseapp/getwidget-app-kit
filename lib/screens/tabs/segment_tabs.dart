@@ -72,7 +72,7 @@ class _SegmentTabsPageState extends State<SegmentTabsPage>
                 indicatorSize: TabBarIndicatorSize.tab,
                 labelColor: GFColors.WHITE,
                 unselectedLabelColor: GFColors.DARK,
-                indicator: BoxDecoration(
+                indicator: const BoxDecoration(
                   color: GFColors.DARK,
                   border: Border(
                     bottom: BorderSide(

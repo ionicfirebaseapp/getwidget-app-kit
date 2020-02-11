@@ -65,9 +65,9 @@ class _DrawerPageState extends State<DrawerPage> {
                     backgroundColor: Colors.green,
                     child: const Text('G'),
                   ),
-                  GFAvatar(
+                  const GFAvatar(
                     backgroundColor: Colors.black,
-                    child: const Text('F'),
+                    child: Text('F'),
                   ),
                 ],
                 child: Column(
@@ -111,7 +111,8 @@ class _DrawerPageState extends State<DrawerPage> {
                   GFAccordion(
                       title: 'Components',
                       expandedTitlebackgroundColor: Colors.white,
-                      textStyle: TextStyle(color: Colors.black87, fontSize: 16),
+                      textStyle:
+                          const TextStyle(color: Colors.black87, fontSize: 16),
                       contentChild: Padding(
                         padding: const EdgeInsets.all(0),
                         child: Column(children: <Widget>[
@@ -127,8 +128,8 @@ class _DrawerPageState extends State<DrawerPage> {
                                 width: 17,
                                 color: Colors.black87,
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 9),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 9),
                                 child: Text(
                                   'Buttons',
                                   style: TextStyle(
@@ -263,7 +264,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'Badge',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -287,7 +288,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'Avatar',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -311,7 +312,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'Images',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -335,7 +336,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'Cards',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -359,7 +360,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'Carousels',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -383,7 +384,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'Tiles',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -407,7 +408,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'Tabs',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -431,7 +432,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'Toggle',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -455,7 +456,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'Toast',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -479,7 +480,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'Alert',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -503,7 +504,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'Accordion',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -527,7 +528,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'SearchBar',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -551,7 +552,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'Appbar',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -575,7 +576,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               );
                             },
                             child: GFListTile(
-                              title: Text(
+                              title: const Text(
                                 'Typography',
                                 style: TextStyle(
                                   color: Colors.black87,
@@ -601,8 +602,8 @@ class _DrawerPageState extends State<DrawerPage> {
                         ),
                       );
                     },
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 2),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 2),
                       child: GFListTile(
                         title: Text('Documents',
                             style:
@@ -620,13 +621,14 @@ class _DrawerPageState extends State<DrawerPage> {
                         ),
                       );
                     },
-                    child: Padding(
-                        padding: const EdgeInsets.only(left: 2),
-                        child: GFListTile(
-                          title: Text('Features',
-                              style: TextStyle(
-                                  fontSize: 16, color: Colors.black87)),
-                        )),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 2),
+                      child: GFListTile(
+                        title: Text('Features',
+                            style:
+                                TextStyle(fontSize: 16, color: Colors.black87)),
+                      ),
+                    ),
                   ),
                 ],
               ),

@@ -64,7 +64,7 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                 indicatorSize: TabBarIndicatorSize.tab,
                 labelColor: GFColors.WHITE,
                 unselectedLabelColor: GFColors.DARK,
-                indicator: BoxDecoration(
+                indicator: const BoxDecoration(
                   color: Colors.black,
                   border: Border(
                     bottom: BorderSide(
@@ -179,7 +179,7 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                               GFImageOverlay(
                                 height: 200,
                                 width: 300,
-                                child: Center(
+                                child: const Center(
                                   child: Text(
                                     'Light Overlay',
                                     style: TextStyle(color: GFColors.WHITE),
@@ -201,7 +201,7 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                               GFImageOverlay(
                                 height: 200,
                                 width: 300,
-                                child: Center(
+                                child: const Center(
                                     child: Text(
                                   'Medium Overlay',
                                   style: TextStyle(color: GFColors.WHITE),
@@ -222,7 +222,7 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                               GFImageOverlay(
                                 height: 200,
                                 width: 300,
-                                child: Center(
+                                child: const Center(
                                     child: Text(
                                   'Strong Overlay',
                                   style: TextStyle(color: GFColors.WHITE),

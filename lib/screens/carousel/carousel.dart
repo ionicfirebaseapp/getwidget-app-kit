@@ -98,7 +98,7 @@ class _CarouselState extends State<Carousel>
                 indicatorSize: TabBarIndicatorSize.tab,
                 labelColor: GFColors.WHITE,
                 unselectedLabelColor: GFColors.DARK,
-                indicator: BoxDecoration(
+                indicator: const BoxDecoration(
                   color: Colors.black,
                   border: Border(
                     bottom: BorderSide(

@@ -61,7 +61,7 @@ class _ButtonTypesState extends State<ButtonTypes> {
                       ]),
                   child: GFListTile(
                       color: GFColors.DARK,
-                      title: Text(
+                      title: const Text(
                         'Standard Buttons',
                         style: TextStyle(color: GFColors.WHITE),
                       ),
@@ -91,7 +91,7 @@ class _ButtonTypesState extends State<ButtonTypes> {
                       ]),
                   child: GFListTile(
                       color: GFColors.DARK,
-                      title: Text(
+                      title: const Text(
                         'Pills Buttons',
                         style: TextStyle(color: GFColors.WHITE),
                       ),
@@ -121,7 +121,7 @@ class _ButtonTypesState extends State<ButtonTypes> {
                       ]),
                   child: GFListTile(
                       color: GFColors.DARK,
-                      title: Text(
+                      title: const Text(
                         'Square Buttons',
                         style: TextStyle(color: GFColors.WHITE),
                       ),
@@ -151,7 +151,7 @@ class _ButtonTypesState extends State<ButtonTypes> {
                       ]),
                   child: GFListTile(
                       color: GFColors.DARK,
-                      title: Text(
+                      title: const Text(
                         'Shadow Buttons',
                         style: TextStyle(color: GFColors.WHITE),
                       ),
@@ -180,7 +180,7 @@ class _ButtonTypesState extends State<ButtonTypes> {
                     ]),
                 child: GFListTile(
                   color: GFColors.DARK,
-                  title: Text(
+                  title: const Text(
                     'Icons Buttons',
                     style: TextStyle(color: GFColors.WHITE),
                   ),
@@ -212,7 +212,7 @@ class _ButtonTypesState extends State<ButtonTypes> {
                     ]),
                 child: GFListTile(
                   color: GFColors.DARK,
-                  title: Text(
+                  title: const Text(
                     'Social Buttons',
                     style: TextStyle(color: GFColors.WHITE),
                   ),

@@ -80,7 +80,7 @@ class _SearchbarPageState extends State<SearchbarPage> {
             GFSearchBar(
                 searchBoxInputDecoration: InputDecoration(
                   labelText: 'Type Here',
-                  labelStyle: TextStyle(color: Colors.black26),
+                  labelStyle: const TextStyle(color: Colors.black26),
                   focusedBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.greenAccent),
                     borderRadius: BorderRadius.circular(25),

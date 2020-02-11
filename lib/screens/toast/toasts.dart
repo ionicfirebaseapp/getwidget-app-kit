@@ -41,7 +41,7 @@ class _ToastsState extends State<Toasts> {
                   backgroundColor: Colors.white,
                   text:
                       'You have succesfully viewed how the floating toast works!!',
-                  textStyle: TextStyle(color: Colors.black87),
+                  textStyle: const TextStyle(color: Colors.black87),
                   button: GFButton(
                     onPressed: () {
                       setState(() {

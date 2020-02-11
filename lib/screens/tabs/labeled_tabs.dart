@@ -43,14 +43,8 @@ class _LabeledTabsState extends State<LabeledTabs>
           ),
           centerTitle: true,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+        body: ListView(
           children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                  color: GFColors.DANGER,
-                  border: Border(top: BorderSide(color: GFColors.LIGHT))),
-            ),
             GFTabBar(
               initialIndex: 0,
               length: 4,

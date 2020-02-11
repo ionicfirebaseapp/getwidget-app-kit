@@ -75,7 +75,7 @@ class _AlertPageState extends State<AlertPage> {
                                       shape: GFButtonShape.pills,
                                       color: GFColors.LIGHT,
                                       type: GFButtonType.outline2x,
-                                      child: Text(
+                                      child: const Text(
                                         'Skip',
                                         style: TextStyle(color: Colors.black),
                                       ),
@@ -141,7 +141,7 @@ class _AlertPageState extends State<AlertPage> {
                                     });
                                   },
                                   color: GFColors.LIGHT,
-                                  child: Text(
+                                  child: const Text(
                                     'Skip',
                                     style: TextStyle(color: Colors.black),
                                   ),
@@ -207,7 +207,7 @@ class _AlertPageState extends State<AlertPage> {
                                   },
                                   shape: GFButtonShape.square,
                                   color: GFColors.LIGHT,
-                                  child: Text(
+                                  child: const Text(
                                     'Skip',
                                     style: TextStyle(color: Colors.black),
                                   ),
