@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:getflutter/getflutter.dart';
 import 'package:flutter/cupertino.dart';
-class FloatingWidget extends StatefulWidget {
+import 'messenger_floating.dart';
+import 'fab_floating.dart';
+
+class FloatingWidgetHome extends StatefulWidget {
   @override
-  _FloatingWidgetState createState() => _FloatingWidgetState();
+  _FloatingWidgetHomeState createState() => _FloatingWidgetHomeState();
 }
 
-class _FloatingWidgetState extends State<FloatingWidget> {
+class _FloatingWidgetHomeState extends State<FloatingWidgetHome> {
   bool showFloatingWidget = false;
 
   @override
@@ -29,47 +32,21 @@ class _FloatingWidgetState extends State<FloatingWidget> {
           ),
           centerTitle: true,
         ),
-         body: GFFloatingWidget(
-           verticalPosition: MediaQuery.of(context).size.height* 0.2,
-           horizontalPosition: MediaQuery.of(context).size.width* 0.8,
-           child: showFloatingWidget?  Column(
-             children: const  <Widget>[
-               GFIconBadge(
+         body: ListView(
+           children: <Widget>[
 
-                   child: GFAvatar(
-                     size: GFSize.large,
-                     backgroundImage:
-                     AssetImage('lib/assets/images/avatar5.png'),
-                   ),
-                   counterChild:  GFBadge(
-                     text: '12',
-                     shape: GFBadgeShape.circle,
-                   )),
+            Container(
+              height: 200,
+              child:  MessengerFloatingWidget(),
+            ),
+             Container(
+               height: MediaQuery.of(context).size.height,
+               child:  FabFloatingWidget(),
+             ),
 
-             ],
-           ):Container(),
-           body: Column(
-//             mainAxisAlignment: MainAxisAlignment.center,
-             children: <Widget>[
-               const Padding(
-                 padding: EdgeInsets.only(left: 15, top: 20, bottom: 40),
-                 child: GFTypography(
-                   text: 'Floating Widget',
-                   type: GFTypographyType.typo5,
-                   dividerWidth: 25,
-                   dividerColor: Color(0xFF19CA4B),
-                 ),
-               ),
-               GFButton(onPressed: (){
-                 setState(() {
-                   showFloatingWidget =!showFloatingWidget;
-                 });
-               }, text: 'View Floating Widget',),
 
-             ],
-           )
-         ),
-         
+           ],
+         )
 
       );
 }

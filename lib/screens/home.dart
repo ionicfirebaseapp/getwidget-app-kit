@@ -1328,6 +1328,57 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  width: 20,
+                ),
+                Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                FloatingWidgetHome()),
+                      );
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      margin: const EdgeInsets.only(top: 23),
+                      decoration: BoxDecoration(
+//                     color:GFColors.getGFColor( GFColor.dark,),
+                          color: const Color(0xFF333333),
+                          borderRadius:
+                          const BorderRadius.all(Radius.circular(7)),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.black.withOpacity(0.61),
+                                blurRadius: 8,
+                                spreadRadius: 0),
+                          ]),
+                      height: 160,
+                      width: MediaQuery.of(context).size.width,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          const SizedBox(
+                            height: 10,
+                          ),
+//                            Image.asset('lib/assets/icons/menu.png'),
+                          SvgPicture.asset('lib/assets/icons/typography.svg'),
+                          Text(
+                            'Floating Widget',
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: GFColors.getGFColor(
+                                  GFColor.white,
+                                )),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
 
               ],
             ),
