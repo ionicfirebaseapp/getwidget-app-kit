@@ -27,6 +27,26 @@ class _ProgressBarState extends State<ProgressBar> {
           ),
           centerTitle: true,
         ),
-        body: const LinearProgressIndicator(),
+        body: ListView(
+          children: <Widget>[
+            GFProgressIndicator(
+//          width: 140.0,
+          linearGradient: LinearGradient(
+            colors: [Colors.red, Colors.red],
+          ),
+          lineHeight: 14.0,
+          percent: 1,
+          center: Text(
+            "100%",
+            style: TextStyle(fontSize: 12.0),
+          ),
+          trailing: Icon(Icons.mood),
+          linearStrokeCap: LinearStrokeCap.butt,
+          backgroundColor: Colors.grey,
+        ),
+
+
+          ],
+        ),
       );
 }
