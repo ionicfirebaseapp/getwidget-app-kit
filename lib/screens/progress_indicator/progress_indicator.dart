@@ -32,59 +32,68 @@ class _ProgressBarState extends State<ProgressBar> {
         ),
         body: ListView(
           children: <Widget>[
-            GFProgressBar(
+            Container(
+              height: 120,
+              width: 300,
+              child: GFProgressBar(
+                radius: 70,
 //          width: 140.0,
 //          linearGradient: LinearGradient(
 //            colors: [Colors.red, Colors.red],
 //          ),
-          lineHeight: 14.0,
-          progressPercent: 0.6,
-          center: Text(
-            "20%", textAlign: TextAlign.end,
-            style:  TextStyle(fontSize: 12.0,),
-          ),
-          trailing: Icon(Icons.mood),
-          linearStrokeCap: LinearStrokeCap.roundAll,
-          backgroundColor: Colors.grey,
-              type: GFProgressType.linear,
-              progressColor: Colors.green,
+//              percent: 0.8,
+                lineHeight: 20.0,
+                alignment: MainAxisAlignment.spaceBetween,
 
-        ),
+                center: Text(
+                  "80%", textAlign: TextAlign.end,
+                  style:  TextStyle(fontSize: 12.0,),
+                ),
+                trailing: Icon(Icons.mood),
+                linearStrokeCap: LinearStrokeCap.roundAll,
+                backgroundColor: Colors.grey,
+                type: GFProgressType.linear,
+                progressColor: Colors.green,
+                animation: true,
+                animationDuration: 3000,
+                percent: 0.4,
+                fillColor: Colors.green,
 
-            GFProgressBar(
-//          width: 140.0,
-//          linearGradient: LinearGradient(
-//            colors: [Colors.red, Colors.red],
-//          ),
-              lineHeight: 14.0,
-              progressPercent: 0.6,
-              center: Text(
-                "20%", textAlign: TextAlign.end,
-                style:  TextStyle(fontSize: 12.0,),
+
               ),
-              linearStrokeCap: LinearStrokeCap.roundAll,
-              backgroundColor: Colors.grey,
-              type: GFProgressType.round,
-              progressColor: Colors.green,
+            ),
 
+            Container(
+              height: 120,
+              width: 300,
+              child: GFProgressBar(
+                leading: Icon(Icons.message),
+//arcBackgroundColor: Colors.amber,
+//arcType: ArcType.FULL,
+              alignment: MainAxisAlignment.spaceBetween,
+
+radius: 60,
+//                radius: 70,
+                percent: 0.5,
+                lineHeight: 20.0,
+lineWidth: 10,
+                center: Text(
+                  "20%", textAlign: TextAlign.end,
+                  style:  TextStyle(fontSize: 12.0,),
+                ),
+                trailing: Icon(Icons.mood),
+                linearStrokeCap: LinearStrokeCap.roundAll,
+                backgroundColor: Colors.amber,
+                type: GFProgressType.round,
+                progressColor: Colors.green,
+circularStrokeCap: CircularStrokeCap.round,
+//                animateFromLastPercent: true,
+                animation: true,
+                animationDuration: 3000,
+              ),
             ),
 
 
-
-//            CircularPercentIndicator(
-//              radius: 100.0,
-//              lineWidth: 10.0,
-//              percent: 0.6,
-//              center: Text("60%"),
-////              circularStrokeCap: CircularStrokeCap.round,
-//              backgroundColor: Colors.grey,
-//              maskFilter: MaskFilter.blur(BlurStyle.solid, 3),
-//              linearGradient: LinearGradient(
-//                begin: Alignment.topCenter,
-//                end: Alignment.bottomCenter,
-//                colors: [Colors.orange, Colors.yellow],
-//              ),
-//            ),
           ],
         ),
       );
