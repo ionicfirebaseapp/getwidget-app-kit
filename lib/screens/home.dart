@@ -866,7 +866,7 @@ class _HomePageState extends State<HomePage> {
                             const SizedBox(
                               height: 10,
                             ),
-                            SvgPicture.asset('lib/assets/icons/typography.svg'),
+                            SvgPicture.asset('lib/assets/icons/progress-bar.svg'),
                             const Text(
                               'Progress Bar',
                               style: TextStyle(
