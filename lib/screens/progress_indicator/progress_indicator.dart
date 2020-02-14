@@ -49,7 +49,7 @@ class _ProgressBarState extends State<ProgressBar> {
                 lineHeight: 20.0,
                 alignment: MainAxisAlignment.spaceBetween,
 
-                child: Text(
+                child:  Text(
                   "80%", textAlign: TextAlign.end,
                   style:  TextStyle(fontSize: 16.0, color: Colors.white),
                 ),
@@ -65,35 +65,30 @@ class _ProgressBarState extends State<ProgressBar> {
 //                progressHeadType: GFProgressHeadType.square,
 //                linearStrokeCap: LinearStrokeCap.round,
                 progressHeadType: GFProgressHeadType.square,
-
-
               ),
             ),
 
             Container(
               margin: EdgeInsets.only(left: 10, right: 10, top: 20),
               child: GFProgressBar(
-                percentage: 0.8,
+                percentage: 1,
                 radius: 70,
                 lineHeight: 20.0,
                 alignment: MainAxisAlignment.spaceBetween,
 
-                child: Text(
-                  "80%", textAlign: TextAlign.end,
+                child:  Padding(padding: EdgeInsets.only(right: 5), child: Text(
+                  "100%", textAlign: TextAlign.end,
                   style:  TextStyle(fontSize: 16.0, color: Colors.white),
-                ),
+                ),),
 //                trailing: Icon(Icons.mood),
 //                leading: Icon(Icons.message),
-                progressHeadType: GFProgressHeadType.circular,
-//                linearStrokeCap: LinearStrokeCap.butt
+//                progressHeadType: GFProgressHeadType.circular,
+                linearStrokeCap: LinearStrokeCap.butt,
                 backgroundColor: Colors.black,
                 type: GFProgressType.linear,
                 progressBarColor: Colors.red,
                 animation: true,
                 animationDuration: 3000,
-
-
-
               ),
             ),
 
@@ -153,7 +148,7 @@ circleWidth: 10,
                 circleWidth: 10,
 
                 child: Text(
-                  "100%", textAlign: TextAlign.end,
+                  "60%", textAlign: TextAlign.end,
                   style:  TextStyle(fontSize: 18.0),
                 ),
 //                linearBarType: LinearBarType.roundAll,
@@ -167,8 +162,6 @@ circleWidth: 10,
 
               ),
             ),
-
-
           ],
         ),
       );
