@@ -55,23 +55,23 @@ class _ProgressBarState extends State<ProgressBar> {
                 ),
 //                trailing: Icon(Icons.mood),
 //                leading: Icon(Icons.message),
-                linearBarType: LinearStrokeCap.roundAll,
+
                 backgroundColor: Colors.black26,
                 type: GFProgressType.linear,
                 progressBarColor: Colors.green,
                 animation: true,
                 animationDuration: 3000,
-
-                fillColor: Colors.green,
+//                headType: GFProgressHeadType.square,
+                progressHeadType: GFProgressHeadType.square,
 
 
               ),
             ),
 
             Container(
-              margin: EdgeInsets.only(left: 5, right: 5, top: 20),
+              margin: EdgeInsets.only(left: 10, right: 10, top: 20),
               child: GFProgressBar(
-                percentage: 1,
+                percentage: 0.7,
                 radius: 70,
                 lineHeight: 20.0,
                 alignment: MainAxisAlignment.spaceBetween,
@@ -82,45 +82,19 @@ class _ProgressBarState extends State<ProgressBar> {
                 ),
 //                trailing: Icon(Icons.mood),
 //                leading: Icon(Icons.message),
-                linearBarType: LinearStrokeCap.butt,
-                backgroundColor: Colors.black26,
+                progressHeadType: GFProgressHeadType.circular,
+                backgroundColor: Colors.black,
                 type: GFProgressType.linear,
                 progressBarColor: Colors.red,
                 animation: true,
                 animationDuration: 3000,
 
-                fillColor: Colors.green,
 
 
               ),
             ),
 
-            Container(
-              margin: EdgeInsets.only(left: 10, right: 5, top: 20),
-              child: GFProgressBar(
-                percentage: 0.35,
-                radius: 70,
-                lineHeight: 20.0,
-                alignment: MainAxisAlignment.spaceBetween,
 
-                child: Text(
-                  "35%", textAlign: TextAlign.end,
-                  style:  TextStyle(fontSize: 16.0, color: Colors.white),
-                ),
-//                trailing: Icon(Icons.mood),
-//                leading: Icon(Icons.message),
-                linearBarType: LinearStrokeCap.round,
-                backgroundColor: Colors.black26,
-                type: GFProgressType.linear,
-                progressBarColor: Colors.lightBlue,
-                animation: true,
-                animationDuration: 3000,
-
-                fillColor: Colors.green,
-
-
-              ),
-            ),
 
             const Padding(
               padding: EdgeInsets.only(left: 15, top: 30, bottom: 50),
@@ -148,41 +122,17 @@ circleWidth: 10,
                   "50%", textAlign: TextAlign.end,
                   style:  TextStyle(fontSize: 18.0,),
                 ),
-                linearBarType: LinearStrokeCap.roundAll,
+//                linearBarType: LinearBarType.roundAll,
                 backgroundColor: Colors.black26,
                 type: GFProgressType.round,
                 progressBarColor: Colors.purple,
-circularBarType: CircularStrokeCap.round,
+//headType:GFProgressHeadType.circular,
                 animation: true,
                 animationDuration: 3000,
+                progressHeadType: GFProgressHeadType.square,
               ),
             ),
 
-            Container(
-//              height: 120,
-//              width: 300,
-            margin: EdgeInsets.only(top:90),
-              child: GFProgressBar(
-                width: 300,
-                alignment: MainAxisAlignment.spaceBetween,
-
-                radius: 90,
-                percentage: 0.9,
-                lineHeight: 20.0,
-                circleWidth: 10,
-
-                child: Text(
-                  "90%", textAlign: TextAlign.end,
-                  style:  TextStyle(fontSize: 18.0,),
-                ),
-                backgroundColor: Colors.black26,
-                type: GFProgressType.round,
-                progressBarColor: Colors.deepOrange,
-                circularBarType: CircularStrokeCap.butt,
-                animation: true,
-                animationDuration: 3000,
-              ),
-            ),
 
             Container(
 //              height: 120,
@@ -190,10 +140,12 @@ circularBarType: CircularStrokeCap.round,
             margin: EdgeInsets.only(top:80),
               child: GFProgressBar(
                 width: 100,
+                circleStartAngle: 20,
+
                 alignment: MainAxisAlignment.spaceBetween,
 
                 radius: 90,
-                percentage: 1,
+                percentage: 0.6,
                 lineHeight: 20.0,
                 circleWidth: 10,
 
@@ -201,13 +153,15 @@ circularBarType: CircularStrokeCap.round,
                   "100%", textAlign: TextAlign.end,
                   style:  TextStyle(fontSize: 18.0),
                 ),
-                linearBarType: LinearStrokeCap.roundAll,
+//                linearBarType: LinearBarType.roundAll,
                 backgroundColor: Colors.black26,
                 type: GFProgressType.round,
                 progressBarColor: Colors.teal,
-                circularBarType: CircularStrokeCap.round,
+                progressHeadType: GFProgressHeadType.circular,
+
                 animation: true,
                 animationDuration: 3000,
+
               ),
             ),
 
