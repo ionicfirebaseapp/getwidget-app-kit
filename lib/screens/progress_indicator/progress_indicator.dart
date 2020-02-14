@@ -62,6 +62,8 @@ class _ProgressBarState extends State<ProgressBar> {
                 animation: true,
                 animationDuration: 3000,
 //                headType: GFProgressHeadType.square,
+//                progressHeadType: GFProgressHeadType.square,
+//                linearStrokeCap: LinearStrokeCap.round,
                 progressHeadType: GFProgressHeadType.square,
 
 
@@ -71,18 +73,19 @@ class _ProgressBarState extends State<ProgressBar> {
             Container(
               margin: EdgeInsets.only(left: 10, right: 10, top: 20),
               child: GFProgressBar(
-                percentage: 0.7,
+                percentage: 0.8,
                 radius: 70,
                 lineHeight: 20.0,
                 alignment: MainAxisAlignment.spaceBetween,
 
                 child: Text(
-                  "100%", textAlign: TextAlign.end,
+                  "80%", textAlign: TextAlign.end,
                   style:  TextStyle(fontSize: 16.0, color: Colors.white),
                 ),
 //                trailing: Icon(Icons.mood),
 //                leading: Icon(Icons.message),
                 progressHeadType: GFProgressHeadType.circular,
+//                linearStrokeCap: LinearStrokeCap.butt
                 backgroundColor: Colors.black,
                 type: GFProgressType.linear,
                 progressBarColor: Colors.red,
