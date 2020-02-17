@@ -39,16 +39,15 @@ class _ProgressBarState extends State<ProgressBar> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 10, right: 10, top: 20),
+              margin:const EdgeInsets.only(left: 10, right: 10, top: 20),
               child: GFProgressBar(
                 percentage: 0.8,
-                lineHeight: 20.0,
+                lineHeight: 20,
                 alignment: MainAxisAlignment.spaceBetween,
-
-                child: Text(
-                  "80%",
+                child: const Text(
+                  '80%',
                   textAlign: TextAlign.end,
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
 
                 leading: Icon(
@@ -68,15 +67,15 @@ class _ProgressBarState extends State<ProgressBar> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 10, right: 10, top: 30),
+              margin: const EdgeInsets.only(left: 10, right: 10, top: 30),
               child: GFProgressBar(
                 percentage: 0.3,
-                lineHeight: 20.0,
+                lineHeight: 20,
                 alignment: MainAxisAlignment.spaceBetween,
-                child: Text(
-                  "30%",
+                child: const Text(
+                  '30%',
                   textAlign: TextAlign.end,
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
                 backgroundColor: Colors.black26,
                 type: GFProgressType.linear,
@@ -86,18 +85,18 @@ class _ProgressBarState extends State<ProgressBar> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 10, right: 10, top: 30),
-              child: GFProgressBar(
+              margin: const EdgeInsets.only(left: 10, right: 10, top: 30),
+              child:  GFProgressBar(
                 percentage: 0.5,
-                lineHeight: 20.0,
+                lineHeight: 20,
                 alignment: MainAxisAlignment.spaceBetween,
 
-                child: Padding(
-                  padding: EdgeInsets.only(right: 5),
+                child: const Padding(
+                  padding:  EdgeInsets.only(right: 5),
                   child: Text(
-                    "50%",
+                    '50%',
                     textAlign: TextAlign.end,
-                    style: TextStyle(fontSize: 16.0, color: Colors.white),
+                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
 //
@@ -124,14 +123,14 @@ class _ProgressBarState extends State<ProgressBar> {
                 width: 100,
                 alignment: MainAxisAlignment.spaceBetween,
                 radius: 90,
-                percentage: 0.5,
-                lineHeight: 20.0,
+                percentage: 0.4,
+                lineHeight: 20,
                 circleWidth: 10,
-                child: Text(
-                  "50%",
+                child: const Text(
+                  '40%',
                   textAlign: TextAlign.end,
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 18,
                   ),
                 ),
                 backgroundColor: Colors.black26,
@@ -142,28 +141,34 @@ class _ProgressBarState extends State<ProgressBar> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 90),
+              margin: const EdgeInsets.only(top: 90),
               child: GFProgressBar(
                 width: 100,
                 circleStartAngle: 20,
-                alignment: MainAxisAlignment.spaceBetween,
+                alignment: MainAxisAlignment.spaceEvenly,
                 radius: 90,
-                percentage: 0.6,
-                lineHeight: 20.0,
+                percentage: 0.9,
+                lineHeight: 45,
                 circleWidth: 10,
-                child: Text(
-                  "60%",
-                  textAlign: TextAlign.end,
-                  style: TextStyle(fontSize: 18.0),
+                child: Column(
+                  children: <Widget>[
+                    const Text(
+                      '90%',
+                      textAlign: TextAlign.end,
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Icon(Icons.sentiment_very_satisfied, color: GFColors.SUCCESS,)
+                  ],
                 ),
                 backgroundColor: Colors.black26,
                 type: GFProgressType.round,
-                progressBarColor: GFColors.PRIMARY,
+                progressBarColor: GFColors.SUCCESS,
                 progressHeadType: GFProgressHeadType.circular,
                 animation: true,
                 animationDuration: 2800,
               ),
             ),
+
           ],
         ),
       );
