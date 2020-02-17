@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+  <g id="Group_2211" data-name="Group 2211" transform="translate(8935 1285)">
+    <rect id="Rectangle_1323" data-name="Rectangle 1323" width="35" height="35" transform="translate(-8935 -1285)" fill="none"/>
+    <g id="Group_2211-2" data-name="Group 2211" transform="translate(0 -1)">
+      <g id="Rectangle_1324" data-name="Rectangle 1324" transform="translate(-8935 -1271)" fill="none" stroke="#19ca4b" stroke-width="2">
+        <rect width="35" height="9" rx="2" stroke="none"/>
+        <rect x="1" y="1" width="33" height="7" rx="1" fill="none"/>
+      </g>
+      <line id="Line_21" data-name="Line 21" y2="5" transform="translate(-8933.5 -1269.5)" fill="none" stroke="#19ca4b" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_22" data-name="Line 22" y2="5.799" transform="translate(-8930.5 -1269.5)" fill="none" stroke="#19ca4b" stroke-width="2"/>
+      <line id="Line_23" data-name="Line 23" y2="5.799" transform="translate(-8927.5 -1269.5)" fill="none" stroke="#19ca4b" stroke-width="2"/>
+      <line id="Line_24" data-name="Line 24" y2="5.799" transform="translate(-8924.5 -1269.5)" fill="none" stroke="#19ca4b" stroke-width="2"/>
+      <line id="Line_25" data-name="Line 25" y2="5.799" transform="translate(-8921.5 -1269.5)" fill="none" stroke="#19ca4b" stroke-width="2"/>
+      <line id="Line_26" data-name="Line 26" y2="5.799" transform="translate(-8918.5 -1269.5)" fill="none" stroke="#19ca4b" stroke-width="2"/>
+      <line id="Line_27" data-name="Line 27" y2="5.799" transform="translate(-8915.5 -1269.5)" fill="none" stroke="#19ca4b" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

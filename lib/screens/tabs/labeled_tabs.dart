@@ -112,13 +112,13 @@ class _LabeledTabsState extends State<LabeledTabs>
               labelPadding: const EdgeInsets.all(8),
               tabBarColor: GFColors.WHITE,
               unselectedLabelColor: GFColors.LIGHT,
-              labelStyle: TextStyle(
+              labelStyle: const TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 13,
                 color: Colors.white,
                 fontFamily: 'OpenSansBold',
               ),
-              unselectedLabelStyle: TextStyle(
+              unselectedLabelStyle: const TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 13,
                 color: Colors.black,
