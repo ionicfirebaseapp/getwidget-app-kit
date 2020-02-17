@@ -30,7 +30,7 @@ class _SegmentedAppbarState extends State<SegmentedAppbar>
             tabBarColor: GFColors.LIGHT,
             labelColor: GFColors.WHITE,
             unselectedLabelColor: GFColors.DARK,
-            indicator: BoxDecoration(
+            indicator: const BoxDecoration(
               color: GFColors.DARK,
             ),
             indicatorPadding: const EdgeInsets.all(8),

@@ -145,7 +145,7 @@ class _BottomLabelTabState extends State<BottomLabelTab>
             labelPadding: const EdgeInsets.all(8),
             tabBarColor: GFColors.DARK,
             unselectedLabelColor: GFColors.WHITE,
-            labelStyle: TextStyle(
+            labelStyle: const TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 13,
               color: Colors.white,

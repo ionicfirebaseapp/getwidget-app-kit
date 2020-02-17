@@ -828,8 +828,6 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -839,8 +837,7 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  ProgressBar()),
+                              builder: (BuildContext context) => ProgressBar()),
                         );
                       },
                       child: Container(
@@ -849,7 +846,7 @@ class _HomePageState extends State<HomePage> {
                         decoration: BoxDecoration(
                           color: const Color(0xFF333333),
                           borderRadius:
-                          const BorderRadius.all(Radius.circular(7)),
+                              const BorderRadius.all(Radius.circular(7)),
                           boxShadow: [
                             BoxShadow(
                                 color: Colors.black.withOpacity(0.61),
@@ -866,7 +863,8 @@ class _HomePageState extends State<HomePage> {
                             const SizedBox(
                               height: 10,
                             ),
-                            SvgPicture.asset('lib/assets/icons/progress-bar.svg'),
+                            SvgPicture.asset(
+                                'lib/assets/icons/progress-bar.svg'),
                             const Text(
                               'Progress Bar',
                               style: TextStyle(
@@ -877,10 +875,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-
                 ],
               ),
-
               const SizedBox(height: 20)
             ],
           ),

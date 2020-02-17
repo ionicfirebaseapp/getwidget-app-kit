@@ -142,7 +142,7 @@ class _IconButtonsState extends State<IconButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             'Dark',
                             style: TextStyle(color: GFColors.WHITE),
                           ),
@@ -623,7 +623,7 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           shape: GFButtonShape.square,
-                          child: Text(
+                          child: const Text(
                             'Dark',
                             style: TextStyle(color: GFColors.WHITE),
                           ),
@@ -771,7 +771,7 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           shape: GFButtonShape.pills,
-                          child: Text(
+                          child: const Text(
                             'Dark',
                             style: TextStyle(color: GFColors.WHITE),
                           ),
@@ -922,7 +922,7 @@ class _IconButtonsState extends State<IconButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             'Dark',
                             style: TextStyle(color: GFColors.WHITE),
                           ),
@@ -972,7 +972,7 @@ class _IconButtonsState extends State<IconButtons> {
                     children: <Widget>[
                       GFButton(
                         onPressed: () {},
-                        child: Text('Large',
+                        child: const Text('Large',
                             style: TextStyle(color: GFColors.WHITE)),
                         color: GFColors.PRIMARY,
                         size: GFSize.LARGE,
@@ -980,7 +980,7 @@ class _IconButtonsState extends State<IconButtons> {
                       ),
                       GFButton(
                         onPressed: () {},
-                        child: Text('Normal',
+                        child: const Text('Normal',
                             style: TextStyle(color: GFColors.WHITE)),
                         color: GFColors.PRIMARY,
                         size: GFSize.MEDIUM,
@@ -989,7 +989,7 @@ class _IconButtonsState extends State<IconButtons> {
                       ),
                       GFButton(
                         onPressed: () {},
-                        child: Text('Small',
+                        child: const Text('Small',
                             style: TextStyle(color: GFColors.WHITE)),
                         color: GFColors.PRIMARY,
                         size: GFSize.SMALL,
