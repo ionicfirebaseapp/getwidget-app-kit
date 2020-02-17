@@ -21,7 +21,7 @@ import 'package:getflutter_app/screens/tiles/tiles_page.dart';
 import 'package:getflutter_app/screens/toast/toasts.dart';
 import 'package:getflutter_app/screens/toggle/toggles.dart';
 import 'package:getflutter_app/screens/typography/typography.dart';
-import '../screens/progress_indicator/progress_indicator.dart';
+import '../screens/progress_bar/progress_bar.dart';
 
 class HomePage extends StatefulWidget {
   @override

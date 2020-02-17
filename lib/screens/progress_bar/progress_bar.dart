@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getflutter/getflutter.dart';
-import 'package:getflutter/components/progress_indicator/progress_bar.dart';
-import 'package:getflutter/components/progress_indicator/circular.dart';
 
 class ProgressBar extends StatefulWidget {
   @override
