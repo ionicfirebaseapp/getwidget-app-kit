@@ -49,7 +49,6 @@ class _ProgressBarState extends State<ProgressBar> {
                   textAlign: TextAlign.end,
                   style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
-
                 leading: Icon(
                   Icons.sentiment_dissatisfied,
                   color: GFColors.DANGER,
@@ -58,32 +57,16 @@ class _ProgressBarState extends State<ProgressBar> {
                   Icons.sentiment_satisfied,
                   color: GFColors.SUCCESS,
                 ),
-                backgroundColor: Colors.black26,
                 type: GFProgressType.linear,
+                backgroundColor: Colors.black26,
                 progressBarColor: GFColors.INFO,
                 animation: true,
                 animationDuration: 4000,
+
 //
               ),
             ),
-            Container(
-              margin: const EdgeInsets.only(left: 10, right: 10, top: 30),
-              child: GFProgressBar(
-                percentage: 0.3,
-                lineHeight: 20,
-                alignment: MainAxisAlignment.spaceBetween,
-                child: const Text(
-                  '30%',
-                  textAlign: TextAlign.end,
-                  style: TextStyle(fontSize: 16, color: Colors.white),
-                ),
-                backgroundColor: Colors.black26,
-                type: GFProgressType.linear,
-                progressBarColor: GFColors.DANGER,
-                animation: true,
-                animationDuration: 2000,
-              ),
-            ),
+
             Container(
               margin: const EdgeInsets.only(left: 10, right: 10, top: 30),
               child: GFProgressBar(
@@ -102,10 +85,26 @@ class _ProgressBarState extends State<ProgressBar> {
 //
                 progressHeadType: GFProgressHeadType.square,
                 backgroundColor: Colors.black26,
-                type: GFProgressType.linear,
                 progressBarColor: GFColors.WARNING,
                 animation: true,
                 animationDuration: 3000,
+              ),
+            ),
+
+            Container(
+              margin: const EdgeInsets.only(left: 10, right: 10, top: 30),
+              child: GFProgressBar(
+                percentage: 0.3,
+                lineHeight: 20,
+                child: const Text(
+                  '30%',
+                  textAlign: TextAlign.end,
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                ),
+                backgroundColor: Colors.black26,
+                progressBarColor: GFColors.DANGER,
+                animation: true,
+                animationDuration: 2000,
               ),
             ),
             const Padding(
@@ -134,10 +133,11 @@ class _ProgressBarState extends State<ProgressBar> {
                   ),
                 ),
                 backgroundColor: Colors.black26,
-                type: GFProgressType.round,
+                type: GFProgressType.circular,
                 progressBarColor: GFColors.SECONDARY,
                 animation: true,
                 animationDuration: 2500,
+
               ),
             ),
             Container(
@@ -147,6 +147,7 @@ class _ProgressBarState extends State<ProgressBar> {
                 circleStartAngle: 20,
                 alignment: MainAxisAlignment.spaceEvenly,
                 radius: 90,
+
                 percentage: 0.9,
                 lineHeight: 45,
                 circleWidth: 10,
@@ -164,7 +165,7 @@ class _ProgressBarState extends State<ProgressBar> {
                   ],
                 ),
                 backgroundColor: Colors.black26,
-                type: GFProgressType.round,
+                type: GFProgressType.circular,
                 progressBarColor: GFColors.SUCCESS,
                 progressHeadType: GFProgressHeadType.circular,
                 animation: true,
