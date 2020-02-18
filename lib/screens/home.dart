@@ -891,7 +891,7 @@ class _HomePageState extends State<HomePage> {
 
             Container(
 //              padding: EdgeInsets.only(top:120),
-              color: Colors.red,
+//              color: Colors.red,
               height: MediaQuery.of(context).size.height,
               child:  GridView.count(
                 shrinkWrap: true,
@@ -901,12 +901,24 @@ class _HomePageState extends State<HomePage> {
                 crossAxisSpacing: 10,
                 children: <Widget>[
 
-                  buildSquareTile('Buttons', Icons.android, GFColors.SUCCESS),
+                  buildSquareTile('Buttons', Icons.radio_button_checked, GFColors.SUCCESS),
                   buildSquareTile('Badges', Icons.android,  GFColors.SUCCESS),
-                  buildSquareTile('Cards', Icons.android,  GFColors.SUCCESS),
-                  buildSquareTile('Carousel', Icons.android,  GFColors.SUCCESS),
-                  buildSquareTile('Tabs', Icons.android,  GFColors.SUCCESS),
-                  buildSquareTile('Tile', Icons.android,  GFColors.SUCCESS),
+                  buildSquareTile('Avatar', Icons.card_giftcard,  GFColors.SUCCESS),
+                  buildSquareTile('Images', Icons.view_carousel,  GFColors.SUCCESS),
+                  buildSquareTile('Cards', Icons.card_giftcard,  GFColors.SUCCESS),
+                  buildSquareTile('Carousel', Icons.view_carousel,  GFColors.SUCCESS),
+                  buildSquareTile('Tabs', Icons.tab,  GFColors.SUCCESS),
+                  buildSquareTile('Tile', Icons.title,  GFColors.SUCCESS),
+                  buildSquareTile('Toggle', Icons.card_giftcard,  GFColors.SUCCESS),
+                  buildSquareTile('Toast', Icons.view_carousel,  GFColors.SUCCESS),
+                  buildSquareTile('Alert', Icons.card_giftcard,  GFColors.SUCCESS),
+                  buildSquareTile('Accordion', Icons.view_carousel,  GFColors.SUCCESS),
+                  buildSquareTile('SearchBar', Icons.card_giftcard,  GFColors.SUCCESS),
+                  buildSquareTile('Appbar', Icons.view_carousel,  GFColors.SUCCESS),
+                  buildSquareTile('Rating', Icons.card_giftcard,  GFColors.SUCCESS),
+                  buildSquareTile('Loaders', Icons.view_carousel,  GFColors.SUCCESS),
+                  buildSquareTile('Typography', Icons.card_giftcard,  GFColors.SUCCESS),
+                  buildSquareTile('Floating Widget', Icons.view_carousel,  GFColors.SUCCESS),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -915,7 +927,7 @@ class _HomePageState extends State<HomePage> {
                             builder: (BuildContext context) => ProgressBar()),
                       );
                     },
-                    child:   buildSquareTile('Progress Bar', Icons.android,  GFColors.SUCCESS),
+                    child:   buildSquareTile('Progress Bar', Icons.power_input,  GFColors.SUCCESS),
                   )
 
 
@@ -944,19 +956,26 @@ class _HomePageState extends State<HomePage> {
         ),
       );
 
-  Widget buildSquareTile(text, icon, iconColor){
+  Widget buildSquareTile(text, child, iconColor){
 
 
 
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-          color: GFColors.DARK
+        color: const Color(0xFF333333),
+        borderRadius:
+        const BorderRadius.all(Radius.circular(7)),
+        boxShadow: [
+          BoxShadow(
+              color: Colors.black.withOpacity(0.61),
+              blurRadius: 6,
+              spreadRadius: 0),
+        ],
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Icon((icon), color: iconColor,),
+          Icon((child), color: iconColor,),
           Text(text, style: TextStyle(color: GFColors.WHITE, fontSize: 18),)
         ],
       ),
