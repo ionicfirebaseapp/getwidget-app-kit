@@ -29,6 +29,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  List names= [
+    {
+
+      'images':'lib/assets/icons/gflogo.svg',
+
+    }
+  ];
+
+
   @override
   Widget build(BuildContext context) => Scaffold(
         drawer: DrawerPage(),
@@ -879,42 +889,75 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 20),
 
-              GridView.count(
+            Container(
+//              padding: EdgeInsets.only(top:120),
+              color: Colors.red,
+              height: MediaQuery.of(context).size.height,
+              child:  GridView.count(
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
                 crossAxisCount: 2,
-              children: <Widget>[
-                buildSquareTile('uj'),
-                buildSquareTile('uj'),
-                buildSquareTile('uj'),
-                buildSquareTile('uj'),
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                children: <Widget>[
 
-              ],
-              )
+                  buildSquareTile('Buttons', Icons.android, GFColors.SUCCESS),
+                  buildSquareTile('Badges', Icons.android,  GFColors.SUCCESS),
+                  buildSquareTile('Cards', Icons.android,  GFColors.SUCCESS),
+                  buildSquareTile('Carousel', Icons.android,  GFColors.SUCCESS),
+                  buildSquareTile('Tabs', Icons.android,  GFColors.SUCCESS),
+                  buildSquareTile('Tile', Icons.android,  GFColors.SUCCESS),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => ProgressBar()),
+                      );
+                    },
+                    child:   buildSquareTile('Progress Bar', Icons.android,  GFColors.SUCCESS),
+                  )
+
+
+                ],
+              ),
+            )
+//            GridView.builder(
+//              itemCount: names.length,
+//              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+//                  crossAxisCount: 3, crossAxisSpacing: 4.0, mainAxisSpacing: 4.0),
+//              itemBuilder: (BuildContext context, int index){
+//                return GestureDetector(
+//                  onTap: (){
+//
+//                  },
+//                  child: buildSquareTile(index),
+//                );
+//              },
+//            ),
 
 
             ],
           ),
-          
-          
+
+
         ),
       );
 
-  Widget buildSquareTile(text){
+  Widget buildSquareTile(text, icon, iconColor){
 
 
-     IconData icon;
 
     return Container(
-      height: 160,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10)),
-        color: GFColors.DARK
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+          color: GFColors.DARK
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-         Text(text)
+          Icon((icon), color: iconColor,),
+          Text(text, style: TextStyle(color: GFColors.WHITE, fontSize: 18),)
         ],
       ),
     );
