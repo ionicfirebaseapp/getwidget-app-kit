@@ -37,23 +37,65 @@ class _ToastsState extends State<Toasts> {
           showblurness: showFloatingToast,
           blurnessColor: Colors.black87,
           child: showFloatingToast
-              ? GFToast(
-                  backgroundColor: Colors.white,
-                  text:
-                      'You have succesfully viewed how the floating toast works!!',
-                  textStyle: const TextStyle(color: Colors.black87),
-                  button: GFButton(
-                    onPressed: () {
-                      setState(() {
-                        showFloatingToast = false;
-                      });
-                    },
-                    text: 'OK',
-                    type: GFButtonType.transparent,
-                    color: GFColors.SUCCESS,
+            ?GFAlert(
+            alignment: Alignment.center,
+            backgroundColor: Colors.white,
+            title: 'Welcome!',
+            content:
+            'Get Flutter is one of the largest library for mobile or web apps with  1000+ pre-built reusable widgets.',
+            type: GFAlertType.rounded,
+            bottombar: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                GFButton(
+                  onPressed: () {
+                    setState(() {
+
+                    });
+                  },
+                  color: GFColors.LIGHT,
+                  child: const Text(
+                    'Skip',
+                    style: TextStyle(color: Colors.black),
                   ),
-                  autoDismiss: false,
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                GFButton(
+                  onPressed: () {
+                    setState(() {
+                      showFloatingToast = false;
+                    });
+                  },
+                  shape: GFButtonShape.pills,
+                  icon: Icon(
+                    Icons.keyboard_arrow_right,
+                    color: GFColors.WHITE,
+                  ),
+                  position: GFPosition.end,
+                  text: 'Learn More',
                 )
+              ],
+            ),
+          )
+//              ? GFToast(
+//                  backgroundColor: Colors.white,
+//                  text:
+//                      'You have succesfully viewed how the floating toast works!!',
+//                  textStyle: const TextStyle(color: Colors.black87),
+//                  button: GFButton(
+//                    onPressed: () {
+//                      setState(() {
+//                        showFloatingToast = false;
+//                      });
+//                    },
+//                    text: 'OK',
+//                    type: GFButtonType.transparent,
+//                    color: GFColors.SUCCESS,
+//                  ),
+//                  autoDismiss: false,
+//                )
               : Container(),
           body: ListView(
             physics: const ScrollPhysics(),

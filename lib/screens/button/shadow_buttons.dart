@@ -54,24 +54,18 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                           onPressed: () {},
                           shape: GFButtonShape.standard,
                           buttonBoxShadow: true,
-                          child: const Text(
-                            'Primary',
-                          ),
+                          text: 'Primary',
                           color: GFColors.PRIMARY,
                         ),
                         GFButton(
                           onPressed: () {},
-                          child: const Text(
-                            'Secondary',
-                          ),
+                          text: 'Secondary',
                           color: GFColors.SECONDARY,
                           buttonBoxShadow: true,
                         ),
                         GFButton(
                           onPressed: () {},
-                          child: const Text(
-                            'Success',
-                          ),
+                          text: 'Success',
                           buttonBoxShadow: true,
                           color: GFColors.SUCCESS,
                         ),
@@ -85,25 +79,20 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                       children: <Widget>[
                         GFButton(
                           onPressed: () {},
-                          child: const Text(
-                            'Warning',
-                          ),
+                          text: 'Warning',
+
                           buttonBoxShadow: true,
                           color: GFColors.WARNING,
                         ),
                         GFButton(
                           onPressed: () {},
-                          child: const Text(
-                            'Danger',
-                          ),
+                          text: 'Danger',
                           buttonBoxShadow: true,
                           color: GFColors.DANGER,
                         ),
                         GFButton(
                           onPressed: () {},
-                          child: const Text(
-                            'Info',
-                          ),
+                          text: 'Info',
                           buttonBoxShadow: true,
                           color: GFColors.INFO,
                         ),
@@ -117,18 +106,13 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                       children: <Widget>[
                         GFButton(
                           onPressed: () {},
-                          child: const Text(
-                            'Light',
-                          ),
+                          text:'Light',
                           buttonBoxShadow: true,
                           color: GFColors.LIGHT,
                         ),
                         GFButton(
                           onPressed: () {},
-                          child: const Text(
-                            'Dark',
-                            style: TextStyle(color: GFColors.WHITE),
-                          ),
+                          text: 'Dark',
                           buttonBoxShadow: true,
                           color: GFColors.DARK,
                         ),

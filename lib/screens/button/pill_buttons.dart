@@ -125,10 +125,11 @@ class _PillsButtonsState extends State<PillsButtons>
                                     ),
                                     GFButton(
                                       onPressed: () {},
-                                      child: const Text(
-                                        'Secondary',
-                                      ),
-                                      color: GFColors.SECONDARY,
+                                      text: 'Secondary',
+//                                      child: const Text(
+//                                        'Secondary',
+//                                      ),
+                                      color:  GFColors.SECONDARY,
                                       shape: GFButtonShape.pills,
                                     ),
                                     GFButton(
