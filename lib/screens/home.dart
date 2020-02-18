@@ -21,6 +21,7 @@ import 'package:getflutter_app/screens/tiles/tiles_page.dart';
 import 'package:getflutter_app/screens/toast/toasts.dart';
 import 'package:getflutter_app/screens/toggle/toggles.dart';
 import 'package:getflutter_app/screens/typography/typography.dart';
+import '../screens/progress_bar/progress_bar.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -817,6 +818,55 @@ class _HomePageState extends State<HomePage> {
                                 'lib/assets/icons/floating_widget.svg'),
                             const Text(
                               'Floating Widget',
+                              style: TextStyle(
+                                  fontSize: 20, color: GFColors.WHITE),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => ProgressBar()),
+                        );
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        margin: const EdgeInsets.only(top: 23),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF333333),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(7)),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.black.withOpacity(0.61),
+                                blurRadius: 8,
+                                spreadRadius: 0),
+                          ],
+                        ),
+                        height: 160,
+                        width: MediaQuery.of(context).size.width,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            SvgPicture.asset(
+                                'lib/assets/icons/progress-bar.svg'),
+                            const Text(
+                              'Progress Bar',
                               style: TextStyle(
                                   fontSize: 20, color: GFColors.WHITE),
                             )

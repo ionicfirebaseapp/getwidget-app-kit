@@ -65,6 +65,7 @@ flutter:
     - lib/assets/icons/images.svg
     - lib/assets/icons/rating.svg
     - lib/assets/icons/floating_widget.svg
+    - lib/assets/icons/progress-bar.svg
     - lib/assets/icons/tabs.svg
     - lib/assets/icons/tiles.svg
     - lib/assets/icons/typography.svg

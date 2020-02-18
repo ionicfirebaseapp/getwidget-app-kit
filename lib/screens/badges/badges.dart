@@ -302,7 +302,9 @@ class _BadgesPageState extends State<BadgesPage> {
                               color: GFColors.DARK,
                             )),
                         counterChild: const GFBadge(
-                            text: '124', shape: GFBadgeShape.pills, size: 25),
+                            text: '124',
+                            shape: GFBadgeShape.standard,
+                            size: 25),
                       ),
                     ],
                   )

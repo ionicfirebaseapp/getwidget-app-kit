@@ -58,7 +58,7 @@ class _AlertPageState extends State<AlertPage> {
                               showblur = true;
                               alertWidget = GFAlert(
                                 backgroundColor: Colors.white,
-                                title: 'Welcome !',
+                                title: 'Welcome!',
                                 content:
                                     'Get Flutter is one of the largest Flutter open-source UI library '
                                     'for mobile or web apps with  1000+ pre-built reusable widgets.',
@@ -126,7 +126,7 @@ class _AlertPageState extends State<AlertPage> {
                           alertWidget = GFAlert(
                             alignment: Alignment.center,
                             backgroundColor: Colors.white,
-                            title: 'Welcome !',
+                            title: 'Welcome!',
                             content:
                                 'Get Flutter is one of the largest Flutter open-source UI library for mobile or web apps with  1000+ pre-built reusable widgets.',
                             type: GFAlertType.rounded,

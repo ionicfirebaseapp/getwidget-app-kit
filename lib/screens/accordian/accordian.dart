@@ -96,7 +96,7 @@ class _AccordionState extends State<Accordion> {
                     'GetFlutter is an open source library that comes with pre-build 1000+ UI components.'
                     ' The library is built to make flutter development faster and more enjoyable.',
                 collapsedIcon: const Text('Show'),
-                expandedIcon: Text(
+                expandedIcon: const Text(
                   'Hide',
                   style: TextStyle(color: Colors.red),
                 )),

@@ -82,7 +82,7 @@ class _ToastsState extends State<Toasts> {
                 height: 15,
               ),
               const GFToast(
-                text: 'Pass true to autoDismiss property to use this effect !',
+                text: 'Pass true to autoDismiss property to use this effect!',
                 autoDismiss: true,
                 duration: Duration(seconds: 2),
               ),
@@ -112,7 +112,7 @@ class _ToastsState extends State<Toasts> {
               ),
               GFToast(
                 text:
-                    'This item already has the label “travel”. You can add a new label. !',
+                    'This item already has the label “travel”. You can add  new label. !',
                 button: GFButton(
                   onPressed: () {},
                   text: 'OK',
