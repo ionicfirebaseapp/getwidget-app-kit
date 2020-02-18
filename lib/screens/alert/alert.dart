@@ -260,15 +260,11 @@ class _AlertPageState extends State<AlertPage> {
                             alertWidget = GFAlert(
                               alignment: Alignment.center,
                               backgroundColor: Colors.white,
-                              child: Icon(
-                                Icons.favorite_border,
-                                size: 70,
-                                color: GFColors.DANGER,
-                              ),
+                              child: Image.asset('lib/assets/gif/success1.gif', width: 60,),
                               contentChild: const Text(
-                                'Add your favourites to your whislist, you can remove'
-                                ' it whenever you feel to.',
-                                style: TextStyle(fontSize: 20),
+                                'You have succesfully viewed the Custom Alert... Hurrayyy!!'
+                                , textAlign: TextAlign.center,
+                                style: TextStyle(fontSize: 15),
                               ),
                               bottombar: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
@@ -281,7 +277,7 @@ class _AlertPageState extends State<AlertPage> {
                                       });
                                     },
                                     color: GFColors.INFO,
-                                    text: 'Add',
+                                    text: 'OK',
                                   ),
                                   const SizedBox(
                                     width: 5,

@@ -14,7 +14,7 @@ class _MessengerFloatingWidgetState extends State<MessengerFloatingWidget> {
   @override
   Widget build(BuildContext context) => Scaffold(
         body: GFFloatingWidget(
-          verticalPosition: MediaQuery.of(context).size.height * 0.2,
+          verticalPosition: MediaQuery.of(context).size.height*0.05,
           horizontalPosition: MediaQuery.of(context).size.width * 0.8,
           child: showFloatingWidget
               ? Column(
