@@ -80,7 +80,6 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                         GFButton(
                           onPressed: () {},
                           text: 'Warning',
-
                           buttonBoxShadow: true,
                           color: GFColors.WARNING,
                         ),
@@ -106,7 +105,7 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                       children: <Widget>[
                         GFButton(
                           onPressed: () {},
-                          text:'Light',
+                          text: 'Light',
                           buttonBoxShadow: true,
                           color: GFColors.LIGHT,
                         ),
