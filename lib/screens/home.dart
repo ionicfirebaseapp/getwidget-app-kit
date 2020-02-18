@@ -877,9 +877,46 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              const SizedBox(height: 20)
+              const SizedBox(height: 20),
+
+              GridView.count(
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                crossAxisCount: 2,
+              children: <Widget>[
+                buildSquareTile('uj'),
+                buildSquareTile('uj'),
+                buildSquareTile('uj'),
+                buildSquareTile('uj'),
+
+              ],
+              )
+
+
             ],
           ),
+          
+          
         ),
       );
+
+  Widget buildSquareTile(text){
+
+
+     IconData icon;
+
+    return Container(
+      height: 160,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+        color: GFColors.DARK
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+         Text(text)
+        ],
+      ),
+    );
+  }
 }
