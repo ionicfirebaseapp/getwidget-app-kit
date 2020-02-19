@@ -900,37 +900,25 @@ class _HomePageState extends State<HomePage> {
                 mainAxisSpacing: 10,
                 crossAxisSpacing: 10,
                 children: <Widget>[
-
-                  buildSquareTile('Buttons', Icons.radio_button_checked, GFColors.SUCCESS),
-                  buildSquareTile('Badges', Icons.android,  GFColors.SUCCESS),
-                  buildSquareTile('Avatar', Icons.card_giftcard,  GFColors.SUCCESS),
-                  buildSquareTile('Images', Icons.view_carousel,  GFColors.SUCCESS),
-                  buildSquareTile('Cards', Icons.card_giftcard,  GFColors.SUCCESS),
-                  buildSquareTile('Carousel', Icons.view_carousel,  GFColors.SUCCESS),
-                  buildSquareTile('Tabs', Icons.tab,  GFColors.SUCCESS),
-                  buildSquareTile('Tile', Icons.title,  GFColors.SUCCESS),
-                  buildSquareTile('Toggle', Icons.card_giftcard,  GFColors.SUCCESS),
-                  buildSquareTile('Toast', Icons.view_carousel,  GFColors.SUCCESS),
-                  buildSquareTile('Alert', Icons.card_giftcard,  GFColors.SUCCESS),
-                  buildSquareTile('Accordion', Icons.view_carousel,  GFColors.SUCCESS),
-                  buildSquareTile('SearchBar', Icons.card_giftcard,  GFColors.SUCCESS),
-                  buildSquareTile('Appbar', Icons.view_carousel,  GFColors.SUCCESS),
-                  buildSquareTile('Rating', Icons.card_giftcard,  GFColors.SUCCESS),
-                  buildSquareTile('Loaders', Icons.view_carousel,  GFColors.SUCCESS),
-                  buildSquareTile('Typography', Icons.card_giftcard,  GFColors.SUCCESS),
-                  buildSquareTile('Floating Widget', Icons.view_carousel,  GFColors.SUCCESS),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) => ProgressBar()),
-                      );
-                    },
-                    child:   buildSquareTile('Progress Bar', Icons.power_input,  GFColors.SUCCESS),
-                  )
-
-
+                  buildSquareTile('Buttons', Icons.radio_button_checked, GFColors.SUCCESS, router:ButtonTypes()),
+                  buildSquareTile('Badges', Icons.android,  GFColors.SUCCESS, router:BadgesPage()),
+                  buildSquareTile('Avatar', Icons.card_giftcard,  GFColors.SUCCESS, router: Avatar() ),
+                  buildSquareTile('Images', Icons.view_carousel,  GFColors.SUCCESS, router: Images()),
+                  buildSquareTile('Cards', Icons.card_giftcard,  GFColors.SUCCESS, router: CardPage()),
+                  buildSquareTile('Carousel', Icons.view_carousel,  GFColors.SUCCESS, router: Carousel()),
+                  buildSquareTile('Tabs', Icons.tab,  GFColors.SUCCESS, router: TabTypes()),
+                  buildSquareTile('Tile', Icons.title,  GFColors.SUCCESS, router: TilesPage()),
+                  buildSquareTile('Toggle', Icons.card_giftcard,  GFColors.SUCCESS, router: Toggles()),
+                  buildSquareTile('Toast', Icons.view_carousel,  GFColors.SUCCESS, router: Toasts()),
+                  buildSquareTile('Alert', Icons.card_giftcard,  GFColors.SUCCESS, router: AlertPage()),
+                  buildSquareTile('Accordion', Icons.view_carousel,  GFColors.SUCCESS, router: Accordion()),
+                  buildSquareTile('SearchBar', Icons.card_giftcard,  GFColors.SUCCESS, router: SearchbarPage()),
+                  buildSquareTile('Appbar', Icons.view_carousel,  GFColors.SUCCESS, router: AppHome()),
+                  buildSquareTile('Rating', Icons.card_giftcard,  GFColors.SUCCESS, router: RatingPage()),
+                  buildSquareTile('Loaders', Icons.view_carousel,  GFColors.SUCCESS, router: Loaders()),
+                  buildSquareTile('Typography', Icons.card_giftcard,  GFColors.SUCCESS, router: TypographyPage()),
+                  buildSquareTile('Floating Widget', Icons.view_carousel,  GFColors.SUCCESS, router: FloatingWidgetHome()),
+                  buildSquareTile('Progress Bar', Icons.view_carousel,  GFColors.SUCCESS, router: ProgressBar()),
                 ],
               ),
             )
@@ -956,28 +944,37 @@ class _HomePageState extends State<HomePage> {
         ),
       );
 
-  Widget buildSquareTile(text, child, iconColor){
+  Widget buildSquareTile(text, icon, iconColor, {Widget router}){
 
 
 
-    return Container(
-      decoration: BoxDecoration(
-        color: const Color(0xFF333333),
-        borderRadius:
-        const BorderRadius.all(Radius.circular(7)),
-        boxShadow: [
-          BoxShadow(
-              color: Colors.black.withOpacity(0.61),
-              blurRadius: 6,
-              spreadRadius: 0),
-        ],
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          Icon((child), color: iconColor,),
-          Text(text, style: TextStyle(color: GFColors.WHITE, fontSize: 18),)
-        ],
+    return InkWell(
+      onTap: (){
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (BuildContext context) => router),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: const Color(0xFF333333),
+          borderRadius:
+          const BorderRadius.all(Radius.circular(7)),
+          boxShadow: [
+            BoxShadow(
+                color: Colors.black.withOpacity(0.61),
+                blurRadius: 6,
+                spreadRadius: 0),
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Icon((icon), color: iconColor,),
+            Text(text, style: TextStyle(color: GFColors.WHITE, fontSize: 18),)
+          ],
+        ),
       ),
     );
   }
