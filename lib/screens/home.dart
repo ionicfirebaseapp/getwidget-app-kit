@@ -40,92 +40,146 @@ class _HomePageState extends State<HomePage> {
 
   List gfComponents = [
    {
-      'img': 'lib/assets/icons/buttons.svg',
+      'icon': IconData(
+        0xe904,
+        fontFamily: 'icomoon',
+      ),
       'title':'Button',
       'route': ButtonTypes()
     },
    {
-      'img':'lib/assets/icons/badges.svg',
+      'icon':IconData(
+        0xe902,
+      fontFamily: 'icomoon',
+   ),
       'title':'Badge',
       'route':BadgesPage()
     },
     {
-      'img':'lib/assets/icons/cards.svg',
+      'icon':IconData(
+        0xe905,
+      fontFamily: 'icomoon',
+    ),
       'title':'Cards',
       'route':CardPage()
     },
     {
-      'img':'lib/assets/icons/carousels.svg',
+      'icon':IconData(
+        0xe906,
+        fontFamily: 'icomoon',
+      ),
       'title':'Carousel',
       'route':Carousel()
     },
     {
-      'img':'lib/assets/icons/avatars.svg',
+      'icon':IconData(
+        0xe902,
+        fontFamily: 'icomoon',
+      ),
       'title':'Avatar',
       'route':Avatar()
     },
     {
-      'img':'lib/assets/icons/images.svg',
+      'icon':IconData(
+        0xe90d,
+        fontFamily: 'icomoon',
+      ),
       'title':'Images',
       'route':Images()
     },
     {
-      'img':'lib/assets/icons/tiles.svg',
+      'icon':IconData(
+        0xe90e,
+        fontFamily: 'icomoon',
+      ),
       'title':'Tiles',
       'route':TilesPage()
     },
     {
-      'img':'lib/assets/icons/tabs.svg',
+      'icon':IconData(
+        0xe91d,
+        fontFamily: 'icomoon',
+      ),
       'title':'Tabs',
       'route':TabTypes()
     },
     {
-      'img':'lib/assets/icons/toggle.svg',
+      'icon':IconData(
+        0xe910,
+        fontFamily: 'icomoon',
+      ),
       'title':'Toggle',
       'route':Toggles()
     },
     {
-      'img':'lib/assets/icons/toast.svg',
+      'icon':IconData(
+        0xe920,
+        fontFamily: 'icomoon',
+      ),
       'title':'Toast',
       'route':Toasts()
     },
     {
-      'img':'lib/assets/icons/alert.svg',
+      'icon':IconData(
+        0xe901,
+        fontFamily: 'icomoon',
+      ),
       'title':'Alert',
       'route':AlertPage()
     },
     {
-      'img':'lib/assets/icons/accordion.svg',
+      'icon':IconData(
+        0xe900,
+        fontFamily: 'icomoon',
+      ),
       'title':'Accordion',
       'route':Accordion()
     },
     {
-      'img':'lib/assets/icons/search-bar.svg',
+      'icon':IconData(
+        0xe919,
+        fontFamily: 'icomoon',
+      ),
       'title':'Search Bar',
       'route':SearchbarPage()
     },
     {
-      'img':'lib/assets/icons/appbar.svg',
+      'icon':IconData(
+        0xe91e,
+        fontFamily: 'icomoon',
+      ),
       'title':'Appbar',
       'route':AppHome()
     },
     {
-      'img':'lib/assets/icons/rating.svg',
+      'icon':IconData(
+        0xe902,
+        fontFamily: 'icomoon',
+      ),
       'title':'Rating',
       'route':RatingPage()
     },
     {
-      'img':'lib/assets/icons/loader.svg',
+      'icon':IconData(
+        0xe902,
+        fontFamily: 'icomoon',
+      ),
       'title':'Loaders',
       'route':Loaders()
     },
     {
-      'img':'lib/assets/icons/typography.svg',
+      'icon':IconData(
+        0xe923,
+        fontFamily: 'icomoon',
+      ),
       'title':'Typography',
       'route':TypographyPage()
     },
     {
-      'img':'lib/assets/icons/floating_widget.svg',
+      'icon':IconData(
+        0xe902,
+        fontFamily: 'icomoon',
+      ),
       'title':'Floating Widget',
       'route':FloatingWidgetHome()
     }
@@ -163,7 +217,7 @@ physics: ScrollPhysics(),
                 onTap: (){
 
                 },
-                child: buildSquareTile(gfComponents[index]['title'],gfComponents[index]['img'], gfComponents[index]['route'])
+                child: buildSquareTile(gfComponents[index]['title'],gfComponents[index]['icon'], gfComponents[index]['route'])
             );
           },
         ),
@@ -171,7 +225,10 @@ physics: ScrollPhysics(),
     Container(
       height: 160,
       margin: EdgeInsets.only(left: 15, bottom: 20, right: 15),
-      child: buildSquareTile('Progress Bar', 'lib/assets/icons/progress-bar.svg', ProgressBar()),
+      child: buildSquareTile('Progress Bar', IconData(
+        0xe904,
+        fontFamily: 'icomoon',
+      ), ProgressBar()),
     )
   ],
 ),
@@ -1028,7 +1085,7 @@ physics: ScrollPhysics(),
 ////                mainAxisSpacing: 10,
 ////                crossAxisSpacing: 10,
 ////                children: <Widget>[
-//////                  buildSquareTile(title, img, route)
+//////                  buildSquareTile(title, icon, route)
 //////                  buildSquareTile([gfComponents,{}][]),
 //////                  buildSquareTile('Badges', Icons.android,  GFColors.SUCCESS, route:BadgesPage()),
 //////                  buildSquareTile('Avatar', Icons.card_giftcard,  GFColors.SUCCESS, route: Avatar() ),
@@ -1084,7 +1141,10 @@ physics: ScrollPhysics(),
     );
   }
 
-  Widget buildSquareTile(title, img, route){
+  Widget buildSquareTile(title, icon, route){
+
+//    IconData icon;
+   print(icon);
 
     return InkWell(
       onTap: (){
@@ -1109,7 +1169,8 @@ physics: ScrollPhysics(),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-         SvgPicture.asset(img),
+Icon(icon, color: GFColors.SUCCESS),
+//            Icon((icon),),
             Text(title, style: TextStyle(color: GFColors.WHITE, fontSize: 20),)
           ],
         ),

@@ -93,3 +93,11 @@ flutter:
     - lib/assets/gif/loader.gif
     - lib/assets/gif/loader1.gif
     - lib/assets/gif/success1.gif
+
+
+  fonts:
+    - family: IcoMoon
+      fonts:
+        - asset: lib/assets/fonts/icomoon.ttf
+          weight: 400
+
