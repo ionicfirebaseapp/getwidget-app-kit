@@ -38,6 +38,89 @@ class _HomePageState extends State<HomePage> {
     }
   ];
 
+  List gfComponents = [
+   {
+      'img': 'lib/assets/icons/buttons.svg',
+      'title':'Button',
+      'route': ButtonTypes()
+    },
+   {
+      'img':'lib/assets/icons/badges.svg',
+      'title':'Badge',
+      'route':BadgesPage()
+    },
+    {
+      'img':'lib/assets/icons/cards.svg',
+      'title':'Cards',
+      'route':CardPage()
+    },
+    {
+      'img':'lib/assets/icons/carousels.svg',
+      'title':'Carousel',
+      'route':Carousel()
+    },
+    {
+      'img':'lib/assets/icons/avatars.svg',
+      'title':'Avatar',
+      'route':Avatar()
+    },
+    {
+      'img':'lib/assets/icons/images.svg',
+      'title':'Images',
+      'route':Images()
+    },
+    {
+      'img':'lib/assets/icons/tiles.svg',
+      'title':'Tiles',
+      'route':TilesPage()
+    },
+    {
+      'img':'lib/assets/icons/tabs.svg',
+      'title':'Tabs',
+      'route':TabTypes()
+    },
+    {
+      'img':'lib/assets/icons/toggle.svg',
+      'title':'Toggle',
+      'route':Toggles()
+    },
+    {
+      'img':'lib/assets/icons/toast.svg',
+      'title':'Toast',
+      'route':Toasts()
+    },
+    {
+      'img':'lib/assets/icons/alert.svg',
+      'title':'Alert',
+      'route':AlertPage()
+    },
+    {
+      'img':'lib/assets/icons/accordion.svg',
+      'title':'Accordion',
+      'route':Accordion()
+    },
+    {
+      'img':'lib/assets/icons/search-bar.svg',
+      'title':'Search Bar',
+      'route':SearchbarPage()
+    },
+    {
+      'img':'lib/assets/icons/appbar.svg',
+      'title':'Appbar',
+      'route':AppHome()
+    },
+    {
+      'img':'lib/assets/icons/rating.svg',
+      'title':'Rating',
+      'route':RatingPage()
+    },
+    {
+      'img':'lib/assets/icons/loader.svg',
+      'title':'Loaders',
+      'route':Loaders()
+    }
+  ];
+
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -889,52 +972,59 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 20),
 
-            Container(
-//              padding: EdgeInsets.only(top:120),
-//              color: Colors.red,
-              height: MediaQuery.of(context).size.height,
-              child:  GridView.count(
-                shrinkWrap: true,
-                scrollDirection: Axis.vertical,
-                crossAxisCount: 2,
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-                children: <Widget>[
-                  buildSquareTile('Buttons', Icons.radio_button_checked, GFColors.SUCCESS, router:ButtonTypes()),
-                  buildSquareTile('Badges', Icons.android,  GFColors.SUCCESS, router:BadgesPage()),
-                  buildSquareTile('Avatar', Icons.card_giftcard,  GFColors.SUCCESS, router: Avatar() ),
-                  buildSquareTile('Images', Icons.view_carousel,  GFColors.SUCCESS, router: Images()),
-                  buildSquareTile('Cards', Icons.card_giftcard,  GFColors.SUCCESS, router: CardPage()),
-                  buildSquareTile('Carousel', Icons.view_carousel,  GFColors.SUCCESS, router: Carousel()),
-                  buildSquareTile('Tabs', Icons.tab,  GFColors.SUCCESS, router: TabTypes()),
-                  buildSquareTile('Tile', Icons.title,  GFColors.SUCCESS, router: TilesPage()),
-                  buildSquareTile('Toggle', Icons.card_giftcard,  GFColors.SUCCESS, router: Toggles()),
-                  buildSquareTile('Toast', Icons.view_carousel,  GFColors.SUCCESS, router: Toasts()),
-                  buildSquareTile('Alert', Icons.card_giftcard,  GFColors.SUCCESS, router: AlertPage()),
-                  buildSquareTile('Accordion', Icons.view_carousel,  GFColors.SUCCESS, router: Accordion()),
-                  buildSquareTile('SearchBar', Icons.card_giftcard,  GFColors.SUCCESS, router: SearchbarPage()),
-                  buildSquareTile('Appbar', Icons.view_carousel,  GFColors.SUCCESS, router: AppHome()),
-                  buildSquareTile('Rating', Icons.card_giftcard,  GFColors.SUCCESS, router: RatingPage()),
-                  buildSquareTile('Loaders', Icons.view_carousel,  GFColors.SUCCESS, router: Loaders()),
-                  buildSquareTile('Typography', Icons.card_giftcard,  GFColors.SUCCESS, router: TypographyPage()),
-                  buildSquareTile('Floating Widget', Icons.view_carousel,  GFColors.SUCCESS, router: FloatingWidgetHome()),
-                  buildSquareTile('Progress Bar', Icons.view_carousel,  GFColors.SUCCESS, router: ProgressBar()),
-                ],
-              ),
-            )
-//            GridView.builder(
-//              itemCount: names.length,
-//              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-//                  crossAxisCount: 3, crossAxisSpacing: 4.0, mainAxisSpacing: 4.0),
-//              itemBuilder: (BuildContext context, int index){
-//                return GestureDetector(
-//                  onTap: (){
-//
-//                  },
-//                  child: buildSquareTile(index),
-//                );
-//              },
+//            Container(
+////              padding: EdgeInsets.only(top:120),
+////              color: Colors.red,
+//              height: MediaQuery.of(context).size.height,
+//              child:  GridView.count(
+//                shrinkWrap: true,
+//                scrollDirection: Axis.vertical,
+//                crossAxisCount: 2,
+//                mainAxisSpacing: 10,
+//                crossAxisSpacing: 10,
+//                children: <Widget>[
+////                  buildSquareTile(title, img, route)
+////                  buildSquareTile([gfComponents,{}][]),
+////                  buildSquareTile('Badges', Icons.android,  GFColors.SUCCESS, route:BadgesPage()),
+////                  buildSquareTile('Avatar', Icons.card_giftcard,  GFColors.SUCCESS, route: Avatar() ),
+////                  buildSquareTile('Images', Icons.view_carousel,  GFColors.SUCCESS, route: Images()),
+////                  buildSquareTile('Cards', Icons.card_giftcard,  GFColors.SUCCESS, route: CardPage()),
+////                  buildSquareTile('Carousel', Icons.view_carousel,  GFColors.SUCCESS, route: Carousel()),
+////                  buildSquareTile('Tabs', Icons.tab,  GFColors.SUCCESS, route: TabTypes()),
+////                  buildSquareTile('Tile', Icons.title,  GFColors.SUCCESS, route: TilesPage()),
+////                  buildSquareTile('Toggle', Icons.card_giftcard,  GFColors.SUCCESS, route: Toggles()),
+////                  buildSquareTile('Toast', Icons.view_carousel,  GFColors.SUCCESS, route: Toasts()),
+////                  buildSquareTile('Alert', Icons.card_giftcard,  GFColors.SUCCESS, route: AlertPage()),
+////                  buildSquareTile('Accordion', Icons.view_carousel,  GFColors.SUCCESS, route: Accordion()),
+////                  buildSquareTile('SearchBar', Icons.card_giftcard,  GFColors.SUCCESS, route: SearchbarPage()),
+////                  buildSquareTile('Appbar', Icons.view_carousel,  GFColors.SUCCESS, route: AppHome()),
+////                  buildSquareTile('Rating', Icons.card_giftcard,  GFColors.SUCCESS, route: RatingPage()),
+////                  buildSquareTile('Loaders', Icons.view_carousel,  GFColors.SUCCESS, route: Loaders()),
+////                  buildSquareTile('Typography', Icons.card_giftcard,  GFColors.SUCCESS, route: TypographyPage()),
+////                  buildSquareTile('Floating Widget', Icons.view_carousel,  GFColors.SUCCESS, route: FloatingWidgetHome()),
+////                  buildSquareTile('Progress Bar', Icons.view_carousel,  GFColors.SUCCESS, route: ProgressBar()),
+//                ],
+//              ),
 //            ),
+          Container
+            (
+            height: MediaQuery.of(context).size.height,
+            child:   GridView.builder(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              itemCount: gfComponents.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, crossAxisSpacing: 20, mainAxisSpacing: 20),
+              itemBuilder: (BuildContext context, int index){
+                return GestureDetector(
+                    onTap: (){
+
+                    },
+                    child: buildSquareTile(gfComponents[index]['title'],gfComponents[index]['img'], gfComponents[index]['route'])
+                );
+              },
+            ),
+          )
 
 
             ],
@@ -944,7 +1034,7 @@ class _HomePageState extends State<HomePage> {
         ),
       );
 
-  Widget buildSquareTile(text, icon, iconColor, {Widget router}){
+  Widget buildSquareTile(title, img, route){
 
 
 
@@ -953,7 +1043,7 @@ class _HomePageState extends State<HomePage> {
         Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (BuildContext context) => router),
+              builder: (BuildContext context) => route),
         );
       },
       child: Container(
@@ -971,11 +1061,13 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Icon((icon), color: iconColor,),
-            Text(text, style: TextStyle(color: GFColors.WHITE, fontSize: 18),)
+         SvgPicture.asset(img),
+            Text(title, style: TextStyle(color: GFColors.WHITE, fontSize: 20),)
           ],
         ),
       ),
     );
   }
 }
+
+
