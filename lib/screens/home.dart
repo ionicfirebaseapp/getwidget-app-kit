@@ -118,6 +118,16 @@ class _HomePageState extends State<HomePage> {
       'img':'lib/assets/icons/loader.svg',
       'title':'Loaders',
       'route':Loaders()
+    },
+    {
+      'img':'lib/assets/icons/typography.svg',
+      'title':'Typography',
+      'route':TypographyPage()
+    },
+    {
+      'img':'lib/assets/icons/floating_widget.svg',
+      'title':'Floating Widget',
+      'route':FloatingWidgetHome()
     }
   ];
 
@@ -130,913 +140,951 @@ class _HomePageState extends State<HomePage> {
           title: SvgPicture.asset('lib/assets/icons/gflogo.svg'),
           centerTitle: true,
         ),
-        body: Container(
-          margin: const EdgeInsets.only(left: 15, right: 15),
-          child: ListView(
-            children: <Widget>[
-              const SizedBox(
-                height: 10,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => ButtonTypes()),
-                        );
-                      },
-                      child: Container(
-                        height: 160,
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.61),
-                                  blurRadius: 8,
-                                  spreadRadius: 0),
-                            ]),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(height: 10),
-                            SvgPicture.asset('lib/assets/icons/buttons.svg'),
-                            const Text(
-                              'Buttons',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 23),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => BadgesPage()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.61),
-                                  blurRadius: 8,
-                                  spreadRadius: 0),
-                            ]),
-                        height: 160,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset('lib/assets/icons/badges.svg'),
-                            const Text(
-                              'Badges',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => Avatar()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.61),
-                                blurRadius: 8,
-                                spreadRadius: 0,
-                              ),
-                            ]),
-                        height: 160,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset('lib/assets/icons/avatars.svg'),
-                            const Text(
-                              'Avatar',
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: GFColors.WHITE,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 23),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => Images()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF333333),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(7)),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black.withOpacity(0.61),
-                                blurRadius: 8,
-                                spreadRadius: 0),
-                          ],
-                        ),
-                        height: 160,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(height: 10),
-                            SvgPicture.asset('lib/assets/icons/images.svg'),
-                            const Text(
-                              'Images',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => CardPage()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.61),
-                                blurRadius: 8,
-                                spreadRadius: 0,
-                              ),
-                            ]),
-                        height: 160,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset('lib/assets/icons/cards.svg'),
-                            const Text(
-                              'Cards',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 23),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => Carousel()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.61),
-                                blurRadius: 8,
-                                spreadRadius: 0,
-                              ),
-                            ]),
-                        height: 160,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset('lib/assets/icons/carousels.svg'),
-                            const Text(
-                              'Carousels',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => TilesPage()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.61),
-                                  blurRadius: 8,
-                                  spreadRadius: 0),
-                            ]),
-                        height: 160,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(height: 10),
-                            SvgPicture.asset('lib/assets/icons/tiles.svg'),
-                            const Text(
-                              'Tiles',
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: GFColors.WHITE,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 23),
-                  Expanded(
-                      child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) => TabTypes()),
-                      );
-                    },
-                    child: Container(
-                      margin: const EdgeInsets.only(top: 23),
-                      decoration: BoxDecoration(
-                          color: const Color(0xFF333333),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(7)),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.61),
-                              blurRadius: 8,
-                              spreadRadius: 0,
-                            ),
-                          ]),
-                      height: 160,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          SvgPicture.asset('lib/assets/icons/tabs.svg'),
-                          const Text(
-                            'Tabs',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: GFColors.WHITE,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ))
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => Toggles()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.61),
-                                  blurRadius: 8,
-                                  spreadRadius: 0),
-                            ]),
-                        height: 160,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset('lib/assets/icons/toggle.svg'),
-                            const Text(
-                              'Toggle',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 23,
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => Toasts()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.61),
-                                  blurRadius: 8,
-                                  spreadRadius: 0),
-                            ]),
-                        height: 160,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset('lib/assets/icons/toast.svg'),
-                            const Text(
-                              'Toast',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => AlertPage()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.61),
-                                  blurRadius: 8,
-                                  spreadRadius: 0),
-                            ]),
-                        height: 160,
-                        width: MediaQuery.of(context).size.width,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset('lib/assets/icons/alert.svg'),
-                            const Text(
-                              'Alert',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => Accordion()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.61),
-                                  blurRadius: 8,
-                                  spreadRadius: 0),
-                            ]),
-                        height: 160,
-                        width: MediaQuery.of(context).size.width,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset('lib/assets/icons/accordion.svg'),
-                            const Text(
-                              'Accordion',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  SearchbarPage()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.61),
-                                  blurRadius: 8,
-                                  spreadRadius: 0),
-                            ]),
-                        height: 160,
-                        width: MediaQuery.of(context).size.width,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset('lib/assets/icons/search-bar.svg'),
-                            const Text(
-                              'Searchbar',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => AppHome()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.61),
-                                  blurRadius: 8,
-                                  spreadRadius: 0),
-                            ]),
-                        height: 160,
-                        width: MediaQuery.of(context).size.width,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset('lib/assets/icons/appbar.svg'),
-                            const Text(
-                              'Appbar',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => RatingPage()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.61),
-                                  blurRadius: 8,
-                                  spreadRadius: 0),
-                            ]),
-                        height: 160,
-                        width: MediaQuery.of(context).size.width,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(height: 10),
-                            SvgPicture.asset('lib/assets/icons/rating.svg'),
-                            const Text(
-                              'Rating',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => Loaders()),
-                        );
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                            color: const Color(0xFF333333),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(7)),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black.withOpacity(0.61),
-                                  blurRadius: 8,
-                                  spreadRadius: 0),
-                            ]),
-                        height: 160,
-                        width: MediaQuery.of(context).size.width,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset('lib/assets/icons/loader.svg'),
-                            const Text(
-                              'Loaders',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  TypographyPage()),
-                        );
-                      },
-                      child: Container(
-                        alignment: Alignment.center,
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF333333),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(7)),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black.withOpacity(0.61),
-                                blurRadius: 8,
-                                spreadRadius: 0),
-                          ],
-                        ),
-                        height: 160,
-                        width: MediaQuery.of(context).size.width,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset('lib/assets/icons/typography.svg'),
-                            const Text(
-                              'Typography',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  FloatingWidgetHome()),
-                        );
-                      },
-                      child: Container(
-                        alignment: Alignment.center,
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF333333),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(7)),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black.withOpacity(0.61),
-                                blurRadius: 8,
-                                spreadRadius: 0),
-                          ],
-                        ),
-                        height: 160,
-                        width: MediaQuery.of(context).size.width,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset(
-                                'lib/assets/icons/floating_widget.svg'),
-                            const Text(
-                              'Floating Widget',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext context) => ProgressBar()),
-                        );
-                      },
-                      child: Container(
-                        alignment: Alignment.center,
-                        margin: const EdgeInsets.only(top: 23),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF333333),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(7)),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black.withOpacity(0.61),
-                                blurRadius: 8,
-                                spreadRadius: 0),
-                          ],
-                        ),
-                        height: 160,
-                        width: MediaQuery.of(context).size.width,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            SvgPicture.asset(
-                                'lib/assets/icons/progress-bar.svg'),
-                            const Text(
-                              'Progress Bar',
-                              style: TextStyle(
-                                  fontSize: 20, color: GFColors.WHITE),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20),
+body:
+ListView(
+physics: ScrollPhysics(),
+  scrollDirection: Axis.vertical,
+  shrinkWrap: true,
+  children: <Widget>[
+//    SizedBox(
+//      height: 20,
+//    ),
+        Container(
+          margin: EdgeInsets.only(left: 15, bottom: 20, top:20, right: 15),
+        child:     GridView.builder(
+          scrollDirection: Axis.vertical,
+          shrinkWrap: true,
+          physics: ScrollPhysics(),
+          itemCount: gfComponents.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, crossAxisSpacing: 20, mainAxisSpacing: 20),
+          itemBuilder: (BuildContext context, int index){
+            return GestureDetector(
+                onTap: (){
 
-//            Container(
-////              padding: EdgeInsets.only(top:120),
-////              color: Colors.red,
-//              height: MediaQuery.of(context).size.height,
-//              child:  GridView.count(
-//                shrinkWrap: true,
-//                scrollDirection: Axis.vertical,
-//                crossAxisCount: 2,
-//                mainAxisSpacing: 10,
-//                crossAxisSpacing: 10,
+                },
+                child: buildSquareTile(gfComponents[index]['title'],gfComponents[index]['img'], gfComponents[index]['route'])
+            );
+          },
+        ),
+    ),
+    Container(
+      height: 160,
+      margin: EdgeInsets.only(left: 15, bottom: 20, right: 15),
+      child: buildSquareTile('Progress Bar', 'lib/assets/icons/progress-bar.svg', ProgressBar()),
+    )
+  ],
+),
+//        body: Container(
+//          margin: const EdgeInsets.only(left: 15, right: 15),
+//          child: ListView(
+//            children: <Widget>[
+//              const SizedBox(
+//                height: 10,
+//              ),
+//              Row(
+//                mainAxisAlignment: MainAxisAlignment.spaceBetween,
 //                children: <Widget>[
-////                  buildSquareTile(title, img, route)
-////                  buildSquareTile([gfComponents,{}][]),
-////                  buildSquareTile('Badges', Icons.android,  GFColors.SUCCESS, route:BadgesPage()),
-////                  buildSquareTile('Avatar', Icons.card_giftcard,  GFColors.SUCCESS, route: Avatar() ),
-////                  buildSquareTile('Images', Icons.view_carousel,  GFColors.SUCCESS, route: Images()),
-////                  buildSquareTile('Cards', Icons.card_giftcard,  GFColors.SUCCESS, route: CardPage()),
-////                  buildSquareTile('Carousel', Icons.view_carousel,  GFColors.SUCCESS, route: Carousel()),
-////                  buildSquareTile('Tabs', Icons.tab,  GFColors.SUCCESS, route: TabTypes()),
-////                  buildSquareTile('Tile', Icons.title,  GFColors.SUCCESS, route: TilesPage()),
-////                  buildSquareTile('Toggle', Icons.card_giftcard,  GFColors.SUCCESS, route: Toggles()),
-////                  buildSquareTile('Toast', Icons.view_carousel,  GFColors.SUCCESS, route: Toasts()),
-////                  buildSquareTile('Alert', Icons.card_giftcard,  GFColors.SUCCESS, route: AlertPage()),
-////                  buildSquareTile('Accordion', Icons.view_carousel,  GFColors.SUCCESS, route: Accordion()),
-////                  buildSquareTile('SearchBar', Icons.card_giftcard,  GFColors.SUCCESS, route: SearchbarPage()),
-////                  buildSquareTile('Appbar', Icons.view_carousel,  GFColors.SUCCESS, route: AppHome()),
-////                  buildSquareTile('Rating', Icons.card_giftcard,  GFColors.SUCCESS, route: RatingPage()),
-////                  buildSquareTile('Loaders', Icons.view_carousel,  GFColors.SUCCESS, route: Loaders()),
-////                  buildSquareTile('Typography', Icons.card_giftcard,  GFColors.SUCCESS, route: TypographyPage()),
-////                  buildSquareTile('Floating Widget', Icons.view_carousel,  GFColors.SUCCESS, route: FloatingWidgetHome()),
-////                  buildSquareTile('Progress Bar', Icons.view_carousel,  GFColors.SUCCESS, route: ProgressBar()),
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => ButtonTypes()),
+//                        );
+//                      },
+//                      child: Container(
+//                        height: 160,
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                  color: Colors.black.withOpacity(0.61),
+//                                  blurRadius: 8,
+//                                  spreadRadius: 0),
+//                            ]),
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(height: 10),
+//                            SvgPicture.asset('lib/assets/icons/buttons.svg'),
+//                            const Text(
+//                              'Buttons',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                  const SizedBox(width: 23),
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => BadgesPage()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                  color: Colors.black.withOpacity(0.61),
+//                                  blurRadius: 8,
+//                                  spreadRadius: 0),
+//                            ]),
+//                        height: 160,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset('lib/assets/icons/badges.svg'),
+//                            const Text(
+//                              'Badges',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
 //                ],
 //              ),
-//            ),
-          Container
-            (
-            height: MediaQuery.of(context).size.height,
-            child:   GridView.builder(
-              scrollDirection: Axis.vertical,
-              shrinkWrap: true,
-              itemCount: gfComponents.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, crossAxisSpacing: 20, mainAxisSpacing: 20),
-              itemBuilder: (BuildContext context, int index){
-                return GestureDetector(
-                    onTap: (){
-
-                    },
-                    child: buildSquareTile(gfComponents[index]['title'],gfComponents[index]['img'], gfComponents[index]['route'])
-                );
-              },
-            ),
-          )
-
-
-            ],
-          ),
-
-
-        ),
+//              Row(
+//                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                children: <Widget>[
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => Avatar()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                color: Colors.black.withOpacity(0.61),
+//                                blurRadius: 8,
+//                                spreadRadius: 0,
+//                              ),
+//                            ]),
+//                        height: 160,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset('lib/assets/icons/avatars.svg'),
+//                            const Text(
+//                              'Avatar',
+//                              style: TextStyle(
+//                                fontSize: 20,
+//                                color: GFColors.WHITE,
+//                              ),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                  const SizedBox(width: 23),
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => Images()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                          color: const Color(0xFF333333),
+//                          borderRadius:
+//                              const BorderRadius.all(Radius.circular(7)),
+//                          boxShadow: [
+//                            BoxShadow(
+//                                color: Colors.black.withOpacity(0.61),
+//                                blurRadius: 8,
+//                                spreadRadius: 0),
+//                          ],
+//                        ),
+//                        height: 160,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(height: 10),
+//                            SvgPicture.asset('lib/assets/icons/images.svg'),
+//                            const Text(
+//                              'Images',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                ],
+//              ),
+//              Row(
+//                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                children: <Widget>[
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => CardPage()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                color: Colors.black.withOpacity(0.61),
+//                                blurRadius: 8,
+//                                spreadRadius: 0,
+//                              ),
+//                            ]),
+//                        height: 160,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset('lib/assets/icons/cards.svg'),
+//                            const Text(
+//                              'Cards',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                  const SizedBox(width: 23),
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => Carousel()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                color: Colors.black.withOpacity(0.61),
+//                                blurRadius: 8,
+//                                spreadRadius: 0,
+//                              ),
+//                            ]),
+//                        height: 160,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset('lib/assets/icons/carousels.svg'),
+//                            const Text(
+//                              'Carousels',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                ],
+//              ),
+//              Row(
+//                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                children: <Widget>[
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => TilesPage()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                  color: Colors.black.withOpacity(0.61),
+//                                  blurRadius: 8,
+//                                  spreadRadius: 0),
+//                            ]),
+//                        height: 160,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(height: 10),
+//                            SvgPicture.asset('lib/assets/icons/tiles.svg'),
+//                            const Text(
+//                              'Tiles',
+//                              style: TextStyle(
+//                                fontSize: 20,
+//                                color: GFColors.WHITE,
+//                              ),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                  const SizedBox(width: 23),
+//                  Expanded(
+//                      child: GestureDetector(
+//                    onTap: () {
+//                      Navigator.push(
+//                        context,
+//                        MaterialPageRoute(
+//                            builder: (BuildContext context) => TabTypes()),
+//                      );
+//                    },
+//                    child: Container(
+//                      margin: const EdgeInsets.only(top: 23),
+//                      decoration: BoxDecoration(
+//                          color: const Color(0xFF333333),
+//                          borderRadius:
+//                              const BorderRadius.all(Radius.circular(7)),
+//                          boxShadow: [
+//                            BoxShadow(
+//                              color: Colors.black.withOpacity(0.61),
+//                              blurRadius: 8,
+//                              spreadRadius: 0,
+//                            ),
+//                          ]),
+//                      height: 160,
+//                      child: Column(
+//                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                        children: <Widget>[
+//                          const SizedBox(
+//                            height: 10,
+//                          ),
+//                          SvgPicture.asset('lib/assets/icons/tabs.svg'),
+//                          const Text(
+//                            'Tabs',
+//                            style: TextStyle(
+//                              fontSize: 20,
+//                              color: GFColors.WHITE,
+//                            ),
+//                          )
+//                        ],
+//                      ),
+//                    ),
+//                  ))
+//                ],
+//              ),
+//              Row(
+//                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                children: <Widget>[
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => Toggles()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                  color: Colors.black.withOpacity(0.61),
+//                                  blurRadius: 8,
+//                                  spreadRadius: 0),
+//                            ]),
+//                        height: 160,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset('lib/assets/icons/toggle.svg'),
+//                            const Text(
+//                              'Toggle',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                  const SizedBox(
+//                    width: 23,
+//                  ),
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => Toasts()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                  color: Colors.black.withOpacity(0.61),
+//                                  blurRadius: 8,
+//                                  spreadRadius: 0),
+//                            ]),
+//                        height: 160,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset('lib/assets/icons/toast.svg'),
+//                            const Text(
+//                              'Toast',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  )
+//                ],
+//              ),
+//              Row(
+//                mainAxisAlignment: MainAxisAlignment.center,
+//                children: <Widget>[
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => AlertPage()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                  color: Colors.black.withOpacity(0.61),
+//                                  blurRadius: 8,
+//                                  spreadRadius: 0),
+//                            ]),
+//                        height: 160,
+//                        width: MediaQuery.of(context).size.width,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset('lib/assets/icons/alert.svg'),
+//                            const Text(
+//                              'Alert',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                  const SizedBox(
+//                    width: 20,
+//                  ),
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => Accordion()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                  color: Colors.black.withOpacity(0.61),
+//                                  blurRadius: 8,
+//                                  spreadRadius: 0),
+//                            ]),
+//                        height: 160,
+//                        width: MediaQuery.of(context).size.width,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset('lib/assets/icons/accordion.svg'),
+//                            const Text(
+//                              'Accordion',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  )
+//                ],
+//              ),
+//              Row(
+//                mainAxisAlignment: MainAxisAlignment.center,
+//                children: <Widget>[
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) =>
+//                                  SearchbarPage()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                  color: Colors.black.withOpacity(0.61),
+//                                  blurRadius: 8,
+//                                  spreadRadius: 0),
+//                            ]),
+//                        height: 160,
+//                        width: MediaQuery.of(context).size.width,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset('lib/assets/icons/search-bar.svg'),
+//                            const Text(
+//                              'Searchbar',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                  const SizedBox(
+//                    width: 20,
+//                  ),
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => AppHome()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                  color: Colors.black.withOpacity(0.61),
+//                                  blurRadius: 8,
+//                                  spreadRadius: 0),
+//                            ]),
+//                        height: 160,
+//                        width: MediaQuery.of(context).size.width,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset('lib/assets/icons/appbar.svg'),
+//                            const Text(
+//                              'Appbar',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                ],
+//              ),
+//              Row(
+//                mainAxisAlignment: MainAxisAlignment.center,
+//                children: <Widget>[
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => RatingPage()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                  color: Colors.black.withOpacity(0.61),
+//                                  blurRadius: 8,
+//                                  spreadRadius: 0),
+//                            ]),
+//                        height: 160,
+//                        width: MediaQuery.of(context).size.width,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(height: 10),
+//                            SvgPicture.asset('lib/assets/icons/rating.svg'),
+//                            const Text(
+//                              'Rating',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                  const SizedBox(
+//                    width: 20,
+//                  ),
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => Loaders()),
+//                        );
+//                      },
+//                      child: Container(
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                            color: const Color(0xFF333333),
+//                            borderRadius:
+//                                const BorderRadius.all(Radius.circular(7)),
+//                            boxShadow: [
+//                              BoxShadow(
+//                                  color: Colors.black.withOpacity(0.61),
+//                                  blurRadius: 8,
+//                                  spreadRadius: 0),
+//                            ]),
+//                        height: 160,
+//                        width: MediaQuery.of(context).size.width,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset('lib/assets/icons/loader.svg'),
+//                            const Text(
+//                              'Loaders',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                ],
+//              ),
+//              Row(
+//                mainAxisAlignment: MainAxisAlignment.center,
+//                children: <Widget>[
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) =>
+//                                  TypographyPage()),
+//                        );
+//                      },
+//                      child: Container(
+//                        alignment: Alignment.center,
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                          color: const Color(0xFF333333),
+//                          borderRadius:
+//                              const BorderRadius.all(Radius.circular(7)),
+//                          boxShadow: [
+//                            BoxShadow(
+//                                color: Colors.black.withOpacity(0.61),
+//                                blurRadius: 8,
+//                                spreadRadius: 0),
+//                          ],
+//                        ),
+//                        height: 160,
+//                        width: MediaQuery.of(context).size.width,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          crossAxisAlignment: CrossAxisAlignment.center,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset('lib/assets/icons/typography.svg'),
+//                            const Text(
+//                              'Typography',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                  const SizedBox(width: 20),
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) =>
+//                                  FloatingWidgetHome()),
+//                        );
+//                      },
+//                      child: Container(
+//                        alignment: Alignment.center,
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                          color: const Color(0xFF333333),
+//                          borderRadius:
+//                              const BorderRadius.all(Radius.circular(7)),
+//                          boxShadow: [
+//                            BoxShadow(
+//                                color: Colors.black.withOpacity(0.61),
+//                                blurRadius: 8,
+//                                spreadRadius: 0),
+//                          ],
+//                        ),
+//                        height: 160,
+//                        width: MediaQuery.of(context).size.width,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          crossAxisAlignment: CrossAxisAlignment.center,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset(
+//                                'lib/assets/icons/floating_widget.svg'),
+//                            const Text(
+//                              'Floating Widget',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                ],
+//              ),
+//              Row(
+//                mainAxisAlignment: MainAxisAlignment.center,
+//                children: <Widget>[
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                              builder: (BuildContext context) => ProgressBar()),
+//                        );
+//                      },
+//                      child: Container(
+//                        alignment: Alignment.center,
+//                        margin: const EdgeInsets.only(top: 23),
+//                        decoration: BoxDecoration(
+//                          color: const Color(0xFF333333),
+//                          borderRadius:
+//                              const BorderRadius.all(Radius.circular(7)),
+//                          boxShadow: [
+//                            BoxShadow(
+//                                color: Colors.black.withOpacity(0.61),
+//                                blurRadius: 8,
+//                                spreadRadius: 0),
+//                          ],
+//                        ),
+//                        height: 160,
+//                        width: MediaQuery.of(context).size.width,
+//                        child: Column(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                          crossAxisAlignment: CrossAxisAlignment.center,
+//                          children: <Widget>[
+//                            const SizedBox(
+//                              height: 10,
+//                            ),
+//                            SvgPicture.asset(
+//                                'lib/assets/icons/progress-bar.svg'),
+//                            const Text(
+//                              'Progress Bar',
+//                              style: TextStyle(
+//                                  fontSize: 20, color: GFColors.WHITE),
+//                            )
+//                          ],
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                ],
+//              ),
+//              const SizedBox(height: 20),
+//
+////            Container(
+//////              padding: EdgeInsets.only(top:120),
+//////              color: Colors.red,
+////              height: MediaQuery.of(context).size.height,
+////              child:  GridView.count(
+////                shrinkWrap: true,
+////                scrollDirection: Axis.vertical,
+////                crossAxisCount: 2,
+////                mainAxisSpacing: 10,
+////                crossAxisSpacing: 10,
+////                children: <Widget>[
+//////                  buildSquareTile(title, img, route)
+//////                  buildSquareTile([gfComponents,{}][]),
+//////                  buildSquareTile('Badges', Icons.android,  GFColors.SUCCESS, route:BadgesPage()),
+//////                  buildSquareTile('Avatar', Icons.card_giftcard,  GFColors.SUCCESS, route: Avatar() ),
+//////                  buildSquareTile('Images', Icons.view_carousel,  GFColors.SUCCESS, route: Images()),
+//////                  buildSquareTile('Cards', Icons.card_giftcard,  GFColors.SUCCESS, route: CardPage()),
+//////                  buildSquareTile('Carousel', Icons.view_carousel,  GFColors.SUCCESS, route: Carousel()),
+//////                  buildSquareTile('Tabs', Icons.tab,  GFColors.SUCCESS, route: TabTypes()),
+//////                  buildSquareTile('Tile', Icons.title,  GFColors.SUCCESS, route: TilesPage()),
+//////                  buildSquareTile('Toggle', Icons.card_giftcard,  GFColors.SUCCESS, route: Toggles()),
+//////                  buildSquareTile('Toast', Icons.view_carousel,  GFColors.SUCCESS, route: Toasts()),
+//////                  buildSquareTile('Alert', Icons.card_giftcard,  GFColors.SUCCESS, route: AlertPage()),
+//////                  buildSquareTile('Accordion', Icons.view_carousel,  GFColors.SUCCESS, route: Accordion()),
+//////                  buildSquareTile('SearchBar', Icons.card_giftcard,  GFColors.SUCCESS, route: SearchbarPage()),
+//////                  buildSquareTile('Appbar', Icons.view_carousel,  GFColors.SUCCESS, route: AppHome()),
+//////                  buildSquareTile('Rating', Icons.card_giftcard,  GFColors.SUCCESS, route: RatingPage()),
+//////                  buildSquareTile('Loaders', Icons.view_carousel,  GFColors.SUCCESS, route: Loaders()),
+//////                  buildSquareTile('Typography', Icons.card_giftcard,  GFColors.SUCCESS, route: TypographyPage()),
+//////                  buildSquareTile('Floating Widget', Icons.view_carousel,  GFColors.SUCCESS, route: FloatingWidgetHome()),
+//////                  buildSquareTile('Progress Bar', Icons.view_carousel,  GFColors.SUCCESS, route: ProgressBar()),
+////                ],
+////              ),
+////            ),
+//
+//
+//
+//            ],
+//          ),
+//
+//
+//        ),
       );
 
+
+  Widget SingleTile(){
+    return InkWell(
+      onTap: (){},
+      child: Container(
+        decoration: BoxDecoration(
+          color: const Color(0xFF333333),
+          borderRadius:
+          const BorderRadius.all(Radius.circular(7)),
+          boxShadow: [
+            BoxShadow(
+                color: Colors.black.withOpacity(0.61),
+                blurRadius: 6,
+                spreadRadius: 0),
+          ],
+        ),
+        child: Row(
+
+        ),
+      ),
+    );
+  }
+
   Widget buildSquareTile(title, img, route){
-
-
 
     return InkWell(
       onTap: (){
