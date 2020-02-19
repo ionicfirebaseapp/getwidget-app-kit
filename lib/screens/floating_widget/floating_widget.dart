@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getflutter/getflutter.dart';
 import 'package:flutter/cupertino.dart';
-import 'fab_floating.dart';
 import 'messenger_floating.dart';
 
 class FloatingWidgetHome extends StatefulWidget {
