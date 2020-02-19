@@ -22,8 +22,6 @@ final List<Color> gradientColor = [
   const Color(0xFFFF3636),
 ];
 
-
-
 final List<Color> gradientColors = [
   const Color(0xffFFD633),
   const Color(0xFFFF8F33),

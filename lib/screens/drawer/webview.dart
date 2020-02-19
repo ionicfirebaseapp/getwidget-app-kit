@@ -19,7 +19,10 @@ class _WebViewsState extends State<WebViews> {
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
         backgroundColor: GFColors.DARK,
-        title: Image.asset('lib/assets/icons/gflogo.png', width: 150,),
+        title: Image.asset(
+          'lib/assets/icons/gflogo.png',
+          width: 150,
+        ),
         centerTitle: true,
         leading: InkWell(
           onTap: () {

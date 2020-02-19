@@ -205,75 +205,80 @@ class _BadgesPageState extends State<BadgesPage> {
                     children: <Widget>[
                       GFIconBadge(
                           child: GFIconButton(
-                              type: GFButtonType.transparent,
-                              onPressed: () {},
+                            type: GFButtonType.transparent,
+                            onPressed: () {},
                             icon: const Icon(
                               IconData(
                                 0xe917,
                                 fontFamily: 'GFIconFonts',
                               ),
                               color: GFColors.PRIMARY,
-                            ),),
+                            ),
+                          ),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.circle,
                           )),
                       GFIconBadge(
                           child: GFIconButton(
-                              type: GFButtonType.transparent,
-                              onPressed: () {},
+                            type: GFButtonType.transparent,
+                            onPressed: () {},
                             icon: const Icon(
                               IconData(
                                 0xe91a,
                                 fontFamily: 'GFIconFonts',
                               ),
                               color: GFColors.SECONDARY,
-                            ),),
+                            ),
+                          ),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.circle,
                           )),
                       GFIconBadge(
                           child: GFIconButton(
-                              type: GFButtonType.transparent,
-                              onPressed: () {},
+                            type: GFButtonType.transparent,
+                            onPressed: () {},
                             icon: const Icon(
                               IconData(
                                 0xe91c,
                                 fontFamily: 'GFIconFonts',
                               ),
                               color: GFColors.SUCCESS,
-                            ),),
+                            ),
+                          ),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.circle,
                           )),
                       GFIconBadge(
                           child: GFIconButton(
-                              type: GFButtonType.transparent,
-                              onPressed: () {},
+                            type: GFButtonType.transparent,
+                            onPressed: () {},
                             icon: const Icon(
                               IconData(
                                 0xe924,
                                 fontFamily: 'GFIconFonts',
                               ),
                               color: GFColors.WARNING,
-                            ),),
+                            ),
+                          ),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.circle,
                           )),
                       GFIconBadge(
                         child: GFIconButton(
-                            type: GFButtonType.transparent,
-                            onPressed: () {},
+                          type: GFButtonType.transparent,
+                          onPressed: () {},
                           icon: const Icon(
                             IconData(
                               0xe908,
                               fontFamily: 'GFIconFonts',
                             ),
                             color: GFColors.DANGER,
-                          ),  ),
+                          ),
+                        ),
                         counterChild: const GFBadge(
                           text: '12',
                           shape: GFBadgeShape.circle,
@@ -285,45 +290,48 @@ class _BadgesPageState extends State<BadgesPage> {
                     children: <Widget>[
                       GFIconBadge(
                           child: GFIconButton(
-                              type: GFButtonType.transparent,
-                              onPressed: () {},
+                            type: GFButtonType.transparent,
+                            onPressed: () {},
                             icon: const Icon(
                               IconData(
                                 0xe911,
                                 fontFamily: 'GFIconFonts',
                               ),
                               color: GFColors.INFO,
-                            ), ),
+                            ),
+                          ),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.standard,
                           )),
                       GFIconBadge(
                           child: GFIconButton(
-                              type: GFButtonType.transparent,
-                              onPressed: () {},
+                            type: GFButtonType.transparent,
+                            onPressed: () {},
                             icon: const Icon(
                               IconData(
                                 0xe912,
                                 fontFamily: 'GFIconFonts',
                               ),
                               color: GFColors.LIGHT,
-                            ),  ),
+                            ),
+                          ),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.square,
                           )),
                       GFIconBadge(
                         child: GFIconButton(
-                            type: GFButtonType.transparent,
-                            onPressed: () {},
+                          type: GFButtonType.transparent,
+                          onPressed: () {},
                           icon: const Icon(
                             IconData(
                               0xe909,
                               fontFamily: 'GFIconFonts',
                             ),
                             color: GFColors.DARK,
-                          ), ),
+                          ),
+                        ),
                         counterChild: const GFBadge(
                             text: '124',
                             shape: GFBadgeShape.standard,

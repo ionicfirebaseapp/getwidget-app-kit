@@ -260,11 +260,15 @@ class _AlertPageState extends State<AlertPage> {
                             alertWidget = GFAlert(
                               alignment: Alignment.center,
                               backgroundColor: Colors.white,
-                              child: Image.asset('lib/assets/gif/success1.gif', width: 80,),
+                              child: Image.asset(
+                                'lib/assets/gif/success1.gif',
+                                width: 80,
+                              ),
                               contentChild: const Text(
-                                'You have succesfully viewed the Custom Alert... Hurrayyy!!'
-                                , textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                                'You have succesfully viewed the Custom Alert... Hurrayyy!!',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 15, fontWeight: FontWeight.bold),
                               ),
                               bottombar: GFButton(
                                 onPressed: () {
