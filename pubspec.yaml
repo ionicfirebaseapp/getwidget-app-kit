@@ -78,6 +78,8 @@ flutter:
     - lib/assets/icons/toggle.svg
     - lib/assets/icons/gflogo.svg
     - lib/assets/images/gflogo.png
+    - lib/assets/icons/loader1.svg
+    - lib/assets/icons/progress-bar1.svg
     - lib/assets/images/avatar1.png
     - lib/assets/images/avatar2.png
     - lib/assets/images/avatar3.png
@@ -111,3 +113,14 @@ flutter:
         - asset: lib/assets/fonts/gfSocialFonts.ttf
           weight: 400
 
+
+    - family: GFIconFonts
+      fonts:
+        - asset: lib/assets/fonts/gfIconFonts.ttf
+          weight: 400
+
+
+    - family: GFIcons
+      fonts:
+        - asset: lib/assets/fonts/loader.ttf
+          weight: 400

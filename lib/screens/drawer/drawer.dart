@@ -649,6 +649,10 @@ import 'package:getflutter_app/screens/button/social_buttons.dart';
 import 'package:getflutter_app/screens/button/square_buttons.dart';
 import 'package:getflutter_app/screens/button/standard_buttons.dart';
 import 'package:getflutter_app/screens/drawer/webview.dart';
+import 'package:getflutter_app/screens/floating_widget/floating_widget.dart';
+import 'package:getflutter_app/screens/loader/loaders.dart';
+import 'package:getflutter_app/screens/progress_bar/progress_bar.dart';
+import 'package:getflutter_app/screens/rating/rating.dart';
 import 'package:getflutter_app/screens/searchbar/seachbar.dart';
 import 'package:getflutter_app/screens/tabs/tab_types.dart';
 import 'package:getflutter_app/screens/accordian/accordian.dart';
@@ -1265,6 +1269,113 @@ class _DrawerPageState extends State<DrawerPage> {
                             const IconData(
                               0xe923,
                               fontFamily: 'GFFontIcons',
+                            ),
+                            color: GFColors.DARK,
+                            size: 17,
+                          ),
+                        ),
+                      ),
+
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    Loaders()),
+                          );
+                        },
+                        child: GFListTile(
+                          title: const Text(
+                            'Loader',
+                            style: TextStyle(
+                              color: Colors.black87,
+                            ),
+                          ),
+                          avatar:   Icon(
+                            const IconData(
+                              0xe901,
+                              fontFamily: 'GFIcons',
+                            ),
+                            color: GFColors.DARK,
+                            size: 17,
+                          ),
+                        ),
+                      ),
+
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    RatingPage()),
+                          );
+                        },
+                        child: GFListTile(
+                          title: const Text(
+                            'Rating',
+                            style: TextStyle(
+                              color: Colors.black87,
+                            ),
+                          ),
+                          avatar:   Icon(
+                            const IconData(
+                              0xe901,
+                              fontFamily: 'GFFontIcons2',
+                            ),
+                            color: GFColors.DARK,
+                            size: 17,
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    FloatingWidgetHome()),
+                          );
+                        },
+                        child: GFListTile(
+                          title: const Text(
+                            'Floating Widget',
+                            style: TextStyle(
+                              color: Colors.black87,
+                            ),
+                          ),
+                          avatar:   Icon(
+                            const IconData(
+                              0xe900,
+                              fontFamily: 'GFFontIcons2',
+                            ),
+                            color: GFColors.DARK,
+                            size: 17,
+                          ),
+                        ),
+                      ),
+
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    ProgressBar()),
+                          );
+                        },
+                        child: GFListTile(
+                          title: const Text(
+                            'Progress Bar',
+                            style: TextStyle(
+                              color: Colors.black87,
+                            ),
+                          ),
+                          avatar:   Icon(
+                            const IconData(
+                              0xe900,
+                              fontFamily: 'GFIcons',
                             ),
                             color: GFColors.DARK,
                             size: 17,

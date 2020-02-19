@@ -161,8 +161,8 @@ class _HomePageState extends State<HomePage> {
     },
     {
       'icon':IconData(
-        0xe902,
-        fontFamily: 'GFFontIcons',
+        0xe901,
+        fontFamily: 'GFIcons',
       ),
       'title':'Loaders',
       'route':Loaders()
@@ -226,8 +226,8 @@ physics: ScrollPhysics(),
       height: 160,
       margin: EdgeInsets.only(left: 15, bottom: 20, right: 15),
       child: buildSquareTile('Progress Bar', IconData(
-        0xe904,
-        fontFamily: 'icomoon',
+        0xe900,
+        fontFamily: 'GFIcons',
       ), ProgressBar()),
     )
   ],
@@ -1169,7 +1169,7 @@ physics: ScrollPhysics(),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-Icon(icon, color: GFColors.SUCCESS),
+Icon(icon, color: GFColors.SUCCESS, size: 30,),
 //            Icon((icon),),
             Text(title, style: TextStyle(color: GFColors.WHITE, fontSize: 20),)
           ],
