@@ -260,39 +260,22 @@ class _AlertPageState extends State<AlertPage> {
                             alertWidget = GFAlert(
                               alignment: Alignment.center,
                               backgroundColor: Colors.white,
-                              child: Image.asset('lib/assets/gif/success1.gif', width: 60,),
+                              child: Image.asset('lib/assets/gif/success1.gif', width: 80,),
                               contentChild: const Text(
                                 'You have succesfully viewed the Custom Alert... Hurrayyy!!'
                                 , textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 15),
+                                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                               ),
-                              bottombar: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: <Widget>[
-                                  GFButton(
-                                    onPressed: () {
-                                      setState(() {
-                                        alertWidget = null;
-                                        showblur = false;
-                                      });
-                                    },
-                                    color: GFColors.INFO,
-                                    text: 'OK',
-                                  ),
-                                  const SizedBox(
-                                    width: 5,
-                                  ),
-                                  GFButton(
-                                    color: GFColors.DANGER,
-                                    onPressed: () {
-                                      setState(() {
-                                        alertWidget = null;
-                                        showblur = false;
-                                      });
-                                    },
-                                    text: 'Cancel',
-                                  )
-                                ],
+                              bottombar: GFButton(
+                                onPressed: () {
+                                  setState(() {
+                                    alertWidget = null;
+                                    showblur = false;
+                                  });
+                                },
+                                fullWidthButton: true,
+                                color: GFColors.SECONDARY,
+                                text: 'OK',
                               ),
                             );
                           });

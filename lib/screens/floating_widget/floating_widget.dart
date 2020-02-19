@@ -36,10 +36,10 @@ class _FloatingWidgetHomeState extends State<FloatingWidgetHome> {
               height: 200,
               child: MessengerFloatingWidget(),
             ),
-            Container(
-              height: MediaQuery.of(context).size.height * 0.55,
-              child: FabFloatingWidget(),
-            ),
+//            Container(
+//              height: MediaQuery.of(context).size.height * 0.55,
+//              child: FabFloatingWidget(),
+//            ),
           ],
         ),
       );
