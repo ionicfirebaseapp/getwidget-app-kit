@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:getflutter/getflutter.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -316,20 +315,32 @@ class _CardPageState extends State<CardPage>
                               GFIconButton(
                                   color: const Color(0xFF3B5998),
                                   shape: GFIconButtonShape.circle,
-                                  icon: SvgPicture.asset(
-                                      'lib/assets/icons/fb.svg'),
+                                  icon: const Icon(
+                                    IconData(0xe908,
+                                        fontFamily: 'GFSocialFonts'),
+                                    color: Colors.white,
+                                    size: 20,
+                                  ),
                                   onPressed: () {}),
                               GFIconButton(
                                   color: const Color(0xFF00ACEE),
                                   shape: GFIconButtonShape.circle,
-                                  icon: SvgPicture.asset(
-                                      'lib/assets/icons/twitter.svg'),
+                                  icon: const Icon(
+                                    IconData(0xe907,
+                                        fontFamily: 'GFSocialFonts'),
+                                    color: Colors.white,
+                                    size: 20,
+                                  ),
                                   onPressed: () {}),
                               GFIconButton(
                                   color: const Color(0xFF25D366),
                                   shape: GFIconButtonShape.circle,
-                                  icon: SvgPicture.asset(
-                                      'lib/assets/icons/whatsapp.svg'),
+                                  icon: const Icon(
+                                    IconData(0xe906,
+                                        fontFamily: 'GFSocialFonts'),
+                                    color: Colors.white,
+                                    size: 20,
+                                  ),
                                   onPressed: () {}),
                             ],
                           ),
@@ -408,8 +419,12 @@ class _CardPageState extends State<CardPage>
                               GFIconButton(
                                   color: const Color(0xFF3B5998),
                                   shape: GFIconButtonShape.circle,
-                                  icon: SvgPicture.asset(
-                                      'lib/assets/icons/fb.svg'),
+                                  icon: const Icon(
+                                    IconData(0xe908,
+                                        fontFamily: 'GFSocialFonts'),
+                                    color: Colors.white,
+                                    size: 20,
+                                  ),
                                   onPressed: () {}),
                             ],
                           ),
