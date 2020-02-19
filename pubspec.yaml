@@ -11,7 +11,6 @@ dependencies:
     sdk: flutter
   getflutter:
     path: ../
-  flutter_svg: ^0.15.0
   webview_flutter: ^0.3.19+6
   cupertino_icons: ^0.1.2
 
@@ -22,25 +21,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - lib/assets/icons/buttons.svg
-    - lib/assets/icons/primary.svg
-    - lib/assets/icons/secondary.svg
-    - lib/assets/icons/success.svg
-    - lib/assets/icons/warning.svg
-    - lib/assets/icons/danger.svg
-    - lib/assets/icons/info.svg
-    - lib/assets/icons/dark.svg
-    - lib/assets/icons/link.svg
-    - lib/assets/icons/light.svg
-    - lib/assets/icons/fb.svg
-    - lib/assets/icons/twitter.svg
-    - lib/assets/icons/whatsapp.svg
-    - lib/assets/icons/google.svg
-    - lib/assets/icons/dribble.svg
-    - lib/assets/icons/youtube.svg
-    - lib/assets/icons/slack.svg
-    - lib/assets/icons/pinterest.svg
-    - lib/assets/icons/linkedin.svg
     - lib/assets/images/image.png
     - lib/assets/images/image1.png
     - lib/assets/images/red.png
@@ -57,29 +37,7 @@ flutter:
     - lib/assets/images/card3.png
     - lib/assets/images/card5.png
     - lib/assets/images/card4.png
-    - lib/assets/icons/buttons.svg
-    - lib/assets/icons/badges.svg
-    - lib/assets/icons/avatars.svg
-    - lib/assets/icons/cards.svg
-    - lib/assets/icons/carousels.svg
-    - lib/assets/icons/images.svg
-    - lib/assets/icons/rating.svg
-    - lib/assets/icons/floating_widget.svg
-    - lib/assets/icons/progress-bar.svg
-    - lib/assets/icons/tabs.svg
-    - lib/assets/icons/tiles.svg
-    - lib/assets/icons/typography.svg
-    - lib/assets/icons/accordion.svg
-    - lib/assets/icons/appbar.svg
-    - lib/assets/icons/alert.svg
-    - lib/assets/icons/toast.svg
-    - lib/assets/icons/search-bar.svg
-    - lib/assets/icons/loader.svg
-    - lib/assets/icons/toggle.svg
-    - lib/assets/icons/gflogo.svg
     - lib/assets/images/gflogo.png
-    - lib/assets/icons/loader1.svg
-    - lib/assets/icons/progress-bar1.svg
     - lib/assets/images/avatar1.png
     - lib/assets/images/avatar2.png
     - lib/assets/images/avatar3.png
