@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
    {
       'icon': IconData(
         0xe904,
-        fontFamily: 'icomoon',
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Button',
       'route': ButtonTypes()
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
    {
       'icon':IconData(
         0xe902,
-      fontFamily: 'icomoon',
+      fontFamily: 'GFFontIcons',
    ),
       'title':'Badge',
       'route':BadgesPage()
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
     {
       'icon':IconData(
         0xe905,
-      fontFamily: 'icomoon',
+      fontFamily: 'GFFontIcons',
     ),
       'title':'Cards',
       'route':CardPage()
@@ -66,15 +66,15 @@ class _HomePageState extends State<HomePage> {
     {
       'icon':IconData(
         0xe906,
-        fontFamily: 'icomoon',
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Carousel',
       'route':Carousel()
     },
     {
       'icon':IconData(
-        0xe902,
-        fontFamily: 'icomoon',
+        0xe903,
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Avatar',
       'route':Avatar()
@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
     {
       'icon':IconData(
         0xe90d,
-        fontFamily: 'icomoon',
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Images',
       'route':Images()
@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
     {
       'icon':IconData(
         0xe90e,
-        fontFamily: 'icomoon',
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Tiles',
       'route':TilesPage()
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
     {
       'icon':IconData(
         0xe91d,
-        fontFamily: 'icomoon',
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Tabs',
       'route':TabTypes()
@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
     {
       'icon':IconData(
         0xe910,
-        fontFamily: 'icomoon',
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Toggle',
       'route':Toggles()
@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
     {
       'icon':IconData(
         0xe920,
-        fontFamily: 'icomoon',
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Toast',
       'route':Toasts()
@@ -122,7 +122,7 @@ class _HomePageState extends State<HomePage> {
     {
       'icon':IconData(
         0xe901,
-        fontFamily: 'icomoon',
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Alert',
       'route':AlertPage()
@@ -130,7 +130,7 @@ class _HomePageState extends State<HomePage> {
     {
       'icon':IconData(
         0xe900,
-        fontFamily: 'icomoon',
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Accordion',
       'route':Accordion()
@@ -138,7 +138,7 @@ class _HomePageState extends State<HomePage> {
     {
       'icon':IconData(
         0xe919,
-        fontFamily: 'icomoon',
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Search Bar',
       'route':SearchbarPage()
@@ -146,15 +146,15 @@ class _HomePageState extends State<HomePage> {
     {
       'icon':IconData(
         0xe91e,
-        fontFamily: 'icomoon',
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Appbar',
       'route':AppHome()
     },
     {
       'icon':IconData(
-        0xe902,
-        fontFamily: 'icomoon',
+        0xe901,
+        fontFamily: 'GFFontIcons2',
       ),
       'title':'Rating',
       'route':RatingPage()
@@ -162,7 +162,7 @@ class _HomePageState extends State<HomePage> {
     {
       'icon':IconData(
         0xe902,
-        fontFamily: 'icomoon',
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Loaders',
       'route':Loaders()
@@ -170,15 +170,15 @@ class _HomePageState extends State<HomePage> {
     {
       'icon':IconData(
         0xe923,
-        fontFamily: 'icomoon',
+        fontFamily: 'GFFontIcons',
       ),
       'title':'Typography',
       'route':TypographyPage()
     },
     {
       'icon':IconData(
-        0xe902,
-        fontFamily: 'icomoon',
+        0xe900,
+        fontFamily: 'GFFontIcons2',
       ),
       'title':'Floating Widget',
       'route':FloatingWidgetHome()

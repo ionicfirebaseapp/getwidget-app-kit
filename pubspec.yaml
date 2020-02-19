@@ -96,8 +96,18 @@ flutter:
 
 
   fonts:
-    - family: IcoMoon
+    - family: GFFontIcons
       fonts:
-        - asset: lib/assets/fonts/icomoon.ttf
+        - asset: lib/assets/fonts/gfFontIcon.ttf
+          weight: 400
+
+    - family: GFFontIcons2
+      fonts:
+        - asset: lib/assets/fonts/gfFontIcons2.ttf
+          weight: 400
+
+    - family: GFSocialFonts
+      fonts:
+        - asset: lib/assets/fonts/gfSocialFonts.ttf
           weight: 400
 
