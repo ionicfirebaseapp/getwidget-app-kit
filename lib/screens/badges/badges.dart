@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getflutter/getflutter.dart';
 
@@ -208,10 +207,13 @@ class _BadgesPageState extends State<BadgesPage> {
                           child: GFIconButton(
                               type: GFButtonType.transparent,
                               onPressed: () {},
-                              icon: SvgPicture.asset(
-                                'lib/assets/icons/primary.svg',
-                                color: GFColors.PRIMARY,
-                              )),
+                            icon: const Icon(
+                              IconData(
+                                0xe917,
+                                fontFamily: 'GFIconFonts',
+                              ),
+                              color: GFColors.PRIMARY,
+                            ),),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.circle,
@@ -220,10 +222,13 @@ class _BadgesPageState extends State<BadgesPage> {
                           child: GFIconButton(
                               type: GFButtonType.transparent,
                               onPressed: () {},
-                              icon: SvgPicture.asset(
-                                'lib/assets/icons/secondary.svg',
-                                color: GFColors.SECONDARY,
-                              )),
+                            icon: const Icon(
+                              IconData(
+                                0xe91a,
+                                fontFamily: 'GFIconFonts',
+                              ),
+                              color: GFColors.SECONDARY,
+                            ),),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.circle,
@@ -232,10 +237,13 @@ class _BadgesPageState extends State<BadgesPage> {
                           child: GFIconButton(
                               type: GFButtonType.transparent,
                               onPressed: () {},
-                              icon: SvgPicture.asset(
-                                'lib/assets/icons/success.svg',
-                                color: GFColors.SUCCESS,
-                              )),
+                            icon: const Icon(
+                              IconData(
+                                0xe91c,
+                                fontFamily: 'GFIconFonts',
+                              ),
+                              color: GFColors.SUCCESS,
+                            ),),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.circle,
@@ -244,10 +252,13 @@ class _BadgesPageState extends State<BadgesPage> {
                           child: GFIconButton(
                               type: GFButtonType.transparent,
                               onPressed: () {},
-                              icon: SvgPicture.asset(
-                                'lib/assets/icons/warning.svg',
-                                color: GFColors.WARNING,
-                              )),
+                            icon: const Icon(
+                              IconData(
+                                0xe924,
+                                fontFamily: 'GFIconFonts',
+                              ),
+                              color: GFColors.WARNING,
+                            ),),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.circle,
@@ -256,10 +267,13 @@ class _BadgesPageState extends State<BadgesPage> {
                         child: GFIconButton(
                             type: GFButtonType.transparent,
                             onPressed: () {},
-                            icon: SvgPicture.asset(
-                              'lib/assets/icons/danger.svg',
-                              color: GFColors.DANGER,
-                            )),
+                          icon: const Icon(
+                            IconData(
+                              0xe908,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.DANGER,
+                          ),  ),
                         counterChild: const GFBadge(
                           text: '12',
                           shape: GFBadgeShape.circle,
@@ -273,10 +287,13 @@ class _BadgesPageState extends State<BadgesPage> {
                           child: GFIconButton(
                               type: GFButtonType.transparent,
                               onPressed: () {},
-                              icon: SvgPicture.asset(
-                                'lib/assets/icons/info.svg',
-                                color: GFColors.INFO,
-                              )),
+                            icon: const Icon(
+                              IconData(
+                                0xe911,
+                                fontFamily: 'GFIconFonts',
+                              ),
+                              color: GFColors.INFO,
+                            ), ),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.standard,
@@ -285,10 +302,13 @@ class _BadgesPageState extends State<BadgesPage> {
                           child: GFIconButton(
                               type: GFButtonType.transparent,
                               onPressed: () {},
-                              icon: SvgPicture.asset(
-                                'lib/assets/icons/light.svg',
-                                color: GFColors.LIGHT,
-                              )),
+                            icon: const Icon(
+                              IconData(
+                                0xe912,
+                                fontFamily: 'GFIconFonts',
+                              ),
+                              color: GFColors.LIGHT,
+                            ),  ),
                           counterChild: const GFBadge(
                             text: '12',
                             shape: GFBadgeShape.square,
@@ -297,10 +317,13 @@ class _BadgesPageState extends State<BadgesPage> {
                         child: GFIconButton(
                             type: GFButtonType.transparent,
                             onPressed: () {},
-                            icon: SvgPicture.asset(
-                              'lib/assets/icons/dark.svg',
-                              color: GFColors.DARK,
-                            )),
+                          icon: const Icon(
+                            IconData(
+                              0xe909,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.DARK,
+                          ), ),
                         counterChild: const GFBadge(
                             text: '124',
                             shape: GFBadgeShape.standard,

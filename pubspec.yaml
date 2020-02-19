@@ -95,6 +95,7 @@ flutter:
     - lib/assets/gif/loader.gif
     - lib/assets/gif/loader1.gif
     - lib/assets/gif/success1.gif
+    - lib/assets/icons/gflogo.png
 
 
   fonts:
