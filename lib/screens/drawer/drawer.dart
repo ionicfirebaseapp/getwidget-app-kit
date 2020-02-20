@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:getflutter/getflutter.dart';
 import 'package:getflutter_app/screens/appbar/app_home.dart';
 import 'package:getflutter_app/screens/button/icon_buttons.dart';
@@ -10,6 +9,10 @@ import 'package:getflutter_app/screens/button/social_buttons.dart';
 import 'package:getflutter_app/screens/button/square_buttons.dart';
 import 'package:getflutter_app/screens/button/standard_buttons.dart';
 import 'package:getflutter_app/screens/drawer/webview.dart';
+import 'package:getflutter_app/screens/floating_widget/floating_widget.dart';
+import 'package:getflutter_app/screens/loader/loaders.dart';
+import 'package:getflutter_app/screens/progress_bar/progress_bar.dart';
+import 'package:getflutter_app/screens/rating/rating.dart';
 import 'package:getflutter_app/screens/searchbar/seachbar.dart';
 import 'package:getflutter_app/screens/tabs/tab_types.dart';
 import 'package:getflutter_app/screens/accordian/accordian.dart';
@@ -122,11 +125,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                 left: 7, top: 10, bottom: 10, right: 0),
                             expandedTitlebackgroundColor: Colors.white,
                             child: Row(children: [
-                              SvgPicture.asset(
-                                'lib/assets/icons/buttons.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              Icon(
+                                const IconData(
+                                  0xe904,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                               const Padding(
                                 padding: EdgeInsets.only(left: 9),
@@ -270,11 +275,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/badges.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe902,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),
@@ -294,11 +301,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/avatars.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe903,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),
@@ -318,11 +327,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/images.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe90d,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),
@@ -342,11 +353,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/cards.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe905,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),
@@ -366,11 +379,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/carousels.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe906,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),
@@ -390,11 +405,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/tiles.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe90e,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),
@@ -414,11 +431,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/tabs.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe91d,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),
@@ -438,11 +457,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/toggle.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe910,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),
@@ -462,11 +483,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/toast.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe920,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),
@@ -486,11 +509,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/alert.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe901,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),
@@ -510,11 +535,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/accordion.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe900,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),
@@ -534,11 +561,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/search-bar.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe919,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),
@@ -558,11 +587,13 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/appbar.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe91e,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),
@@ -582,11 +613,117 @@ class _DrawerPageState extends State<DrawerPage> {
                                   color: Colors.black87,
                                 ),
                               ),
-                              avatar: SvgPicture.asset(
-                                'lib/assets/icons/typography.svg',
-                                height: 17,
-                                width: 17,
-                                color: Colors.black87,
+                              avatar: Icon(
+                                const IconData(
+                                  0xe923,
+                                  fontFamily: 'GFFontIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Loaders()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Loader',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe901,
+                                  fontFamily: 'GFIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        RatingPage()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Rating',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe901,
+                                  fontFamily: 'GFFontIcons2',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        FloatingWidgetHome()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Floating Widget',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe900,
+                                  fontFamily: 'GFFontIcons2',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        ProgressBar()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Progress Bar',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe900,
+                                  fontFamily: 'GFIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
                               ),
                             ),
                           ),

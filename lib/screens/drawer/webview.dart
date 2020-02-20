@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:getflutter/colors/gf_color.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -20,7 +19,10 @@ class _WebViewsState extends State<WebViews> {
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
         backgroundColor: GFColors.DARK,
-        title: SvgPicture.asset('lib/assets/icons/gflogo.svg'),
+        title: Image.asset(
+          'lib/assets/icons/gflogo.png',
+          width: 150,
+        ),
         centerTitle: true,
         leading: InkWell(
           onTap: () {

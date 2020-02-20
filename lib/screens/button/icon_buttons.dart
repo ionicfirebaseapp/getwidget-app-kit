@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:getflutter/getflutter.dart';
 
 class IconButtons extends StatefulWidget {
@@ -52,10 +51,16 @@ class _IconButtonsState extends State<IconButtons> {
                     children: <Widget>[
                       Expanded(
                         child: GFButton(
-                            onPressed: () {},
-                            child: const Text('Primary'),
-                            icon: SvgPicture.asset(
-                                'lib/assets/icons/primary.svg')),
+                          onPressed: () {},
+                          child: const Text('Primary'),
+                          icon: const Icon(
+                            IconData(
+                              0xe917,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
+                        ),
                       ),
                       const SizedBox(
                         width: 6,
@@ -64,8 +69,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Second'),
-                          icon: SvgPicture.asset(
-                              'lib/assets/icons/secondary.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe91a,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.SECONDARY,
                         ),
                       ),
@@ -76,8 +86,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Success'),
-                          icon:
-                              SvgPicture.asset('lib/assets/icons/success.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe91c,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.SUCCESS,
                         ),
                       )
@@ -92,8 +107,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Warning'),
-                          icon:
-                              SvgPicture.asset('lib/assets/icons/warning.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe924,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.WARNING,
                         ),
                       ),
@@ -104,7 +124,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Danger'),
-                          icon: SvgPicture.asset('lib/assets/icons/danger.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe908,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.DANGER,
                         ),
                       ),
@@ -115,7 +141,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Info'),
-                          icon: SvgPicture.asset('lib/assets/icons/info.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe911,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.INFO,
                         ),
                       )
@@ -131,7 +163,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Light'),
-                          icon: SvgPicture.asset('lib/assets/icons/light.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe912,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           type: GFButtonType.solid,
                           color: GFColors.LIGHT,
                         ),
@@ -146,7 +184,13 @@ class _IconButtonsState extends State<IconButtons> {
                             'Dark',
                             style: TextStyle(color: GFColors.WHITE),
                           ),
-                          icon: SvgPicture.asset('lib/assets/icons/dark.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe909,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.DARK,
                         ),
                       ),
@@ -157,7 +201,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Link'),
-                          icon: SvgPicture.asset('lib/assets/icons/link.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe913,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: GFColors.WHITE,
+                          ),
                           color: GFColors.TRANSPARENT,
                         ),
                       ),
@@ -194,9 +244,12 @@ class _IconButtonsState extends State<IconButtons> {
                           onPressed: () {},
                           type: GFButtonType.outline,
                           child: const Text('Primary'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/primary.svg',
-                            color: GFColors.PRIMARY,
+                          icon: const Icon(
+                            IconData(
+                              0xe917,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                         ),
                       ),
@@ -207,9 +260,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Second'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/secondary.svg',
-                            color: GFColors.SECONDARY,
+                          icon: const Icon(
+                            IconData(
+                              0xe91a,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.SECONDARY,
                           type: GFButtonType.outline,
@@ -222,9 +278,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Success'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/success.svg',
-                            color: GFColors.SUCCESS,
+                          icon: const Icon(
+                            IconData(
+                              0xe91c,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.SUCCESS,
                           type: GFButtonType.outline,
@@ -241,9 +300,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Warning'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/warning.svg',
-                            color: GFColors.WARNING,
+                          icon: const Icon(
+                            IconData(
+                              0xe924,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.WARNING,
                           type: GFButtonType.outline,
@@ -256,9 +318,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Danger'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/danger.svg',
-                            color: GFColors.DANGER,
+                          icon: const Icon(
+                            IconData(
+                              0xe908,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.DANGER,
                           type: GFButtonType.outline,
@@ -271,9 +336,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Info'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/info.svg',
-                            color: GFColors.INFO,
+                          icon: const Icon(
+                            IconData(
+                              0xe911,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.INFO,
                           type: GFButtonType.outline,
@@ -290,9 +358,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Light'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/light.svg',
-                            color: GFColors.LIGHT,
+                          icon: const Icon(
+                            IconData(
+                              0xe912,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           type: GFButtonType.outline,
                           color: GFColors.LIGHT,
@@ -305,9 +376,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Dark'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/dark.svg',
-                            color: GFColors.DARK,
+                          icon: const Icon(
+                            IconData(
+                              0xe909,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.DARK,
                           type: GFButtonType.outline,
@@ -320,9 +394,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Link'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/link.svg',
-                            color: GFColors.ALT,
+                          icon: const Icon(
+                            IconData(
+                              0xe913,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.TRANSPARENT,
                           type: GFButtonType.outline,
@@ -358,13 +435,17 @@ class _IconButtonsState extends State<IconButtons> {
                     children: <Widget>[
                       Expanded(
                         child: GFButton(
-                            onPressed: () {},
-                            type: GFButtonType.outline2x,
-                            child: const Text('Primary'),
-                            icon: SvgPicture.asset(
-                              'lib/assets/icons/primary.svg',
-                              color: GFColors.PRIMARY,
-                            )),
+                          onPressed: () {},
+                          type: GFButtonType.outline2x,
+                          child: const Text('Primary'),
+                          icon: const Icon(
+                            IconData(
+                              0xe917,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
+                          ),
+                        ),
                       ),
                       const SizedBox(
                         width: 6,
@@ -373,9 +454,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Second'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/secondary.svg',
-                            color: GFColors.SECONDARY,
+                          icon: const Icon(
+                            IconData(
+                              0xe91a,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.SECONDARY,
                           type: GFButtonType.outline2x,
@@ -388,9 +472,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Success'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/success.svg',
-                            color: GFColors.SUCCESS,
+                          icon: const Icon(
+                            IconData(
+                              0xe91c,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.SUCCESS,
                           type: GFButtonType.outline2x,
@@ -408,9 +495,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Warning'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/warning.svg',
-                            color: GFColors.WARNING,
+                          icon: const Icon(
+                            IconData(
+                              0xe924,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.WARNING,
                           type: GFButtonType.outline2x,
@@ -423,9 +513,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Danger'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/danger.svg',
-                            color: GFColors.DANGER,
+                          icon: const Icon(
+                            IconData(
+                              0xe908,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.DANGER,
                           type: GFButtonType.outline2x,
@@ -438,9 +531,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Info'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/info.svg',
-                            color: GFColors.INFO,
+                          icon: const Icon(
+                            IconData(
+                              0xe911,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.INFO,
                           type: GFButtonType.outline2x,
@@ -458,9 +554,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Light'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/light.svg',
-                            color: GFColors.LIGHT,
+                          icon: const Icon(
+                            IconData(
+                              0xe912,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           type: GFButtonType.outline2x,
                           color: GFColors.LIGHT,
@@ -473,9 +572,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Dark'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/dark.svg',
-                            color: GFColors.DARK,
+                          icon: const Icon(
+                            IconData(
+                              0xe909,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.DARK,
                           type: GFButtonType.outline2x,
@@ -488,9 +590,12 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Link'),
-                          icon: SvgPicture.asset(
-                            'lib/assets/icons/link.svg',
-                            color: GFColors.ALT,
+                          icon: const Icon(
+                            IconData(
+                              0xe913,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
                           ),
                           color: GFColors.TRANSPARENT,
                         ),
@@ -525,11 +630,17 @@ class _IconButtonsState extends State<IconButtons> {
                     children: <Widget>[
                       Expanded(
                         child: GFButton(
-                            onPressed: () {},
-                            shape: GFButtonShape.square,
-                            child: const Text('Primary'),
-                            icon: SvgPicture.asset(
-                                'lib/assets/icons/primary.svg')),
+                          onPressed: () {},
+                          shape: GFButtonShape.square,
+                          child: const Text('Primary'),
+                          icon: const Icon(
+                            IconData(
+                              0xe917,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
+                        ),
                       ),
                       const SizedBox(
                         width: 6,
@@ -539,8 +650,13 @@ class _IconButtonsState extends State<IconButtons> {
                           onPressed: () {},
                           shape: GFButtonShape.square,
                           child: const Text('Second'),
-                          icon: SvgPicture.asset(
-                              'lib/assets/icons/secondary.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe91a,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.SECONDARY,
                         ),
                       ),
@@ -552,8 +668,13 @@ class _IconButtonsState extends State<IconButtons> {
                           shape: GFButtonShape.square,
                           onPressed: () {},
                           child: const Text('Success'),
-                          icon:
-                              SvgPicture.asset('lib/assets/icons/success.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe91c,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.SUCCESS,
                         ),
                       )
@@ -570,8 +691,13 @@ class _IconButtonsState extends State<IconButtons> {
                           onPressed: () {},
                           shape: GFButtonShape.square,
                           child: const Text('Warning'),
-                          icon:
-                              SvgPicture.asset('lib/assets/icons/warning.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe924,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.WARNING,
                         ),
                       ),
@@ -583,7 +709,13 @@ class _IconButtonsState extends State<IconButtons> {
                           onPressed: () {},
                           shape: GFButtonShape.square,
                           child: const Text('Danger'),
-                          icon: SvgPicture.asset('lib/assets/icons/danger.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe908,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.DANGER,
                         ),
                       ),
@@ -595,7 +727,13 @@ class _IconButtonsState extends State<IconButtons> {
                           onPressed: () {},
                           shape: GFButtonShape.square,
                           child: const Text('Info'),
-                          icon: SvgPicture.asset('lib/assets/icons/info.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe911,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.INFO,
                         ),
                       )
@@ -611,7 +749,13 @@ class _IconButtonsState extends State<IconButtons> {
                           onPressed: () {},
                           shape: GFButtonShape.square,
                           child: const Text('Light'),
-                          icon: SvgPicture.asset('lib/assets/icons/light.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe912,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           type: GFButtonType.solid,
                           color: GFColors.LIGHT,
                         ),
@@ -627,7 +771,13 @@ class _IconButtonsState extends State<IconButtons> {
                             'Dark',
                             style: TextStyle(color: GFColors.WHITE),
                           ),
-                          icon: SvgPicture.asset('lib/assets/icons/dark.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe909,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.DARK,
                         ),
                       ),
@@ -639,7 +789,13 @@ class _IconButtonsState extends State<IconButtons> {
                           onPressed: () {},
                           shape: GFButtonShape.square,
                           child: const Text('Link'),
-                          icon: SvgPicture.asset('lib/assets/icons/link.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe913,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: GFColors.WHITE,
+                          ),
                           color: GFColors.TRANSPARENT,
                         ),
                       )
@@ -672,11 +828,17 @@ class _IconButtonsState extends State<IconButtons> {
                     children: <Widget>[
                       Expanded(
                         child: GFButton(
-                            onPressed: () {},
-                            shape: GFButtonShape.pills,
-                            child: const Text('Primary'),
-                            icon: SvgPicture.asset(
-                                'lib/assets/icons/primary.svg')),
+                          onPressed: () {},
+                          shape: GFButtonShape.pills,
+                          child: const Text('Primary'),
+                          icon: const Icon(
+                            IconData(
+                              0xe917,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
+                        ),
                       ),
                       const SizedBox(
                         width: 6,
@@ -686,8 +848,13 @@ class _IconButtonsState extends State<IconButtons> {
                           onPressed: () {},
                           shape: GFButtonShape.pills,
                           child: const Text('Second'),
-                          icon: SvgPicture.asset(
-                              'lib/assets/icons/secondary.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe91a,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.SECONDARY,
                         ),
                       ),
@@ -699,8 +866,13 @@ class _IconButtonsState extends State<IconButtons> {
                           shape: GFButtonShape.pills,
                           onPressed: () {},
                           child: const Text('Success'),
-                          icon:
-                              SvgPicture.asset('lib/assets/icons/success.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe91c,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.SUCCESS,
                         ),
                       )
@@ -717,8 +889,13 @@ class _IconButtonsState extends State<IconButtons> {
                           onPressed: () {},
                           shape: GFButtonShape.pills,
                           child: const Text('Warning'),
-                          icon:
-                              SvgPicture.asset('lib/assets/icons/warning.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe924,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.WARNING,
                         ),
                       ),
@@ -730,7 +907,13 @@ class _IconButtonsState extends State<IconButtons> {
                           onPressed: () {},
                           shape: GFButtonShape.pills,
                           child: const Text('Danger'),
-                          icon: SvgPicture.asset('lib/assets/icons/danger.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe908,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.DANGER,
                         ),
                       ),
@@ -742,7 +925,13 @@ class _IconButtonsState extends State<IconButtons> {
                           onPressed: () {},
                           shape: GFButtonShape.pills,
                           child: const Text('Info'),
-                          icon: SvgPicture.asset('lib/assets/icons/info.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe911,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.INFO,
                         ),
                       )
@@ -759,7 +948,13 @@ class _IconButtonsState extends State<IconButtons> {
                           onPressed: () {},
                           shape: GFButtonShape.pills,
                           child: const Text('Light'),
-                          icon: SvgPicture.asset('lib/assets/icons/light.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe912,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           type: GFButtonType.solid,
                           color: GFColors.LIGHT,
                         ),
@@ -775,7 +970,13 @@ class _IconButtonsState extends State<IconButtons> {
                             'Dark',
                             style: TextStyle(color: GFColors.WHITE),
                           ),
-                          icon: SvgPicture.asset('lib/assets/icons/dark.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe909,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.DARK,
                         ),
                       ),
@@ -787,7 +988,13 @@ class _IconButtonsState extends State<IconButtons> {
                           onPressed: () {},
                           shape: GFButtonShape.pills,
                           child: const Text('Link'),
-                          icon: SvgPicture.asset('lib/assets/icons/link.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe913,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: GFColors.WHITE,
+                          ),
                           color: GFColors.TRANSPARENT,
                         ),
                       )
@@ -823,8 +1030,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Primary'),
-                          icon:
-                              SvgPicture.asset('lib/assets/icons/primary.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe917,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           buttonBoxShadow: true,
                         ),
                       ),
@@ -835,8 +1047,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Second'),
-                          icon: SvgPicture.asset(
-                              'lib/assets/icons/secondary.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe91a,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.SECONDARY,
                           buttonBoxShadow: true,
                         ),
@@ -848,8 +1065,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Success'),
-                          icon:
-                              SvgPicture.asset('lib/assets/icons/success.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe91c,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.SUCCESS,
                           buttonBoxShadow: true,
                         ),
@@ -866,8 +1088,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Warning'),
-                          icon:
-                              SvgPicture.asset('lib/assets/icons/warning.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe924,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.WARNING,
                           buttonBoxShadow: true,
                         ),
@@ -879,7 +1106,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Danger'),
-                          icon: SvgPicture.asset('lib/assets/icons/danger.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe908,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.DANGER,
                           buttonBoxShadow: true,
                         ),
@@ -891,7 +1124,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Info'),
-                          icon: SvgPicture.asset('lib/assets/icons/info.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe911,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.INFO,
                           buttonBoxShadow: true,
                         ),
@@ -910,7 +1149,13 @@ class _IconButtonsState extends State<IconButtons> {
                           child: const Text(
                             'Light',
                           ),
-                          icon: SvgPicture.asset('lib/assets/icons/light.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe912,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           type: GFButtonType.solid,
                           color: GFColors.LIGHT,
                           buttonBoxShadow: true,
@@ -926,7 +1171,13 @@ class _IconButtonsState extends State<IconButtons> {
                             'Dark',
                             style: TextStyle(color: GFColors.WHITE),
                           ),
-                          icon: SvgPicture.asset('lib/assets/icons/dark.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe909,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            color: GFColors.WHITE,
+                          ),
                           color: GFColors.DARK,
                           buttonBoxShadow: true,
                         ),
@@ -938,7 +1189,13 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           child: const Text('Link'),
-                          icon: SvgPicture.asset('lib/assets/icons/link.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe913,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: GFColors.WHITE,
+                          ),
                           color: GFColors.TRANSPARENT,
                         ),
                       )
@@ -976,7 +1233,13 @@ class _IconButtonsState extends State<IconButtons> {
                             style: TextStyle(color: GFColors.WHITE)),
                         color: GFColors.PRIMARY,
                         size: GFSize.LARGE,
-                        icon: SvgPicture.asset('lib/assets/icons/primary.svg'),
+                        icon: const Icon(
+                          IconData(
+                            0xe91a,
+                            fontFamily: 'GFIconFonts',
+                          ),
+                          color: GFColors.WHITE,
+                        ),
                       ),
                       GFButton(
                         onPressed: () {},
@@ -984,8 +1247,13 @@ class _IconButtonsState extends State<IconButtons> {
                             style: TextStyle(color: GFColors.WHITE)),
                         color: GFColors.PRIMARY,
                         size: GFSize.MEDIUM,
-                        icon:
-                            SvgPicture.asset('lib/assets/icons/secondary.svg'),
+                        icon: const Icon(
+                          IconData(
+                            0xe91c,
+                            fontFamily: 'GFIconFonts',
+                          ),
+                          color: GFColors.WHITE,
+                        ),
                       ),
                       GFButton(
                         onPressed: () {},
@@ -993,7 +1261,13 @@ class _IconButtonsState extends State<IconButtons> {
                             style: TextStyle(color: GFColors.WHITE)),
                         color: GFColors.PRIMARY,
                         size: GFSize.SMALL,
-                        icon: SvgPicture.asset('lib/assets/icons/info.svg'),
+                        icon: const Icon(
+                          IconData(
+                            0xe909,
+                            fontFamily: 'GFIconFonts',
+                          ),
+                          color: GFColors.WHITE,
+                        ),
                       ),
                     ],
                   ),
@@ -1025,7 +1299,13 @@ class _IconButtonsState extends State<IconButtons> {
                     blockButton: true,
                     child: const Text('Large'),
                     size: GFSize.LARGE,
-                    icon: SvgPicture.asset('lib/assets/icons/primary.svg'),
+                    icon: const Icon(
+                      IconData(
+                        0xe91a,
+                        fontFamily: 'GFIconFonts',
+                      ),
+                      color: GFColors.WHITE,
+                    ),
                   ),
                   const SizedBox(
                     height: 10,
@@ -1035,7 +1315,13 @@ class _IconButtonsState extends State<IconButtons> {
                     blockButton: true,
                     child: const Text('Normal'),
                     size: GFSize.MEDIUM,
-                    icon: SvgPicture.asset('lib/assets/icons/secondary.svg'),
+                    icon: const Icon(
+                      IconData(
+                        0xe91c,
+                        fontFamily: 'GFIconFonts',
+                      ),
+                      color: GFColors.WHITE,
+                    ),
                   ),
                   const SizedBox(
                     height: 10,
@@ -1045,7 +1331,13 @@ class _IconButtonsState extends State<IconButtons> {
                     blockButton: true,
                     child: const Text('Small'),
                     size: GFSize.SMALL,
-                    icon: SvgPicture.asset('lib/assets/icons/success.svg'),
+                    icon: const Icon(
+                      IconData(
+                        0xe909,
+                        fontFamily: 'GFIconFonts',
+                      ),
+                      color: GFColors.WHITE,
+                    ),
                   ),
                   const SizedBox(
                     height: 10,
@@ -1074,23 +1366,43 @@ class _IconButtonsState extends State<IconButtons> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       GFIconButton(
-                          icon:
-                              SvgPicture.asset('lib/assets/icons/primary.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe917,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
+                          ),
                           onPressed: () {}),
                       GFIconButton(
                           color: GFColors.SECONDARY,
-                          icon: SvgPicture.asset(
-                              'lib/assets/icons/secondary.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe91a,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
+                          ),
                           onPressed: () {}),
                       GFIconButton(
                           color: GFColors.SUCCESS,
-                          icon:
-                              SvgPicture.asset('lib/assets/icons/success.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe91c,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
+                          ),
                           onPressed: () {}),
                       GFIconButton(
                           color: GFColors.WARNING,
-                          icon:
-                              SvgPicture.asset('lib/assets/icons/warning.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe924,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
+                          ),
                           onPressed: () {}),
                     ],
                   ),
@@ -1102,19 +1414,43 @@ class _IconButtonsState extends State<IconButtons> {
                     children: <Widget>[
                       GFIconButton(
                           color: GFColors.DANGER,
-                          icon: SvgPicture.asset('lib/assets/icons/danger.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe908,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
+                          ),
                           onPressed: () {}),
                       GFIconButton(
                           color: GFColors.INFO,
-                          icon: SvgPicture.asset('lib/assets/icons/info.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe911,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
+                          ),
                           onPressed: () {}),
                       GFIconButton(
                           color: GFColors.LIGHT,
-                          icon: SvgPicture.asset('lib/assets/icons/light.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe912,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
+                          ),
                           onPressed: () {}),
                       GFIconButton(
                           color: GFColors.DARK,
-                          icon: SvgPicture.asset('lib/assets/icons/dark.svg'),
+                          icon: const Icon(
+                            IconData(
+                              0xe909,
+                              fontFamily: 'GFIconFonts',
+                            ),
+                            // color: getGFColor(GFColor.white),
+                          ),
                           onPressed: () {}),
                     ],
                   ),

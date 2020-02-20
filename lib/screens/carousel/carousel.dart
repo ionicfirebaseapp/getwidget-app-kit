@@ -22,17 +22,6 @@ final List<Color> gradientColor = [
   const Color(0xFFFF3636),
 ];
 
-List<Gradient> gcolors = [
-  const LinearGradient(colors: [
-    Color(0xffF0417C),
-    Color(0xFFFF3636),
-  ]),
-  const LinearGradient(colors: [
-    Color(0xffFFD633),
-    Color(0xFFFF8F33),
-  ])
-];
-
 final List<Color> gradientColors = [
   const Color(0xffFFD633),
   const Color(0xFFFF8F33),
@@ -140,7 +129,7 @@ class _CarouselState extends State<Carousel>
                           aspectRatio: 2,
                           items: gradientColor
                               .map(
-                                (u) => GFCard(
+                                (url) => GFCard(
                                   gradient: LinearGradient(
                                       begin: FractionalOffset.topLeft,
                                       end: FractionalOffset.bottomRight,
@@ -182,9 +171,6 @@ class _CarouselState extends State<Carousel>
                                 ),
                               )
                               .toList(),
-                          onPageChanged: (index) {
-                            setState(() {});
-                          },
                         ),
                         const Padding(
                           padding:
@@ -299,9 +285,6 @@ class _CarouselState extends State<Carousel>
                                 ),
                               )
                               .toList(),
-                          onPageChanged: (index) {
-                            setState(() {});
-                          },
                         ),
                         const SizedBox(
                           height: 20,
