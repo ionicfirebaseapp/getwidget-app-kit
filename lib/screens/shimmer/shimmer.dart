@@ -95,11 +95,12 @@ class _ShimmerPageState extends State<ShimmerPage> {
         ),
         GFShimmer(
           child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Icon(Icons.keyboard_arrow_right),
             const Text(
-              'Swipe to Unlock',
+              'Hurray!! Order Placed',
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
-            )
+            ),
+            const SizedBox(width: 5),
+            Icon(Icons.sentiment_very_satisfied),
           ]),
           direction: GFShimmerDirection.rightToLeft,
           showGradient: true,
@@ -107,12 +108,12 @@ class _ShimmerPageState extends State<ShimmerPage> {
             begin: Alignment.bottomRight,
             end: Alignment.centerLeft,
             stops: const <double>[0, 0.3, 0.6, 0.9, 1],
-            colors: [
+            colors: const [
               GFColors.DANGER,
               GFColors.PRIMARY,
               GFColors.WARNING,
               GFColors.SECONDARY,
-              GFColors.INFO
+              Colors.red,
             ],
           ),
         ),

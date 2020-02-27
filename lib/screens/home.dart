@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getflutter/getflutter.dart';
-import 'package:getflutter_app/screens/accordian/accordian.dart';
-import 'package:getflutter_app/screens/alert/alert.dart';
-import 'package:getflutter_app/screens/appbar/app_home.dart';
-import 'package:getflutter_app/screens/avatar/avatars.dart';
-import 'package:getflutter_app/screens/badges/badges.dart';
-import 'package:getflutter_app/screens/button/button_types.dart';
-import 'package:getflutter_app/screens/cards/cards.dart';
-import 'package:getflutter_app/screens/carousel/carousel.dart';
-import 'package:getflutter_app/screens/drawer/drawer.dart';
-import 'package:getflutter_app/screens/floating_widget/floating_widget.dart';
-import 'package:getflutter_app/screens/images/images.dart';
-import 'package:getflutter_app/screens/loader/loaders.dart';
-import 'package:getflutter_app/screens/rating/rating.dart';
-import 'package:getflutter_app/screens/searchbar/seachbar.dart';
-import 'package:getflutter_app/screens/tabs/tab_types.dart';
-import 'package:getflutter_app/screens/tiles/tiles_page.dart';
-import 'package:getflutter_app/screens/toast/toasts.dart';
-import 'package:getflutter_app/screens/toggle/toggles.dart';
-import 'package:getflutter_app/screens/typography/typography.dart';
+import '../screens/accordian/accordian.dart';
+import '../screens/alert/alert.dart';
+import '../screens/appbar/app_home.dart';
+import '../screens/avatar/avatars.dart';
+import '../screens/badges/badges.dart';
+import '../screens/button/button_types.dart';
+import '../screens/cards/cards.dart';
+import '../screens/carousel/carousel.dart';
+import '../screens/drawer/drawer.dart';
+import '../screens/floating_widget/floating_widget.dart';
+import '../screens/images/images.dart';
+import '../screens/loader/loaders.dart';
 import '../screens/progress_bar/progress_bar.dart';
+import '../screens/rating/rating.dart';
+import '../screens/searchbar/seachbar.dart';
 import '../screens/shimmer/shimmer.dart';
+import '../screens/tabs/tab_types.dart';
+import '../screens/tiles/tiles_page.dart';
+import '../screens/toast/toasts.dart';
+import '../screens/toggle/toggles.dart';
+import '../screens/typography/typography.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -272,7 +272,7 @@ class _HomePageState extends State<HomePage> {
 //            Icon((icon),),
               Text(
                 title,
-                style: TextStyle(color: GFColors.WHITE, fontSize: 20),
+                style: const TextStyle(color: GFColors.WHITE, fontSize: 20),
               )
             ],
           ),
