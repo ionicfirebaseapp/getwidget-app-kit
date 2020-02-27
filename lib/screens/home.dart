@@ -21,6 +21,7 @@ import 'package:getflutter_app/screens/toast/toasts.dart';
 import 'package:getflutter_app/screens/toggle/toggles.dart';
 import 'package:getflutter_app/screens/typography/typography.dart';
 import '../screens/progress_bar/progress_bar.dart';
+import '../screens/shimmer/shimmer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -172,6 +173,22 @@ class _HomePageState extends State<HomePage> {
       ),
       'title': 'Floating Widget',
       'route': FloatingWidgetHome()
+    },
+    {
+      'icon': const IconData(
+        0xe900,
+        fontFamily: 'GFIcons',
+      ),
+      'title': 'Progress Bar',
+      'route': ProgressBar()
+    },
+    {
+      'icon': const IconData(
+        0xe900,
+        fontFamily: 'GFFontIcons2',
+      ),
+      'title': 'Shimmer',
+      'route': ShimmerPage()
     }
   ];
 
@@ -211,17 +228,17 @@ class _HomePageState extends State<HomePage> {
                               gfComponents[index]['icon'],
                               gfComponents[index]['route']))),
             ),
-            Container(
-              height: 160,
-              margin: const EdgeInsets.only(left: 15, bottom: 20, right: 15),
-              child: buildSquareTile(
-                  'Progress Bar',
-                  const IconData(
-                    0xe900,
-                    fontFamily: 'GFIcons',
-                  ),
-                  ProgressBar()),
-            )
+            // Container(
+            //   height: 160,
+            //   margin: const EdgeInsets.only(left: 15, bottom: 20, right: 15),
+            //   child: buildSquareTile(
+            //       'Progress Bar',
+            //       const IconData(
+            //         0xe900,
+            //         fontFamily: 'GFIcons',
+            //       ),
+            //       ProgressBar()),
+            // )
           ],
         ),
       );
