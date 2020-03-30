@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:getflutter/colors/gf_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getflutter/getflutter.dart';
+import 'dart:async';
 
 class Toasts extends StatefulWidget {
   @override
@@ -10,6 +11,19 @@ class Toasts extends StatefulWidget {
 
 class _ToastsState extends State<Toasts> {
   bool showFloatingToast = false;
+  Timer autoTimer;
+  bool showblurness = true;
+  Duration autoTimerDuration= Duration(milliseconds:400);
+
+//  @override
+//  initState(){
+//    autoTimer = Timer(autoTimerDuration, (){
+//      setState((){
+//        showblurness = true;
+//        autoTimer= Timer()
+//      });
+//    });
+//  }
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -219,5 +233,111 @@ class _ToastsState extends State<Toasts> {
             ],
           ),
         ),
+
+//
+//  body: GFFloatingWidget(
+//    showblurness: showblurness,
+//    blurnessColor: Colors.black54,
+//    child: GFToast(
+//      text: 'Hi Hello',
+//         autoDismissDuration: autoTimerDuration,
+////       autoDismissDuration: Duration(autoTimer),
+//
+//
+//    ),
+//    body:   GFCard(
+//      content: Column(
+//        children: <Widget>[
+//          const SizedBox(
+//            height: 10,
+//          ),
+//          Row(
+//            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//            children: const <Widget>[
+//              GFAvatar(
+//                backgroundImage:
+//                AssetImage('lib/assets/images/avatar5.png'),
+//              ),
+//              GFAvatar(
+//                backgroundImage:
+//                AssetImage('lib/assets/images/img.png'),
+//              ),
+//              GFAvatar(
+//                backgroundImage:
+//                AssetImage('lib/assets/images/img1.png'),
+//              ),
+//              GFAvatar(
+//                backgroundImage:
+//                AssetImage('lib/assets/images/img2.png'),
+//              )
+//            ],
+//          ),
+//          const SizedBox(
+//            height: 20,
+//          ),
+//          Row(
+//            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//            children: const <Widget>[
+//              GFAvatar(
+//                backgroundImage:
+//                AssetImage('lib/assets/images/avatar6.png'),
+//                shape: GFAvatarShape.standard,
+//              ),
+//              GFAvatar(
+//                backgroundImage:
+//                AssetImage('lib/assets/images/avatar11.png'),
+//                shape: GFAvatarShape.standard,
+//              ),
+//              GFAvatar(
+//                backgroundImage:
+//                AssetImage('lib/assets/images/avatar9.png'),
+//                shape: GFAvatarShape.standard,
+//              ),
+//              GFAvatar(
+//                backgroundImage:
+//                AssetImage('lib/assets/images/avatar12.png'),
+//                shape: GFAvatarShape.standard,
+//              ),
+//            ],
+//          ),
+//          const SizedBox(
+//            height: 20,
+//          ),
+//          Row(
+//            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//            children: const <Widget>[
+//              GFAvatar(
+//                backgroundImage: AssetImage(
+//                  'lib/assets/images/avatar10.png',
+//                ),
+//                shape: GFAvatarShape.square,
+//              ),
+//              GFAvatar(
+//                backgroundImage:
+//                AssetImage('lib/assets/images/avatar12.png'),
+//                shape: GFAvatarShape.square,
+//              ),
+//              GFAvatar(
+//                backgroundImage:
+//                AssetImage('lib/assets/images/avatar11.png'),
+//                shape: GFAvatarShape.square,
+//              ),
+//              GFAvatar(
+//                backgroundImage:
+//                AssetImage('lib/assets/images/avatar6.png'),
+//                shape: GFAvatarShape.square,
+//              ),
+//            ],
+//          ),
+//          const SizedBox(
+//            height: 10,
+//          ),
+//
+//
+//          GFButton(onPressed: (){}, text: 'Click for auto dismissable toast',)
+//        ],
+//      ),
+//    )
+//  ),
       );
 }

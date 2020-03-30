@@ -125,7 +125,8 @@ class _DrawerPageState extends State<DrawerPage> {
                             titlePadding: const EdgeInsets.only(
                                 left: 7, top: 10, bottom: 10, right: 0),
                             expandedTitlebackgroundColor: Colors.white,
-                            child: Row(children: [
+
+                            titleChild: Row(children: [
                               Icon(
                                 const IconData(
                                   0xe904,
