@@ -22,6 +22,9 @@ import '../screens/tiles/tiles_page.dart';
 import '../screens/toast/toasts.dart';
 import '../screens/toggle/toggles.dart';
 import '../screens/typography/typography.dart';
+import '../screens/checkbox/checkboxs.dart';
+import '../screens/checkboxlisttile/checkbox_list_tile_page.dart';
+import '../screens/radiobutton/radio_buttons.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -189,6 +192,22 @@ class _HomePageState extends State<HomePage> {
       ),
       'title': 'Shimmer',
       'route': ShimmerPage()
+    },
+    {
+      'icon': const IconData(
+        0xe900,
+        fontFamily: 'GFFontIcons2',
+      ),
+      'title': 'CheckBox',
+      'route': CheckBoxPage()
+    },
+    {
+      'icon': const IconData(
+        0xe900,
+        fontFamily: 'GFFontIcons2',
+      ),
+      'title': 'CheckboxListTile',
+      'route': CheckBoxListTilePage()
     }
   ];
 
@@ -228,17 +247,18 @@ class _HomePageState extends State<HomePage> {
                               gfComponents[index]['icon'],
                               gfComponents[index]['route']))),
             ),
-            // Container(
-            //   height: 160,
-            //   margin: const EdgeInsets.only(left: 15, bottom: 20, right: 15),
-            //   child: buildSquareTile(
-            //       'Progress Bar',
-            //       const IconData(
-            //         0xe900,
-            //         fontFamily: 'GFIcons',
-            //       ),
-            //       ProgressBar()),
-            // )
+             Container(
+               height: 160,
+               margin: const EdgeInsets.only(left: 15, bottom: 20, right: 15),
+               child: buildSquareTile(
+                   'RadioButton',
+                   const IconData(
+                     0xe900,
+                     fontFamily: 'GFIcons',
+                   ),
+                   RadioButtonPage()
+               ),
+             )
           ],
         ),
       );
