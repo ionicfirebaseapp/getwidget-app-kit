@@ -27,7 +27,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
       ),
       centerTitle: true,
     ),
-    
+
     body: ListView(
       shrinkWrap: true,
       scrollDirection: Axis.vertical,
