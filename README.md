@@ -2,12 +2,12 @@
 
 
 <p align="center">
-  <a href="https://www.getflutter.dev/" target="_blank">
-    <img src="https://ik.imagekit.io/ionicfirebaseapp/tr:w-auto-300/gf-logo-g-b_SYSBeqUrR.png" alt="Get Flutter">
+  <a href="https://www.getwidget.dev/" target="_blank">
+    <img src="https://ik.imagekit.io/ionicfirebaseapp/logo.black_iOBoLWdj2I.png" alt="Get Flutter">
   </a>
 </p>
 
-[**GetFlutter**](https://www.getflutter.dev) is a 100% free Flutter open-source UI library built with <a href="https://flutter.dev/" target="_blank">Flutter SDK</a> to make Flutter development easier and more joyful than ever. GetFlutter has 1000+ pre-build widgets that you can reuse to develop both Flutter mobile app and web app. Our motto is to provide the best Flutter UI library to the Flutter community to speed up their development process and build awesome apps with pre-build Flutter Library Components.
+[**GetWidget**](https://www.getwidget.dev) is a 100% free Flutter open-source UI library built with <a href="https://flutter.dev/" target="_blank">Flutter SDK</a> to make Flutter development easier and more joyful than ever. GetFlutter has 1000+ pre-build widgets that you can reuse to develop both Flutter mobile app and web app. Our motto is to provide the best Flutter UI library to the Flutter community to speed up their development process and build awesome apps with pre-build Flutter Library Components.
 
 ## Table of contents 
 
@@ -22,8 +22,8 @@
  
  ## Screenshot
  <p align="center">
-  <a target="_blank" href="https://www.getflutter.dev/">
-    <img src="https://ik.imagekit.io/ionicfirebaseapp/tr:dpr-auto,tr:w-auto/GitHub-full_0QqS07XrO.png" alt="Get Flutter Screens">
+  <a target="_blank" href="https://www.getwidget.dev/">
+    <img src="https://ik.imagekit.io/ionicfirebaseapp/GitHub_1_O8ZlrxSIo.png" alt="Get Flutter Screens">
   </a>
 </p>
 
@@ -55,7 +55,7 @@ Ionicfirebaseapp.com has been developed an open-source News Mobile App with GetF
  
  ## Contributing
  
-  GetFlutter is **100% free** and **open source**. We encourage and support an active, healthy community that accepts contributions from the public &ndash; including you. There are a couple of ways in which you can contribute to the growing community of `getflutter`.
+  GetWidget is **100% free** and **open source**. We encourage and support an active, healthy community that accepts contributions from the public &ndash; including you. There are a couple of ways in which you can contribute to the growing community of `getflutter`.
   
   * Pick up any issue marked with ["good first issue"](https://github.com/ionicfirebaseapp/getflutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
   * Fix a bug
@@ -68,20 +68,19 @@ Ionicfirebaseapp.com has been developed an open-source News Mobile App with GetF
  
  ## Documentation
  
-  [**Installation Guide**](https://docs.getflutter.dev)
+  [**Installation Guide**](https://docs.getwidget.dev)
   
  
 ### Social Media
 
-Twitter: <https://twitter.com/getflutterdev>
+Twitter: <https://twitter.com/getwidgetdev>
 
-Facebook: <https://www.facebook.com/getflutter>
+Facebook: <https://www.facebook.com/getwidget/>
 
-Linkedin: <https://www.linkedin.com/company/getflutter>
+Linkedin: <https://www.linkedin.com/company/getwidget>
 
-Instagram: <https://www.instagram.com/getflutter.dev/> 
+Instagram: <https://www.instagram.com/getwidget.dev/> 
 
-### Note: GetFlutter is not directly and/or indirectly associated/affiliated with Flutter or Google LLC. We are the team of Flutter Developers and we built this open-source library for the Flutter development community to made app development more easier. 
  
  ## Copyright-and-license 
  Code and documentation Copyright 2017-2020 the [GETFLUTTER Authors](https://www.getflutter.dev) and [IONICFIREBASEAPP](https://ionicfirebaseapp.com) Code released under the [MIT License]. Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
