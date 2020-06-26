@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:getflutter/getflutter.dart';
+import 'package:getflutter/getwidget.dart';
 
 class SquareButtons extends StatefulWidget {
   @override
@@ -50,7 +50,6 @@ class _SquareButtonsState extends State<SquareButtons>
               child: GFSegmentTabs(
                 tabController: tabController,
                 width: 280,
-                initialIndex: 0,
                 length: 3,
                 tabs: const <Widget>[
                   Text(

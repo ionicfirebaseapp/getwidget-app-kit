@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/getflutter.dart';
+import 'package:getflutter/getwidget.dart';
 
 class SegmentedAppbar extends StatefulWidget {
   @override
@@ -36,7 +36,6 @@ class _SegmentedAppbarState extends State<SegmentedAppbar>
             indicatorPadding: const EdgeInsets.all(8),
             indicatorWeight: 2,
             border: Border.all(color: Colors.white, width: 1),
-            initialIndex: 0,
             length: 3,
             tabs: const <Widget>[
               Text('Tab1'),

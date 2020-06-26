@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/getflutter.dart';
+import 'package:getflutter/getwidget.dart';
 import 'package:flutter/cupertino.dart';
 
 class CardPage extends StatefulWidget {
@@ -53,7 +53,6 @@ class _CardPageState extends State<CardPage>
               child: GFSegmentTabs(
                 tabController: tabController,
                 width: 280,
-                initialIndex: 0,
                 length: 3,
                 tabs: const <Widget>[
                   Text('Basic'),
@@ -283,7 +282,7 @@ class _CardPageState extends State<CardPage>
                             ),
                           ),
                           content: Text(
-                            'GetFlutter is an open source library that comes with pre-build 1000+ UI components',
+                            'GetWidget is an open source library that comes with pre-build 1000+ UI components',
                             style: TextStyle(color: Colors.grey),
                           ),
                         ),
@@ -374,7 +373,7 @@ class _CardPageState extends State<CardPage>
                             ),
                           ),
                           content: Text(
-                            'GetFlutter is an open source library that comes with pre-build 1000+ UI components',
+                            'GetWidget is an open source library that comes with pre-build 1000+ UI components',
                             style: TextStyle(color: Colors.grey),
                           ),
                           buttonBar: GFButtonBar(
@@ -410,7 +409,7 @@ class _CardPageState extends State<CardPage>
                             ),
                           ),
                           content: Text(
-                            'GetFlutter is an open source library that comes with pre-build 1000+ UI components',
+                            'GetWidget is an open source library that comes with pre-build 1000+ UI components',
                             style: TextStyle(color: Colors.grey),
                           ),
                           buttonBar: GFButtonBar(

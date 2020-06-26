@@ -1,31 +1,32 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:getflutter/getflutter.dart';
-import 'package:getflutter_app/screens/appbar/app_home.dart';
-import 'package:getflutter_app/screens/button/icon_buttons.dart';
-import 'package:getflutter_app/screens/button/pill_buttons.dart';
-import 'package:getflutter_app/screens/button/shadow_buttons.dart';
-import 'package:getflutter_app/screens/button/social_buttons.dart';
-import 'package:getflutter_app/screens/button/square_buttons.dart';
-import 'package:getflutter_app/screens/button/standard_buttons.dart';
-import 'package:getflutter_app/screens/drawer/webview.dart';
-import 'package:getflutter_app/screens/floating_widget/floating_widget.dart';
-import 'package:getflutter_app/screens/loader/loaders.dart';
-import 'package:getflutter_app/screens/progress_bar/progress_bar.dart';
-import 'package:getflutter_app/screens/rating/rating.dart';
-import 'package:getflutter_app/screens/searchbar/seachbar.dart';
-import 'package:getflutter_app/screens/tabs/tab_types.dart';
-import 'package:getflutter_app/screens/accordian/accordian.dart';
-import 'package:getflutter_app/screens/alert/alert.dart';
-import 'package:getflutter_app/screens/avatar/avatars.dart';
-import 'package:getflutter_app/screens/badges/badges.dart';
-import 'package:getflutter_app/screens/cards/cards.dart';
-import 'package:getflutter_app/screens/carousel/carousel.dart';
-import 'package:getflutter_app/screens/images/images.dart';
-import 'package:getflutter_app/screens/tiles/tiles_page.dart';
-import 'package:getflutter_app/screens/toast/toasts.dart';
-import 'package:getflutter_app/screens/toggle/toggles.dart';
-import 'package:getflutter_app/screens/typography/typography.dart';
+import 'package:getflutter/getwidget.dart';
+import '../../screens/accordian/accordian.dart';
+import '../../screens/alert/alert.dart';
+import '../../screens/appbar/app_home.dart';
+import '../../screens/avatar/avatars.dart';
+import '../../screens/badges/badges.dart';
+import '../../screens/button/icon_buttons.dart';
+import '../../screens/button/pill_buttons.dart';
+import '../../screens/button/shadow_buttons.dart';
+import '../../screens/button/social_buttons.dart';
+import '../../screens/button/square_buttons.dart';
+import '../../screens/button/standard_buttons.dart';
+import '../../screens/cards/cards.dart';
+import '../../screens/carousel/carousel.dart';
+import '../../screens/drawer/webview.dart';
+import '../../screens/floating_widget/floating_widget.dart';
+import '../../screens/images/images.dart';
+import '../../screens/loader/loaders.dart';
+import '../../screens/progress_bar/progress_bar.dart';
+import '../../screens/rating/rating.dart';
+import '../../screens/searchbar/seachbar.dart';
+import '../../screens/shimmer/shimmer.dart';
+import '../../screens/tabs/tab_types.dart';
+import '../../screens/tiles/tiles_page.dart';
+import '../../screens/toast/toasts.dart';
+import '../../screens/toggle/toggles.dart';
+import '../../screens/typography/typography.dart';
 
 class DrawerPage extends StatefulWidget {
   @override
@@ -96,7 +97,7 @@ class _DrawerPageState extends State<DrawerPage> {
                     const SizedBox(
                       height: 5,
                     ),
-                    Text(
+                    const Text(
                       'info@getflutter.dev',
                       style: TextStyle(color: Colors.white),
                     ),
@@ -124,7 +125,7 @@ class _DrawerPageState extends State<DrawerPage> {
                             titlePadding: const EdgeInsets.only(
                                 left: 7, top: 10, bottom: 10, right: 0),
                             expandedTitlebackgroundColor: Colors.white,
-                            child: Row(children: [
+                            titleChild: Row(children: [
                               Icon(
                                 const IconData(
                                   0xe904,
@@ -713,6 +714,32 @@ class _DrawerPageState extends State<DrawerPage> {
                             child: GFListTile(
                               title: const Text(
                                 'Progress Bar',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe900,
+                                  fontFamily: 'GFIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        ShimmerPage()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Shimmer',
                                 style: TextStyle(
                                   color: Colors.black87,
                                 ),

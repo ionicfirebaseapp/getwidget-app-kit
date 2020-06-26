@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
         title:
-            'GetFlutter Demo App | Get Flutter - Open source UI library for flutter app',
+            'GetWidget Demo App | GetWidget - Open source UI library for flutter app',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/getflutter.dart';
+import 'package:getflutter/getwidget.dart';
 import 'package:flutter/cupertino.dart';
 
 class IconTabs extends StatefulWidget {
@@ -46,7 +46,6 @@ class _IconTabsState extends State<IconTabs>
         body: ListView(
           children: <Widget>[
             GFTabBar(
-              initialIndex: 0,
               length: 4,
               controller: tabController,
               tabs: [

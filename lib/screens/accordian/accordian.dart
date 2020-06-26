@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:getflutter/components/accordian/gf_accordian.dart';
-import 'package:getflutter/getflutter.dart';
+import 'package:getflutter/getwidget.dart';
 
 class Accordion extends StatefulWidget {
   @override
@@ -61,7 +60,7 @@ class _AccordionState extends State<Accordion> {
                 ),
                 title: 'GF Accordion',
                 content:
-                    'GetFlutter is an open source library that comes with pre-build 1000+ UI components.'
+                    'GetWidget is an open source library that comes with pre-build 1000+ UI components.'
                     ' The library is built to make flutter development faster and more enjoyable.'),
             const Padding(
               padding: EdgeInsets.only(left: 15, top: 30),
@@ -93,7 +92,7 @@ class _AccordionState extends State<Accordion> {
                 ),
                 title: 'GF Accordion',
                 content:
-                    'GetFlutter is an open source library that comes with pre-build 1000+ UI components.'
+                    'GetWidget is an open source library that comes with pre-build 1000+ UI components.'
                     ' The library is built to make flutter development faster and more enjoyable.',
                 collapsedIcon: const Text('Show'),
                 expandedIcon: const Text(
@@ -130,7 +129,7 @@ class _AccordionState extends State<Accordion> {
               ),
               title: 'GF Accordion',
               content:
-                  'GetFlutter is an open source library that comes with pre-build 1000+ UI components.'
+                  'GetWidget is an open source library that comes with pre-build 1000+ UI components.'
                   ' The library is built to make flutter development faster and more enjoyable.',
               collapsedIcon: Icon(Icons.add_circle_outline),
               expandedIcon: Icon(

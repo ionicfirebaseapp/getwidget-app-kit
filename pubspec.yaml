@@ -1,5 +1,5 @@
-name: getflutter_app
-description: A GetFlutter Demo App
+name: gf_app
+description: A GetWidget Demo App
 
 version: 1.0.8+9
 
@@ -53,7 +53,6 @@ flutter:
     - lib/assets/gif/success1.gif
     - lib/assets/icons/gflogo.png
 
-
   fonts:
     - family: GFFontIcons
       fonts:
@@ -70,12 +69,10 @@ flutter:
         - asset: lib/assets/fonts/gfSocialFonts.ttf
           weight: 400
 
-
     - family: GFIconFonts
       fonts:
         - asset: lib/assets/fonts/gfIconFonts.ttf
           weight: 400
-
 
     - family: GFIcons
       fonts:

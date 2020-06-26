@@ -1,6 +1,6 @@
 {
-    "name": "getflutter_app",
-    "short_name": "getflutter_app",
+    "name": "gf_app",
+    "short_name": "gf_app",
     "start_url": ".",
     "display": "minimal-ui",
     "background_color": "#0175C2",

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/getflutter.dart';
+import 'package:getflutter/getwidget.dart';
 import 'package:flutter/cupertino.dart';
 
 class Images extends StatefulWidget {
@@ -49,7 +49,6 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
               child: GFSegmentTabs(
                 tabController: tabController,
                 width: 280,
-                initialIndex: 0,
                 length: 3,
                 tabs: const <Widget>[
                   Text('Basic'),
