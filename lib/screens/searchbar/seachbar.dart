@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/getflutter.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:flutter/cupertino.dart';
 
 class SearchbarPage extends StatefulWidget {

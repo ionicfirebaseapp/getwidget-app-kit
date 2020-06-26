@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/getflutter.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:flutter/cupertino.dart';
 
 class BottomLabelTab extends StatefulWidget {
@@ -79,7 +79,6 @@ class _BottomLabelTabState extends State<BottomLabelTab>
             )),
         bottomNavigationBar: Container(
           child: GFTabBar(
-            initialIndex: 0,
             length: 1,
             controller: tabController,
             tabs: [

@@ -1,9 +1,9 @@
-[![pub package](https://img.shields.io/pub/v/getflutter.svg)](https://pub.dartlang.org/packages/getflutter) [![Build Status](https://travis-ci.org/ionicfirebaseapp/getwidget.svg?branch=master)](https://travis-ci.com/ionicfirebaseapp/getflutter) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://opensource.org/licenses/MIT) [![License](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/ionicfirebaseapp/getwidget/blob/master/LICENSE) [![Gitter](https://badges.gitter.im/getflutterdev/getflutter.svg)](https://gitter.im/getflutterdev/getflutter) [![Twitter Follow](https://img.shields.io/twitter/follow/getwidgetdev.svg?style=social)](https://twitter.com/getwidgetdev)
+[![Financial Contributors on Open Collective](https://opencollective.com/getflutter/all/badge.svg?label=financial+contributors)](https://opencollective.com/getflutter) [![pub package](https://img.shields.io/pub/v/getflutter.svg)](https://pub.dartlang.org/packages/getflutter) [![Build Status](https://travis-ci.org/ionicfirebaseapp/getflutter.svg?branch=master)](https://travis-ci.com/ionicfirebaseapp/getflutter) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://opensource.org/licenses/MIT) [![License](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/ionicfirebaseapp/getwidget/blob/master/LICENSE) [![Gitter](https://badges.gitter.im/getflutterdev/getflutter.svg)](https://gitter.im/getflutterdev/getflutter) [![Twitter Follow](https://img.shields.io/twitter/follow/getflutterdev.svg?style=social)](https://twitter.com/getwidgetdev)
 
 
 <p align="center">
   <a href="https://docs.getwidget.dev/" target="_blank">
-    <img src="https://ik.imagekit.io/ionicfirebaseapp/logo.black_iOBoLWdj2I.png" alt="Get Flutter">
+    <img src="https://ik.imagekit.io/ionicfirebaseapp/logo.black_iOBoLWdj2I.png" alt="GetWidget">
   </a>
 </p>
 
@@ -57,13 +57,18 @@ we have launched the library with the following components :
  
   GetWidget is **100% free** and **open source**. We encourage and support an active, healthy community that accepts contributions from the public &ndash; including you. There are a couple of ways in which you can contribute to the growing community of `getwidget`.
   
-  * Pick up any issue marked with ["good first issue"](https://github.com/ionicfirebaseapp/getflutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+  * Pick up any issue marked with ["good first issue"](https://github.com/ionicfirebaseapp/getwidget/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
   * Fix a bug
   * Write and improve some **documentation**. Documentation is very critical to us. We would appreciate help in adding multiple languages to our docs.
   * If you are a developer, feel free to check out the source and submit pull requests.
   * Dig into [**CONTRIBUTING.MD**](CONTRIBUTING.md), which covers submitting bugs, requesting new features, preparing your code for a pull request, etc.
+<<<<<<< HEAD
+  * Please don't forget to **like**, **follow**, and **star our repo**! Join our growing [community](http://forum.getwidget.dev) to keep up to date with the latest GetWidget development. 
+  * Not sure what to work on? [**We've got lots ideas.**](https://roadmap.getwidget.dev)
+=======
   * Please don't forget to **like**, **follow**, and **star our repo**! Join our growing [community](http://forum.getflutter.dev) to keep up to date with the latest GetWidget development. 
   * Not sure what to work on? [**We've got lots ideas.**](https://roadmap.getflutter.dev)
+>>>>>>> 738437d3ba9c9466da436ef54e89a17af6108f4e
  
  
  ## Documentation

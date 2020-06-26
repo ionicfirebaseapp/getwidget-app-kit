@@ -1,8 +1,6 @@
-import 'package:getflutter/getflutter.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:getflutter/components/alert/gf_alert.dart';
-import 'package:getflutter/types/gf_alert_type.dart';
 
 class AlertPage extends StatefulWidget {
   @override
@@ -56,7 +54,7 @@ class _AlertPageState extends State<AlertPage> {
                           onPressed: () {
                             setState(() {
                               showblur = true;
-                              alertWidget= GFToast(
+                              alertWidget = GFToast(
                                 text: 'hi',
                               );
 //                              alertWidget = GFAlert(

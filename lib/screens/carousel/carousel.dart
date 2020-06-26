@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/getflutter.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:flutter/cupertino.dart';
 
 final List<String> imageList = [
@@ -75,7 +75,6 @@ class _CarouselState extends State<Carousel>
               child: GFSegmentTabs(
                 tabController: tabController,
                 width: 280,
-                initialIndex: 0,
                 length: 2,
                 tabs: const <Widget>[
                   Text('Gradient'),
@@ -158,7 +157,7 @@ class _CarouselState extends State<Carousel>
                                           padding: EdgeInsets.only(
                                               left: 30, right: 30, top: 30),
                                           child: Text(
-                                            'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
+                                            'GetWidget is an open source library that comes with pre-build 1000+ UI components. ',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
                                               color: GFColors.LIGHT,
@@ -212,7 +211,7 @@ class _CarouselState extends State<Carousel>
                                         padding:
                                             EdgeInsets.only(right: 5, top: 10),
                                         child: Text(
-                                          'GetFlutter is an open source library that comes with pre-build 1000+ UI components ',
+                                          'GetWidget is an open source library that comes with pre-build 1000+ UI components ',
                                           style: TextStyle(
                                             fontSize: 10,
                                             color: GFColors.LIGHT,
@@ -273,7 +272,7 @@ class _CarouselState extends State<Carousel>
                                           padding: EdgeInsets.only(
                                               left: 30, right: 30, top: 30),
                                           child: Text(
-                                            'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
+                                            'GetWidget is an open source library that comes with pre-build 1000+ UI components. ',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
                                                 color: GFColors.LIGHT),
@@ -339,7 +338,7 @@ class _CarouselState extends State<Carousel>
                                           padding: EdgeInsets.only(
                                               left: 30, right: 30, top: 30),
                                           child: Text(
-                                            'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
+                                            'GetWidget is an open source library that comes with pre-build 1000+ UI components. ',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
                                                 color: GFColors.LIGHT),
@@ -451,7 +450,7 @@ class _CarouselState extends State<Carousel>
                                             top: 30,
                                           ),
                                           child: Text(
-                                            'GetFlutter is an open source library that comes with pre-build 1000+ UI components. ',
+                                            'GetWidget is an open source library that comes with pre-build 1000+ UI components. ',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
                                                 color: GFColors.LIGHT),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/getflutter.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:flutter/cupertino.dart';
 
 class SegmentTabsPage extends StatefulWidget {
@@ -51,7 +51,6 @@ class _SegmentTabsPageState extends State<SegmentTabsPage>
               child: GFSegmentTabs(
                 tabController: tabController,
                 width: 280,
-                initialIndex: 0,
                 length: 3,
                 tabs: const <Widget>[
                   Text(

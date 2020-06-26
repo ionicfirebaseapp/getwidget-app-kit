@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/colors/gf_color.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:getflutter/getflutter.dart';
 import 'dart:async';
 
 class Toasts extends StatefulWidget {
@@ -13,7 +12,7 @@ class _ToastsState extends State<Toasts> {
   bool showFloatingToast = false;
   Timer autoTimer;
   bool showblurness = true;
-  Duration autoTimerDuration= Duration(milliseconds:400);
+  Duration autoTimerDuration = Duration(milliseconds: 400);
 
 //  @override
 //  initState(){

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:getflutter/getflutter.dart';
+import 'package:getwidget/getwidget.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/alert/alert.dart';
 import '../screens/appbar/app_home.dart';
@@ -247,18 +247,17 @@ class _HomePageState extends State<HomePage> {
                               gfComponents[index]['icon'],
                               gfComponents[index]['route']))),
             ),
-             Container(
-               height: 160,
-               margin: const EdgeInsets.only(left: 15, bottom: 20, right: 15),
-               child: buildSquareTile(
-                   'RadioButton',
-                   const IconData(
-                     0xe900,
-                     fontFamily: 'GFIcons',
-                   ),
-                   RadioButtonPage()
-               ),
-             )
+            Container(
+              height: 160,
+              margin: const EdgeInsets.only(left: 15, bottom: 20, right: 15),
+              child: buildSquareTile(
+                  'RadioButton',
+                  const IconData(
+                    0xe900,
+                    fontFamily: 'GFIcons',
+                  ),
+                  RadioButtonPage()),
+            )
           ],
         ),
       );
