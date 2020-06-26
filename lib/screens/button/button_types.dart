@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:getflutter/getwidget.dart';
+import 'package:getwidget/getwidget.dart';
 import 'icon_buttons.dart';
 import 'pill_buttons.dart';
 import 'shadow_buttons.dart';

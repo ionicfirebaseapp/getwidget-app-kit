@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:getflutter/colors/gf_color.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViews extends StatefulWidget {

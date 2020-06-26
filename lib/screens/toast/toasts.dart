@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:getflutter/colors/gf_color.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:getflutter/getwidget.dart';
 import 'dart:async';
 
 class Toasts extends StatefulWidget {

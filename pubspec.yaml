@@ -9,8 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  getflutter:
-    path: ../
+  getwidget: ^1.1.0
   webview_flutter: ^0.3.19+6
   cupertino_icons: ^0.1.2
 
