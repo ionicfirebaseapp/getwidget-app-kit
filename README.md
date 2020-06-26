@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://docs.getwidget.dev/" target="_blank">
-    <img src="https://ik.imagekit.io/ionicfirebaseapp/logo.black_iOBoLWdj2I.png" alt="Get Flutter">
+    <img src="https://ik.imagekit.io/ionicfirebaseapp/logo.black_iOBoLWdj2I.png" alt="GetWidget">
   </a>
 </p>
 
