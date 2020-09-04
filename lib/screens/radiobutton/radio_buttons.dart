@@ -8,6 +8,20 @@ class RadioButtonPage extends StatefulWidget {
 }
 
 class _RadioButtonPageState extends State<RadioButtonPage> {
+  int selectedRadio;
+  bool isChecked = false;
+  setSelectedRadio(int val) {
+    setState(() {
+      selectedRadio = val;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    selectedRadio = 1;
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -48,7 +62,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 content: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                GFRadioButton(
+                GFRadio(
 //                type: GFRadioButtonType.custom,
                   size: GFSize.LARGE,
 //                activebgColor: Colors.red,
@@ -59,37 +73,44 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
 //                custombgColor: Colors.red,
                   onChanged: (val) {
                     print('on change val $val');
+                    setSelectedRadio(val);
                   },
-                  value: true,
+                  value: 0,
                   inactiveIcon: null,
-                  radioColor: GFColors.INFO,
+                  radioColor: GFColors.INFO, groupValue: selectedRadio,
                 ),
-                GFRadioButton(
+                GFRadio(
                   size: GFSize.MEDIUM,
                   onChanged: (val) {
                     print('on change val $val');
+                    setSelectedRadio(val);
                   },
-                  value: true,
+                  value: 1,
                   inactiveIcon: null,
                   radioColor: GFColors.DANGER,
+                  groupValue: selectedRadio,
                 ),
-                GFRadioButton(
+                GFRadio(
                   size: GFSize.SMALL,
                   onChanged: (val) {
                     print('on change val $val');
+                    setSelectedRadio(val);
                   },
-                  value: false,
+                  value: 2,
                   inactiveIcon: null,
                   radioColor: GFColors.WARNING,
+                  groupValue: selectedRadio,
                 ),
-                GFRadioButton(
+                GFRadio(
                   size: 20,
                   onChanged: (val) {
                     print('on change val $val');
+                    setSelectedRadio(val);
                   },
-                  value: true,
+                  value: 3,
                   inactiveIcon: null,
                   radioColor: GFColors.SUCCESS,
+                  groupValue: selectedRadio,
                 )
               ],
             )),
@@ -108,8 +129,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 content: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                GFRadioButton(
-                  type: GFRadioButtonType.square,
+                GFRadio(
+                  type: GFRadioType.square,
                   size: GFSize.LARGE,
 //                activebgColor: Colors.red,
 //                inactivebgColor: Colors.amber,
@@ -122,10 +143,10 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   },
                   value: true,
                   inactiveIcon: null,
-                  radioColor: GFColors.SECONDARY,
+                  radioColor: GFColors.SECONDARY, groupValue: null,
                 ),
-                GFRadioButton(
-                  type: GFRadioButtonType.square,
+                GFRadio(
+                  type: GFRadioType.square,
                   size: GFSize.MEDIUM,
                   onChanged: (val) {
                     print('on change val $val');
@@ -133,9 +154,10 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   value: true,
                   inactiveIcon: null,
                   radioColor: GFColors.ALT,
+                  groupValue: null,
                 ),
-                GFRadioButton(
-                  type: GFRadioButtonType.square,
+                GFRadio(
+                  type: GFRadioType.square,
                   size: GFSize.SMALL,
                   onChanged: (val) {
                     print('on change val $val');
@@ -143,9 +165,10 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   value: false,
                   inactiveIcon: null,
                   radioColor: GFColors.PRIMARY,
+                  groupValue: null,
                 ),
-                GFRadioButton(
-                  type: GFRadioButtonType.square,
+                GFRadio(
+                  type: GFRadioType.square,
                   size: 20,
                   onChanged: (val) {
                     print('on change val $val');
@@ -154,6 +177,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   inactiveIcon: null,
                   radioColor: GFColors.INFO,
                   activeIcon: Icon(Icons.close),
+                  groupValue: null,
                 )
               ],
             )),
@@ -172,8 +196,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 content: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                GFRadioButton(
-                  type: GFRadioButtonType.blunt,
+                GFRadio(
+                  type: GFRadioType.blunt,
                   size: GFSize.LARGE,
 //                activebgColor: Colors.red,
 //                inactivebgColor: Colors.amber,
@@ -186,10 +210,10 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   },
                   value: true,
                   inactiveIcon: null,
-                  custombgColor: GFColors.DANGER,
+                  custombgColor: GFColors.DANGER, groupValue: null,
                 ),
-                GFRadioButton(
-                  type: GFRadioButtonType.blunt,
+                GFRadio(
+                  type: GFRadioType.blunt,
                   size: GFSize.MEDIUM,
                   onChanged: (val) {
                     print('on change val $val');
@@ -197,9 +221,10 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   value: true,
                   inactiveIcon: null,
                   custombgColor: GFColors.WARNING,
+                  groupValue: null,
                 ),
-                GFRadioButton(
-                  type: GFRadioButtonType.blunt,
+                GFRadio(
+                  type: GFRadioType.blunt,
                   size: GFSize.SMALL,
                   onChanged: (val) {
                     print('on change val $val');
@@ -207,9 +232,10 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   value: false,
                   inactiveIcon: null,
                   custombgColor: GFColors.DARK,
+                  groupValue: null,
                 ),
-                GFRadioButton(
-                  type: GFRadioButtonType.blunt,
+                GFRadio(
+                  type: GFRadioType.blunt,
                   size: 25,
                   onChanged: (val) {
                     print('on change val $val');
@@ -217,6 +243,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   value: true,
                   inactiveIcon: null,
                   custombgColor: GFColors.SUCCESS,
+                  groupValue: null,
                 )
               ],
             )),
@@ -235,8 +262,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 content: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                GFRadioButton(
-                  type: GFRadioButtonType.custom,
+                GFRadio(
+                  type: GFRadioType.custom,
                   activeIcon: Icon(Icons.check),
                   radioColor: Colors.red,
                   size: GFSize.LARGE,
@@ -247,9 +274,10 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     print('on change val $val');
                   },
                   value: true,
+                  groupValue: null,
                 ),
-                GFRadioButton(
-                  type: GFRadioButtonType.custom,
+                GFRadio(
+                  type: GFRadioType.custom,
                   activeIcon: Icon(Icons.sentiment_satisfied),
                   size: GFSize.MEDIUM,
                   onChanged: (val) {
@@ -258,9 +286,10 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   value: true,
                   inactiveIcon: Icon(Icons.sentiment_dissatisfied),
                   custombgColor: GFColors.WARNING,
+                  groupValue: null,
                 ),
-                GFRadioButton(
-                  type: GFRadioButtonType.blunt,
+                GFRadio(
+                  type: GFRadioType.blunt,
                   size: GFSize.SMALL,
                   onChanged: (val) {
                     print('on change val $val');
@@ -268,9 +297,10 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   value: false,
                   inactiveIcon: null,
                   custombgColor: GFColors.DARK,
+                  groupValue: null,
                 ),
-                GFRadioButton(
-                  type: GFRadioButtonType.blunt,
+                GFRadio(
+                  type: GFRadioType.blunt,
                   size: 25,
                   onChanged: (val) {
                     print('on change val $val');
