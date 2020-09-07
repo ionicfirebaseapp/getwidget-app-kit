@@ -8,6 +8,8 @@ class CheckBoxListTilePage extends StatefulWidget {
 }
 
 class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
+  bool check = true;
+  bool check1 = false;
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -42,9 +44,11 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
               type: GFCheckboxType.circle,
               inactiveBorderColor: Colors.deepOrangeAccent,
               onChanged: (val) {
-                print('on change val $val');
+                setState(() {
+                  check = val;
+                });
               },
-              value: false,
+              value: check,
               inactiveIcon: null,
             ),
             GFCheckboxListTile(
@@ -57,9 +61,11 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
               type: GFCheckboxType.circle,
               inactiveBorderColor: Colors.deepOrangeAccent,
               onChanged: (val) {
-                print('on change val $val');
+                setState(() {
+                  check1 = val;
+                });
               },
-              value: true,
+              value: check1,
               inactiveIcon: null,
             )
           ],

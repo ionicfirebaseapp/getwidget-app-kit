@@ -68,7 +68,7 @@ class _IconButtonsState extends State<IconButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: const Text('Second'),
+                          child: const Text('Secondary'),
                           icon: const Icon(
                             IconData(
                               0xe91a,
@@ -79,9 +79,13 @@ class _IconButtonsState extends State<IconButtons> {
                           color: GFColors.SECONDARY,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: <Widget>[
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -95,14 +99,10 @@ class _IconButtonsState extends State<IconButtons> {
                           ),
                           color: GFColors.SUCCESS,
                         ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: <Widget>[
+                      ),
+                      const SizedBox(
+                        width: 6,
+                      ),
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -117,9 +117,17 @@ class _IconButtonsState extends State<IconButtons> {
                           color: GFColors.WARNING,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
+                      // const SizedBox(
+                      //   width: 6,
+                      // ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -259,7 +267,7 @@ class _IconButtonsState extends State<IconButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: const Text('Second'),
+                          child: const Text('Secondary'),
                           icon: const Icon(
                             IconData(
                               0xe91a,
@@ -271,9 +279,13 @@ class _IconButtonsState extends State<IconButtons> {
                           type: GFButtonType.outline,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: <Widget>[
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -288,14 +300,10 @@ class _IconButtonsState extends State<IconButtons> {
                           color: GFColors.SUCCESS,
                           type: GFButtonType.outline,
                         ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: <Widget>[
+                      ),
+                      const SizedBox(
+                        width: 6,
+                      ),
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -311,9 +319,16 @@ class _IconButtonsState extends State<IconButtons> {
                           type: GFButtonType.outline,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
+                      // const SizedBox(
+                      //   width: 6,
+                      // ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -453,7 +468,7 @@ class _IconButtonsState extends State<IconButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: const Text('Second'),
+                          child: const Text('Secondary'),
                           icon: const Icon(
                             IconData(
                               0xe91a,
@@ -465,9 +480,14 @@ class _IconButtonsState extends State<IconButtons> {
                           type: GFButtonType.outline2x,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -482,15 +502,10 @@ class _IconButtonsState extends State<IconButtons> {
                           color: GFColors.SUCCESS,
                           type: GFButtonType.outline2x,
                         ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
+                      ),
+                      const SizedBox(
+                        width: 6,
+                      ),
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -506,9 +521,16 @@ class _IconButtonsState extends State<IconButtons> {
                           type: GFButtonType.outline2x,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
+                      // const SizedBox(
+                      //   width: 6,
+                      // ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -649,7 +671,7 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           shape: GFButtonShape.square,
-                          child: const Text('Second'),
+                          child: const Text('Secondary'),
                           icon: const Icon(
                             IconData(
                               0xe91a,
@@ -660,9 +682,14 @@ class _IconButtonsState extends State<IconButtons> {
                           color: GFColors.SECONDARY,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
                       Expanded(
                         child: GFButton(
                           shape: GFButtonShape.square,
@@ -677,15 +704,10 @@ class _IconButtonsState extends State<IconButtons> {
                           ),
                           color: GFColors.SUCCESS,
                         ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
+                      ),
+                      const SizedBox(
+                        width: 6,
+                      ),
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -701,9 +723,14 @@ class _IconButtonsState extends State<IconButtons> {
                           color: GFColors.WARNING,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -847,7 +874,7 @@ class _IconButtonsState extends State<IconButtons> {
                         child: GFButton(
                           onPressed: () {},
                           shape: GFButtonShape.pills,
-                          child: const Text('Second'),
+                          child: const Text('Secondary'),
                           icon: const Icon(
                             IconData(
                               0xe91a,
@@ -858,9 +885,14 @@ class _IconButtonsState extends State<IconButtons> {
                           color: GFColors.SECONDARY,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
                       Expanded(
                         child: GFButton(
                           shape: GFButtonShape.pills,
@@ -875,15 +907,10 @@ class _IconButtonsState extends State<IconButtons> {
                           ),
                           color: GFColors.SUCCESS,
                         ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
+                      ),
+                      const SizedBox(
+                        width: 6,
+                      ),
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -902,6 +929,14 @@ class _IconButtonsState extends State<IconButtons> {
                       const SizedBox(
                         width: 6,
                       ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -1046,7 +1081,7 @@ class _IconButtonsState extends State<IconButtons> {
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
-                          child: const Text('Second'),
+                          child: const Text('Secondary'),
                           icon: const Icon(
                             IconData(
                               0xe91a,
@@ -1058,9 +1093,14 @@ class _IconButtonsState extends State<IconButtons> {
                           buttonBoxShadow: true,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -1075,15 +1115,10 @@ class _IconButtonsState extends State<IconButtons> {
                           color: GFColors.SUCCESS,
                           buttonBoxShadow: true,
                         ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
+                      ),
+                      const SizedBox(
+                        width: 6,
+                      ),
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -1102,6 +1137,14 @@ class _IconButtonsState extends State<IconButtons> {
                       const SizedBox(
                         width: 6,
                       ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
                       Expanded(
                         child: GFButton(
                           onPressed: () {},

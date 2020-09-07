@@ -76,9 +76,14 @@ class _SocialButtonsState extends State<SocialButtons> {
                           buttonBoxShadow: true,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -91,15 +96,10 @@ class _SocialButtonsState extends State<SocialButtons> {
                           color: const Color(0xFF25D366),
                           buttonBoxShadow: true,
                         ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
+                      ),
+                      const SizedBox(
+                        width: 6,
+                      ),
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -113,9 +113,14 @@ class _SocialButtonsState extends State<SocialButtons> {
                           buttonBoxShadow: true,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
                       Expanded(
                         child: GFButton(
                           onPressed: () {},
@@ -181,9 +186,14 @@ class _SocialButtonsState extends State<SocialButtons> {
                           buttonBoxShadow: true,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
                       Expanded(
                         child: GFButton(
                           onPressed: () {},

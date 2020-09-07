@@ -8,6 +8,8 @@ class RadioListTilePage extends StatefulWidget {
 }
 
 class _RadioListTilePageState extends State<RadioListTilePage> {
+  int groupValue = 0;
+
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -30,24 +32,44 @@ class _RadioListTilePageState extends State<RadioListTilePage> {
         ),
         body: ListView(
           children: <Widget>[
-            // GFRadioListTile(),
-            // GFSlidable()
-            GFListTile(
+            GFRadioListTile(
               titleText: 'Hello',
               subtitleText: 'Happy New Year',
               avatar: GFAvatar(),
 
-              // size: GFSize.SMALL,
+              size: GFSize.SMALL,
               // activebgColor: GFColors.DANGER,
-              // activeBorderColor: Colors.purple,
-              // type: GFCheckboxType.circle,
-              // inactiveBorderColor: Colors.deepOrangeAccent,
-              // onChanged: (val) {
-              //   print('on change val $val');
-              // },
-              // value: true,
-              // inactiveIcon: null,
-            )
+              activeBorderColor: Colors.purple,
+              type: GFRadioType.square,
+              inactiveBorderColor: Colors.deepOrangeAccent,
+              value: 0,
+              groupValue: groupValue,
+              onChanged: (val) {
+                setState(() {
+                  groupValue = val;
+                });
+              },
+              inactiveIcon: null,
+            ),
+            GFRadioListTile(
+              titleText: 'Hello',
+              subtitleText: 'Happy New Year',
+              avatar: GFAvatar(),
+
+              size: GFSize.SMALL,
+              // activebgColor: GFColors.DANGER,
+              activeBorderColor: Colors.purple,
+              type: GFRadioType.square,
+              inactiveBorderColor: Colors.deepOrangeAccent,
+              value: 1,
+              groupValue: groupValue,
+              onChanged: (val) {
+                setState(() {
+                  groupValue = val;
+                });
+              },
+              inactiveIcon: null,
+            ),
           ],
         ),
       );
