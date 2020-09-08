@@ -71,20 +71,6 @@ class _BadgesPageState extends State<BadgesPage> {
                           color: GFColors.SECONDARY,
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
-                      ),
-                      Expanded(
-                        child: GFButtonBadge(
-                          icon: const GFBadge(
-                            text: '6',
-                            shape: GFBadgeShape.pills,
-                          ),
-                          onPressed: () {},
-                          text: 'Success',
-                          color: GFColors.SUCCESS,
-                        ),
-                      )
                     ],
                   ),
                   const SizedBox(
@@ -99,13 +85,31 @@ class _BadgesPageState extends State<BadgesPage> {
                             shape: GFBadgeShape.pills,
                           ),
                           onPressed: () {},
-                          text: 'Warning',
-                          color: GFColors.WARNING,
+                          text: 'Success',
+                          color: GFColors.SUCCESS,
                         ),
                       ),
                       const SizedBox(
                         width: 6,
                       ),
+                      Expanded(
+                        child: GFButtonBadge(
+                          icon: const GFBadge(
+                            text: '6',
+                            shape: GFBadgeShape.pills,
+                          ),
+                          onPressed: () {},
+                          text: 'Warning',
+                          color: GFColors.WARNING,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: <Widget>[
                       Expanded(
                         child: GFButtonBadge(
                           icon: const GFBadge(

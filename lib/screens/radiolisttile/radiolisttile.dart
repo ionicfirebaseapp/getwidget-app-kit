@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:flutter/cupertino.dart';
 
-class CheckBoxListTilePage extends StatefulWidget {
+class RadioListTilePage extends StatefulWidget {
   @override
-  _CheckBoxListTilePageState createState() => _CheckBoxListTilePageState();
+  _RadioListTilePageState createState() => _RadioListTilePageState();
 }
 
-class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
-  bool check = true;
-  bool check1 = false;
+class _RadioListTilePageState extends State<RadioListTilePage> {
+  int groupValue = 0;
+
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -25,49 +25,51 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
                 ),
               )),
           title: const Text(
-            'CheckboxListTile',
+            'RadioListTile',
             style: TextStyle(fontSize: 17),
           ),
           centerTitle: true,
         ),
-
-//    body: GFCheckBoxListTile(),
         body: ListView(
           children: <Widget>[
-            GFCheckboxListTile(
-              titleText: 'hi',
-              subtitleText: 'Happy Ugadi',
+            GFRadioListTile(
+              titleText: 'Hello',
+              subtitleText: 'Happy New Year',
               avatar: GFAvatar(),
+
               size: GFSize.SMALL,
-              activebgColor: GFColors.DANGER,
+              // activebgColor: GFColors.DANGER,
               activeBorderColor: Colors.purple,
-              type: GFCheckboxType.circle,
+              type: GFRadioType.square,
               inactiveBorderColor: Colors.deepOrangeAccent,
+              value: 0,
+              groupValue: groupValue,
               onChanged: (val) {
                 setState(() {
-                  check = val;
+                  groupValue = val;
                 });
               },
-              value: check,
               inactiveIcon: null,
             ),
-            GFCheckboxListTile(
-              titleText: 'hi',
-              subtitleText: 'Happy Ugadi',
+            GFRadioListTile(
+              titleText: 'Hello',
+              subtitleText: 'Happy New Year',
               avatar: GFAvatar(),
+
               size: GFSize.SMALL,
-              activebgColor: GFColors.DANGER,
+              // activebgColor: GFColors.DANGER,
               activeBorderColor: Colors.purple,
-              type: GFCheckboxType.circle,
+              type: GFRadioType.square,
               inactiveBorderColor: Colors.deepOrangeAccent,
+              value: 1,
+              groupValue: groupValue,
               onChanged: (val) {
                 setState(() {
-                  check1 = val;
+                  groupValue = val;
                 });
               },
-              value: check1,
               inactiveIcon: null,
-            )
+            ),
           ],
         ),
       );

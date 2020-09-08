@@ -136,7 +136,7 @@ class _CarouselState extends State<Carousel>
                                   margin: const EdgeInsets.only(
                                     left: 15,
                                     right: 15,
-                                    bottom: 30,
+                                    bottom: 24,
                                   ),
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(4)),

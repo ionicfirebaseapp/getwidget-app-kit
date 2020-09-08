@@ -92,7 +92,7 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                             children: const <Widget>[
                               GFImageOverlay(
                                 height: 200,
-                                width: 300,
+                                width: 280,
                                 image:
                                     AssetImage('lib/assets/images/image2.png'),
                               )
@@ -105,7 +105,7 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                             children: const <Widget>[
                               GFImageOverlay(
                                 height: 200,
-                                width: 300,
+                                width: 280,
                                 image:
                                     AssetImage('lib/assets/images/image.png'),
                               )
@@ -118,7 +118,7 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                             children: const <Widget>[
                               GFImageOverlay(
                                 height: 200,
-                                width: 300,
+                                width: 280,
                                 image:
                                     AssetImage('lib/assets/images/image1.png'),
                               )
@@ -177,7 +177,7 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                             children: <Widget>[
                               GFImageOverlay(
                                 height: 200,
-                                width: 300,
+                                width: 280,
                                 child: const Center(
                                   child: Text(
                                     'Light Overlay',
@@ -199,7 +199,7 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                             children: <Widget>[
                               GFImageOverlay(
                                 height: 200,
-                                width: 300,
+                                width: 280,
                                 child: const Center(
                                     child: Text(
                                   'Medium Overlay',
@@ -220,7 +220,7 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                             children: <Widget>[
                               GFImageOverlay(
                                 height: 200,
-                                width: 300,
+                                width: 280,
                                 child: const Center(
                                     child: Text(
                                   'Strong Overlay',

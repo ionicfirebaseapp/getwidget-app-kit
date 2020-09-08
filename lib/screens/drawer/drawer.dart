@@ -71,7 +71,7 @@ class _DrawerPageState extends State<DrawerPage> {
                   ),
                   const GFAvatar(
                     backgroundColor: Colors.black,
-                    child: Text('F'),
+                    child: Text('W'),
                   ),
                 ],
                 child: Column(
@@ -88,7 +88,7 @@ class _DrawerPageState extends State<DrawerPage> {
                       height: 5,
                     ),
                     Text(
-                      'GetFlutter',
+                      'GetWidget',
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
@@ -114,7 +114,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 children: <Widget>[
                   GFAccordion(
                       title: 'Components',
-                      expandedTitlebackgroundColor: Colors.white,
+                      expandedTitleBackgroundColor: Colors.white,
                       textStyle:
                           const TextStyle(color: Colors.black87, fontSize: 16),
                       contentChild: Padding(
@@ -124,7 +124,7 @@ class _DrawerPageState extends State<DrawerPage> {
                             margin: const EdgeInsets.all(0),
                             titlePadding: const EdgeInsets.only(
                                 left: 7, top: 10, bottom: 10, right: 0),
-                            expandedTitlebackgroundColor: Colors.white,
+                            expandedTitleBackgroundColor: Colors.white,
                             titleChild: Row(children: [
                               Icon(
                                 const IconData(
