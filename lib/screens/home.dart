@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:gf_app/screens/radiolisttile/radiolisttile.dart';
+// import 'package:gf_app/webview.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/alert/alert.dart';
 import '../screens/appbar/app_home.dart';
@@ -233,6 +234,22 @@ class _HomePageState extends State<HomePage> {
         drawer: DrawerPage(),
         appBar: AppBar(
           backgroundColor: GFColors.DARK,
+          // actions: <Widget>[
+          //   Padding(
+          //       padding: EdgeInsets.only(right: 20.0),
+          //       child: GestureDetector(
+          //         onTap: () {
+          //           Navigator.push(
+          //             context,
+          //             MaterialPageRoute(builder: (context) => WebView()),
+          //           );
+          //         },
+          //         child: Icon(
+          //           Icons.apps,
+          //           size: 26.0,
+          //         ),
+          //       )),
+          // ],
           title: Image.asset(
             'lib/assets/icons/gflogo.png',
             width: 150,

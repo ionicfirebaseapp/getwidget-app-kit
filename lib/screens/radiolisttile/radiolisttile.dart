@@ -32,7 +32,7 @@ class _RadioListTilePageState extends State<RadioListTilePage> {
         ),
         body: ListView(
           children: <Widget>[
-            GFRadioListTile(
+            GFCheckboxListTile(
               titleText: 'Hello',
               subtitleText: 'Happy New Year',
               avatar: GFAvatar(),
@@ -40,18 +40,18 @@ class _RadioListTilePageState extends State<RadioListTilePage> {
               size: GFSize.SMALL,
               // activebgColor: GFColors.DANGER,
               activeBorderColor: Colors.purple,
-              type: GFRadioType.square,
+              type: GFCheckboxType.circle,
               inactiveBorderColor: Colors.deepOrangeAccent,
-              value: 0,
-              groupValue: groupValue,
+              // value: 0,
+              // groupValue: groupValue,
               onChanged: (val) {
                 setState(() {
-                  groupValue = val;
+                  // groupValue = val;
                 });
               },
               inactiveIcon: null,
             ),
-            GFRadioListTile(
+            GFCheckboxListTile(
               titleText: 'Hello',
               subtitleText: 'Happy New Year',
               avatar: GFAvatar(),
@@ -59,13 +59,13 @@ class _RadioListTilePageState extends State<RadioListTilePage> {
               size: GFSize.SMALL,
               // activebgColor: GFColors.DANGER,
               activeBorderColor: Colors.purple,
-              type: GFRadioType.square,
+              type: GFCheckboxType.circle,
               inactiveBorderColor: Colors.deepOrangeAccent,
-              value: 1,
-              groupValue: groupValue,
+              // value: 1,
+              // groupValue: groupValue,
               onChanged: (val) {
                 setState(() {
-                  groupValue = val;
+                  // groupValue = val;
                 });
               },
               inactiveIcon: null,

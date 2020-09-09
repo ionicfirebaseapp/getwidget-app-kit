@@ -114,7 +114,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 children: <Widget>[
                   GFAccordion(
                       title: 'Components',
-                      expandedTitleBackgroundColor: Colors.white,
+                      expandedTitlebackgroundColor: Colors.white,
                       textStyle:
                           const TextStyle(color: Colors.black87, fontSize: 16),
                       contentChild: Padding(
@@ -124,7 +124,7 @@ class _DrawerPageState extends State<DrawerPage> {
                             margin: const EdgeInsets.all(0),
                             titlePadding: const EdgeInsets.only(
                                 left: 7, top: 10, bottom: 10, right: 0),
-                            expandedTitleBackgroundColor: Colors.white,
+                            expandedTitlebackgroundColor: Colors.white,
                             titleChild: Row(children: [
                               Icon(
                                 const IconData(
@@ -761,8 +761,9 @@ class _DrawerPageState extends State<DrawerPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (BuildContext context) => const WebViews(
-                              url: 'https://docs.getflutter.dev/'),
+                          builder: (BuildContext context) => WebView(
+                              // selectedUrl: 'https://docs.getflutter.dev/'
+                              ),
                         ),
                       );
                     },
@@ -780,8 +781,9 @@ class _DrawerPageState extends State<DrawerPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (BuildContext context) => const WebViews(
-                              url: 'https://www.getflutter.dev/features'),
+                          builder: (BuildContext context) => WebView(
+                              // selectedUrl: 'https://www.getflutter.dev/features'
+                              ),
                         ),
                       );
                     },

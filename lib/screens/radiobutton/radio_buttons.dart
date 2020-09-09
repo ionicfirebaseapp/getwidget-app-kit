@@ -22,7 +22,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
   //   selectedRadio = 1;
   // }
 
-  int groupValue = 0;
+  // int groupValue = 0;
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -64,7 +64,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 content: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                GFRadio(
+                GFRadioButton(
 //                type: GFRadioButtonType.custom,
                   size: GFSize.LARGE,
 //                activebgColor: Colors.red,
@@ -73,47 +73,47 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
 //                activeBorderColor: Colors.pink,
 //                radioColor: Colors.black87,
 //                custombgColor: Colors.red,
-                  value: 0,
-                  groupValue: groupValue,
+                  value: true,
+                  groupValue: true,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: null,
                   radioColor: GFColors.INFO,
                 ),
-                GFRadio(
+                GFRadioButton(
                   size: GFSize.MEDIUM,
-                  value: 1,
-                  groupValue: groupValue,
+                  // value: 1,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: null,
                   radioColor: GFColors.DANGER,
                 ),
-                GFRadio(
+                GFRadioButton(
                   size: GFSize.SMALL,
-                  value: 2,
-                  groupValue: groupValue,
+                  // value: 2,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: null,
                   radioColor: GFColors.WARNING,
                 ),
-                GFRadio(
+                GFRadioButton(
                   size: 20,
-                  value: 3,
-                  groupValue: groupValue,
+                  // value: 3,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: null,
@@ -136,8 +136,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 content: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                GFRadio(
-                  type: GFRadioType.square,
+                GFRadioButton(
+                  type: GFRadioButtonType.square,
                   size: GFSize.LARGE,
 //                activebgColor: Colors.red,
 //                inactivebgColor: Colors.amber,
@@ -145,50 +145,50 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
 //                activeBorderColor: Colors.pink,
 //                radioColor: Colors.black87,
 //                custombgColor: Colors.red,
-                  value: 4,
-                  groupValue: groupValue,
+                  // value: 4,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: null,
                   radioColor: GFColors.SECONDARY,
                 ),
-                GFRadio(
-                  type: GFRadioType.square,
+                GFRadioButton(
+                  type: GFRadioButtonType.square,
                   size: GFSize.MEDIUM,
-                  value: 5,
-                  groupValue: groupValue,
+                  // value: 5,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: null,
                   radioColor: GFColors.ALT,
                 ),
-                GFRadio(
-                  type: GFRadioType.square,
+                GFRadioButton(
+                  type: GFRadioButtonType.square,
                   size: GFSize.SMALL,
-                  value: 6,
-                  groupValue: groupValue,
+                  // value: 6,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: null,
                   radioColor: GFColors.PRIMARY,
                 ),
-                GFRadio(
-                  type: GFRadioType.square,
+                GFRadioButton(
+                  type: GFRadioButtonType.square,
                   size: 20,
-                  value: 7,
-                  groupValue: groupValue,
+                  // value: 7,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: null,
@@ -212,8 +212,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 content: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                GFRadio(
-                    type: GFRadioType.blunt,
+                GFRadioButton(
+                    type: GFRadioButtonType.blunt,
                     size: GFSize.LARGE,
 //                activebgColor: Colors.red,
 //                inactivebgColor: Colors.amber,
@@ -221,49 +221,49 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
 //                activeBorderColor: Colors.pink,
 //                radioColor: Colors.black87,
 //                custombgColor: Colors.red,
-                    value: 8,
-                    groupValue: groupValue,
+                    // value: 8,
+                    // groupValue: groupValue,
                     onChanged: (val) {
                       setState(() {
-                        groupValue = val;
+                        // groupValue = val;
                       });
                     },
                     inactiveIcon: null,
                     custombgColor: GFColors.DANGER),
-                GFRadio(
-                  type: GFRadioType.blunt,
+                GFRadioButton(
+                  type: GFRadioButtonType.blunt,
                   size: GFSize.MEDIUM,
-                  value: 9,
-                  groupValue: groupValue,
+                  // value: 9,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: null,
                   custombgColor: GFColors.WARNING,
                 ),
-                GFRadio(
-                  type: GFRadioType.blunt,
+                GFRadioButton(
+                  type: GFRadioButtonType.blunt,
                   size: GFSize.SMALL,
-                  value: 10,
-                  groupValue: groupValue,
+                  // value: 10,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: null,
                   custombgColor: GFColors.DARK,
                 ),
-                GFRadio(
-                  type: GFRadioType.blunt,
+                GFRadioButton(
+                  type: GFRadioButtonType.blunt,
                   size: 25,
-                  value: 11,
-                  groupValue: groupValue,
+                  // value: 11,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: null,
@@ -286,57 +286,57 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 content: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                GFRadio(
-                  type: GFRadioType.custom,
+                GFRadioButton(
+                  type: GFRadioButtonType.custom,
                   activeIcon: Icon(Icons.check),
                   radioColor: Colors.red,
                   size: GFSize.LARGE,
                   inactivebgColor: Colors.amber,
                   inactiveBorderColor: Colors.purple,
                   activeBorderColor: Colors.pink,
-                  value: 12,
-                  groupValue: groupValue,
+                  // value: 12,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                 ),
-                GFRadio(
-                  type: GFRadioType.custom,
+                GFRadioButton(
+                  type: GFRadioButtonType.custom,
                   activeIcon: Icon(Icons.sentiment_satisfied),
                   size: GFSize.MEDIUM,
-                  value: 13,
-                  groupValue: groupValue,
+                  // value: 13,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: Icon(Icons.sentiment_dissatisfied),
                   custombgColor: GFColors.WARNING,
                 ),
-                GFRadio(
-                  type: GFRadioType.blunt,
+                GFRadioButton(
+                  type: GFRadioButtonType.blunt,
                   size: GFSize.SMALL,
-                  value: 14,
-                  groupValue: groupValue,
+                  // value: 14,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: null,
                   custombgColor: GFColors.DARK,
                 ),
-                GFRadio(
-                  type: GFRadioType.blunt,
+                GFRadioButton(
+                  type: GFRadioButtonType.blunt,
                   size: 25,
-                  value: 15,
-                  groupValue: groupValue,
+                  // value: 15,
+                  // groupValue: groupValue,
                   onChanged: (val) {
                     setState(() {
-                      groupValue = val;
+                      // groupValue = val;
                     });
                   },
                   inactiveIcon: null,

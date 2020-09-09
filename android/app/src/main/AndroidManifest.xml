@@ -10,7 +10,8 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="GetWidget"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -30,3 +31,4 @@
             android:value="2" />
     </application>
 </manifest>
+ 

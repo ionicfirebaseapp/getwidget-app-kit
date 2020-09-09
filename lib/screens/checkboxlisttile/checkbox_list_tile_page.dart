@@ -41,7 +41,7 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
               size: GFSize.SMALL,
               activebgColor: GFColors.DANGER,
               activeBorderColor: Colors.purple,
-              type: GFCheckboxType.circle,
+              type: GFCheckboxType.square,
               inactiveBorderColor: Colors.deepOrangeAccent,
               onChanged: (val) {
                 setState(() {
@@ -58,7 +58,7 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
               size: GFSize.SMALL,
               activebgColor: GFColors.DANGER,
               activeBorderColor: Colors.purple,
-              type: GFCheckboxType.circle,
+              type: GFCheckboxType.square,
               inactiveBorderColor: Colors.deepOrangeAccent,
               onChanged: (val) {
                 setState(() {
