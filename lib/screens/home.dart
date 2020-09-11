@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:gf_app/screens/border/border.dart';
 import 'package:gf_app/screens/radiolisttile/radiolisttile.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/alert/alert.dart';
@@ -225,6 +226,22 @@ class _HomePageState extends State<HomePage> {
       ),
       'title': 'RadioListTile',
       'route': RadioListTilePage()
+    },
+    {
+      'icon': const IconData(
+        0xe900,
+        fontFamily: 'GFIcons',
+      ),
+      'title': 'GFBorder',
+      'route': BorderPage()
+    },
+    {
+      'icon': const IconData(
+        0xe900,
+        fontFamily: 'GFIcons',
+      ),
+      'title': 'GFBottomsheet',
+      'route': BorderPage()
     }
   ];
 

@@ -9,7 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  getwidget: ^1.1.3
+  getwidget: 
+    path: D:\Flutter_Apps\Get_Widget\getflutter\
   webview_flutter: ^0.3.19+6
   cupertino_icons: ^0.1.2
 
