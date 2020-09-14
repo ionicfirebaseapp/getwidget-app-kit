@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:gf_app/screens/animations/animation.dart';
 import 'package:gf_app/screens/border/border.dart';
+import 'package:gf_app/screens/bottomsheet/bottomsheet.dart';
 import 'package:gf_app/screens/radiolisttile/radiolisttile.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/alert/alert.dart';
@@ -197,32 +199,32 @@ class _HomePageState extends State<HomePage> {
     },
     {
       'icon': const IconData(
-        0xe900,
-        fontFamily: 'GFFontIcons2',
+        0xe906,
+        fontFamily: 'GFIconsnew',
       ),
       'title': 'CheckBox',
       'route': CheckBoxPage()
     },
     {
       'icon': const IconData(
-        0xe900,
-        fontFamily: 'GFFontIcons2',
+        0xe905,
+        fontFamily: 'GFIconsnew',
       ),
       'title': 'CheckboxListTile',
       'route': CheckBoxListTilePage()
     },
     {
       'icon': const IconData(
-        0xe900,
-        fontFamily: 'GFIcons',
+        0xe908,
+        fontFamily: 'GFIconsnew',
       ),
       'title': 'RadioButton',
       'route': RadioButtonPage()
     },
     {
       'icon': const IconData(
-        0xe900,
-        fontFamily: 'GFIcons',
+        0xe909,
+        fontFamily: 'GFIconsnew',
       ),
       'title': 'RadioListTile',
       'route': RadioListTilePage()
@@ -230,19 +232,27 @@ class _HomePageState extends State<HomePage> {
     {
       'icon': const IconData(
         0xe900,
-        fontFamily: 'GFIcons',
+        fontFamily: 'GFIconsnew',
       ),
-      'title': 'GFBorder',
+      'title': 'Border',
       'route': BorderPage()
     },
     {
       'icon': const IconData(
-        0xe900,
-        fontFamily: 'GFIcons',
+        0xe901,
+        fontFamily: 'GFIconsnew',
       ),
-      'title': 'GFBottomsheet',
-      'route': BorderPage()
-    }
+      'title': 'BottomSheet',
+      'route': BottomSheetPage()
+    },
+    //  {
+    //   'icon': const IconData(
+    //     0xe907,
+    //     fontFamily: 'GFIconsnew',
+    //   ),
+    //   'title': 'Animation',
+    //   'route': AnimationPage()
+    // }
   ];
 
   @override

@@ -30,19 +30,22 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
           ),
           centerTitle: true,
         ),
-
-//    body: GFCheckBoxListTile(),
         body: ListView(
           children: <Widget>[
             GFCheckboxListTile(
               titleText: 'hi',
               subtitleText: 'Happy Ugadi',
-              avatar: GFAvatar(),
-              size: GFSize.SMALL,
-              activebgColor: GFColors.DANGER,
-              activeBorderColor: Colors.purple,
+              avatar: GFAvatar(
+                backgroundImage: AssetImage('lib/assets/images/img.png'),
+              ),
+              size: 25,
+              activebgColor: Colors.green,
+              activeIcon: Icon(
+                Icons.check,
+                size: 15,
+                color: Colors.white,
+              ),
               type: GFCheckboxType.circle,
-              inactiveBorderColor: Colors.deepOrangeAccent,
               onChanged: (val) {
                 setState(() {
                   check = val;
@@ -54,12 +57,17 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
             GFCheckboxListTile(
               titleText: 'hi',
               subtitleText: 'Happy Ugadi',
-              avatar: GFAvatar(),
-              size: GFSize.SMALL,
-              activebgColor: GFColors.DANGER,
-              activeBorderColor: Colors.purple,
+              avatar: GFAvatar(
+                backgroundImage: AssetImage('lib/assets/images/img1.png'),
+              ),
+              size: 25,
+              activebgColor: Colors.green,
+              activeIcon: Icon(
+                Icons.check,
+                size: 15,
+                color: Colors.white,
+              ),
               type: GFCheckboxType.circle,
-              inactiveBorderColor: Colors.deepOrangeAccent,
               onChanged: (val) {
                 setState(() {
                   check1 = val;

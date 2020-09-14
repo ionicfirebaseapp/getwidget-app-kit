@@ -8,20 +8,6 @@ class RadioButtonPage extends StatefulWidget {
 }
 
 class _RadioButtonPageState extends State<RadioButtonPage> {
-  // int selectedRadio;
-  // bool isChecked = false;
-  // setSelectedRadio(int val) {
-  //   setState(() {
-  //     selectedRadio = val;
-  //   });
-  // }
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   selectedRadio = 1;
-  // }
-
   int groupValue = 0;
 
   @override
@@ -70,7 +56,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
 //                activebgColor: Colors.red,
 //                inactivebgColor: Colors.amber,
 //                inactiveBorderColor: Colors.purple,
-//                activeBorderColor: Colors.pink,
+                  activeBorderColor: GFColors.SUCCESS,
 //                radioColor: Colors.black87,
 //                custombgColor: Colors.red,
                   value: 0,
@@ -81,7 +67,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     });
                   },
                   inactiveIcon: null,
-                  radioColor: GFColors.INFO,
+                  radioColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
                   size: GFSize.MEDIUM,
@@ -93,7 +79,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     });
                   },
                   inactiveIcon: null,
-                  radioColor: GFColors.DANGER,
+                  activeBorderColor: GFColors.SUCCESS,
+                  radioColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
                   size: GFSize.SMALL,
@@ -105,7 +92,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     });
                   },
                   inactiveIcon: null,
-                  radioColor: GFColors.WARNING,
+                  activeBorderColor: GFColors.SUCCESS,
+                  radioColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
                   size: 20,
@@ -117,6 +105,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     });
                   },
                   inactiveIcon: null,
+                  activeBorderColor: GFColors.SUCCESS,
                   radioColor: GFColors.SUCCESS,
                 )
               ],
@@ -153,7 +142,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     });
                   },
                   inactiveIcon: null,
-                  radioColor: GFColors.SECONDARY,
+                  activeBorderColor: GFColors.SUCCESS,
+                  radioColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
                   type: GFRadioType.square,
@@ -166,7 +156,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     });
                   },
                   inactiveIcon: null,
-                  radioColor: GFColors.ALT,
+                  activeBorderColor: GFColors.SUCCESS,
+                  radioColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
                   type: GFRadioType.square,
@@ -179,7 +170,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     });
                   },
                   inactiveIcon: null,
-                  radioColor: GFColors.PRIMARY,
+                  activeBorderColor: GFColors.SUCCESS,
+                  radioColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
                   type: GFRadioType.square,
@@ -192,7 +184,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     });
                   },
                   inactiveIcon: null,
-                  radioColor: GFColors.INFO,
+                  activeBorderColor: GFColors.SUCCESS,
+                  radioColor: GFColors.SUCCESS,
                   activeIcon: Icon(Icons.close),
                 )
               ],
@@ -218,7 +211,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
 //                activebgColor: Colors.red,
 //                inactivebgColor: Colors.amber,
 //                inactiveBorderColor: Colors.purple,
-//                activeBorderColor: Colors.pink,
+                    activeBorderColor: GFColors.SUCCESS,
 //                radioColor: Colors.black87,
 //                custombgColor: Colors.red,
                     value: 8,
@@ -229,7 +222,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                       });
                     },
                     inactiveIcon: null,
-                    custombgColor: GFColors.DANGER),
+                    custombgColor: GFColors.SUCCESS),
                 GFRadio(
                   type: GFRadioType.blunt,
                   size: GFSize.MEDIUM,
@@ -241,7 +234,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     });
                   },
                   inactiveIcon: null,
-                  custombgColor: GFColors.WARNING,
+                  activeBorderColor: GFColors.SUCCESS,
+                  custombgColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
                   type: GFRadioType.blunt,
@@ -254,7 +248,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     });
                   },
                   inactiveIcon: null,
-                  custombgColor: GFColors.DARK,
+                  activeBorderColor: GFColors.SUCCESS,
+                  custombgColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
                   type: GFRadioType.blunt,
@@ -267,6 +262,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     });
                   },
                   inactiveIcon: null,
+                  activeBorderColor: GFColors.SUCCESS,
                   custombgColor: GFColors.SUCCESS,
                 )
               ],
@@ -291,9 +287,9 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   activeIcon: Icon(Icons.check),
                   radioColor: Colors.red,
                   size: GFSize.LARGE,
-                  inactivebgColor: Colors.amber,
-                  inactiveBorderColor: Colors.purple,
-                  activeBorderColor: Colors.pink,
+                  activebgColor: GFColors.SUCCESS,
+                  inactiveBorderColor: GFColors.DARK,
+                  activeBorderColor: GFColors.SUCCESS,
                   value: 12,
                   groupValue: groupValue,
                   onChanged: (val) {
@@ -315,6 +311,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   },
                   inactiveIcon: Icon(Icons.sentiment_dissatisfied),
                   custombgColor: GFColors.WARNING,
+                  activebgColor: GFColors.SUCCESS,
+                  activeBorderColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
                   type: GFRadioType.blunt,
@@ -327,7 +325,8 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     });
                   },
                   inactiveIcon: null,
-                  custombgColor: GFColors.DARK,
+                  custombgColor: GFColors.SUCCESS,
+                  activeBorderColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
                   type: GFRadioType.blunt,
@@ -340,6 +339,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                     });
                   },
                   inactiveIcon: null,
+                  activeBorderColor: GFColors.SUCCESS,
                   custombgColor: GFColors.SUCCESS,
                 ),
               ],

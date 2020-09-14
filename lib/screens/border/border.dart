@@ -67,14 +67,14 @@ class _BorderPageState extends State<BorderPage> {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
               child: GFBorder(
-                radius: Radius.circular(40),
+                type: GFBorderType.RRect,
+                radius: Radius.circular(20),
                 color: Color(0xFFAA66CC),
-                // dashedLine: [2, 0],
-                // strokeWidth: 5,
-                // type: GFBorderType.Rect,
                 child: Container(
+                  decoration: BoxDecoration(
+                      color: Color(0xFFFAF0FF),
+                      borderRadius: BorderRadius.circular(20)),
                   height: 100,
-                  // color: Color(0xFFE9FFEF),
                 ),
               ),
             ),

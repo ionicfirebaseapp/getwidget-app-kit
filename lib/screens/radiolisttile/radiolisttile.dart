@@ -35,13 +35,13 @@ class _RadioListTilePageState extends State<RadioListTilePage> {
             GFRadioListTile(
               titleText: 'Hello',
               subtitleText: 'Happy New Year',
-              avatar: GFAvatar(),
-
-              size: GFSize.SMALL,
-              // activebgColor: GFColors.DANGER,
-              activeBorderColor: Colors.purple,
+              avatar: GFAvatar(
+                backgroundImage: AssetImage('lib/assets/images/img1.png'),
+              ),
+              size: 25,
+              activeBorderColor: Colors.green,
+              focusColor: Colors.green,
               type: GFRadioType.square,
-              inactiveBorderColor: Colors.deepOrangeAccent,
               value: 0,
               groupValue: groupValue,
               onChanged: (val) {
@@ -54,13 +54,13 @@ class _RadioListTilePageState extends State<RadioListTilePage> {
             GFRadioListTile(
               titleText: 'Hello',
               subtitleText: 'Happy New Year',
-              avatar: GFAvatar(),
-
-              size: GFSize.SMALL,
-              // activebgColor: GFColors.DANGER,
-              activeBorderColor: Colors.purple,
+              avatar: GFAvatar(
+                backgroundImage: AssetImage('lib/assets/images/img2.png'),
+              ),
+              size: 25,
+              activeBorderColor: Colors.green,
+              focusColor: Colors.green,
               type: GFRadioType.square,
-              inactiveBorderColor: Colors.deepOrangeAccent,
               value: 1,
               groupValue: groupValue,
               onChanged: (val) {
