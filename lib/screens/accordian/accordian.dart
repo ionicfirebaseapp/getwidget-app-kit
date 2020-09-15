@@ -51,6 +51,8 @@ class _AccordionState extends State<Accordion> {
                       color: Colors.black.withOpacity(0.2), width: 0.5),
                 ),
                 contentborder: Border(
+                  top: BorderSide(
+                    color: Colors.black.withOpacity(0.2), width: 0.5),
                   bottom: BorderSide(
                       color: Colors.black.withOpacity(0.2), width: 0.5),
                   left: BorderSide(
@@ -83,6 +85,8 @@ class _AccordionState extends State<Accordion> {
                       color: Colors.black.withOpacity(0.2), width: 0.5),
                 ),
                 contentborder: Border(
+                  top: BorderSide(
+                    color: Colors.black.withOpacity(0.2), width: 0.5),
                   bottom: BorderSide(
                       color: Colors.black.withOpacity(0.2), width: 0.5),
                   left: BorderSide(
@@ -120,6 +124,8 @@ class _AccordionState extends State<Accordion> {
                     color: Colors.black.withOpacity(0.2), width: 0.5),
               ),
               contentborder: Border(
+                top: BorderSide(
+                    color: Colors.black.withOpacity(0.2), width: 0.5),
                 bottom: BorderSide(
                     color: Colors.black.withOpacity(0.2), width: 0.5),
                 left: BorderSide(

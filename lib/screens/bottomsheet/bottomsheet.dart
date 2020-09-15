@@ -66,7 +66,7 @@ class _BottomSheetPageState extends State<BottomSheetPage> {
             ),
           ),
           stickyFooter: Container(
-            color: Colors.lightGreen,
+            color: GFColors.SUCCESS,
             height: 100,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -88,7 +88,7 @@ class _BottomSheetPageState extends State<BottomSheetPage> {
           stickyFooterHeight: 50,
         ),
         floatingActionButton: FloatingActionButton(
-            backgroundColor: Colors.lightGreen,
+            backgroundColor: GFColors.SUCCESS,
             child: const Icon(Icons.keyboard_arrow_down),
             onPressed: () {
               _controller.isBottomSheetOpened
