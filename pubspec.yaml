@@ -51,6 +51,11 @@ flutter:
     - lib/assets/images/avatar11.png
     - lib/assets/images/avatar12.png
     - lib/assets/gif/success1.gif
+    - lib/assets/icons/allign.png
+    - lib/assets/icons/Rotation.png
+    - lib/assets/icons/scaling.png
+    - lib/assets/icons/size.png
+    - lib/assets/icons/slide.png
     - lib/assets/icons/gflogo.png
 
   fonts:

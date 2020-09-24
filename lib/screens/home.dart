@@ -4,6 +4,7 @@ import 'package:getwidget/getwidget.dart';
 import 'package:gf_app/screens/animations/animation.dart';
 import 'package:gf_app/screens/border/border.dart';
 import 'package:gf_app/screens/bottomsheet/bottomsheet.dart';
+import 'package:gf_app/screens/intro-screen/introscreen.dart';
 import 'package:gf_app/screens/radiolisttile/radiolisttile.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/alert/alert.dart';
@@ -245,14 +246,22 @@ class _HomePageState extends State<HomePage> {
       'title': 'BottomSheet',
       'route': BottomSheetPage()
     },
-    //  {
-    //   'icon': const IconData(
-    //     0xe907,
-    //     fontFamily: 'GFIconsnew',
-    //   ),
-    //   'title': 'Animation',
-    //   'route': AnimationPage()
-    // }
+     {
+      'icon': const IconData(
+        0xe907,
+        fontFamily: 'GFIconsnew',
+      ),
+      'title': 'Animation',
+      'route': AnimationPage()
+    },
+     {
+      'icon': const IconData(
+        0xe907,
+        fontFamily: 'GFIconsnew',
+      ),
+      'title': 'IntroScreen',
+      'route': Introscreen()
+    }
   ];
 
   @override

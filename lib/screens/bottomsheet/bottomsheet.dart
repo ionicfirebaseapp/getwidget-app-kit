@@ -9,6 +9,7 @@ class BottomSheetPage extends StatefulWidget {
 
 class _BottomSheetPageState extends State<BottomSheetPage> {
   final GFBottomSheetController _controller = GFBottomSheetController();
+  bool isSelected = false;
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -87,13 +88,20 @@ class _BottomSheetPageState extends State<BottomSheetPage> {
           ),
           stickyFooterHeight: 50,
         ),
-        floatingActionButton: FloatingActionButton(
-            backgroundColor: GFColors.SUCCESS,
-            child: const Icon(Icons.keyboard_arrow_down),
-            onPressed: () {
-              _controller.isBottomSheetOpened
-                  ? _controller.hideBottomSheet()
-                  : _controller.showBottomSheet();
-            }),
+        // floatingActionButton: InkWell(
+        //   onTap: (){
+        //     setState(() {
+        //       isSelected != isSelected;
+        //     });
+        //   },
+        //   child: FloatingActionButton(
+        //       backgroundColor: GFColors.SUCCESS,
+        //       child: isSelected? Icon(Icons.keyboard_arrow_down):Icon(Icons.keyboard_arrow_up),
+        //       onPressed: () {
+        //         _controller.isBottomSheetOpened
+        //             ? _controller.hideBottomSheet()
+        //             : _controller.showBottomSheet();
+        //       }),
+        // ),
       );
 }
