@@ -70,7 +70,7 @@ packages:
   getwidget:
     dependency: "direct main"
     description:
-      path: "D:\\Flutter_Apps\\Get_Widget\\getflutter\\"
+      path: "D:\\Flutter_Apps\\Get_Widget\\getwidget\\"
       relative: false
     source: path
     version: "1.1.3"

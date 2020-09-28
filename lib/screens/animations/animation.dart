@@ -30,15 +30,15 @@ class _AnimationPageState extends State<AnimationPage>
         new CurvedAnimation(parent: controller, curve: Curves.bounceInOut);
     controller.repeat();
 
-offsetAnimation = Tween<Offset>(
-  begin: Offset.zero,
-  end: const Offset(1.5,0),
-).animate(CurvedAnimation(
-  parent: controller,
-  curve: Curves.linear,
-));
+    offsetAnimation = Tween<Offset>(
+      begin: Offset.zero,
+      end: const Offset(1.5, 0),
+    ).animate(CurvedAnimation(
+      parent: controller,
+      curve: Curves.linear,
+    ));
 
-controller.forward();
+    controller.forward();
   }
 
   @override
@@ -64,7 +64,7 @@ controller.forward();
       body: ListView(
         children: [
           const Padding(
-            padding: EdgeInsets.only(left: 15, top: 30,bottom: 20),
+            padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
             child: GFTypography(
               text: 'Rotation',
               type: GFTypographyType.typo5,
@@ -88,10 +88,10 @@ controller.forward();
               ),
             ),
           ),
-          SizedBox(height:5),
-          Center(child:Text('Tap Me')),
+          SizedBox(height: 5),
+          Center(child: Text('Tap Me')),
           const Padding(
-            padding: EdgeInsets.only(left: 15, top: 30,bottom: 20),
+            padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
             child: GFTypography(
               text: 'Scaling',
               type: GFTypographyType.typo5,
@@ -114,10 +114,10 @@ controller.forward();
               ),
             ),
           ),
-          SizedBox(height:5),
-          Center(child:Text('Tap Me')),
+          SizedBox(height: 5),
+          Center(child: Text('Tap Me')),
           const Padding(
-            padding: EdgeInsets.only(left: 15, top: 30,bottom: 20),
+            padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
             child: GFTypography(
               text: 'Allignment',
               type: GFTypographyType.typo5,
@@ -135,10 +135,10 @@ controller.forward();
               height: 80,
             ),
           ),
-                    SizedBox(height:5),
-          Center(child:Text('Tap Me')),
+          SizedBox(height: 5),
+          Center(child: Text('Tap Me')),
           const Padding(
-            padding: EdgeInsets.only(left: 15, top: 30,bottom: 20),
+            padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
             child: GFTypography(
               text: 'Slide Transition',
               type: GFTypographyType.typo5,
@@ -151,7 +151,7 @@ controller.forward();
             child: Expanded(
               child: GFAnimation(
                 controller: controller,
-    slidePosition: offsetAnimation,
+                slidePosition: offsetAnimation,
                 type: GFAnimationType.slideTransition,
                 child: Image.asset(
                   'lib/assets/icons/slide.png',
@@ -161,8 +161,8 @@ controller.forward();
               ),
             ),
           ),
-          SizedBox(height:5),
-          Center(child:Text('Tap Me')),
+          SizedBox(height: 5),
+          Center(child: Text('Tap Me')),
           // const Padding(
           //   padding: EdgeInsets.only(left: 15, top: 30,bottom: 20),
           //   child: GFTypography(
@@ -176,7 +176,7 @@ controller.forward();
           //   onTap: () {
           //     if (mounted) {
           //       setState(() {
-          //         _size = _large ? 50.0 : 20.0;
+          //         _size = _large ? 50.0 : 200.0;
           //         _large = !_large;
           //       });
           //     }
@@ -189,56 +189,57 @@ controller.forward();
           // ),
           // SizedBox(height:5),
           // Center(child:Text('Tap Me')),
-          //  const Padding(
-          //   padding: EdgeInsets.only(left: 15, top: 30,bottom: 20),
-          //   child: GFTypography(
-          //     text: 'TextStyle',
-          //     type: GFTypographyType.typo5,
-          //     dividerWidth: 25,
-          //     dividerColor: Color(0xFF19CA4B),
-          //   ),
-          // ),
-          // // GFAnimation(
-          // //       onTap: (){
-          // //         setState(() {
-          // //           _fontSize = _first ? 60 : 30;
-          // //           _color = _first ? Colors.blue : Colors.red;
-          // //           _first = !_first;
-          // //         });
-          // //       },
-          // //       color: _color,
-          // //       fontSize: _fontSize,
-          // //       type: GFAnimationType.textStyle,
-          // //       child: Center(child: Text('Get Widget')),
-          // //     ),
-          //     SizedBox(height:5),
-          // Center(child:Text('Tap Me')),
-          // const Padding(
-          //   padding: EdgeInsets.only(left: 15, top: 30,bottom: 20),
-          //   child: GFTypography(
-          //     text: 'Container',
-          //     type: GFTypographyType.typo5,
-          //     dividerWidth: 25,
-          //     dividerColor: Color(0xFF19CA4B),
-          //   ),
-          // ),
-          //   // GFAnimation(
-          //   //   width: 50,
-          //   //   changedWidth: 100,
-          //   //   height: 50,
-          //   //   changedHeight: 100,
-          //   //   color: _color,
-          //   //   fontSize: _fontSize,
-          //   //   type: GFAnimationType.container,
-          //   //   child: Image.asset(
-          //   //       'lib/assets/icons/slide.png',
-          //   //       width: 80,
-          //   //       height: 80,
-          //   //     ),
-          //   // ),
-          // SizedBox(height:5),
-          // Center(child:Text('Tap Me')),
-          SizedBox(height:20),
+          const Padding(
+            padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
+            child: GFTypography(
+              text: 'TextStyle',
+              type: GFTypographyType.typo5,
+              dividerWidth: 25,
+              dividerColor: Color(0xFF19CA4B),
+            ),
+          ),
+          GFAnimation(
+            onTap: () {
+              setState(() {
+                _fontSize = _first ? 60 : 30;
+                _color = _first ? Colors.blue : Colors.red;
+                _first = !_first;
+              });
+            },
+            color: _color,
+            fontSize: _fontSize,
+            type: GFAnimationType.textStyle,
+            child: Center(child: Text('Get Widget')),
+          ),
+          SizedBox(height: 5),
+          Center(child: Text('Tap Me')),
+          const Padding(
+            padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
+            child: GFTypography(
+              text: 'Container',
+              type: GFTypographyType.typo5,
+              dividerWidth: 25,
+              dividerColor: Color(0xFF19CA4B),
+            ),
+          ),
+          GFAnimation(
+            width: 50,
+            changedWidth: 100,
+            height: 50,
+            changedHeight: 100,
+            activeColor: Colors.transparent,
+            color: Colors.transparent,
+            fontSize: _fontSize,
+            type: GFAnimationType.container,
+            child: Image.asset(
+              'lib/assets/icons/slide.png',
+              width: 80,
+              height: 80,
+            ),
+          ),
+          SizedBox(height: 5),
+          Center(child: Text('Tap Me')),
+          SizedBox(height: 20),
         ],
       ));
 }

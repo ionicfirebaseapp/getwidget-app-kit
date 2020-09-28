@@ -52,7 +52,7 @@ class _AccordionState extends State<Accordion> {
                 ),
                 contentborder: Border(
                   top: BorderSide(
-                    color: Colors.black.withOpacity(0.2), width: 0.5),
+                      color: Colors.black.withOpacity(0.2), width: 0.5),
                   bottom: BorderSide(
                       color: Colors.black.withOpacity(0.2), width: 0.5),
                   left: BorderSide(
@@ -86,7 +86,7 @@ class _AccordionState extends State<Accordion> {
                 ),
                 contentborder: Border(
                   top: BorderSide(
-                    color: Colors.black.withOpacity(0.2), width: 0.5),
+                      color: Colors.black.withOpacity(0.2), width: 0.5),
                   bottom: BorderSide(
                       color: Colors.black.withOpacity(0.2), width: 0.5),
                   left: BorderSide(

@@ -6,6 +6,7 @@ import 'package:gf_app/screens/border/border.dart';
 import 'package:gf_app/screens/bottomsheet/bottomsheet.dart';
 import 'package:gf_app/screens/intro-screen/introscreen.dart';
 import 'package:gf_app/screens/radiolisttile/radiolisttile.dart';
+import 'package:gf_app/screens/sticky_header/stickyheader.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/alert/alert.dart';
 import '../screens/appbar/app_home.dart';
@@ -246,7 +247,7 @@ class _HomePageState extends State<HomePage> {
       'title': 'BottomSheet',
       'route': BottomSheetPage()
     },
-     {
+    {
       'icon': const IconData(
         0xe907,
         fontFamily: 'GFIconsnew',
@@ -254,14 +255,22 @@ class _HomePageState extends State<HomePage> {
       'title': 'Animation',
       'route': AnimationPage()
     },
-     {
+    {
       'icon': const IconData(
         0xe907,
         fontFamily: 'GFIconsnew',
       ),
       'title': 'IntroScreen',
       'route': Introscreen()
-    }
+    },
+    {
+      'icon': const IconData(
+        0xe907,
+        fontFamily: 'GFIconsnew',
+      ),
+      'title': 'StickyHeader',
+      'route': StickyHeader()
+    },
   ];
 
   @override

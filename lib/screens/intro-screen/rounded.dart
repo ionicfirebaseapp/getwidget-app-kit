@@ -4,12 +4,12 @@ import 'package:getwidget/components/intro_screen/gf_intro_screen.dart';
 import 'package:getwidget/components/intro_screen/gf_intro_slide.dart';
 import 'package:getwidget/types/gf_intro_type.dart';
 
-
 class RoundedIntro extends StatefulWidget {
   RoundedIntro({Key key}) : super(key: key);
   @override
   _RoundedIntroState createState() => _RoundedIntroState();
 }
+
 class _RoundedIntroState extends State<RoundedIntro> {
   @override
   Widget build(BuildContext context) {
@@ -20,6 +20,7 @@ class _RoundedIntroState extends State<RoundedIntro> {
       ),
     );
   }
+
   List<Widget> slides() {
     final List<Widget> list = [];
     list.add(const GFIntroSlide(
