@@ -30,78 +30,165 @@ class _BottomSheetPageState extends State<BottomSheetPage> {
           ),
           centerTitle: true,
         ),
+        body: ListView(
+          children: <Widget>[buildPostImage(), SizedBox(height: 20)],
+        ),
         bottomSheet: GFBottomSheet(
           controller: _controller,
-//animationDuration: 800,
-//      minContentHeight: 100,
-          maxContentHeight: 200,
-//      elevation: 10,
+          maxContentHeight: 300,
           enableExpandableContent: true,
           stickyHeaderHeight: 100,
           stickyHeader: Container(
-            decoration: BoxDecoration(color: Colors.white,
-                // borderRadius: BorderRadius.circular(10),
+            decoration: BoxDecoration(
+                color: Colors.white,
                 boxShadow: [BoxShadow(color: Colors.black45, blurRadius: 0)]),
-//        height: 100,
             child: const GFListTile(
               avatar: GFAvatar(
-                backgroundImage: AssetImage('lib/assets/images/gflogo.png'),
+                backgroundImage: AssetImage('lib/assets/images/img.png'),
               ),
-              titleText: 'GetWidget',
-              subtitleText: 'Open source UI library',
+              titleText: 'Eva Mendez',
+              subtitleText: '11 minutes ago',
             ),
           ),
-          contentBody: Container(
-            margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-            child: ListView(
-              shrinkWrap: true,
-              physics: const ScrollPhysics(),
-              children: const [
-                Center(
-                    child: Text(
-                  'Getwidget reduces your overall app development time to minimum 30% because of its pre-build clean UI widget that you can use in flutter app development. We have spent more than 1000+ hours to build this library to make flutter developer’s life easy.',
-                  style: TextStyle(
-                      fontSize: 15, wordSpacing: 0.3, letterSpacing: 0.2),
-                ))
-              ],
+          contentBody: SingleChildScrollView(
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+              child: Column(
+                children: [
+                  //  Container(
+                  //       margin: EdgeInsets.symmetric(horizontal: 10),
+                  //       height: 60,
+                  //       padding: EdgeInsets.only(bottom: 15),
+                  //       child: TextFormField(
+
+                  //         initialValue: "Enter Message",
+                  //         keyboardType: TextInputType.emailAddress,
+                  //         decoration: InputDecoration(
+
+                  //             errorBorder: OutlineInputBorder(
+                  //                 borderSide: BorderSide(
+                  //                     width: 0, color: Color(0xFFF44242))),
+                  //             errorStyle: TextStyle(color: Color(0xFFF44242)),
+                  //             contentPadding: EdgeInsets.all(10),
+                  //             enabledBorder: const OutlineInputBorder(
+                  //               borderSide: const BorderSide(color: Colors.grey, width: 0.0),
+                  //             ),
+
+                  //             focusedBorder: OutlineInputBorder(
+                  //               borderSide: BorderSide(color: Colors.grey),
+                  //             ),
+                  //             fillColor: Colors.white,
+                  //             focusColor: Colors.white),
+                  //       ),
+                  //     ),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 15),
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          width: 30,
+                          height: 30,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      'lib/assets/images/img1.png'))),
+                        ),
+                        Container(
+                            margin: EdgeInsets.only(left: 6),
+                            child: Text(
+                              'Add to your story',
+                              style: TextStyle(color: Colors.blue),
+                            ))
+                      ],
+                    ),
+                  ),
+                  ListView.builder(
+                      physics: ScrollPhysics(),
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
+                      itemCount: 3,
+                      itemBuilder: (BuildContext context, int index) {
+                        return SingleChildScrollView(
+                            child: InkWell(
+                          child: GFListTile(
+                            avatar: GFAvatar(
+                              backgroundImage:
+                                  AssetImage('lib/assets/images/img2.png'),
+                              size: 20,
+                            ),
+                            subtitleText: 'John Mendez',
+                            icon: Container(
+                              width: 66,
+                              height: 30,
+                              child: GFButton(
+                                onPressed: () {},
+                                color: GFColors.PRIMARY,
+                                child: Center(
+                                    child: Text(
+                                  'Send',
+                                  style: TextStyle(color: Colors.white),
+                                )),
+                              ),
+                            ),
+                          ),
+                        ));
+                      }),
+                ],
+              ),
             ),
           ),
-          stickyFooter: Container(
-            color: GFColors.SUCCESS,
-            height: 100,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text(
-                  'Get in touch',
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
-                Text(
-                  'info@getwidget.dev',
-                  style: TextStyle(fontSize: 15, color: Colors.white),
-                ),
-              ],
-            ),
-          ),
-          stickyFooterHeight: 50,
         ),
-        // floatingActionButton: InkWell(
-        //   onTap: (){
-        //     setState(() {
-        //       isSelected != isSelected;
-        //     });
-        //   },
-        //   child: FloatingActionButton(
-        //       backgroundColor: GFColors.SUCCESS,
-        //       child: isSelected? Icon(Icons.keyboard_arrow_down):Icon(Icons.keyboard_arrow_up),
-        //       onPressed: () {
-        //         _controller.isBottomSheetOpened
-        //             ? _controller.hideBottomSheet()
-        //             : _controller.showBottomSheet();
-        //       }),
-        // ),
       );
+
+  Widget buildPostImage() {
+    return Stack(
+      children: <Widget>[
+        Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height * 0.65,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+            image: AssetImage('lib/assets/images/story.jpg'),
+            fit: BoxFit.fill,
+            colorFilter: new ColorFilter.mode(
+                Colors.black.withOpacity(0.2), BlendMode.darken),
+          )),
+        ),
+        Positioned(
+            bottom: 0,
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: 83,
+              padding: EdgeInsets.all(10),
+              color: Colors.black.withOpacity(0.30),
+              child: Column(
+                children: <Widget>[
+                  Text(
+                    'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        '123 Likes .',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      Text(
+                        ' 86 Comments .',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      Text(
+                        ' 19 Shares',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ))
+      ],
+    );
+  }
 }

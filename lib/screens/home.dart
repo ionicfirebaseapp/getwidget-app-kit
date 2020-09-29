@@ -6,6 +6,7 @@ import 'package:gf_app/screens/border/border.dart';
 import 'package:gf_app/screens/bottomsheet/bottomsheet.dart';
 import 'package:gf_app/screens/intro-screen/introscreen.dart';
 import 'package:gf_app/screens/radiolisttile/radiolisttile.dart';
+import 'package:gf_app/screens/sticky_header/sticky_types.dart';
 import 'package:gf_app/screens/sticky_header/stickyheader.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/alert/alert.dart';
@@ -269,7 +270,7 @@ class _HomePageState extends State<HomePage> {
         fontFamily: 'GFIconsnew',
       ),
       'title': 'StickyHeader',
-      'route': StickyHeader()
+      'route': StickyTypes()
     },
   ];
 

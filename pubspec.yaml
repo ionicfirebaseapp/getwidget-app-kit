@@ -50,6 +50,14 @@ flutter:
     - lib/assets/images/avatar10.png
     - lib/assets/images/avatar11.png
     - lib/assets/images/avatar12.png
+    - lib/assets/images/s1.png
+    - lib/assets/images/s2.png
+    - lib/assets/images/s3.png
+    - lib/assets/images/s4.png
+    - lib/assets/images/s5.png
+    - lib/assets/images/story.jpg
+
+
     - lib/assets/gif/success1.gif
     - lib/assets/icons/allign.png
     - lib/assets/icons/Rotation.png
