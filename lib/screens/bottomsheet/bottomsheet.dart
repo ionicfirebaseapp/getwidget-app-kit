@@ -139,6 +139,106 @@ class _BottomSheetPageState extends State<BottomSheetPage> {
             ),
           ),
         ),
+//                 bottomSheet: GFBottomSheet(
+//           controller: _controller,
+//           maxContentHeight: 300,
+// // minContentHeight: 200,
+//           enableExpandableContent: true,
+//           stickyHeaderHeight: 70,
+//           stickyHeader: const GFListTile(
+//             padding: EdgeInsets.zero,
+//             avatar: GFAvatar(
+//                 backgroundImage: AssetImage('lib/assets/images/img.png'),
+//                 size: 30,
+//                 ),
+//             titleText: 'Eva Mendez',
+//             subtitleText: '11 minutes ago',
+//           ),
+//           contentBody: Container(
+//             margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+//             child: ListView(
+//               shrinkWrap: true,
+//               physics: const ScrollPhysics(),
+//               children: [
+//                 Container(
+//                   margin: EdgeInsets.symmetric(horizontal: 10),
+//                   height: 60,
+//                   padding: EdgeInsets.only(bottom: 15),
+//                   child: TextFormField(
+//                     initialValue: "Enter Message",
+//                     keyboardType: TextInputType.emailAddress,
+//                     decoration: InputDecoration(
+//                         errorBorder: OutlineInputBorder(
+//                             borderSide:
+//                                 BorderSide(width: 0, color: Color(0xFFF44242))),
+//                         errorStyle: TextStyle(color: Color(0xFFF44242)),
+//                         contentPadding: EdgeInsets.all(10),
+//                         enabledBorder: const OutlineInputBorder(
+//                           borderSide:
+//                               const BorderSide(color: Colors.grey, width: 0.0),
+//                         ),
+//                         focusedBorder: OutlineInputBorder(
+//                           borderSide: BorderSide(color: Colors.grey),
+//                         ),
+//                         fillColor: Colors.white,
+//                         focusColor: Colors.white),
+//                   ),
+//                 ),
+//                 Container(
+//                   child: Row(
+//                     children: <Widget>[
+//                       Container(
+//                         width: 30,
+//                         height: 30,
+//                         decoration: BoxDecoration(
+//                             borderRadius: BorderRadius.circular(50),
+//                             image: DecorationImage(
+//                                 image: AssetImage('lib/assets/images/img.png'))),
+//                       ),
+//                       Container(
+//                           margin: EdgeInsets.only(left: 6),
+//                           child: Text(
+//                             'Add to your story',
+//                             style: TextStyle(color: Colors.blue),
+//                           ))
+//                     ],
+//                   ),
+//                 ),
+//                 ListView.builder(
+//                     physics: ScrollPhysics(),
+//                     shrinkWrap: true,
+//                     scrollDirection: Axis.vertical,
+//                     itemCount: 3,
+//                     itemBuilder: (BuildContext context, int index) {
+//                       return SingleChildScrollView(
+//                           child: InkWell(
+//                         child: GFListTile(
+//                           avatar: GFAvatar(
+//                             backgroundImage:
+//                                 AssetImage('lib/assets/images/img.png'),
+//                             size: 20,
+//                           ),
+//                           subtitleText: 'John Mendez',
+//                           icon: Container(
+//                             width: 66,
+//                             height: 30,
+//                             child: GFButton(
+//                               onPressed: () {},
+//                               color: GFColors.PRIMARY,
+//                               child: Center(
+//                                   child: Text(
+//                                 'Send',
+//                                 style: TextStyle(color: Colors.white),
+//                               )),
+//                             ),
+//                           ),
+//                         ),
+//                       ));
+//                     }),
+//               ],
+//             ),
+//           ),
+//         ),
       );
 
   Widget buildPostImage() {

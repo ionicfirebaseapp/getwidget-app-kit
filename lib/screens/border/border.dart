@@ -213,6 +213,27 @@ class _BorderPageState extends State<BorderPage>
                                 ),
                               ),
                               Container(
+                                width: 130,
+                                height: 90,
+                                child: GFBorder(
+                                  type: GFBorderType.Oval,
+                                  dashedLine: [6, 0],
+                                  color: Color(0xFF19CA4B),
+                                  strokeWidth: 2,
+                                  child: Center(
+                                      child: Image.asset(
+                                    'lib/assets/images/img.png',
+                                    fit: BoxFit.fitWidth,
+                                  )),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 15),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
                                 width: 100,
                                 height: 100,
                                 child: GFBorder(
@@ -227,26 +248,26 @@ class _BorderPageState extends State<BorderPage>
                                   )),
                                 ),
                               ),
-                            ],
-                          ),
-                          Container(
-                            width: 100,
-                            height: 100,
-                            child: GFBorder(
-                              type: GFBorderType.Circle,
-                              dashedLine: [2, 0],
-                              color: Color(0xFF19CA4B),
-                              strokeWidth: 2,
-                              child: Container(
-                                child: Image.asset(
-                                  'lib/assets/images/img.png',
-                                  width: MediaQuery.of(context).size.width,
-                                  fit: BoxFit.fitWidth,
+                              Container(
+                                width: 100,
+                                height: 100,
+                                child: GFBorder(
+                                  type: GFBorderType.Circle,
+                                  dashedLine: [2, 0],
+                                  color: Color(0xFF19CA4B),
+                                  strokeWidth: 2,
+                                  child: Container(
+                                    child: Image.asset(
+                                      'lib/assets/images/img1.png',
+                                      width: MediaQuery.of(context).size.width,
+                                      fit: BoxFit.fitWidth,
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
+                            ],
                           ),
-                          SizedBox(height: 20)
+                          SizedBox(height: 40)
                         ],
                       ),
                     ),
@@ -363,7 +384,81 @@ class _BorderPageState extends State<BorderPage>
                               ),
                             ),
                           ),
-                          SizedBox(height: 20)
+                          const Padding(
+                            padding: EdgeInsets.only(left: 15, top: 30),
+                            child: GFTypography(
+                              text: 'Rounded Corners',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
+                                // width: 50,
+                                height: 60,
+                                child: GFBorder(
+                                  type: GFBorderType.Oval,
+                                  dashedLine: [3, 1],
+                                  color: Color(0xFF19CA4B),
+                                  child: Center(child: Text('Oval Border')),
+                                ),
+                              ),
+                              Container(
+                                width: 130,
+                                height: 90,
+                                child: GFBorder(
+                                  type: GFBorderType.Oval,
+                                  dashedLine: [3, 1],
+                                  color: Color(0xFF19CA4B),
+                                  child: Center(
+                                      child: Image.asset(
+                                    'lib/assets/images/img.png',
+                                    fit: BoxFit.fitWidth,
+                                  )),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 15),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
+                                width: 100,
+                                height: 100,
+                                child: GFBorder(
+                                  type: GFBorderType.Circle,
+                                  dashedLine: [3, 1],
+                                  color: Color(0xFF19CA4B),
+                                  child: Center(
+                                      child: Text(
+                                    'Circular Border',
+                                    textAlign: TextAlign.center,
+                                  )),
+                                ),
+                              ),
+                              Container(
+                                width: 100,
+                                height: 100,
+                                child: GFBorder(
+                                  type: GFBorderType.Circle,
+                                  dashedLine: [3, 1],
+                                  color: Color(0xFF19CA4B),
+                                  child: Container(
+                                    child: Image.asset(
+                                      'lib/assets/images/img1.png',
+                                      width: MediaQuery.of(context).size.width,
+                                      fit: BoxFit.fitWidth,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 40)
                         ],
                       ),
                     ),
@@ -478,7 +573,81 @@ class _BorderPageState extends State<BorderPage>
                               ),
                             ),
                           ),
-                          SizedBox(height: 20)
+                          const Padding(
+                            padding: EdgeInsets.only(left: 15, top: 30),
+                            child: GFTypography(
+                              text: 'Rounded Corners',
+                              type: GFTypographyType.typo5,
+                              dividerWidth: 25,
+                              dividerColor: Color(0xFF19CA4B),
+                            ),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
+                                // width: 50,
+                                height: 60,
+                                child: GFBorder(
+                                  type: GFBorderType.Oval,
+                                  dashedLine: [2, 1],
+                                  color: Color(0xFF19CA4B),
+                                  child: Center(child: Text('Oval Border')),
+                                ),
+                              ),
+                              Container(
+                                width: 130,
+                                height: 90,
+                                child: GFBorder(
+                                  type: GFBorderType.Oval,
+                                  dashedLine: [2, 1],
+                                  color: Color(0xFF19CA4B),
+                                  child: Center(
+                                      child: Image.asset(
+                                    'lib/assets/images/img.png',
+                                    fit: BoxFit.fitWidth,
+                                  )),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 15),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
+                                width: 100,
+                                height: 100,
+                                child: GFBorder(
+                                  type: GFBorderType.Circle,
+                                  dashedLine: [2, 1],
+                                  color: Color(0xFF19CA4B),
+                                  child: Center(
+                                      child: Text(
+                                    'Circular Border',
+                                    textAlign: TextAlign.center,
+                                  )),
+                                ),
+                              ),
+                              Container(
+                                width: 100,
+                                height: 100,
+                                child: GFBorder(
+                                  type: GFBorderType.Circle,
+                                  dashedLine: [2, 1],
+                                  color: Color(0xFF19CA4B),
+                                  child: Container(
+                                    child: Image.asset(
+                                      'lib/assets/images/img1.png',
+                                      width: MediaQuery.of(context).size.width,
+                                      fit: BoxFit.fitWidth,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 40)
                         ],
                       ),
                     ),

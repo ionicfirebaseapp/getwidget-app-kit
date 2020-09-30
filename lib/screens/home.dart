@@ -256,14 +256,14 @@ class _HomePageState extends State<HomePage> {
       'title': 'Animation',
       'route': AnimationPage()
     },
-    {
-      'icon': const IconData(
-        0xe907,
-        fontFamily: 'GFIconsnew',
-      ),
-      'title': 'IntroScreen',
-      'route': Introscreen()
-    },
+    // {
+    //   'icon': const IconData(
+    //     0xe907,
+    //     fontFamily: 'GFIconsnew',
+    //   ),
+    //   'title': 'IntroScreen',
+    //   'route': Introscreen()
+    // },
     {
       'icon': const IconData(
         0xe907,

@@ -21,6 +21,7 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
     "lib/assets/images/s4.png",
     "lib/assets/images/s5.png",
   ];
+  int groupValue = 0;
 
   @override
   void initState() {
@@ -56,36 +57,88 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                   stickyContentBuilder:
                       (BuildContext context, double stuckValue) {
                     stuckValue = 1.0 - stuckValue.clamp(0.0, 1.0);
-                    return Container(
-                      height: 50,
-                      width: MediaQuery.of(context).size.width * 0.5,
-                      color: Color.lerp(Color(0xFF42335d).withOpacity(0.6),
-                          Color(0xFF42335d), stuckValue),
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      alignment: Alignment.centerLeft,
-                      child: Row(
-                        children: <Widget>[
-                          Expanded(
-                            child: Text(
-                              'Product #$index',
-                              style: const TextStyle(color: Colors.white),
-                            ),
+                    return Column(
+                      children: [
+                        Container(
+                          height: 50,
+                          width: MediaQuery.of(context).size.width * 0.5,
+                          color: Color.lerp(Color(0xFF42335d).withOpacity(0.6),
+                              Color(0xFF42335d), stuckValue),
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          alignment: Alignment.centerLeft,
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                child: Text(
+                                  'Product Name $index',
+                                  style: const TextStyle(color: Colors.white),
+                                ),
+                              ),
+                              // Offstage(
+                              //   offstage: stuckValue <= 0.0,
+                              //   child: Opacity(
+                              //     opacity: stuckValue,
+                              //     child: IconButton(
+                              //       icon: const Icon(Icons.image,
+                              //           color: Colors.white),
+                              //       onPressed: () => Scaffold.of(context)
+                              //           .showSnackBar(SnackBar(
+                              //               content: Text('Favorite #$index'))),
+                              //     ),
+                              //   ),
+                              // ),
+                            ],
                           ),
-                          // Offstage(
-                          //   offstage: stuckValue <= 0.0,
-                          //   child: Opacity(
-                          //     opacity: stuckValue,
-                          //     child: IconButton(
-                          //       icon: const Icon(Icons.image,
-                          //           color: Colors.white),
-                          //       onPressed: () => Scaffold.of(context)
-                          //           .showSnackBar(SnackBar(
-                          //               content: Text('Favorite #$index'))),
-                          //     ),
-                          //   ),
-                          // ),
-                        ],
-                      ),
+                        ),
+                        Container(
+                          height: 200,
+                          width: MediaQuery.of(context).size.width * 0.5,
+                          child: ListView.builder(
+                              physics: ScrollPhysics(),
+                              shrinkWrap: true,
+                              scrollDirection: Axis.vertical,
+                              itemCount: 3,
+                              itemBuilder: (BuildContext context, int index) {
+                                return SingleChildScrollView(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      GFRadioListTile(
+                                        titleText: 'Medium',
+                                        size: 20,
+                                        activeBorderColor: Colors.green,
+                                        focusColor: Colors.green,
+                                        type: GFRadioType.square,
+                                        value: 1,
+                                        groupValue: groupValue,
+                                        onChanged: (val) {
+                                          setState(() {
+                                            groupValue = val;
+                                          });
+                                        },
+                                        inactiveIcon: null,
+                                      ),
+                                      // GFRadio(
+                                      //   type: GFRadioType.blunt,
+                                      //   size: 25,
+                                      //   value: 15,
+                                      //   groupValue: groupValue,
+                                      //   onChanged: (val) {
+                                      //     setState(() {
+                                      //       groupValue = val;
+                                      //     });
+                                      //   },
+                                      //   inactiveIcon: null,
+                                      //   activeBorderColor: GFColors.SUCCESS,
+                                      //   custombgColor: GFColors.SUCCESS,
+                                      // ),
+                                    ],
+                                  ),
+                                );
+                              }),
+                        ),
+                      ],
                     );
                   },
                   content: Container(

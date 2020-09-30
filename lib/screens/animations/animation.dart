@@ -37,8 +37,6 @@ class _AnimationPageState extends State<AnimationPage>
       parent: controller,
       curve: Curves.linear,
     ));
-
-    controller.forward();
   }
 
   @override
@@ -61,94 +59,94 @@ class _AnimationPageState extends State<AnimationPage>
         ),
         centerTitle: true,
       ),
-      body: ListView(
-        children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
-            child: GFTypography(
-              text: 'Rotation',
-              type: GFTypographyType.typo5,
-              dividerWidth: 25,
-              dividerColor: Color(0xFF19CA4B),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
+              child: GFTypography(
+                text: 'Rotation',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
             ),
-          ),
-          GestureDetector(
-            onTap: () {
-              controller.repeat();
-            },
-            child: GFAnimation(
-              turnsAnimation: animation,
-              controller: controller,
-              type: GFAnimationType.rotateTransition,
-              alignment: Alignment.center,
+            GestureDetector(
+              onTap: () {
+                controller.repeat();
+              },
+              child: GFAnimation(
+                turnsAnimation: animation,
+                controller: controller,
+                type: GFAnimationType.rotateTransition,
+                alignment: Alignment.center,
+                child: Image.asset(
+                  'lib/assets/icons/Rotation.png',
+                  width: 80,
+                  height: 80,
+                ),
+              ),
+            ),
+            SizedBox(height: 5),
+            Center(child: Text('Tap Me')),
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
+              child: GFTypography(
+                text: 'Scaling',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                controller.repeat();
+              },
+              child: GFAnimation(
+                scaleAnimation: animation,
+                controller: controller,
+                type: GFAnimationType.scaleTransition,
+                child: Image.asset(
+                  'lib/assets/icons/scaling.png',
+                  width: 80,
+                  height: 80,
+                ),
+              ),
+            ),
+            SizedBox(height: 5),
+            Center(child: Text('Tap Me')),
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
+              child: GFTypography(
+                text: 'Allignment',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
+            ),
+            GFAnimation(
+              duration: Duration(seconds: 2),
+              alignment: Alignment.bottomLeft,
+              type: GFAnimationType.align,
               child: Image.asset(
-                'lib/assets/icons/Rotation.png',
+                'lib/assets/icons/allign.png',
                 width: 80,
                 height: 80,
               ),
             ),
-          ),
-          SizedBox(height: 5),
-          Center(child: Text('Tap Me')),
-          const Padding(
-            padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
-            child: GFTypography(
-              text: 'Scaling',
-              type: GFTypographyType.typo5,
-              dividerWidth: 25,
-              dividerColor: Color(0xFF19CA4B),
-            ),
-          ),
-          GestureDetector(
-            onTap: () {
-              controller.repeat();
-            },
-            child: GFAnimation(
-              scaleAnimation: animation,
-              controller: controller,
-              type: GFAnimationType.scaleTransition,
-              child: Image.asset(
-                'lib/assets/icons/scaling.png',
-                width: 80,
-                height: 80,
+            SizedBox(height: 5),
+            Center(child: Text('Tap Me')),
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
+              child: GFTypography(
+                text: 'Slide Transition',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
               ),
             ),
-          ),
-          SizedBox(height: 5),
-          Center(child: Text('Tap Me')),
-          const Padding(
-            padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
-            child: GFTypography(
-              text: 'Allignment',
-              type: GFTypographyType.typo5,
-              dividerWidth: 25,
-              dividerColor: Color(0xFF19CA4B),
-            ),
-          ),
-          GFAnimation(
-            duration: Duration(seconds: 2),
-            alignment: Alignment.bottomLeft,
-            type: GFAnimationType.align,
-            child: Image.asset(
-              'lib/assets/icons/allign.png',
-              width: 80,
-              height: 80,
-            ),
-          ),
-          SizedBox(height: 5),
-          Center(child: Text('Tap Me')),
-          const Padding(
-            padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
-            child: GFTypography(
-              text: 'Slide Transition',
-              type: GFTypographyType.typo5,
-              dividerWidth: 25,
-              dividerColor: Color(0xFF19CA4B),
-            ),
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            child: Expanded(
+            Container(
+              width: MediaQuery.of(context).size.width,
               child: GFAnimation(
                 controller: controller,
                 slidePosition: offsetAnimation,
@@ -160,86 +158,87 @@ class _AnimationPageState extends State<AnimationPage>
                 ),
               ),
             ),
-          ),
-          SizedBox(height: 5),
-          Center(child: Text('Tap Me')),
-          // const Padding(
-          //   padding: EdgeInsets.only(left: 15, top: 30,bottom: 20),
-          //   child: GFTypography(
-          //     text: 'Size',
-          //     type: GFTypographyType.typo5,
-          //     dividerWidth: 25,
-          //     dividerColor: Color(0xFF19CA4B),
-          //   ),
-          // ),
-          // GFAnimation(
-          //   onTap: () {
-          //     if (mounted) {
-          //       setState(() {
-          //         _size = _large ? 50.0 : 200.0;
-          //         _large = !_large;
-          //       });
-          //     }
-          //   },
-          //   type: GFAnimationType.size,
-          //   controller: controller,
-          //   child: Image.asset(
-          //         'lib/assets/images/avatar3.png',
-          //   ),
-          // ),
-          // SizedBox(height:5),
-          // Center(child:Text('Tap Me')),
-          const Padding(
-            padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
-            child: GFTypography(
-              text: 'TextStyle',
-              type: GFTypographyType.typo5,
-              dividerWidth: 25,
-              dividerColor: Color(0xFF19CA4B),
+            SizedBox(height: 5),
+            // Center(child: Text('Tap Me')),
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
+              child: GFTypography(
+                text: 'Size',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
             ),
-          ),
-          GFAnimation(
-            onTap: () {
-              setState(() {
-                _fontSize = _first ? 60 : 30;
-                _color = _first ? Colors.blue : Colors.red;
-                _first = !_first;
-              });
-            },
-            color: _color,
-            fontSize: _fontSize,
-            type: GFAnimationType.textStyle,
-            child: Center(child: Text('Get Widget')),
-          ),
-          SizedBox(height: 5),
-          Center(child: Text('Tap Me')),
-          const Padding(
-            padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
-            child: GFTypography(
-              text: 'Container',
-              type: GFTypographyType.typo5,
-              dividerWidth: 25,
-              dividerColor: Color(0xFF19CA4B),
+            GFAnimation(
+              onTap: () {
+                if (mounted) {
+                  setState(() {
+                    selected = !selected;
+                  });
+                }
+              },
+              width: selected ? 100 : 50,
+              height: selected ? 100 : 50,
+              type: GFAnimationType.size,
+              controller: controller,
+              child: Image.asset(
+                'lib/assets/icons/size.png',
+              ),
             ),
-          ),
-          GFAnimation(
-            width: 50,
-            changedWidth: 100,
-            height: 50,
-            changedHeight: 100,
-            activeColor: Colors.transparent,
-            color: Colors.transparent,
-            fontSize: _fontSize,
-            type: GFAnimationType.container,
-            child: Image.asset(
-              'lib/assets/icons/slide.png',
-              width: 80,
-              height: 80,
+            SizedBox(height: 5),
+            Center(child: Text('Tap Me')),
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
+              child: GFTypography(
+                text: 'TextStyle',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
             ),
-          ),
-          SizedBox(height: 5),
-          Center(child: Text('Tap Me')),
-          SizedBox(height: 20),
-        ],
+            GFAnimation(
+              onTap: () {
+                setState(() {
+                  _fontSize = _first ? 60 : 30;
+                  _color = _first ? Colors.blue : Colors.red;
+                  _first = !_first;
+                });
+              },
+              color: _color,
+              fontSize: _fontSize,
+              type: GFAnimationType.textStyle,
+              child: Center(child: Text('Get Widget')),
+            ),
+            SizedBox(height: 5),
+            Center(child: Text('Tap Me')),
+            const Padding(
+              padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
+              child: GFTypography(
+                text: 'Container',
+                type: GFTypographyType.typo5,
+                dividerWidth: 25,
+                dividerColor: Color(0xFF19CA4B),
+              ),
+            ),
+            GFAnimation(
+              width: 50,
+              changedWidth: 100,
+              height: 50,
+              changedHeight: 100,
+              activeColor: Colors.transparent,
+              color: Colors.transparent,
+              fontSize: _fontSize,
+              type: GFAnimationType.container,
+              child: Image.asset(
+                'lib/assets/icons/slide.png',
+                width: 80,
+                height: 80,
+              ),
+            ),
+            SizedBox(height: 5),
+            Center(child: Text('Tap Me')),
+            SizedBox(height: 20),
+          ],
+        ),
       ));
 }
