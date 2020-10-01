@@ -91,49 +91,105 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                           ),
                         ),
                         Container(
-                          height: 200,
+                          // height: 200,
                           width: MediaQuery.of(context).size.width * 0.5,
                           child: ListView.builder(
                               physics: ScrollPhysics(),
                               shrinkWrap: true,
                               scrollDirection: Axis.vertical,
-                              itemCount: 3,
+                              itemCount: 1,
                               itemBuilder: (BuildContext context, int index) {
                                 return SingleChildScrollView(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      GFRadioListTile(
-                                        titleText: 'Medium',
-                                        size: 20,
-                                        activeBorderColor: Colors.green,
-                                        focusColor: Colors.green,
-                                        type: GFRadioType.square,
-                                        value: 1,
-                                        groupValue: groupValue,
-                                        onChanged: (val) {
-                                          setState(() {
-                                            groupValue = val;
-                                          });
-                                        },
-                                        inactiveIcon: null,
-                                      ),
-                                      // GFRadio(
-                                      //   type: GFRadioType.blunt,
-                                      //   size: 25,
-                                      //   value: 15,
-                                      //   groupValue: groupValue,
-                                      //   onChanged: (val) {
-                                      //     setState(() {
-                                      //       groupValue = val;
-                                      //     });
-                                      //   },
-                                      //   inactiveIcon: null,
-                                      //   activeBorderColor: GFColors.SUCCESS,
-                                      //   custombgColor: GFColors.SUCCESS,
-                                      // ),
-                                    ],
+                                  child: Container(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 15),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        // GFRadioListTile(
+                                        //   titleText: 'Medium',
+                                        //   size: 20,
+                                        //   activeBorderColor: Colors.green,
+                                        //   focusColor: Colors.green,
+                                        //   type: GFRadioType.square,
+                                        //   value: 1,
+                                        //   groupValue: groupValue,
+                                        //   onChanged: (val) {
+                                        //     setState(() {
+                                        //       groupValue = val;
+                                        //     });
+                                        //   },
+                                        //   inactiveIcon: null,
+                                        // ),
+                                        SizedBox(height: 15),
+                                        Row(
+                                          children: [
+                                            GFRadio(
+                                              type: GFRadioType.blunt,
+                                              size: 23,
+                                              value: 1,
+                                              groupValue: groupValue,
+                                              onChanged: (val) {
+                                                setState(() {
+                                                  groupValue = val;
+                                                });
+                                              },
+                                              inactiveIcon: null,
+                                              activeBorderColor:
+                                                  GFColors.SUCCESS,
+                                              custombgColor: GFColors.SUCCESS,
+                                            ),
+                                            SizedBox(width: 5),
+                                            Text('Large')
+                                          ],
+                                        ),
+                                        SizedBox(height: 8),
+                                        Row(
+                                          children: [
+                                            GFRadio(
+                                              type: GFRadioType.blunt,
+                                              size: 23,
+                                              value: 2,
+                                              groupValue: groupValue,
+                                              onChanged: (val) {
+                                                setState(() {
+                                                  groupValue = val;
+                                                });
+                                              },
+                                              inactiveIcon: null,
+                                              activeBorderColor:
+                                                  GFColors.SUCCESS,
+                                              custombgColor: GFColors.SUCCESS,
+                                            ),
+                                            SizedBox(width: 5),
+                                            Text('Medium')
+                                          ],
+                                        ),
+                                        SizedBox(height: 8),
+                                        Row(
+                                          children: [
+                                            GFRadio(
+                                              type: GFRadioType.blunt,
+                                              size: 23,
+                                              value: 3,
+                                              groupValue: groupValue,
+                                              onChanged: (val) {
+                                                setState(() {
+                                                  groupValue = val;
+                                                });
+                                              },
+                                              inactiveIcon: null,
+                                              activeBorderColor:
+                                                  GFColors.SUCCESS,
+                                              custombgColor: GFColors.SUCCESS,
+                                            ),
+                                            SizedBox(width: 5),
+                                            Text('Small')
+                                          ],
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 );
                               }),

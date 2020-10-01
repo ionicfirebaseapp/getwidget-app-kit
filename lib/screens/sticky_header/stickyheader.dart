@@ -44,87 +44,160 @@ class _StickyHeaderState extends State<StickyHeader>
           centerTitle: true,
         ),
         body: Container(
-            // alignment: AlignmentDirectional.center,
-            child: ListView.builder(
-                itemCount: imageList.length,
-                itemBuilder: (context, index) => GFStickyHeaderBuilder(
-                      direction: Axis.vertical,
-                      // enableHeaderOverlap: true,
-                      // stickyContentPosition: GFPosition.end,
-                      stickyContentBuilder:
-                          (BuildContext context, double stuckValue) {
-                        stuckValue = 1.0 - stuckValue.clamp(0.0, 1.0);
-                        return Center(
-                          child: Container(
-                            height: 50.0,
-                            width: MediaQuery.of(context).size.width,
-                            color: Color(0xFF42335d)
-                                .withOpacity(0.6 + stuckValue * 0.4),
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
-                            alignment: Alignment.centerLeft,
-                            child: Text(
+          height: 600,
+          // color: Colors.teal,
+          child: ListView.builder(
+              itemCount: imageList.length,
+              itemBuilder: (context, index) => GFStickyHeader(
+                    // enableHeaderOverlap: true,
+                    // direction: Axis.horizontal,
+                    // stickyContentPosition: GFPosition.end,
+                    stickyContent: Container(
+                      // alignment: AlignmentDirectional.centerEnd,
+                      child: Container(
+                        alignment: AlignmentDirectional.center,
+                        height: 50,
+                        width: MediaQuery.of(context).size.width,
+                        color: Color(0xFF42335d),
+                        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                        child: Row(
+                          children: [
+                            Text(
                               'Contact Group $index',
                               style: const TextStyle(color: Colors.white),
                             ),
-                          ),
-                        );
-                      },
-                      content: Container(
-                        height: 300,
-                        child: ListView.builder(
-                            physics: ScrollPhysics(),
-                            shrinkWrap: true,
-                            scrollDirection: Axis.vertical,
-                            itemCount: 8,
-                            itemBuilder: (BuildContext context, int index) {
-                              return SingleChildScrollView(
-                                child: Column(
-                                  children: [
-                                    GFCheckboxListTile(
-                                      titleText: 'Eva Mendez',
-                                      subtitleText: 'Hello',
-                                      avatar: GFAvatar(
-                                        backgroundImage: AssetImage(
-                                            'lib/assets/images/img.png'),
-                                      ),
-                                      size: 25,
-                                      activebgColor: Colors.green,
-                                      activeIcon: Icon(
-                                        Icons.check,
-                                        size: 15,
-                                        color: Colors.white,
-                                      ),
-                                      type: GFCheckboxType.circle,
-                                      onChanged: (val) {
-                                        setState(() {
-                                          check = val;
-                                        });
-                                      },
-                                      value: check,
-                                      inactiveIcon: null,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 20.0),
-                                      child: Divider(),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            }),
+                          ],
+                        ),
                       ),
-                      // content: Container(
-                      //   // margin: EdgeInsets.all(8),
-                      //   height: 200,
-                      //   width: MediaQuery.of(context).size.width,
-                      //   color: Colors.teal,
-                      //   child: Image.asset(imageList[index],
-                      //       fit: BoxFit.cover, width: 300, height: 200.0),
-                      // ),
-                    ))),
+                    ),
+                    content: Container(
+                      height: 300,
+                      child: ListView.builder(
+                          physics: ScrollPhysics(),
+                          shrinkWrap: true,
+                          scrollDirection: Axis.vertical,
+                          itemCount: 8,
+                          itemBuilder: (BuildContext context, int index) {
+                            return SingleChildScrollView(
+                              child: Column(
+                                children: [
+                                  GFCheckboxListTile(
+                                    titleText: 'Eva Mendez',
+                                    subtitleText: 'Hello',
+                                    avatar: GFAvatar(
+                                      backgroundImage: AssetImage(
+                                          'lib/assets/images/img.png'),
+                                    ),
+                                    size: 25,
+                                    activebgColor: Colors.green,
+                                    activeIcon: Icon(
+                                      Icons.check,
+                                      size: 15,
+                                      color: Colors.white,
+                                    ),
+                                    type: GFCheckboxType.circle,
+                                    onChanged: (val) {
+                                      setState(() {
+                                        check = val;
+                                      });
+                                    },
+                                    value: check,
+                                    inactiveIcon: null,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 20.0),
+                                    child: Divider(),
+                                  ),
+                                ],
+                              ),
+                            );
+                          }),
+                    ),
+                  )),
+        ),
+        // Container(
+        //     // alignment: AlignmentDirectional.center,
+        //     child: ListView.builder(
+        //         itemCount: imageList.length,
+        //         itemBuilder: (context, index) => GFStickyHeaderBuilder(
+        //               direction: Axis.vertical,
+        //               // enableHeaderOverlap: true,
+        //               // stickyContentPosition: GFPosition.end,
+        //               stickyContentBuilder:
+        //                   (BuildContext context, double stuckValue) {
+        //                 stuckValue = 1.0 - stuckValue.clamp(0.0, 1.0);
+        //                 return Center(
+        //                   child: Container(
+        //                     height: 50.0,
+        //                     width: MediaQuery.of(context).size.width,
+        //                     color: Color(0xFF42335d)
+        //                         .withOpacity(0.6 + stuckValue * 0.4),
+        //                     padding: EdgeInsets.symmetric(horizontal: 16.0),
+        //                     alignment: Alignment.centerLeft,
+        //                     child: Text(
+        //                       'Contact Group $index',
+        //                       style: const TextStyle(color: Colors.white),
+        //                     ),
+        //                   ),
+        //                 );
+        //               },
+        //               content: Container(
+        //                 height: 300,
+        //                 child: ListView.builder(
+        //                     physics: ScrollPhysics(),
+        //                     shrinkWrap: true,
+        //                     scrollDirection: Axis.vertical,
+        //                     itemCount: 8,
+        //                     itemBuilder: (BuildContext context, int index) {
+        //                       return SingleChildScrollView(
+        //                         child: Column(
+        //                           children: [
+        //                             GFCheckboxListTile(
+        //                               titleText: 'Eva Mendez',
+        //                               subtitleText: 'Hello',
+        //                               avatar: GFAvatar(
+        //                                 backgroundImage: AssetImage(
+        //                                     'lib/assets/images/img.png'),
+        //                               ),
+        //                               size: 25,
+        //                               activebgColor: Colors.green,
+        //                               activeIcon: Icon(
+        //                                 Icons.check,
+        //                                 size: 15,
+        //                                 color: Colors.white,
+        //                               ),
+        //                               type: GFCheckboxType.circle,
+        //                               onChanged: (val) {
+        //                                 setState(() {
+        //                                   check = val;
+        //                                 });
+        //                               },
+        //                               value: check,
+        //                               inactiveIcon: null,
+        //                             ),
+        //                             Padding(
+        //                               padding: const EdgeInsets.symmetric(
+        //                                   horizontal: 20.0),
+        //                               child: Divider(),
+        //                             ),
+        //                           ],
+        //                         ),
+        //                       );
+        //                     }),
+        //               ),
+        //               // content: Container(
+        //               //   // margin: EdgeInsets.all(8),
+        //               //   height: 200,
+        //               //   width: MediaQuery.of(context).size.width,
+        //               //   color: Colors.teal,
+        //               //   child: Image.asset(imageList[index],
+        //               //       fit: BoxFit.cover, width: 300, height: 200.0),
+        //               // ),
+        //             ))),
         bottomNavigationBar: Container(
           height: 60,
-          padding: EdgeInsets.all(5),
+          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
           child: GFButton(
             onPressed: () {},
             shape: GFButtonShape.pills,

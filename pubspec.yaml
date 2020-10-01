@@ -56,6 +56,10 @@ flutter:
     - lib/assets/images/s4.png
     - lib/assets/images/s5.png
     - lib/assets/images/story.jpg
+    - lib/assets/images/i1.png
+    - lib/assets/images/i2.png
+    - lib/assets/images/i3.png
+    - lib/assets/images/i4.png
 
 
     - lib/assets/gif/success1.gif
