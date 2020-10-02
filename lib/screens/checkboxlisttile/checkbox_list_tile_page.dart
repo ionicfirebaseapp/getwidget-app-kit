@@ -10,6 +10,7 @@ class CheckBoxListTilePage extends StatefulWidget {
 class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
   bool check = true;
   bool check1 = false;
+  bool check2 = true;
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -35,7 +36,8 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
             GFCheckboxListTile(
               titleText: 'hi',
               subtitleText: 'Happy Ugadi',
-              avatar: GFAvatar(
+              position: GFPosition.start,
+              icon: GFAvatar(
                 backgroundImage: AssetImage('lib/assets/images/img.png'),
               ),
               size: 25,
@@ -49,10 +51,10 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
               onChanged: (val) {
                 setState(() {
                   check = val;
+                  print(val);
                 });
               },
               value: check,
-              inactiveIcon: null,
             ),
             GFCheckboxListTile(
               titleText: 'hi',
@@ -74,7 +76,27 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
                 });
               },
               value: check1,
-              inactiveIcon: null,
+            ),
+            GFCheckboxListTile(
+              titleText: 'hi',
+              subtitleText: 'Happy Ugadi',
+              avatar: GFAvatar(
+                backgroundImage: AssetImage('lib/assets/images/img1.png'),
+              ),
+              size: 25,
+              activebgColor: GFColors.SECONDARY,
+              activeIcon: Icon(
+                Icons.check,
+                size: 15,
+                color: Colors.white,
+              ),
+              type: GFCheckboxType.square,
+              onChanged: (val) {
+                setState(() {
+                  check2 = val;
+                });
+              },
+              value: check2,
             )
           ],
         ),
