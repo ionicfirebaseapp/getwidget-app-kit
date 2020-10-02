@@ -1,6 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:gf_app/screens/border/border.dart';
+import 'package:gf_app/screens/bottomsheet/bottomsheet.dart';
+import 'package:gf_app/screens/checkbox/checkboxs.dart';
+import 'package:gf_app/screens/checkboxlisttile/checkbox_list_tile_page.dart';
+import 'package:gf_app/screens/radiobutton/radio_buttons.dart';
+import 'package:gf_app/screens/radiolisttile/radiolisttile.dart';
 import '../../screens/accordian/accordian.dart';
 import '../../screens/alert/alert.dart';
 import '../../screens/appbar/app_home.dart';
@@ -748,6 +754,162 @@ class _DrawerPageState extends State<DrawerPage> {
                                 const IconData(
                                   0xe900,
                                   fontFamily: 'GFIcons',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        CheckBoxPage()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Checkbox',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe906,
+                                  fontFamily: 'GFIconsnew',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        CheckBoxListTilePage()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Checkbox ListTile',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe905,
+                                  fontFamily: 'GFIconsnew',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        RadioButtonPage()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Radio Button',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe908,
+                                  fontFamily: 'GFIconsnew',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        RadioListTilePage()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Radio ListTile',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe909,
+                                  fontFamily: 'GFIconsnew',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        BorderPage()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Border',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe900,
+                                  fontFamily: 'GFIconsnew',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        BottomSheetPage()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'BottomSheet',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe901,
+                                  fontFamily: 'GFIconsnew',
                                 ),
                                 color: GFColors.DARK,
                                 size: 17,

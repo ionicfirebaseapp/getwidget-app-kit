@@ -9,9 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  getwidget: ^1.1.3
-  # getwidget: 
-  #   path: G:\Getwidget\getwidget\
+  getwidget: 
+    path: D:\Flutter_Apps\Get_Widget\getflutter\
+  webview_flutter: ^0.3.19+6
   flutter_webview_plugin: ^0.3.11
   cupertino_icons: ^0.1.2
 
@@ -52,7 +52,24 @@ flutter:
     - lib/assets/images/avatar10.png
     - lib/assets/images/avatar11.png
     - lib/assets/images/avatar12.png
+    - lib/assets/images/s1.png
+    - lib/assets/images/s2.png
+    - lib/assets/images/s3.png
+    - lib/assets/images/s4.png
+    - lib/assets/images/s5.png
+    - lib/assets/images/story.jpg
+    - lib/assets/images/i1.png
+    - lib/assets/images/i2.png
+    - lib/assets/images/i3.png
+    - lib/assets/images/i4.png
+
+
     - lib/assets/gif/success1.gif
+    - lib/assets/icons/allign.png
+    - lib/assets/icons/Rotation.png
+    - lib/assets/icons/scaling.png
+    - lib/assets/icons/size.png
+    - lib/assets/icons/slide.png
     - lib/assets/icons/gflogo.png
 
   fonts:
@@ -80,3 +97,8 @@ flutter:
       fonts:
         - asset: lib/assets/fonts/loader.ttf
           weight: 400
+
+    - family: GFIconsnew
+      fonts:
+        - asset: lib/assets/fonts/newcomp.ttf
+          weight: 400         
