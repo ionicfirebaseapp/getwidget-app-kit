@@ -1,43 +1,33 @@
-import 'dart:async';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:getwidget/getwidget.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 
-class WebViews extends StatefulWidget {
-  const WebViews({Key key, this.url}) : super(key: key);
-  final String url;
+class WebView extends StatefulWidget {
+  WebView({Key key}) : super(key: key);
+
   @override
-  _WebViewsState createState() => _WebViewsState();
+  _WebViewState createState() => _WebViewState();
 }
 
-class _WebViewsState extends State<WebViews> {
-  final Completer<WebViewController> _controller =
-      Completer<WebViewController>();
+class _WebViewState extends State<WebView> {
   @override
-  Widget build(BuildContext context) => Scaffold(
-      appBar: AppBar(
-        backgroundColor: GFColors.DARK,
-        title: Image.asset(
-          'lib/assets/icons/gflogo.png',
-          width: 150,
-        ),
-        centerTitle: true,
-        leading: InkWell(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Icon(
-            CupertinoIcons.back,
-            color: GFColors.SUCCESS,
-          ),
-        ),
-      ),
-      body: Builder(
-          builder: (BuildContext context) => WebView(
-                initialUrl: widget.url,
-                javascriptMode: JavascriptMode.unrestricted,
-                onWebViewCreated: _controller.complete,
-              )));
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      routes: {
+        "/": (_) => new WebviewScaffold(
+              url: "https://docs.getwidget.dev/",
+              appBar: new AppBar(
+                // title: new Text("Widget webview"),
+                title: Image.asset(
+                  'lib/assets/icons/gflogo.png',
+                  width: 150,
+                ),
+                centerTitle: true,
+                backgroundColor: GFColors.DARK,
+              ),
+            ),
+      },
+      debugShowCheckedModeBanner: false,
+    );
+  }
 }
