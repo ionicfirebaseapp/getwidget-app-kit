@@ -40,6 +40,12 @@ class _AnimationPageState extends State<AnimationPage>
   }
 
   @override
+  void dispose() {
+    if (controller != null) controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
         backgroundColor: GFColors.DARK,

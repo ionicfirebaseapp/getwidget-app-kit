@@ -34,8 +34,6 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
           scrollDirection: Axis.vertical,
           physics: ScrollPhysics(),
           children: <Widget>[
-//        Radio(value: null, groupValue: null, onChanged: null),
-
             const Padding(
               padding: EdgeInsets.only(left: 15, top: 30),
               child: GFTypography(
@@ -45,7 +43,6 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 dividerColor: Color(0xFF19CA4B),
               ),
             ),
-
             GFCard(
                 content: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -110,7 +107,6 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 )
               ],
             )),
-
             const Padding(
               padding: EdgeInsets.only(left: 15, top: 30),
               child: GFTypography(
@@ -120,7 +116,6 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 dividerColor: Color(0xFF19CA4B),
               ),
             ),
-
             GFCard(
                 content: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -190,7 +185,6 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 )
               ],
             )),
-
             const Padding(
               padding: EdgeInsets.only(left: 15, top: 30),
               child: GFTypography(
@@ -200,7 +194,6 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 dividerColor: Color(0xFF19CA4B),
               ),
             ),
-
             GFCard(
                 content: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -267,7 +260,6 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 )
               ],
             )),
-
             const Padding(
               padding: EdgeInsets.only(left: 15, top: 30),
               child: GFTypography(
@@ -277,7 +269,6 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                 dividerColor: Color(0xFF19CA4B),
               ),
             ),
-
             GFCard(
                 content: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

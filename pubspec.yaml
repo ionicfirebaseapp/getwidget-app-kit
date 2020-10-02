@@ -9,12 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  getwidget: 
-    path: D:\Flutter_Apps\Get_Widget\getflutter\
-  webview_flutter: ^0.3.19+6
+  getwidget:
+    path: /Users/pietchsolution/Downloads/projects/getwidget/getflutter
   flutter_webview_plugin: ^0.3.11
   cupertino_icons: ^0.1.2
-
 
 dev_dependencies:
   flutter_test:
@@ -63,7 +61,6 @@ flutter:
     - lib/assets/images/i3.png
     - lib/assets/images/i4.png
 
-
     - lib/assets/gif/success1.gif
     - lib/assets/icons/allign.png
     - lib/assets/icons/Rotation.png
@@ -101,4 +98,4 @@ flutter:
     - family: GFIconsnew
       fonts:
         - asset: lib/assets/fonts/newcomp.ttf
-          weight: 400         
+          weight: 400

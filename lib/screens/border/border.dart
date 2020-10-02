@@ -106,7 +106,7 @@ class _BorderPageState extends State<BorderPage>
                             child: GFBorder(
                               color: Color(0xFF19CA4B),
                               dashedLine: [2, 0],
-                              type: GFBorderType.Rect,
+                              type: GFBorderType.rect,
                               child: Container(
                                 height: 100,
                                 color: Color(0xFFE9FFEF),
@@ -119,7 +119,7 @@ class _BorderPageState extends State<BorderPage>
                             child: GFBorder(
                               color: Color(0xFF19CA4B),
                               dashedLine: [2, 0],
-                              type: GFBorderType.Rect,
+                              type: GFBorderType.rect,
                               child: Image.asset(
                                 'lib/assets/images/card.png',
                                 width: MediaQuery.of(context).size.width,
@@ -143,7 +143,7 @@ class _BorderPageState extends State<BorderPage>
                               radius: Radius.circular(20),
                               color: Color(0xFF19CA4B),
                               dashedLine: [2, 0],
-                              type: GFBorderType.RRect,
+                              type: GFBorderType.rRect,
                               child: Container(
                                 height: 100,
                                 color: Color(0xFFE9FFEF),
@@ -157,7 +157,7 @@ class _BorderPageState extends State<BorderPage>
                               radius: Radius.circular(20),
                               color: Color(0xFF19CA4B),
                               dashedLine: [2, 0],
-                              type: GFBorderType.RRect,
+                              type: GFBorderType.rRect,
                               child: GFCard(
                                 boxFit: BoxFit.cover,
                                 image: Image.asset(
@@ -205,7 +205,7 @@ class _BorderPageState extends State<BorderPage>
                                 // width: 50,
                                 height: 60,
                                 child: GFBorder(
-                                  type: GFBorderType.Oval,
+                                  type: GFBorderType.oval,
                                   dashedLine: [6, 0],
                                   color: Color(0xFF19CA4B),
                                   strokeWidth: 2,
@@ -216,7 +216,7 @@ class _BorderPageState extends State<BorderPage>
                                 width: 130,
                                 height: 90,
                                 child: GFBorder(
-                                  type: GFBorderType.Oval,
+                                  type: GFBorderType.oval,
                                   dashedLine: [6, 0],
                                   color: Color(0xFF19CA4B),
                                   strokeWidth: 2,
@@ -237,7 +237,7 @@ class _BorderPageState extends State<BorderPage>
                                 width: 100,
                                 height: 100,
                                 child: GFBorder(
-                                  type: GFBorderType.Circle,
+                                  type: GFBorderType.circle,
                                   dashedLine: [2, 0],
                                   color: Color(0xFF19CA4B),
                                   strokeWidth: 2,
@@ -252,7 +252,7 @@ class _BorderPageState extends State<BorderPage>
                                 width: 100,
                                 height: 100,
                                 child: GFBorder(
-                                  type: GFBorderType.Circle,
+                                  type: GFBorderType.circle,
                                   dashedLine: [2, 0],
                                   color: Color(0xFF19CA4B),
                                   strokeWidth: 2,
@@ -287,7 +287,7 @@ class _BorderPageState extends State<BorderPage>
                             margin: EdgeInsets.symmetric(
                                 horizontal: 15, vertical: 15),
                             child: GFBorder(
-                              type: GFBorderType.RRect,
+                              type: GFBorderType.rRect,
                               color: Color(0xFF19CA4B),
                               child: Container(
                                 decoration: BoxDecoration(
@@ -301,7 +301,7 @@ class _BorderPageState extends State<BorderPage>
                             margin: EdgeInsets.symmetric(
                                 horizontal: 15, vertical: 15),
                             child: GFBorder(
-                              type: GFBorderType.RRect,
+                              type: GFBorderType.rRect,
                               color: Color(0xFF19CA4B),
                               child: Image.asset(
                                 'lib/assets/images/image1.png',
@@ -323,7 +323,7 @@ class _BorderPageState extends State<BorderPage>
                             margin: EdgeInsets.symmetric(
                                 horizontal: 15, vertical: 15),
                             child: GFBorder(
-                              type: GFBorderType.RRect,
+                              type: GFBorderType.rRect,
                               radius: Radius.circular(20),
                               color: Color(0xFF19CA4B),
                               child: Container(
@@ -338,7 +338,7 @@ class _BorderPageState extends State<BorderPage>
                             margin: EdgeInsets.symmetric(
                                 horizontal: 15, vertical: 15),
                             child: GFBorder(
-                              type: GFBorderType.RRect,
+                              type: GFBorderType.rRect,
                               radius: Radius.circular(20),
                               color: Color(0xFF19CA4B),
                               child: GFCard(
@@ -400,7 +400,7 @@ class _BorderPageState extends State<BorderPage>
                                 // width: 50,
                                 height: 60,
                                 child: GFBorder(
-                                  type: GFBorderType.Oval,
+                                  type: GFBorderType.oval,
                                   dashedLine: [3, 1],
                                   color: Color(0xFF19CA4B),
                                   child: Center(child: Text('Oval Border')),
@@ -410,7 +410,7 @@ class _BorderPageState extends State<BorderPage>
                                 width: 130,
                                 height: 90,
                                 child: GFBorder(
-                                  type: GFBorderType.Oval,
+                                  type: GFBorderType.oval,
                                   dashedLine: [3, 1],
                                   color: Color(0xFF19CA4B),
                                   child: Center(
@@ -430,7 +430,7 @@ class _BorderPageState extends State<BorderPage>
                                 width: 100,
                                 height: 100,
                                 child: GFBorder(
-                                  type: GFBorderType.Circle,
+                                  type: GFBorderType.circle,
                                   dashedLine: [3, 1],
                                   color: Color(0xFF19CA4B),
                                   child: Center(
@@ -444,7 +444,7 @@ class _BorderPageState extends State<BorderPage>
                                 width: 100,
                                 height: 100,
                                 child: GFBorder(
-                                  type: GFBorderType.Circle,
+                                  type: GFBorderType.circle,
                                   dashedLine: [3, 1],
                                   color: Color(0xFF19CA4B),
                                   child: Container(
@@ -480,7 +480,7 @@ class _BorderPageState extends State<BorderPage>
                             child: GFBorder(
                               color: Color(0xFF19CA4B),
                               dashedLine: [2, 1],
-                              type: GFBorderType.Rect,
+                              type: GFBorderType.rect,
                               child: Container(
                                 height: 100,
                                 color: Color(0xFFE9FFEF),
@@ -493,7 +493,7 @@ class _BorderPageState extends State<BorderPage>
                             child: GFBorder(
                               color: Color(0xFF19CA4B),
                               dashedLine: [2, 1],
-                              type: GFBorderType.Rect,
+                              type: GFBorderType.rect,
                               child: Image.asset(
                                 'lib/assets/images/image1.png',
                                 width: MediaQuery.of(context).size.width,
@@ -517,7 +517,7 @@ class _BorderPageState extends State<BorderPage>
                               radius: Radius.circular(20),
                               color: Color(0xFF19CA4B),
                               dashedLine: [2, 1],
-                              type: GFBorderType.RRect,
+                              type: GFBorderType.rRect,
                               child: Container(
                                 height: 100,
                                 color: Color(0xFFE9FFEF),
@@ -531,7 +531,7 @@ class _BorderPageState extends State<BorderPage>
                               radius: Radius.circular(20),
                               color: Color(0xFF19CA4B),
                               dashedLine: [2, 1],
-                              type: GFBorderType.RRect,
+                              type: GFBorderType.rRect,
                               child: GFCard(
                                 boxFit: BoxFit.cover,
                                 colorFilter: ColorFilter.mode(
@@ -589,7 +589,7 @@ class _BorderPageState extends State<BorderPage>
                                 // width: 50,
                                 height: 60,
                                 child: GFBorder(
-                                  type: GFBorderType.Oval,
+                                  type: GFBorderType.oval,
                                   dashedLine: [2, 1],
                                   color: Color(0xFF19CA4B),
                                   child: Center(child: Text('Oval Border')),
@@ -599,7 +599,7 @@ class _BorderPageState extends State<BorderPage>
                                 width: 130,
                                 height: 90,
                                 child: GFBorder(
-                                  type: GFBorderType.Oval,
+                                  type: GFBorderType.oval,
                                   dashedLine: [2, 1],
                                   color: Color(0xFF19CA4B),
                                   child: Center(
@@ -619,7 +619,7 @@ class _BorderPageState extends State<BorderPage>
                                 width: 100,
                                 height: 100,
                                 child: GFBorder(
-                                  type: GFBorderType.Circle,
+                                  type: GFBorderType.circle,
                                   dashedLine: [2, 1],
                                   color: Color(0xFF19CA4B),
                                   child: Center(
@@ -633,7 +633,7 @@ class _BorderPageState extends State<BorderPage>
                                 width: 100,
                                 height: 100,
                                 child: GFBorder(
-                                  type: GFBorderType.Circle,
+                                  type: GFBorderType.circle,
                                   dashedLine: [2, 1],
                                   color: Color(0xFF19CA4B),
                                   child: Container(
