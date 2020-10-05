@@ -188,6 +188,28 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                                             Text('Small')
                                           ],
                                         ),
+                                         SizedBox(height: 8),
+                                        Row(
+                                          children: [
+                                            GFRadio(
+                                              type: GFRadioType.blunt,
+                                              size: 23,
+                                              value: 3,
+                                              groupValue: groupValue,
+                                              onChanged: (val) {
+                                                setState(() {
+                                                  groupValue = val;
+                                                });
+                                              },
+                                              inactiveIcon: null,
+                                              activeBorderColor:
+                                                  GFColors.SUCCESS,
+                                              custombgColor: GFColors.SUCCESS,
+                                            ),
+                                            SizedBox(width: 5),
+                                            Text('Extra Small')
+                                          ],
+                                        ),
                                       ],
                                     ),
                                   ),

@@ -29,75 +29,76 @@ class _FullWidthIntroState extends State<FullWidthIntro> {
 // borderRadius: BorderRadius.circular(50),
         // border: Border.all(color: Colors.red, width: 5),
         slides: slides(),
-        pageController: _pageController,
+        pageController: _pageController, currentIndex: null, pageCount: 5,
+        // showIntroScreenBottomNavigationBar: false,
         // showIntroSCreenBottomNavigationBar: false,
 // introScreenBottomNavigationBar: false,
-        // introScreenBottomNavigationBar:  GFIntroScreenBottomNavigationBar(
-        //   // pageController: _pageController,
-        //   pageCount: slideList.length,
-        //   // currentIndex: initialPage,
-        //   // child: Text('dfghj'),
+        introScreenBottomNavigationBar:  GFIntroScreenBottomNavigationBar(
+          pageController: _pageController,
+          pageCount: slideList.length,
+          currentIndex: initialPage,
+          // child: Text('dfghj'),
 
-        // onForwardButtonTap: () {
-        //   // print('fffffff');
-        //   _pageController.nextPage(
-        //       duration: const Duration(milliseconds: 500),
-        //       curve: Curves.linear);
+        onForwardButtonTap: () {
+          // print('fffffff');
+          _pageController.nextPage(
+              duration: const Duration(milliseconds: 500),
+              curve: Curves.linear);
+        },
+        onBackButtonTap: () {
+          // print('kkkkkkkkk');
+          _pageController.previousPage(
+              duration: const Duration(milliseconds: 500),
+              curve: Curves.linear);
+        },
+        // onDoneTap: (){
+        //   print('done');
         // },
-        // onBackButtonTap: () {
-        //   // print('kkkkkkkkk');
-        //   _pageController.previousPage(
-        //       duration: const Duration(milliseconds: 500),
-        //       curve: Curves.linear);
+        // onSkipTap: (){
+        //   print('skip');
         // },
-        // // onDoneTap: (){
-        // //   print('done');
-        // // },
-        // // onSkipTap: (){
-        // //   print('skip');
-        // // },
-        // // backButtonTextStyle: TextStyle(
-        // //   fontSize: 12
-        // // ),
-
-        // // backButton: GFButton(onPressed: null, child: Text('back'),),
-        // // forwardButton: GFButton(onPressed: null, child: Text('next'),),
-        // // skipButton: GFButton(onPressed: null, child: Text('skip'),),
-        // // doneButton: GFButton(onPressed: null, child: Text('done'),),
-
-        // // backButtonText: 'bbbb',
-        // // forwardButtonText: 'ffffff',
-        // // skipButtonText: 'ssssss',
-        // // doneButtonText: 'ddddddd',
-
-        // // navigationBarHeight: 100,
-        // // navigationBarWidth: 300,
-        // // navigationBarMargin: EdgeInsets.all(20),
-        // // navigationBarPadding: EdgeInsets.all(20),
-        // // navigationBarShape: RoundedRectangleBorder(
-        // //   side: const BorderSide(color: Colors.blue, width: 4),
-        // //   borderRadius: BorderRadius.circular(50),
-        // // ),
-        // navigationBarColor: Colors.transparent,
-
-        // // showDivider: true,
-        // // dividerHeight: 2,
-        // // dividerThickness: 13,
-        // // dividerColor: GFColors.ALT,
-
-        // // dotHeight: 10,
-        // // dotWidth: 16,
-        // // dotShape: RoundedRectangleBorder(
-        // //   side: BorderSide(color: Colors.red, width: 2),
-        // //     borderRadius: BorderRadius.circular(5)
-        // // ),
-        // // inActiveColor: GFColors.DARK,
-        // // activeColor: GFColors.DANGER,
-        // // dotMargin: EdgeInsets.symmetric(horizontal: 6),
-
-        // // showButton: false,
-        // // showPagination: true,
+        // backButtonTextStyle: TextStyle(
+        //   fontSize: 12
         // ),
+
+        // backButton: GFButton(onPressed: null, child: Text('back'),),
+        // forwardButton: GFButton(onPressed: null, child: Text('next'),),
+        // skipButton: GFButton(onPressed: null, child: Text('skip'),),
+        // doneButton: GFButton(onPressed: null, child: Text('done'),),
+
+        // backButtonText: 'bbbb',
+        // forwardButtonText: 'ffffff',
+        // skipButtonText: 'ssssss',
+        // doneButtonText: 'ddddddd',
+
+        // navigationBarHeight: 100,
+        // navigationBarWidth: 300,
+        // navigationBarMargin: EdgeInsets.all(20),
+        // navigationBarPadding: EdgeInsets.all(20),
+        // navigationBarShape: RoundedRectangleBorder(
+        //   side: const BorderSide(color: Colors.blue, width: 4),
+        //   borderRadius: BorderRadius.circular(50),
+        // ),
+        navigationBarColor: Colors.white,
+
+        showDivider: false,
+        // dividerHeight: 2,
+        // dividerThickness: 13,
+        // dividerColor: GFColors.ALT,
+
+        // dotHeight: 10,
+        // dotWidth: 16,
+        // dotShape: RoundedRectangleBorder(
+        //   side: BorderSide(color: Colors.red, width: 2),
+        //     borderRadius: BorderRadius.circular(5)
+        // ),
+        inActiveColor: Colors.grey[200],
+        activeColor: GFColors.SUCCESS,
+        // dotMargin: EdgeInsets.symmetric(horizontal: 6),
+
+        // showButton: false,
+        // showPagination: true,
+        ),
       ),
     );
   }
