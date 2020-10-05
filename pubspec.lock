@@ -67,13 +67,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_webview_plugin:
+    dependency: "direct main"
+    description:
+      name: flutter_webview_plugin
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.11"
   getwidget:
     dependency: "direct main"
     description:
       path: "D:\\Flutter_Apps\\Get_Widget\\getflutter\\"
       relative: false
     source: path
-    version: "1.1.3"
+    version: "1.2.2"
   matcher:
     dependency: transitive
     description:
@@ -156,13 +163,5 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0-nullsafety.3"
-  webview_flutter:
-    dependency: "direct main"
-    description:
-      name: webview_flutter
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.3.19+6"
 sdks:
   dart: ">=2.10.0-110 <2.11.0"
-  flutter: ">=1.12.13+hotfix.5 <2.0.0"

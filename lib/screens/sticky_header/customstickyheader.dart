@@ -10,13 +10,11 @@ class CustomStickyHeader extends StatefulWidget {
 class _CustomStickyHeaderState extends State<CustomStickyHeader>
     with SingleTickerProviderStateMixin {
   final List<String> imageList = [
-    "lib/assets/images/s1.png",
-    "lib/assets/images/s2.png",
-    "lib/assets/images/s3.png",
-    "lib/assets/images/s4.png",
-    "lib/assets/images/s5.png",
-    "lib/assets/images/s1.png",
-    "lib/assets/images/s2.png",
+    "lib/assets/images/e1.png",
+    "lib/assets/images/e2.png",
+    "lib/assets/images/e3.png",
+    "lib/assets/images/e5.png",
+    "lib/assets/images/e1.png",
     "lib/assets/images/s3.png",
     "lib/assets/images/s4.png",
     "lib/assets/images/s5.png",

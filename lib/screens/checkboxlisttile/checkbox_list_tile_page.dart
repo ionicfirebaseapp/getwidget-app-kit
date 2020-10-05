@@ -10,6 +10,7 @@ class CheckBoxListTilePage extends StatefulWidget {
 class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
   bool check = true;
   bool check1 = false;
+  bool check2 = true;
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -35,7 +36,8 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
             GFCheckboxListTile(
               titleText: 'hi',
               subtitleText: 'Happy Ugadi',
-              avatar: GFAvatar(
+              position: GFPosition.start,
+              icon: GFAvatar(
                 backgroundImage: AssetImage('lib/assets/images/img.png'),
               ),
               size: 25,
@@ -49,11 +51,32 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
               onChanged: (val) {
                 setState(() {
                   check = val;
+                  print(val);
                 });
               },
               value: check,
-              inactiveIcon: null,
             ),
+            // GFCheckboxListTile(
+            //   titleText: 'hi',
+            //   subtitleText: 'Happy Ugadi',
+            //   avatar: GFAvatar(
+            //     backgroundImage: AssetImage('lib/assets/images/img1.png'),
+            //   ),
+            //   size: 25,
+            //   activebgColor: Colors.green,
+            //   activeIcon: Icon(
+            //     Icons.check,
+            //     size: 15,
+            //     color: Colors.white,
+            //   ),
+            //   type: GFCheckboxType.circle,
+            //   onChanged: (val) {
+            //     setState(() {
+            //       check1 = val;
+            //     });
+            //   },
+            //   value: check1,
+            // ),
             GFCheckboxListTile(
               titleText: 'hi',
               subtitleText: 'Happy Ugadi',
@@ -61,20 +84,19 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
                 backgroundImage: AssetImage('lib/assets/images/img1.png'),
               ),
               size: 25,
-              activebgColor: Colors.green,
+              activebgColor: GFColors.SECONDARY,
               activeIcon: Icon(
                 Icons.check,
                 size: 15,
                 color: Colors.white,
               ),
-              type: GFCheckboxType.circle,
+              type: GFCheckboxType.square,
               onChanged: (val) {
                 setState(() {
-                  check1 = val;
+                  check2 = val;
                 });
               },
-              value: check1,
-              inactiveIcon: null,
+              value: check2,
             )
           ],
         ),
