@@ -104,3 +104,8 @@ flutter:
       fonts:
         - asset: lib/assets/fonts/newcomp.ttf
           weight: 400
+
+    - family: GFIconsneww
+      fonts:
+        - asset: lib/assets/fonts/new.ttf
+          weight: 400

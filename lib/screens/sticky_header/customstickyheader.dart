@@ -186,7 +186,7 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                                             Text('Small')
                                           ],
                                         ),
-                                         SizedBox(height: 8),
+                                        SizedBox(height: 8),
                                         Row(
                                           children: [
                                             GFRadio(

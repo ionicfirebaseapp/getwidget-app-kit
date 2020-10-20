@@ -21,10 +21,10 @@ class _HalfWidthIntroState extends State<HalfWidthIntro> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        backgroundColor:  Colors.grey[200],
+        backgroundColor: Colors.grey[200],
         body: SafeArea(
           child: GFIntroScreen(
-            height: MediaQuery.of(context).size.height*0.7,
+            height: MediaQuery.of(context).size.height * 0.7,
             width: MediaQuery.of(context).size.width * 0.9,
             color: Colors.white,
             borderRadius: BorderRadius.circular(40),
@@ -97,7 +97,9 @@ class _HalfWidthIntroState extends State<HalfWidthIntro> {
 
               // showButton: false,
               showPagination: true,
-            ), currentIndex: null, pageCount: null,
+            ),
+            currentIndex: null,
+            pageCount: null,
           ),
         ),
       );
@@ -117,7 +119,10 @@ class _HalfWidthIntroState extends State<HalfWidthIntro> {
                 padding: const EdgeInsets.only(top: 10.0, left: 20),
                 child: Text(
                   'Welcome Back!',
-                  style: TextStyle(color: Colors.white,decoration: TextDecoration.none,fontSize: 25),
+                  style: TextStyle(
+                      color: Colors.white,
+                      decoration: TextDecoration.none,
+                      fontSize: 25),
                 ),
               ),
             ],
