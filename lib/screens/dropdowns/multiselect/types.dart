@@ -101,15 +101,10 @@ class _MultiselectTypesState extends State<MultiselectTypes>
                       onSelect: (value) {
                         print('sel $value ');
                       },
-                      dropDownTitleTileText: 'Messi, Griezmann, Coutinho ',
-                      // dropDownTitleTileHintText: 'select',
-                      // dropDownTitleTileHintTextStyle: const TextStyle(
-                      //     fontSize: 14,
-                      //     color: Colors.black54),
+                      dropdownTitleTileText: 'Messi, Griezmann, Coutinho ',
                       dropdownTitleTileMargin: EdgeInsets.only(
                           top: 22, left: 18, right: 18, bottom: 5),
                       dropdownTitleTilePadding: EdgeInsets.all(10),
-                      // hideDropdownUnderline: true,
                       dropdownUnderlineBorder:
                           const BorderSide(color: Colors.transparent, width: 2),
                       dropdownTitleTileBorder:
@@ -124,96 +119,27 @@ class _MultiselectTypesState extends State<MultiselectTypes>
                         color: Colors.black54,
                       ),
                       submitButton: Text('OK'),
-                      dropDownTitleTileTextStyle:
+                      cancelButton: Text('Cancel'),
+                      dropdownTitleTileTextStyle:
                           const TextStyle(fontSize: 14, color: Colors.black54),
-
-                      // color: Colors.blueGrey,
-                      // avatar: const GFAvatar(
-                      //   backgroundColor: Colors.red,
-                      // ),
                       padding: const EdgeInsets.all(6),
                       margin: const EdgeInsets.all(6),
-                      // size: GFSize.LARGE,
                       type: GFCheckboxType.basic,
-                      checkColor: Colors.white,
-                      activebgColor: GFColors.SUCCESS,
-                      // inactivebgColor: Colors.grey[200],
+                      activeBgColor: GFColors.SUCCESS,
                       activeBorderColor: GFColors.SUCCESS,
                       inactiveBorderColor: Colors.grey[200],
-                      // dropdownbgColor: Colors.pink,
-                      //  type: GFCheckboxType.custom,
-                      // activeIcon: const Icon(
-                      //   Icons.check,
-                      //   size: 20,
-                      //   color: GFColors.DARK,
-                      // ),
-                      // inactiveIcon: const Icon(
-                      //   Icons.check_box_outline_blank,
-                      //   size: 20,
-                      //   color: GFColors.DARK,
-                      // ),
-                      // custombgColor: Colors.green,
-                      // selected: true,
                     ),
-
-                    //      Container(
-                    //       //  height: 60,
-                    //       //  width: 200,
-                    //        margin: EdgeInsets.all(15),
-                    //        decoration: BoxDecoration(
-                    //          boxShadow: [
-                    //            BoxShadow(
-                    //              color: Colors.black,
-                    //              blurRadius: 0
-                    //            )
-                    //          ]
-                    //        ),
-                    //        child: GFDropdown(
-                    //   // isExpanded: true,
-                    //   // itemHeight: 60,
-
-                    //   // isDense: true,
-                    //   hint: const Text('FC Barcelona'),
-                    //   // padding: const EdgeInsets.all(12),
-                    //   // borderRadius: BorderRadius.circular(12),
-                    //   // border: const BorderSide(color: Colors.pink, width: 2, style: BorderStyle.solid),
-                    //   // dropdownColor: Colors.tealAccent,
-                    //   dropdownButtonColor: Colors.amber,
-                    //   value: dropdownValue,
-                    //   onChanged: (newValue) {
-                    //     print('value $newValue');
-                    //     setState(() {
-                    //         dropdownValue = newValue;
-                    //     });
-                    //   },
-                    //   items: ['FC Barcelona', 'Real Madrid', 'Manchester city']
-                    //         .map((value) => DropdownMenuItem(
-                    //     value: value,
-                    //     child: Text(value),
-                    //   )).toList(),
-                    // ),
-                    //      ),
                     Container(
-                      // height: 60,
-                      // margin: EdgeInsets.all(15),
-                      // decoration: BoxDecoration(boxShadow: [
-                      //   BoxShadow(color: Colors.green, blurRadius: 0)
-                      // ]),
                       child: GFMultiSelect(
                         items: dropList,
                         onSelect: (value) {
                           print('sel $value ');
                         },
-                        dropDownTitleTileText: 'Messi, Griezmann, Coutinho ',
-                        // dropDownTitleTileHintText: 'select',
-                        // dropDownTitleTileHintTextStyle: const TextStyle(
-                        //     fontSize: 14,
-                        //     color: Colors.black54),
+                        dropdownTitleTileText: 'Messi, Griezmann, Coutinho ',
                         dropdownTitleTileColor: Colors.grey[200],
                         dropdownTitleTileMargin: EdgeInsets.only(
                             top: 22, left: 18, right: 18, bottom: 5),
                         dropdownTitleTilePadding: EdgeInsets.all(10),
-                        // hideDropdownUnderline: true,
                         dropdownUnderlineBorder: const BorderSide(
                             color: Colors.transparent, width: 2),
                         dropdownTitleTileBorder:
@@ -228,36 +154,13 @@ class _MultiselectTypesState extends State<MultiselectTypes>
                           color: Colors.black54,
                         ),
                         submitButton: Text('OK'),
-                        dropDownTitleTileTextStyle: const TextStyle(
+                        dropdownTitleTileTextStyle: const TextStyle(
                             fontSize: 14, color: Colors.black54),
-
-                        // color: Colors.blueGrey,
-                        // avatar: const GFAvatar(
-                        //   backgroundColor: Colors.red,
-                        // ),
                         padding: const EdgeInsets.all(6),
                         margin: const EdgeInsets.all(6),
-                        // size: GFSize.LARGE,
                         type: GFCheckboxType.basic,
-                        checkColor: Colors.white,
-                        activebgColor: Colors.green.withOpacity(0.5),
-                        // inactivebgColor: Colors.grey[200],
-                        // activeBorderColor: GFColors.SUCCESS,
+                        activeBgColor: Colors.green.withOpacity(0.5),
                         inactiveBorderColor: Colors.grey[200],
-                        // dropdownbgColor: Colors.pink,
-                        //  type: GFCheckboxType.custom,
-                        // activeIcon: const Icon(
-                        //   Icons.check,
-                        //   size: 20,
-                        //   color: GFColors.DARK,
-                        // ),
-                        // inactiveIcon: const Icon(
-                        //   Icons.check_box_outline_blank,
-                        //   size: 20,
-                        //   color: GFColors.DARK,
-                        // ),
-                        // custombgColor: Colors.green,
-                        // selected: true,
                       ),
                     ),
                   ],

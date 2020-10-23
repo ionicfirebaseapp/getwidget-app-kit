@@ -95,117 +95,86 @@ class _DropDownTypesState extends State<DropDownTypes>
               Container(
                 height: MediaQuery.of(context).size.height - 140,
                 child: GFTabBarView(
-                  controller: tabController,
-                  height: 400,
-                  children: <Widget>[
-                    Container(
-                      height: 50,
-                      color: Colors.red,
-                      child: DropdownButton(
-                          value: _value,
-                          underline: Container(),
-                          icon: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              // Text('ROOM'),
-                              Icon(
-                                Icons.keyboard_arrow_down,
-                                color: Colors.black,
+                    height: 500,
+                    controller: tabController,
+                    children: <Widget>[
+                      Container(
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 50,
+                              width: MediaQuery.of(context).size.width,
+                              margin: EdgeInsets.all(20),
+                              child: DropdownButtonHideUnderline(
+                                child: GFDropdown(
+                                  padding: const EdgeInsets.all(15),
+                                  borderRadius: BorderRadius.circular(5),
+                                  border: const BorderSide(
+                                      color: Colors.black12, width: 1),
+                                  dropdownButtonColor: Colors.white,
+                                  value: dropdownValue,
+                                  onChanged: (newValue) {
+                                    print('value $newValue');
+                                    setState(() {
+                                      dropdownValue = newValue;
+                                    });
+                                  },
+                                  items: [
+                                    'FC Barcelona',
+                                    'Real Madrid',
+                                    'Villareal',
+                                    'Manchester City'
+                                  ]
+                                      .map((value) => DropdownMenuItem(
+                                            value: value,
+                                            child: Text(value),
+                                          ))
+                                      .toList(),
+                                ),
                               ),
-                            ],
-                          ),
-                          items: [
-                            DropdownMenuItem(
-                              child: Text(
-                                "Dish wash water",
-                              ),
-                              value: 1,
-                            ),
-                            DropdownMenuItem(
-                              child: Text(
-                                "dish wash",
-                              ),
-                              value: 2,
                             ),
                           ],
-                          onChanged: (value) {
-                            setState(() {
-                              _value = value;
-                            });
-                          }),
-                    ),
-
-                    //      Container(
-                    //       //  height: 60,
-                    //       //  width: 200,
-                    //        margin: EdgeInsets.all(15),
-                    //        decoration: BoxDecoration(
-                    //          boxShadow: [
-                    //            BoxShadow(
-                    //              color: Colors.black,
-                    //              blurRadius: 0
-                    //            )
-                    //          ]
-                    //        ),
-                    //        child: GFDropdown(
-                    //   // isExpanded: true,
-                    //   // itemHeight: 60,
-
-                    //   // isDense: true,
-                    //   hint: const Text('FC Barcelona'),
-                    //   // padding: const EdgeInsets.all(12),
-                    //   // borderRadius: BorderRadius.circular(12),
-                    //   // border: const BorderSide(color: Colors.pink, width: 2, style: BorderStyle.solid),
-                    //   // dropdownColor: Colors.tealAccent,
-                    //   dropdownButtonColor: Colors.amber,
-                    //   value: dropdownValue,
-                    //   onChanged: (newValue) {
-                    //     print('value $newValue');
-                    //     setState(() {
-                    //         dropdownValue = newValue;
-                    //     });
-                    //   },
-                    //   items: ['FC Barcelona', 'Real Madrid', 'Manchester city']
-                    //         .map((value) => DropdownMenuItem(
-                    //     value: value,
-                    //     child: Text(value),
-                    //   )).toList(),
-                    // ),
-                    //      ),
-                    Container(
-                      height: 60,
-                      margin: EdgeInsets.all(15),
-                      decoration: BoxDecoration(boxShadow: [
-                        BoxShadow(color: Colors.black, blurRadius: 0)
-                      ]),
-                      child: GFDropdown(
-                        // isExpanded: true,
-                        itemHeight: 60,
-                        // isDense: true,
-                        hint: const Text('FC Barcelona'),
-                        // padding: const EdgeInsets.all(12),
-                        // borderRadius: BorderRadius.circular(12),
-                        // border: const BorderSide(color: Colors.pink, width: 2, style: BorderStyle.solid),
-                        // dropdownColor: Colors.tealAccent,
-                        dropdownButtonColor: Colors.amber,
-                        value: dropdownValue,
-                        onChanged: (newValue) {
-                          print('value $newValue');
-                          setState(() {
-                            dropdownValue = newValue;
-                          });
-                        },
-                        items:
-                            ['FC Barcelona', 'Real Madrid', 'Manchester city']
-                                .map((value) => DropdownMenuItem(
-                                      value: value,
-                                      child: Text(value),
-                                    ))
-                                .toList(),
+                        ),
                       ),
-                    ),
-                  ],
-                ),
+                      Container(
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 50,
+                              width: MediaQuery.of(context).size.width,
+                              margin: EdgeInsets.all(20),
+                              child: DropdownButtonHideUnderline(
+                                child: GFDropdown(
+                                  padding: const EdgeInsets.all(15),
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: const BorderSide(
+                                      color: Colors.black12, width: 1),
+                                  dropdownButtonColor: Colors.grey[300],
+                                  value: dropdownValue,
+                                  onChanged: (newValue) {
+                                    print('value $newValue');
+                                    setState(() {
+                                      dropdownValue = newValue;
+                                    });
+                                  },
+                                  items: [
+                                    'FC Barcelona',
+                                    'Real Madrid',
+                                    'Villareal',
+                                    'Manchester City'
+                                  ]
+                                      .map((value) => DropdownMenuItem(
+                                            value: value,
+                                            child: Text(value),
+                                          ))
+                                      .toList(),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ]),
               )
             ],
           ),

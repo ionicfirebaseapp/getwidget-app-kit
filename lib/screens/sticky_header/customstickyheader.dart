@@ -136,7 +136,7 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                                               inactiveIcon: null,
                                               activeBorderColor:
                                                   GFColors.SUCCESS,
-                                              custombgColor: GFColors.SUCCESS,
+                                              customBgColor: GFColors.SUCCESS,
                                             ),
                                             SizedBox(width: 5),
                                             Text('Large')
@@ -158,7 +158,7 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                                               inactiveIcon: null,
                                               activeBorderColor:
                                                   GFColors.SUCCESS,
-                                              custombgColor: GFColors.SUCCESS,
+                                              customBgColor: GFColors.SUCCESS,
                                             ),
                                             SizedBox(width: 5),
                                             Text('Medium')
@@ -180,7 +180,7 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                                               inactiveIcon: null,
                                               activeBorderColor:
                                                   GFColors.SUCCESS,
-                                              custombgColor: GFColors.SUCCESS,
+                                              customBgColor: GFColors.SUCCESS,
                                             ),
                                             SizedBox(width: 5),
                                             Text('Small')
@@ -202,7 +202,7 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                                               inactiveIcon: null,
                                               activeBorderColor:
                                                   GFColors.SUCCESS,
-                                              custombgColor: GFColors.SUCCESS,
+                                              customBgColor: GFColors.SUCCESS,
                                             ),
                                             SizedBox(width: 5),
                                             Text('Extra Small')

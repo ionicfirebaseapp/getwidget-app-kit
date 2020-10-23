@@ -41,7 +41,7 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
                 backgroundImage: AssetImage('lib/assets/images/img.png'),
               ),
               size: 25,
-              activebgColor: Colors.green,
+              activeBgColor: Colors.green,
               activeIcon: Icon(
                 Icons.check,
                 size: 15,
@@ -84,7 +84,7 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
                 backgroundImage: AssetImage('lib/assets/images/img1.png'),
               ),
               size: 25,
-              activebgColor: GFColors.SECONDARY,
+              activeBgColor: GFColors.SECONDARY,
               activeIcon: Icon(
                 Icons.check,
                 size: 15,

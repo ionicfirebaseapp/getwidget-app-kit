@@ -206,6 +206,7 @@ class _BadgesPageState extends State<BadgesPage> {
                     height: 20,
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       GFIconBadge(
                           child: GFIconButton(
@@ -271,6 +272,11 @@ class _BadgesPageState extends State<BadgesPage> {
                             text: '12',
                             shape: GFBadgeShape.circle,
                           )),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
                       GFIconBadge(
                         child: GFIconButton(
                           type: GFButtonType.transparent,
@@ -288,10 +294,6 @@ class _BadgesPageState extends State<BadgesPage> {
                           shape: GFBadgeShape.circle,
                         ),
                       ),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
                       GFIconBadge(
                           child: GFIconButton(
                             type: GFButtonType.transparent,

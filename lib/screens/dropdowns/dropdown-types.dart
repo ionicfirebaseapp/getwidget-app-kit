@@ -77,41 +77,6 @@ class _DropDownState extends State<DropDown> {
                           color: GFColors.SUCCESS,
                         )),
                   )),
-              // Container(
-              //   //  height: 60,
-              //   width: 200,
-              //   margin: EdgeInsets.all(15),
-              //   decoration: BoxDecoration(
-              //       borderRadius: BorderRadius.circular(2),
-              //       boxShadow: [BoxShadow(color: Colors.black, blurRadius: 0)]),
-              //   child: GFDropdown(
-              //     // isExpanded: true,
-              //     // itemHeight: 60,
-              //     // icon: Icon(Icons.keyboard_arrow_down),
-              //     // isDense: true,
-              //     hint: const Text('one'),
-              //     // padding: const EdgeInsets.all(12),
-              //     borderRadius: BorderRadius.circular(2),
-              //     // border: const BorderSide(color: Colors.pink, width: 2, style: BorderStyle.solid),
-              //     // dropdownColor: Colors.tealAccent,
-              //     // dropdownButtonColor: Colors.amber,
-              //     // underline: Color(0xFFFFFFFF),
-              //     underline: Text(''),
-              //     value: dropdownValue,
-              //     onChanged: (newValue) {
-              //       print('value $newValue');
-              //       setState(() {
-              //         dropdownValue = newValue;
-              //       });
-              //     },
-              //     items: ['One', 'Two', 'Free', 'Four']
-              //         .map((value) => DropdownMenuItem(
-              //               value: value,
-              //               child: Text(value),
-              //             ))
-              //         .toList(),
-              //   ),
-              // ),
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -144,71 +109,6 @@ class _DropDownState extends State<DropDown> {
                           color: GFColors.SUCCESS,
                         )),
                   )),
-              // Container(
-              //     // height: 60,
-              //     // margin: EdgeInsets.all(15),
-              //     decoration: BoxDecoration(boxShadow: [
-              //       BoxShadow(color: Colors.black, blurRadius: 0)
-              //     ]),
-              //     child: GFMultiSelect(
-              //       // color: Colors.red,
-
-              //       items: dropList,
-              //       onSelect: (value) {
-              //         print('sel $value ');
-              //       },
-              //       dropDownTitleTileText: 'Select options : ',
-              //       dropDownTitleTileHintText: 'select',
-              //       dropDownTitleTileHintTextStyle: const TextStyle(
-              //           fontSize: 12,
-              //           fontWeight: FontWeight.w500,
-              //           color: Colors.pink),
-              //       dropdownTitleTileMargin: EdgeInsets.all(2),
-              //       dropdownTitleTilePadding: EdgeInsets.all(4),
-              //       hideDropdownUnderline: true,
-              //       // dropdownUnderlineBorder: const BorderSide(color: Colors.transparent, width: 2),
-              //       // dropdownTitleTileBorder: Border.all(color: Colors.pink, width: 2),
-              //       dropdownTitleTileBorderRadius:
-              //           BorderRadius.circular(75),
-              //       expandedIcon: const Icon(
-              //         Icons.edit,
-              //         color: Colors.tealAccent,
-              //       ),
-              //       collapsedIcon: const Text('close'),
-              //       submitButton: const Text('OK'),
-              //       dropDownTitleTileTextStyle: const TextStyle(
-              //           fontSize: 16,
-              //           fontWeight: FontWeight.w500,
-              //           color: Colors.pink),
-              //       //
-              //       // color: Colors.blueGrey,
-              //       avatar: const GFAvatar(
-              //         backgroundColor: Colors.red,
-              //       ),
-              //       padding: const EdgeInsets.all(6),
-              //       margin: const EdgeInsets.all(26),
-              //       size: GFSize.LARGE,
-              //       type: GFCheckboxType.basic,
-              //       checkColor: GFColors.ALT,
-              //       activebgColor: GFColors.LIGHT,
-              //       inactivebgColor: GFColors.SECONDARY,
-              //       activeBorderColor: GFColors.SUCCESS,
-              //       inactiveBorderColor: GFColors.PRIMARY,
-              //       dropdownbgColor: Colors.pink,
-              //       activeIcon: const Icon(
-              //         Icons.check,
-              //         size: 20,
-              //         color: GFColors.DARK,
-              //       ),
-              //       inactiveIcon: const Icon(
-              //         Icons.check_box_outline_blank,
-              //         size: 20,
-              //         color: GFColors.DARK,
-              //       ),
-              //       // custombgColor: Colors.green,
-              //       selected: true,
-              //     ),
-              //   ),
             ],
           ),
         ),

@@ -6,6 +6,7 @@ import 'package:gf_app/screens/border/border.dart';
 import 'package:gf_app/screens/bottomsheet/bottomsheet.dart';
 import 'package:gf_app/screens/checkbox/checkboxs.dart';
 import 'package:gf_app/screens/checkboxlisttile/checkbox_list_tile_page.dart';
+import 'package:gf_app/screens/dropdowns/dropdown-types.dart';
 import 'package:gf_app/screens/intro-screen/introscreen.dart';
 import 'package:gf_app/screens/radiobutton/radio_buttons.dart';
 import 'package:gf_app/screens/radiolisttile/radiolisttile.dart';
@@ -964,7 +965,7 @@ class _DrawerPageState extends State<DrawerPage> {
                               avatar: Icon(
                                 const IconData(
                                   0xe901,
-                                  fontFamily: 'GFIconsnew',
+                                  fontFamily: 'GFIconsneww',
                                 ),
                                 color: GFColors.DARK,
                                 size: 17,
@@ -989,8 +990,34 @@ class _DrawerPageState extends State<DrawerPage> {
                               ),
                               avatar: Icon(
                                 const IconData(
-                                  0xe901,
-                                  fontFamily: 'GFIconsnew',
+                                  0xe907,
+                                  fontFamily: 'GFIconsneww',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        DropDown()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Dropdown',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe900,
+                                  fontFamily: 'GFIconsneww',
                                 ),
                                 color: GFColors.DARK,
                                 size: 17,
