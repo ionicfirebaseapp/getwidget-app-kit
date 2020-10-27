@@ -31,7 +31,7 @@ class _AlertPageState extends State<AlertPage> {
         ),
         body: GFFloatingWidget(
           verticalPosition: 150,
-          showblurness: showblur,
+          showBlurness: showblur,
           child: alertWidget,
           body: ListView(
             children: <Widget>[

@@ -1,12 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:gf_app/screens/animations/animation.dart';
 import 'package:gf_app/screens/border/border.dart';
 import 'package:gf_app/screens/bottomsheet/bottomsheet.dart';
 import 'package:gf_app/screens/checkbox/checkboxs.dart';
 import 'package:gf_app/screens/checkboxlisttile/checkbox_list_tile_page.dart';
+import 'package:gf_app/screens/dropdowns/dropdown-types.dart';
+import 'package:gf_app/screens/intro-screen/introscreen.dart';
 import 'package:gf_app/screens/radiobutton/radio_buttons.dart';
 import 'package:gf_app/screens/radiolisttile/radiolisttile.dart';
+import 'package:gf_app/screens/sticky_header/sticky_types.dart';
 import '../../screens/accordian/accordian.dart';
 import '../../screens/alert/alert.dart';
 import '../../screens/appbar/app_home.dart';
@@ -910,6 +914,110 @@ class _DrawerPageState extends State<DrawerPage> {
                                 const IconData(
                                   0xe901,
                                   fontFamily: 'GFIconsnew',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        AnimationPage()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Animation',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe907,
+                                  fontFamily: 'GFIconsnew',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Introscreen()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Intro Screen',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe901,
+                                  fontFamily: 'GFIconsneww',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        StickyTypes()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Sticky Header',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe907,
+                                  fontFamily: 'GFIconsneww',
+                                ),
+                                color: GFColors.DARK,
+                                size: 17,
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        DropDown()),
+                              );
+                            },
+                            child: GFListTile(
+                              title: const Text(
+                                'Dropdown',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              avatar: Icon(
+                                const IconData(
+                                  0xe900,
+                                  fontFamily: 'GFIconsneww',
                                 ),
                                 color: GFColors.DARK,
                                 size: 17,

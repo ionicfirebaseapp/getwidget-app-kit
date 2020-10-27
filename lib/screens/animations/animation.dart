@@ -132,7 +132,7 @@ class _AnimationPageState extends State<AnimationPage>
             ),
             GFAnimation(
               duration: Duration(seconds: 2),
-              alignment: Alignment.bottomLeft,
+              alignment: Alignment.centerLeft,
               type: GFAnimationType.align,
               child: Image.asset(
                 'lib/assets/icons/allign.png',

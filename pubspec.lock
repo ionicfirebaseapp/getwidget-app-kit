@@ -77,7 +77,7 @@ packages:
   getwidget:
     dependency: "direct main"
     description:
-      path: "/Users/pietchsolution/Downloads/projects/getwidget/getflutter"
+      path: "D:\\Flutter_Apps\\Get_Widget\\getflutter\\"
       relative: false
     source: path
     version: "1.2.2"

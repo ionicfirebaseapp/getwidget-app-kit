@@ -89,7 +89,7 @@ class _StickyHeaderState extends State<StickyHeader>
                                           'lib/assets/images/img.png'),
                                     ),
                                     size: 25,
-                                    activebgColor: Colors.green,
+                                    activeBgColor: Colors.green,
                                     activeIcon: Icon(
                                       Icons.check,
                                       size: 15,

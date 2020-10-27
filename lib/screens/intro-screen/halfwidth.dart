@@ -21,14 +21,14 @@ class _HalfWidthIntroState extends State<HalfWidthIntro> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey[200],
         body: SafeArea(
           child: GFIntroScreen(
-            height: 500,
+            height: MediaQuery.of(context).size.height * 0.7,
             width: MediaQuery.of(context).size.width * 0.9,
             color: Colors.white,
             borderRadius: BorderRadius.circular(40),
-            // border: Border.all(color: Colors.red, width: 5),
+            border: Border.all(color: Colors.grey[200]),
             slides: slides(),
             pageController: _pageController,
             // showIntroSCreenBottomNavigationBar: false,
@@ -71,17 +71,17 @@ class _HalfWidthIntroState extends State<HalfWidthIntro> {
               skipButtonText: 'Skip',
               doneButtonText: 'Done',
 
-              // navigationBarHeight: 100,
+              navigationBarHeight: 50,
               navigationBarWidth: 300,
               // navigationBarMargin: EdgeInsets.all(20),
               // navigationBarPadding: EdgeInsets.all(20),
               navigationBarShape: RoundedRectangleBorder(
-                side: const BorderSide(color: Colors.blue, width: 4),
-                borderRadius: BorderRadius.circular(50),
+                // side: const BorderSide(color: Colors.blue, width: 4),
+                borderRadius: BorderRadius.circular(60),
               ),
-              navigationBarColor: Colors.green,
+              navigationBarColor: Colors.white,
 
-              // showDivider: true,
+              showDivider: false,
               // dividerHeight: 2,
               // dividerThickness: 13,
               // dividerColor: GFColors.ALT,
@@ -89,15 +89,17 @@ class _HalfWidthIntroState extends State<HalfWidthIntro> {
               dotHeight: 10,
               dotWidth: 16,
               dotShape: RoundedRectangleBorder(
-                  side: BorderSide(color: Colors.red, width: 2),
+                  // side: BorderSide(color: Colors.grey[200], width: 1),
                   borderRadius: BorderRadius.circular(5)),
-              // inActiveColor: GFColors.DARK,
-              // activeColor: GFColors.DANGER,
+              inactiveColor: Colors.grey[200],
+              activeColor: GFColors.SUCCESS,
               dotMargin: EdgeInsets.symmetric(horizontal: 6),
 
               // showButton: false,
               showPagination: true,
             ),
+            currentIndex: null,
+            pageCount: null,
           ),
         ),
       );
@@ -114,11 +116,14 @@ class _HalfWidthIntroState extends State<HalfWidthIntro> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(top: 70.0, left: 20),
-                // child: Text(
-                //   'Welcome!',
-                //   style: TextStyle(color: Colors.white,decoration: TextDecoration.none,fontSize: 25),
-                // ),
+                padding: const EdgeInsets.only(top: 10.0, left: 20),
+                child: Text(
+                  'Welcome Back!',
+                  style: TextStyle(
+                      color: Colors.white,
+                      decoration: TextDecoration.none,
+                      fontSize: 25),
+                ),
               ),
             ],
           ),

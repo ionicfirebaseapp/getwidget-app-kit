@@ -367,7 +367,7 @@ class _CardPageState extends State<CardPage>
                                   color: Colors.grey,
                                   fontWeight: FontWeight.w500),
                             ),
-                            subTitle: Text(
+                            subtitle: Text(
                               'subtitle',
                               style: TextStyle(color: Colors.grey),
                             ),
@@ -403,7 +403,7 @@ class _CardPageState extends State<CardPage>
                                   color: Colors.grey,
                                   fontWeight: FontWeight.w500),
                             ),
-                            subTitle: Text(
+                            subtitle: Text(
                               'subtitle',
                               style: TextStyle(color: Colors.grey),
                             ),
