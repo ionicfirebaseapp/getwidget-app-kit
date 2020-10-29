@@ -10,9 +10,9 @@ dependencies:
   flutter:
     sdk: flutter
   getwidget:
-    path: D:\Flutter_Apps\Get_Widget\getflutter\
+    #path: D:\Flutter_Apps\Get_Widget\getflutter\
   flutter_webview_plugin: ^0.3.11
-  cupertino_icons: ^0.1.2
+  cupertino_icons: ^1.0.0
 
 dev_dependencies:
   flutter_test:
