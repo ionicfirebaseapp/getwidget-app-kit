@@ -58,7 +58,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                 children: <Widget>[
                   GFCheckbox(
                     size: GFSize.SMALL,
-                    activeBgColor: GFColors.DANGER,
+                    activebgColor: GFColors.DANGER,
                     onChanged: (val) {
                       setState(() {
                         check = val;
@@ -68,7 +68,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                     inactiveIcon: null,
                   ),
                   GFCheckbox(
-                    activeBgColor: GFColors.SECONDARY,
+                    activebgColor: GFColors.SECONDARY,
                     onChanged: (val) {
                       setState(() {
                         check1 = val;
@@ -79,7 +79,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                   ),
                   GFCheckbox(
                     size: GFSize.LARGE,
-                    activeBgColor: GFColors.SUCCESS,
+                    activebgColor: GFColors.SUCCESS,
                     onChanged: (val) {
                       setState(() {
                         check2 = val;
@@ -106,7 +106,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                 children: <Widget>[
                   GFCheckbox(
                     size: GFSize.SMALL,
-                    activeBgColor: GFColors.DANGER,
+                    activebgColor: GFColors.DANGER,
                     type: GFCheckboxType.square,
                     onChanged: (val) {
                       setState(() {
@@ -118,7 +118,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                   ),
                   GFCheckbox(
                     type: GFCheckboxType.square,
-                    activeBgColor: GFColors.SECONDARY,
+                    activebgColor: GFColors.SECONDARY,
                     onChanged: (val) {
                       setState(() {
                         check4 = val;
@@ -129,7 +129,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                   ),
                   GFCheckbox(
                     size: GFSize.LARGE,
-                    activeBgColor: GFColors.SUCCESS,
+                    activebgColor: GFColors.SUCCESS,
                     type: GFCheckboxType.square,
                     onChanged: (val) {
                       setState(() {
@@ -157,7 +157,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                 children: <Widget>[
                   GFCheckbox(
                     size: GFSize.SMALL,
-                    activeBgColor: GFColors.DANGER,
+                    activebgColor: GFColors.DANGER,
                     type: GFCheckboxType.circle,
                     onChanged: (val) {
                       setState(() {
@@ -169,7 +169,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                   ),
                   GFCheckbox(
                     type: GFCheckboxType.circle,
-                    activeBgColor: GFColors.SECONDARY,
+                    activebgColor: GFColors.SECONDARY,
                     onChanged: (val) {
                       setState(() {
                         check7 = val;
@@ -178,7 +178,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                     value: check7,
                   ),
                   GFCheckbox(
-                    activeBgColor: GFColors.SUCCESS,
+                    activebgColor: GFColors.SUCCESS,
                     size: GFSize.LARGE,
                     type: GFCheckboxType.circle,
                     onChanged: (val) {
@@ -218,7 +218,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                   ),
                   GFCheckbox(
                     type: GFCheckboxType.square,
-                    activeBgColor: GFColors.SECONDARY,
+                    activebgColor: GFColors.SECONDARY,
                     activeIcon: Icon(Icons.sentiment_satisfied),
                     onChanged: (val) {
                       setState(() {
@@ -238,7 +238,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                       });
                     },
                     value: check11,
-                    customBgColor: GFColors.INFO,
+                    custombgColor: GFColors.INFO,
                     inactiveIcon: null,
                   ),
                 ],

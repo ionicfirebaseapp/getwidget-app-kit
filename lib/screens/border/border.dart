@@ -546,7 +546,7 @@ class _BorderPageState extends State<BorderPage>
                                         color: Colors.grey,
                                         fontWeight: FontWeight.w500),
                                   ),
-                                  subtitle: Text(
+                                  subTitle: Text(
                                     'subtitle',
                                     style: TextStyle(color: Colors.grey),
                                   ),
