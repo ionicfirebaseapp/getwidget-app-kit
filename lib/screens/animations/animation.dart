@@ -25,7 +25,7 @@ class _AnimationPageState extends State<AnimationPage> with SingleTickerProvider
     super.initState();
     controller = AnimationController(
       duration: const Duration(seconds: 2),
-//      vsync: this,
+      vsync: this,
     );
     animation = new CurvedAnimation(parent: controller, curve: Curves.bounceInOut);
     controller.repeat();

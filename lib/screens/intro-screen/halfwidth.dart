@@ -76,7 +76,7 @@ class _HalfWidthIntroState extends State<HalfWidthIntro> {
               // navigationBarMargin: EdgeInsets.all(20),
               // navigationBarPadding: EdgeInsets.all(20),
               navigationBarShape: RoundedRectangleBorder(
-                // side: const BorderSide(color: Colors.blue, width: 4),
+                 side: const BorderSide(color: Colors.blue, width: 4),
                 borderRadius: BorderRadius.circular(60),
               ),
               navigationBarColor: Colors.white,
@@ -89,9 +89,9 @@ class _HalfWidthIntroState extends State<HalfWidthIntro> {
               dotHeight: 10,
               dotWidth: 16,
               dotShape: RoundedRectangleBorder(
-                  // side: BorderSide(color: Colors.grey[200], width: 1),
+                   side: BorderSide(color: Colors.grey[200], width: 1),
                   borderRadius: BorderRadius.circular(5)),
-//              inactiveColor: Colors.grey[200],
+              inActiveColor: Colors.grey[200],
               activeColor: GFColors.SUCCESS,
               dotMargin: EdgeInsets.symmetric(horizontal: 6),
 

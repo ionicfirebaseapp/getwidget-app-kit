@@ -17,17 +17,17 @@ class _FabFloatingWidgetState extends State<FabFloatingWidget> with TickerProvid
     super.initState();
     animationController = AnimationController(
       duration: const Duration(seconds: 2),
-//      vsync: this,
+      vsync: this,
     );
     controller = AnimationController(
-//      vsync: this,
+      vsync: this,
       duration: const Duration(milliseconds: 300),
     );
     offset = Tween<Offset>(begin: const Offset(0, -0.04), end: const Offset(0, 0.2)).animate(controller);
 //    offset = Tween<Offset>(begin: Offset.zero, end: Offset(0.0, 1.0))
 //        .animate(controller);
     _controller = AnimationController(
-//      vsync: this,
+      vsync: this,
       duration: const Duration(milliseconds: 300),
     );
     offset1 = Tween<Offset>(begin: Offset.zero, end: const Offset(0, -0.05)).animate(_controller);
