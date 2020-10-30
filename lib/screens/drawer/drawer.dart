@@ -72,6 +72,7 @@ class _DrawerPageState extends State<DrawerPage> {
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
+// todo: need fix
 //                    colors: const [Color(0xFFD685FF), Color(0xFF7466CC)],
                   ),
                 ),
