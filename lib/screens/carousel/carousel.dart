@@ -130,7 +130,7 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                                   gradient: LinearGradient(
                                     begin: FractionalOffset.topLeft,
                                     end: FractionalOffset.bottomRight,
-//                                    colors: gradientColor,
+                                    colors: gradientColor,
                                   ),
                                   margin: const EdgeInsets.only(
                                     left: 15,
@@ -183,7 +183,7 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                                   gradient: LinearGradient(
                                     begin: FractionalOffset.topCenter,
                                     end: FractionalOffset.bottomCenter,
-//                                    colors: gradientColors,
+                                    colors: gradientColors,
                                   ),
                                   margin: const EdgeInsets.only(left: 15, right: 5),
                                   borderRadius: const BorderRadius.all(Radius.circular(4)),
@@ -235,10 +235,10 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                                   gradient: LinearGradient(
                                     begin: FractionalOffset.bottomLeft,
                                     end: FractionalOffset.topRight,
-//                                    colors: const [
-//                                      Color(0xff33B5E5),
-//                                      Color(0xFF39FFF8),
-//                                    ],
+                                    colors: const [
+                                      Color(0xff33B5E5),
+                                      Color(0xFF39FFF8),
+                                    ],
                                   ),
                                   height: 200,
                                   margin: const EdgeInsets.only(left: 15, right: 15),

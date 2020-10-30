@@ -1,7 +1,11 @@
 
+#
+env:
+	# fvm has bugs, please always use `--global` args.
+	fvm use 1.22.2 --global
 
 setup:
-	fvm flutter pub get
+	flutter pub get
 
 run:
-	fvm flutter run
+	flutter run

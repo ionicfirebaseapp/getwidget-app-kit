@@ -107,14 +107,14 @@ class _ShimmerPageState extends State<ShimmerPage> {
           gradient: LinearGradient(
             begin: Alignment.bottomRight,
             end: Alignment.centerLeft,
-//            stops: const <double>[0, 0.3, 0.6, 0.9, 1],
-//            colors: const [
-//              GFColors.DANGER,
-//              GFColors.PRIMARY,
-//              GFColors.WARNING,
-//              GFColors.SECONDARY,
-//              Colors.red,
-//            ],
+            stops: const <double>[0, 0.3, 0.6, 0.9, 1],
+            colors: const [
+              GFColors.DANGER,
+              GFColors.PRIMARY,
+              GFColors.WARNING,
+              GFColors.SECONDARY,
+              Colors.red,
+            ],
           ),
         ),
       ]));

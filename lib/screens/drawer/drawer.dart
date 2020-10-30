@@ -55,7 +55,7 @@ class _DrawerPageState extends State<DrawerPage> {
                   gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-//                colors: const [Color(0xFFD685FF), Color(0xFF7466CC)],
+                colors: const [Color(0xFFD685FF), Color(0xFF7466CC)],
               )),
               height: 250,
               child: GFDrawerHeader(
@@ -72,8 +72,7 @@ class _DrawerPageState extends State<DrawerPage> {
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-// todo: need fix
-//                    colors: const [Color(0xFFD685FF), Color(0xFF7466CC)],
+                    colors: const [Color(0xFFD685FF), Color(0xFF7466CC)],
                   ),
                 ),
                 otherAccountsPictures: <Widget>[
