@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:getwidget/components/dropdown/gf_dropdown.dart';
 import 'package:getwidget/getwidget.dart';
 
 class DropDownTypes extends StatefulWidget {
@@ -109,9 +110,9 @@ class _DropDownTypesState extends State<DropDownTypes>
                                 child: GFDropdown(
                                   padding: const EdgeInsets.all(15),
                                   borderRadius: BorderRadius.circular(5),
-                                  border: const BorderSide(
-                                      color: Colors.black12, width: 1),
-                                  dropdownButtonColor: Colors.white,
+//                                  border: const BorderSide(
+//                                      color: Colors.black12, width: 1),
+                                  dropdownColor: Colors.white,
                                   value: dropdownValue,
                                   onChanged: (newValue) {
                                     print('value $newValue');
@@ -147,9 +148,9 @@ class _DropDownTypesState extends State<DropDownTypes>
                                 child: GFDropdown(
                                   padding: const EdgeInsets.all(15),
                                   borderRadius: BorderRadius.circular(10),
-                                  border: const BorderSide(
-                                      color: Colors.black12, width: 1),
-                                  dropdownButtonColor: Colors.grey[300],
+//                                  border: const BorderSide(
+//                                      color: Colors.black12, width: 1),
+                                  dropdownColor: Colors.grey[300],
                                   value: dropdownValue,
                                   onChanged: (newValue) {
                                     print('value $newValue');

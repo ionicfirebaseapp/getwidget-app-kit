@@ -92,7 +92,7 @@ class _FullWidthIntroState extends State<FullWidthIntro> {
           //   side: BorderSide(color: Colors.red, width: 2),
           //     borderRadius: BorderRadius.circular(5)
           // ),
-          inactiveColor: Colors.grey[200],
+          inActiveColor: Colors.grey[200],
           activeColor: GFColors.SUCCESS,
           // dotMargin: EdgeInsets.symmetric(horizontal: 6),
 
