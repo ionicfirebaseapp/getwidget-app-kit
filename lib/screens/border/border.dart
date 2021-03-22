@@ -358,7 +358,7 @@ class _BorderPageState extends State<BorderPage>
                                         'lib/assets/images/avatar8.png'),
                                   ),
                                   titleText: 'Card Title',
-                                  subtitleText: 'Sub Title',
+                                  subTitleText: 'Sub Title',
                                   icon: GFIconButton(
                                     onPressed: null,
                                     icon: GestureDetector(
@@ -546,7 +546,7 @@ class _BorderPageState extends State<BorderPage>
                                         color: Colors.grey,
                                         fontWeight: FontWeight.w500),
                                   ),
-                                  subtitle: Text(
+                                  subTitle: Text(
                                     'subtitle',
                                     style: TextStyle(color: Colors.grey),
                                   ),

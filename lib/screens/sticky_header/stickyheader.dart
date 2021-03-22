@@ -83,7 +83,7 @@ class _StickyHeaderState extends State<StickyHeader>
                                 children: [
                                   GFCheckboxListTile(
                                     titleText: 'Eva Mendez',
-                                    subtitleText: 'Hello',
+                                    subTitleText: 'Hello',
                                     avatar: GFAvatar(
                                       backgroundImage: AssetImage(
                                           'lib/assets/images/img.png'),

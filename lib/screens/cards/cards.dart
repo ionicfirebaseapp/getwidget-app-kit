@@ -262,7 +262,7 @@ class _CardPageState extends State<CardPage>
                                   AssetImage('lib/assets/images/avatar8.png'),
                             ),
                             titleText: 'Card Title',
-                            subtitleText: 'Sub Title',
+                            subTitleText: 'Sub Title',
                             icon: GFIconButton(
                               onPressed: null,
                               icon: GestureDetector(
@@ -302,7 +302,7 @@ class _CardPageState extends State<CardPage>
                                   AssetImage('lib/assets/images/avatar9.png'),
                             ),
                             titleText: 'Card Title',
-                            subtitleText: 'Sub Title',
+                            subTitleText: 'Sub Title',
                           ),
                           content: Text(
                             'Some quick example text to build on the card',
@@ -367,7 +367,7 @@ class _CardPageState extends State<CardPage>
                                   color: Colors.grey,
                                   fontWeight: FontWeight.w500),
                             ),
-                            subtitle: Text(
+                            subTitle: Text(
                               'subtitle',
                               style: TextStyle(color: Colors.grey),
                             ),
@@ -403,7 +403,7 @@ class _CardPageState extends State<CardPage>
                                   color: Colors.grey,
                                   fontWeight: FontWeight.w500),
                             ),
-                            subtitle: Text(
+                            subTitle: Text(
                               'subtitle',
                               style: TextStyle(color: Colors.grey),
                             ),

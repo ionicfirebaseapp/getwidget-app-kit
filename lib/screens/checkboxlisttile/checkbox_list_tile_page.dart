@@ -35,7 +35,7 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
           children: <Widget>[
             GFCheckboxListTile(
               titleText: 'hi',
-              subtitleText: 'Happy Ugadi',
+              subTitleText: 'Happy Ugadi',
               position: GFPosition.start,
               icon: GFAvatar(
                 backgroundImage: AssetImage('lib/assets/images/img.png'),
@@ -79,7 +79,7 @@ class _CheckBoxListTilePageState extends State<CheckBoxListTilePage> {
             // ),
             GFCheckboxListTile(
               titleText: 'hi',
-              subtitleText: 'Happy Ugadi',
+              subTitleText: 'Happy Ugadi',
               avatar: GFAvatar(
                 backgroundImage: AssetImage('lib/assets/images/img1.png'),
               ),
