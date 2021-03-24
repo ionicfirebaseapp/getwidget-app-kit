@@ -33,8 +33,10 @@ class _DropDownTypesState extends State<DropDownTypes>
     'Drinking',
     'Jogging'
   ];
+
   late String dropdown;
   late String selected, selectedIndex;
+
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
