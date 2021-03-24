@@ -9,7 +9,7 @@ class BorderPage extends StatefulWidget {
 
 class _BorderPageState extends State<BorderPage>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  late TabController tabController;
 
   @override
   void initState() {
@@ -159,6 +159,9 @@ class _BorderPageState extends State<BorderPage>
                               dashedLine: [2, 0],
                               type: GFBorderType.rRect,
                               child: GFCard(
+                                imageOverlay:
+                                    AssetImage('lib/assets/images/card1.png'),
+                                showImage: true,
                                 boxFit: BoxFit.cover,
                                 image: Image.asset(
                                   'lib/assets/images/card.png',
@@ -342,6 +345,9 @@ class _BorderPageState extends State<BorderPage>
                               radius: Radius.circular(20),
                               color: Color(0xFF19CA4B),
                               child: GFCard(
+                                imageOverlay:
+                                    AssetImage('lib/assets/images/card1.png'),
+                                showImage: true,
                                 boxFit: BoxFit.fill,
                                 colorFilter: ColorFilter.mode(
                                     Colors.black.withOpacity(0.67),
@@ -358,7 +364,7 @@ class _BorderPageState extends State<BorderPage>
                                         'lib/assets/images/avatar8.png'),
                                   ),
                                   titleText: 'Card Title',
-                                  subtitleText: 'Sub Title',
+                                  subTitleText: 'Sub Title',
                                   icon: GFIconButton(
                                     onPressed: null,
                                     icon: GestureDetector(
@@ -533,6 +539,9 @@ class _BorderPageState extends State<BorderPage>
                               dashedLine: [2, 1],
                               type: GFBorderType.rRect,
                               child: GFCard(
+                                showOverlayImage: true,
+                                image:
+                                    Image.asset('lib/assets/images/card1.png'),
                                 boxFit: BoxFit.cover,
                                 colorFilter: ColorFilter.mode(
                                     Colors.black.withOpacity(0.40),

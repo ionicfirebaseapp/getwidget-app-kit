@@ -39,6 +39,8 @@ class _TypographyPageState extends State<TypographyPage> {
               ),
             ),
             GFCard(
+              imageOverlay: AssetImage('lib/assets/images/card1.png'),
+              image: Image.asset('lib/assets/images/card1.png'),
               content: Column(
                 children: const <Widget>[
                   SizedBox(
@@ -107,6 +109,8 @@ class _TypographyPageState extends State<TypographyPage> {
               ),
             ),
             GFCard(
+              imageOverlay: AssetImage('lib/assets/images/card1.png'),
+              image: Image.asset('lib/assets/images/card1.png'),
               content: Column(
                 children: <Widget>[
                   const SizedBox(
@@ -177,6 +181,8 @@ class _TypographyPageState extends State<TypographyPage> {
               ),
             ),
             GFCard(
+              imageOverlay: AssetImage('lib/assets/images/card1.png'),
+              image: Image.asset('lib/assets/images/card1.png'),
               content: Column(
                 children: const <Widget>[
                   SizedBox(

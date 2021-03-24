@@ -3,15 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 
 class HalfWidthIntro extends StatefulWidget {
-  HalfWidthIntro({Key key}) : super(key: key);
   @override
   _HalfWidthIntroState createState() => _HalfWidthIntroState();
 }
 
 class _HalfWidthIntroState extends State<HalfWidthIntro> {
-  PageController _pageController;
-  List<Widget> slideList;
-  int initialPage;
+  late PageController _pageController;
+  late List<Widget> slideList;
+  late int initialPage;
   @override
   void initState() {
     _pageController = PageController(initialPage: 2);
@@ -28,7 +27,7 @@ class _HalfWidthIntroState extends State<HalfWidthIntro> {
             width: MediaQuery.of(context).size.width * 0.9,
             color: Colors.white,
             borderRadius: BorderRadius.circular(40),
-            border: Border.all(color: Colors.grey[200]),
+            border: Border.all(color: Colors.grey[200]!),
             slides: slides(),
             pageController: _pageController,
             // showIntroSCreenBottomNavigationBar: false,
@@ -76,7 +75,7 @@ class _HalfWidthIntroState extends State<HalfWidthIntro> {
               // navigationBarMargin: EdgeInsets.all(20),
               // navigationBarPadding: EdgeInsets.all(20),
               navigationBarShape: RoundedRectangleBorder(
-                 side: const BorderSide(color: Colors.blue, width: 4),
+                side: const BorderSide(color: Colors.blue, width: 4),
                 borderRadius: BorderRadius.circular(60),
               ),
               navigationBarColor: Colors.white,
@@ -89,17 +88,17 @@ class _HalfWidthIntroState extends State<HalfWidthIntro> {
               dotHeight: 10,
               dotWidth: 16,
               dotShape: RoundedRectangleBorder(
-                   side: BorderSide(color: Colors.grey[200], width: 1),
+                  side: BorderSide(color: Colors.grey[200]!, width: 1),
                   borderRadius: BorderRadius.circular(5)),
-              inActiveColor: Colors.grey[200],
+              inactiveColor: Colors.grey[200]!,
               activeColor: GFColors.SUCCESS,
               dotMargin: EdgeInsets.symmetric(horizontal: 6),
 
               // showButton: false,
               showPagination: true,
             ),
-            currentIndex: null,
-            pageCount: null,
+            currentIndex: 1,
+            pageCount: 4,
           ),
         ),
       );

@@ -9,7 +9,7 @@ class BottomLabelTab extends StatefulWidget {
 
 class _BottomLabelTabState extends State<BottomLabelTab>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  late TabController tabController;
 
   @override
   void initState() {

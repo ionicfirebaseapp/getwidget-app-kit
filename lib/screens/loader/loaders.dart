@@ -39,64 +39,66 @@ class _LoadersState extends State<Loaders> {
               ),
             ),
             GFCard(
+                imageOverlay: AssetImage('lib/assets/images/card1.png'),
+                image: Image.asset('lib/assets/images/card1.png'),
                 content: Column(
-              children: <Widget>[
-                const SizedBox(
-                  height: 25,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const <Widget>[
-                    GFLoader(),
-                    GFLoader(
-                      androidLoaderColor:
-                          AlwaysStoppedAnimation<Color>(Colors.red),
+                  children: <Widget>[
+                    const SizedBox(
+                      height: 25,
                     ),
-                    GFLoader(
-                      androidLoaderColor:
-                          AlwaysStoppedAnimation<Color>(Colors.amber),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const <Widget>[
+                        GFLoader(),
+                        GFLoader(
+                          androidLoaderColor:
+                              AlwaysStoppedAnimation<Color>(Colors.red),
+                        ),
+                        GFLoader(
+                          androidLoaderColor:
+                              AlwaysStoppedAnimation<Color>(Colors.amber),
+                        ),
+                        GFLoader(
+                          androidLoaderColor:
+                              AlwaysStoppedAnimation<Color>(Colors.green),
+                        ),
+                      ],
                     ),
-                    GFLoader(
-                      androidLoaderColor:
-                          AlwaysStoppedAnimation<Color>(Colors.green),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const <Widget>[
+                        GFLoader(
+                          loaderstrokeWidth: 2,
+                          size: GFSize.SMALL,
+                        ),
+                        GFLoader(
+                          androidLoaderColor:
+                              AlwaysStoppedAnimation<Color>(Colors.red),
+                          loaderstrokeWidth: 2,
+                          size: GFSize.MEDIUM,
+                        ),
+                        GFLoader(
+                          androidLoaderColor:
+                              AlwaysStoppedAnimation<Color>(Colors.amber),
+                          loaderstrokeWidth: 2,
+                          size: GFSize.LARGE,
+                        ),
+                        GFLoader(
+                          androidLoaderColor:
+                              AlwaysStoppedAnimation<Color>(Colors.green),
+                          loaderstrokeWidth: 2,
+                          size: 60,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 25,
                     ),
                   ],
-                ),
-                const SizedBox(
-                  height: 25,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const <Widget>[
-                    GFLoader(
-                      loaderstrokeWidth: 2,
-                      size: GFSize.SMALL,
-                    ),
-                    GFLoader(
-                      androidLoaderColor:
-                          AlwaysStoppedAnimation<Color>(Colors.red),
-                      loaderstrokeWidth: 2,
-                      size: GFSize.MEDIUM,
-                    ),
-                    GFLoader(
-                      androidLoaderColor:
-                          AlwaysStoppedAnimation<Color>(Colors.amber),
-                      loaderstrokeWidth: 2,
-                      size: GFSize.LARGE,
-                    ),
-                    GFLoader(
-                      androidLoaderColor:
-                          AlwaysStoppedAnimation<Color>(Colors.green),
-                      loaderstrokeWidth: 2,
-                      size: 60,
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 25,
-                ),
-              ],
-            )),
+                )),
             const Padding(
               padding: EdgeInsets.only(left: 15, top: 30),
               child: GFTypography(
@@ -107,36 +109,38 @@ class _LoadersState extends State<Loaders> {
               ),
             ),
             GFCard(
+                imageOverlay: AssetImage('lib/assets/images/card1.png'),
+                image: Image.asset('lib/assets/images/card1.png'),
                 content: Column(
-              children: <Widget>[
-                const SizedBox(
-                  height: 25,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const <Widget>[
-                    GFLoader(
-                      type: GFLoaderType.ios,
-                      size: GFSize.SMALL,
+                  children: <Widget>[
+                    const SizedBox(
+                      height: 25,
                     ),
-                    GFLoader(
-                      type: GFLoaderType.ios,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const <Widget>[
+                        GFLoader(
+                          type: GFLoaderType.ios,
+                          size: GFSize.SMALL,
+                        ),
+                        GFLoader(
+                          type: GFLoaderType.ios,
+                        ),
+                        GFLoader(
+                          type: GFLoaderType.ios,
+                          size: GFSize.LARGE,
+                        ),
+                        GFLoader(
+                          type: GFLoaderType.ios,
+                          size: 60,
+                        ),
+                      ],
                     ),
-                    GFLoader(
-                      type: GFLoaderType.ios,
-                      size: GFSize.LARGE,
-                    ),
-                    GFLoader(
-                      type: GFLoaderType.ios,
-                      size: 60,
+                    const SizedBox(
+                      height: 25,
                     ),
                   ],
-                ),
-                const SizedBox(
-                  height: 25,
-                ),
-              ],
-            )),
+                )),
             const Padding(
               padding: EdgeInsets.only(left: 15, top: 30),
               child: GFTypography(
@@ -147,37 +151,39 @@ class _LoadersState extends State<Loaders> {
               ),
             ),
             GFCard(
+                imageOverlay: AssetImage('lib/assets/images/card1.png'),
+                image: Image.asset('lib/assets/images/card1.png'),
                 content: Column(
-              children: <Widget>[
-                const SizedBox(
-                  height: 25,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const <Widget>[
-                    GFLoader(
-                      type: GFLoaderType.circle,
-                      size: GFSize.SMALL,
+                  children: <Widget>[
+                    const SizedBox(
+                      height: 25,
                     ),
-                    GFLoader(
-                      type: GFLoaderType.circle,
-                      size: GFSize.MEDIUM,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const <Widget>[
+                        GFLoader(
+                          type: GFLoaderType.circle,
+                          size: GFSize.SMALL,
+                        ),
+                        GFLoader(
+                          type: GFLoaderType.circle,
+                          size: GFSize.MEDIUM,
+                        ),
+                        GFLoader(
+                          type: GFLoaderType.circle,
+                          size: GFSize.LARGE,
+                        ),
+                        GFLoader(
+                          type: GFLoaderType.circle,
+                          size: 60,
+                        ),
+                      ],
                     ),
-                    GFLoader(
-                      type: GFLoaderType.circle,
-                      size: GFSize.LARGE,
-                    ),
-                    GFLoader(
-                      type: GFLoaderType.circle,
-                      size: 60,
+                    const SizedBox(
+                      height: 25,
                     ),
                   ],
-                ),
-                const SizedBox(
-                  height: 25,
-                ),
-              ],
-            )),
+                )),
             const Padding(
               padding: EdgeInsets.only(left: 15, top: 30),
               child: GFTypography(
@@ -188,37 +194,39 @@ class _LoadersState extends State<Loaders> {
               ),
             ),
             GFCard(
+                imageOverlay: AssetImage('lib/assets/images/card1.png'),
+                image: Image.asset('lib/assets/images/card1.png'),
                 content: Column(
-              children: <Widget>[
-                const SizedBox(
-                  height: 25,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const <Widget>[
-                    GFLoader(
-                      type: GFLoaderType.square,
-                      size: GFSize.SMALL,
+                  children: <Widget>[
+                    const SizedBox(
+                      height: 25,
                     ),
-                    GFLoader(
-                      type: GFLoaderType.square,
-                      size: GFSize.MEDIUM,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const <Widget>[
+                        GFLoader(
+                          type: GFLoaderType.square,
+                          size: GFSize.SMALL,
+                        ),
+                        GFLoader(
+                          type: GFLoaderType.square,
+                          size: GFSize.MEDIUM,
+                        ),
+                        GFLoader(
+                          type: GFLoaderType.square,
+                          size: GFSize.LARGE,
+                        ),
+                        GFLoader(
+                          type: GFLoaderType.square,
+                          size: 60,
+                        ),
+                      ],
                     ),
-                    GFLoader(
-                      type: GFLoaderType.square,
-                      size: GFSize.LARGE,
-                    ),
-                    GFLoader(
-                      type: GFLoaderType.square,
-                      size: 60,
+                    const SizedBox(
+                      height: 25,
                     ),
                   ],
-                ),
-                const SizedBox(
-                  height: 25,
-                ),
-              ],
-            )),
+                )),
             const Padding(
               padding: EdgeInsets.only(left: 15, top: 30),
               child: GFTypography(
@@ -229,6 +237,8 @@ class _LoadersState extends State<Loaders> {
               ),
             ),
             GFCard(
+              imageOverlay: AssetImage('lib/assets/images/card1.png'),
+              image: Image.asset('lib/assets/images/card1.png'),
               content: Column(
                 children: <Widget>[
                   const SizedBox(

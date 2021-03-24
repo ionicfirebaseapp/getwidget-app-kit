@@ -3,15 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 
 class FullWidthIntro extends StatefulWidget {
-  FullWidthIntro({Key key}) : super(key: key);
   @override
   _FullWidthIntroState createState() => _FullWidthIntroState();
 }
 
 class _FullWidthIntroState extends State<FullWidthIntro> {
-  PageController _pageController;
-  List<Widget> slideList;
-  int initialPage;
+  late PageController _pageController;
+  late List<Widget> slideList;
+  late int initialPage;
   @override
   void initState() {
     _pageController = PageController(initialPage: 2);
@@ -29,7 +28,7 @@ class _FullWidthIntroState extends State<FullWidthIntro> {
 // borderRadius: BorderRadius.circular(50),
         // border: Border.all(color: Colors.red, width: 5),
         slides: slides(),
-        pageController: _pageController, currentIndex: null, pageCount: 5,
+        pageController: _pageController, currentIndex: 1, pageCount: 5,
         // showIntroScreenBottomNavigationBar: false,
         // showIntroSCreenBottomNavigationBar: false,
 // introScreenBottomNavigationBar: false,
@@ -92,7 +91,7 @@ class _FullWidthIntroState extends State<FullWidthIntro> {
           //   side: BorderSide(color: Colors.red, width: 2),
           //     borderRadius: BorderRadius.circular(5)
           // ),
-          inActiveColor: Colors.grey[200],
+          inactiveColor: Colors.grey[200]!,
           activeColor: GFColors.SUCCESS,
           // dotMargin: EdgeInsets.symmetric(horizontal: 6),
 

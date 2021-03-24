@@ -8,7 +8,7 @@ class Images extends StatefulWidget {
 }
 
 class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
-  TabController tabController;
+  late TabController tabController;
 
   @override
   void initState() {
@@ -87,6 +87,9 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                     child: ListView(
                       children: <Widget>[
                         GFCard(
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          image: Image.asset('lib/assets/images/card1.png'),
                           content: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const <Widget>[
@@ -100,6 +103,9 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                           ),
                         ),
                         GFCard(
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          image: Image.asset('lib/assets/images/card1.png'),
                           content: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const <Widget>[
@@ -113,6 +119,9 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                           ),
                         ),
                         GFCard(
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          image: Image.asset('lib/assets/images/card1.png'),
                           content: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const <Widget>[
@@ -132,6 +141,9 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                     child: Column(
                       children: <Widget>[
                         GFCard(
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          image: Image.asset('lib/assets/images/card1.png'),
                           content: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const <Widget>[
@@ -153,6 +165,9 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                           ),
                         ),
                         GFCard(
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          image: Image.asset('lib/assets/images/card1.png'),
                           content: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const <Widget>[
@@ -172,6 +187,9 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                     child: ListView(
                       children: <Widget>[
                         GFCard(
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          image: Image.asset('lib/assets/images/card1.png'),
                           content: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
@@ -194,6 +212,9 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                           ),
                         ),
                         GFCard(
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          image: Image.asset('lib/assets/images/card1.png'),
                           content: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
@@ -215,6 +236,9 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                           ),
                         ),
                         GFCard(
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          image: Image.asset('lib/assets/images/card1.png'),
                           content: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[

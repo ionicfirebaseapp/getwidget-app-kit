@@ -40,13 +40,17 @@ class _TilesPageState extends State<TilesPage> {
               ),
             ),
             GFCard(
+              imageOverlay: AssetImage('lib/assets/images/card1.png'),
+              image: Image.asset('lib/assets/images/card1.png'),
               content: GFListTile(
                 titleText: 'Title',
-                subtitleText: 'Open source UI library',
+                subTitleText: 'Open source UI library',
                 icon: Icon(Icons.favorite),
               ),
             ),
             GFCard(
+              imageOverlay: AssetImage('lib/assets/images/card1.png'),
+              image: Image.asset('lib/assets/images/card1.png'),
               content: GFListTile(
                 avatar: Icon(Icons.favorite),
                 titleText: 'Title',
@@ -62,16 +66,20 @@ class _TilesPageState extends State<TilesPage> {
                 dividerColor: Color(0xFF19CA4B),
               ),
             ),
-            const GFCard(
+            GFCard(
+              imageOverlay: AssetImage('lib/assets/images/card1.png'),
+              image: Image.asset('lib/assets/images/card1.png'),
               content: GFListTile(
                 avatar: GFAvatar(
                   backgroundImage: AssetImage('lib/assets/images/avatar5.png'),
                 ),
                 titleText: 'Title',
-                subtitleText: 'Open source UI library',
+                subTitleText: 'Open source UI library',
               ),
             ),
-            const GFCard(
+            GFCard(
+              imageOverlay: AssetImage('lib/assets/images/card1.png'),
+              image: Image.asset('lib/assets/images/card1.png'),
               content: GFListTile(
                 avatar: GFAvatar(
                   shape: GFAvatarShape.standard,

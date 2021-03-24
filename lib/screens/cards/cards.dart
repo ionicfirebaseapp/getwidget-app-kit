@@ -9,7 +9,7 @@ class CardPage extends StatefulWidget {
 
 class _CardPageState extends State<CardPage>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  late TabController tabController;
 
   @override
   void initState() {
@@ -91,6 +91,9 @@ class _CardPageState extends State<CardPage>
                     child: ListView(
                       children: <Widget>[
                         GFCard(
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          showImage: true,
                           boxFit: BoxFit.cover,
                           image: Image.asset(
                             'lib/assets/images/card.png',
@@ -137,6 +140,9 @@ class _CardPageState extends State<CardPage>
                           ),
                         ),
                         GFCard(
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          showImage: true,
                           boxFit: BoxFit.contain,
                           colorFilter: ColorFilter.mode(
                               Colors.black.withOpacity(0.67), BlendMode.darken),
@@ -183,6 +189,9 @@ class _CardPageState extends State<CardPage>
                           ),
                         ),
                         GFCard(
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          showImage: true,
                           boxFit: BoxFit.cover,
                           colorFilter: ColorFilter.mode(
                               Colors.black.withOpacity(0.67), BlendMode.darken),
@@ -218,6 +227,9 @@ class _CardPageState extends State<CardPage>
                             width: MediaQuery.of(context).size.width,
                             fit: BoxFit.fitWidth,
                           ),
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          showImage: true,
                           titlePosition: GFPosition.end,
                           title: const GFListTile(
                             titleText: 'Card Title',
@@ -255,6 +267,9 @@ class _CardPageState extends State<CardPage>
                             width: MediaQuery.of(context).size.width,
                             fit: BoxFit.fitWidth,
                           ),
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          showImage: true,
                           titlePosition: GFPosition.end,
                           title: GFListTile(
                             avatar: const GFAvatar(
@@ -262,7 +277,7 @@ class _CardPageState extends State<CardPage>
                                   AssetImage('lib/assets/images/avatar8.png'),
                             ),
                             titleText: 'Card Title',
-                            subtitleText: 'Sub Title',
+                            subTitleText: 'Sub Title',
                             icon: GFIconButton(
                               onPressed: null,
                               icon: GestureDetector(
@@ -287,6 +302,9 @@ class _CardPageState extends State<CardPage>
                           ),
                         ),
                         GFCard(
+                          imageOverlay:
+                              AssetImage('lib/assets/images/card1.png'),
+                          showImage: true,
                           boxFit: BoxFit.cover,
                           colorFilter: ColorFilter.mode(
                               Colors.black.withOpacity(0.67), BlendMode.darken),
@@ -302,7 +320,7 @@ class _CardPageState extends State<CardPage>
                                   AssetImage('lib/assets/images/avatar9.png'),
                             ),
                             titleText: 'Card Title',
-                            subtitleText: 'Sub Title',
+                            subTitleText: 'Sub Title',
                           ),
                           content: Text(
                             'Some quick example text to build on the card',
@@ -351,6 +369,8 @@ class _CardPageState extends State<CardPage>
                     child: ListView(
                       children: <Widget>[
                         GFCard(
+                          image: Image.asset('lib/assets/images/card1.png'),
+                          showOverlayImage: true,
                           boxFit: BoxFit.cover,
                           colorFilter: ColorFilter.mode(
                               Colors.black.withOpacity(0.60), BlendMode.darken),
@@ -391,6 +411,8 @@ class _CardPageState extends State<CardPage>
                           ),
                         ),
                         GFCard(
+                          image: Image.asset('lib/assets/images/card1.png'),
+                          showOverlayImage: true,
                           boxFit: BoxFit.cover,
                           colorFilter: ColorFilter.mode(
                               Colors.black.withOpacity(0.40), BlendMode.darken),

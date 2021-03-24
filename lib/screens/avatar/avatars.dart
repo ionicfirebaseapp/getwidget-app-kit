@@ -40,6 +40,8 @@ class _AvatarState extends State<Avatar> {
               ),
             ),
             GFCard(
+              imageOverlay: AssetImage('lib/assets/images/card1.png'),
+              image: Image.asset('lib/assets/images/card1.png'),
               content: Column(
                 children: <Widget>[
                   const SizedBox(

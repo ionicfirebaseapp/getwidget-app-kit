@@ -34,7 +34,7 @@ class _RadioListTilePageState extends State<RadioListTilePage> {
           children: <Widget>[
             GFRadioListTile(
               titleText: 'Hello',
-              subtitleText: 'Happy New Year',
+              subTitleText: 'Happy New Year',
               position: GFPosition.start,
               icon: GFAvatar(
                 backgroundImage: AssetImage('lib/assets/images/img1.png'),
@@ -45,16 +45,16 @@ class _RadioListTilePageState extends State<RadioListTilePage> {
               type: GFRadioType.basic,
               value: 0,
               groupValue: groupValue,
-              onChanged: (val) {
+              onChanged: (value) {
                 setState(() {
-                  groupValue = val;
+                  groupValue = value;
                 });
               },
               // inactiveIcon: null,
             ),
             GFRadioListTile(
               titleText: 'Hello',
-              subtitleText: 'Happy New Year',
+              subTitleText: 'Happy New Year',
               avatar: GFAvatar(
                 backgroundImage: AssetImage('lib/assets/images/img2.png'),
               ),
@@ -64,9 +64,9 @@ class _RadioListTilePageState extends State<RadioListTilePage> {
               type: GFRadioType.square,
               value: 1,
               groupValue: groupValue,
-              onChanged: (val) {
+              onChanged: (value) {
                 setState(() {
-                  groupValue = val;
+                  groupValue = value;
                 });
               },
               // inactiveIcon: null,

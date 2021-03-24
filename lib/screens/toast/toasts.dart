@@ -10,7 +10,7 @@ class Toasts extends StatefulWidget {
 
 class _ToastsState extends State<Toasts> {
   bool showFloatingToast = false;
-  Timer autoTimer;
+  late Timer autoTimer;
   bool showblurness = true;
   Duration autoTimerDuration = Duration(milliseconds: 400);
 
@@ -47,7 +47,7 @@ class _ToastsState extends State<Toasts> {
         body: GFFloatingWidget(
           verticalPosition: MediaQuery.of(context).size.width * 0.5,
           horizontalPosition: MediaQuery.of(context).size.height * 0.02,
-          showblurness: showFloatingToast,
+          showBlurness: showFloatingToast,
           blurnessColor: Colors.black87,
           child: showFloatingToast
               ? GFToast(

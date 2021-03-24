@@ -9,7 +9,7 @@ class IconTabs extends StatefulWidget {
 
 class _IconTabsState extends State<IconTabs>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  late TabController tabController;
 
   @override
   void initState() {

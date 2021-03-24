@@ -53,12 +53,14 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
               ),
             ),
             GFCard(
+              imageOverlay: AssetImage('lib/assets/images/card1.png'),
+              image: Image.asset('lib/assets/images/card1.png'),
               content: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   GFCheckbox(
                     size: GFSize.SMALL,
-                    activebgColor: GFColors.DANGER,
+                    activeBgColor: GFColors.DANGER,
                     onChanged: (val) {
                       setState(() {
                         check = val;
@@ -68,7 +70,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                     inactiveIcon: null,
                   ),
                   GFCheckbox(
-                    activebgColor: GFColors.SECONDARY,
+                    activeBgColor: GFColors.SECONDARY,
                     onChanged: (val) {
                       setState(() {
                         check1 = val;
@@ -79,7 +81,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                   ),
                   GFCheckbox(
                     size: GFSize.LARGE,
-                    activebgColor: GFColors.SUCCESS,
+                    activeBgColor: GFColors.SUCCESS,
                     onChanged: (val) {
                       setState(() {
                         check2 = val;
@@ -101,12 +103,14 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
               ),
             ),
             GFCard(
+              imageOverlay: AssetImage('lib/assets/images/card1.png'),
+              image: Image.asset('lib/assets/images/card1.png'),
               content: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   GFCheckbox(
                     size: GFSize.SMALL,
-                    activebgColor: GFColors.DANGER,
+                    activeBgColor: GFColors.DANGER,
                     type: GFCheckboxType.square,
                     onChanged: (val) {
                       setState(() {
@@ -118,7 +122,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                   ),
                   GFCheckbox(
                     type: GFCheckboxType.square,
-                    activebgColor: GFColors.SECONDARY,
+                    activeBgColor: GFColors.SECONDARY,
                     onChanged: (val) {
                       setState(() {
                         check4 = val;
@@ -129,7 +133,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                   ),
                   GFCheckbox(
                     size: GFSize.LARGE,
-                    activebgColor: GFColors.SUCCESS,
+                    activeBgColor: GFColors.SUCCESS,
                     type: GFCheckboxType.square,
                     onChanged: (val) {
                       setState(() {
@@ -152,12 +156,14 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
               ),
             ),
             GFCard(
+              imageOverlay: AssetImage('lib/assets/images/card1.png'),
+              image: Image.asset('lib/assets/images/card1.png'),
               content: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   GFCheckbox(
                     size: GFSize.SMALL,
-                    activebgColor: GFColors.DANGER,
+                    activeBgColor: GFColors.DANGER,
                     type: GFCheckboxType.circle,
                     onChanged: (val) {
                       setState(() {
@@ -169,7 +175,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                   ),
                   GFCheckbox(
                     type: GFCheckboxType.circle,
-                    activebgColor: GFColors.SECONDARY,
+                    activeBgColor: GFColors.SECONDARY,
                     onChanged: (val) {
                       setState(() {
                         check7 = val;
@@ -178,7 +184,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                     value: check7,
                   ),
                   GFCheckbox(
-                    activebgColor: GFColors.SUCCESS,
+                    activeBgColor: GFColors.SUCCESS,
                     size: GFSize.LARGE,
                     type: GFCheckboxType.circle,
                     onChanged: (val) {
@@ -202,6 +208,8 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
               ),
             ),
             GFCard(
+              imageOverlay: AssetImage('lib/assets/images/card1.png'),
+              image: Image.asset('lib/assets/images/card1.png'),
               content: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -218,7 +226,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                   ),
                   GFCheckbox(
                     type: GFCheckboxType.square,
-                    activebgColor: GFColors.SECONDARY,
+                    activeBgColor: GFColors.SECONDARY,
                     activeIcon: Icon(Icons.sentiment_satisfied),
                     onChanged: (val) {
                       setState(() {
@@ -230,7 +238,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                   ),
                   GFCheckbox(
                     size: GFSize.MEDIUM,
-//            activebgColor: GFColors.,
+//            activeBgColor: GFColors.,
                     type: GFCheckboxType.custom,
                     onChanged: (val) {
                       setState(() {
@@ -238,7 +246,7 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                       });
                     },
                     value: check11,
-                    custombgColor: GFColors.INFO,
+                    customBgColor: GFColors.INFO,
                     inactiveIcon: null,
                   ),
                 ],
@@ -258,8 +266,8 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
 //           value: true,
 //           type: GFCheckboxType.circle,
 ////           checkColor: GFColors.DANGER,
-////activebgColor: Colors.green,
-////inactivebgColor: Colors.white,
+////activeBgColor: Colors.green,
+////inactiveBgColor: Colors.white,
 ////activeBorderColor: Colors.red,
 ////           backgroundColor: Colors.green,
 //         ),

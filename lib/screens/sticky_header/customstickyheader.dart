@@ -113,9 +113,9 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                                         //   type: GFRadioType.square,
                                         //   value: 1,
                                         //   groupValue: groupValue,
-                                        //   onChanged: (val) {
+                                        //   onChanged: (int value) {
                                         //     setState(() {
-                                        //       groupValue = val;
+                                        //       groupValue = value;
                                         //     });
                                         //   },
                                         //   inactiveIcon: null,
@@ -128,15 +128,15 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                                               size: 23,
                                               value: 1,
                                               groupValue: groupValue,
-                                              onChanged: (val) {
+                                              onChanged: (int value) {
                                                 setState(() {
-                                                  groupValue = val;
+                                                  groupValue = value;
                                                 });
                                               },
                                               inactiveIcon: null,
                                               activeBorderColor:
                                                   GFColors.SUCCESS,
-                                              custombgColor: GFColors.SUCCESS,
+                                              customBgColor: GFColors.SUCCESS,
                                             ),
                                             SizedBox(width: 5),
                                             Text('Large')
@@ -150,15 +150,15 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                                               size: 23,
                                               value: 2,
                                               groupValue: groupValue,
-                                              onChanged: (val) {
+                                              onChanged: (int value) {
                                                 setState(() {
-                                                  groupValue = val;
+                                                  groupValue = value;
                                                 });
                                               },
                                               inactiveIcon: null,
                                               activeBorderColor:
                                                   GFColors.SUCCESS,
-                                              custombgColor: GFColors.SUCCESS,
+                                              customBgColor: GFColors.SUCCESS,
                                             ),
                                             SizedBox(width: 5),
                                             Text('Medium')
@@ -172,15 +172,15 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                                               size: 23,
                                               value: 3,
                                               groupValue: groupValue,
-                                              onChanged: (val) {
+                                              onChanged: (int value) {
                                                 setState(() {
-                                                  groupValue = val;
+                                                  groupValue = value;
                                                 });
                                               },
                                               inactiveIcon: null,
                                               activeBorderColor:
                                                   GFColors.SUCCESS,
-                                              custombgColor: GFColors.SUCCESS,
+                                              customBgColor: GFColors.SUCCESS,
                                             ),
                                             SizedBox(width: 5),
                                             Text('Small')
@@ -194,15 +194,15 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                                               size: 23,
                                               value: 3,
                                               groupValue: groupValue,
-                                              onChanged: (val) {
+                                              onChanged: (int value) {
                                                 setState(() {
-                                                  groupValue = val;
+                                                  groupValue = value;
                                                 });
                                               },
                                               inactiveIcon: null,
                                               activeBorderColor:
                                                   GFColors.SUCCESS,
-                                              custombgColor: GFColors.SUCCESS,
+                                              customBgColor: GFColors.SUCCESS,
                                             ),
                                             SizedBox(width: 5),
                                             Text('Extra Small')

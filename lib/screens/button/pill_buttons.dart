@@ -9,7 +9,7 @@ class PillsButtons extends StatefulWidget {
 
 class _PillsButtonsState extends State<PillsButtons>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  late TabController tabController;
 
   @override
   void initState() {
@@ -103,6 +103,9 @@ class _PillsButtonsState extends State<PillsButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -209,6 +212,9 @@ class _PillsButtonsState extends State<PillsButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -314,6 +320,9 @@ class _PillsButtonsState extends State<PillsButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -370,6 +379,9 @@ class _PillsButtonsState extends State<PillsButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -432,6 +444,9 @@ class _PillsButtonsState extends State<PillsButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -546,6 +561,9 @@ class _PillsButtonsState extends State<PillsButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -660,6 +678,9 @@ class _PillsButtonsState extends State<PillsButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -719,6 +740,9 @@ class _PillsButtonsState extends State<PillsButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -787,6 +811,9 @@ class _PillsButtonsState extends State<PillsButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -901,6 +928,9 @@ class _PillsButtonsState extends State<PillsButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -1015,6 +1045,9 @@ class _PillsButtonsState extends State<PillsButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -1074,6 +1107,9 @@ class _PillsButtonsState extends State<PillsButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,

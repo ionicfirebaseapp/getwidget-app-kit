@@ -9,7 +9,7 @@ class AlertPage extends StatefulWidget {
 
 class _AlertPageState extends State<AlertPage> {
   bool showblur = false;
-  Widget alertWidget;
+  late Widget alertWidget = Container();
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -31,7 +31,7 @@ class _AlertPageState extends State<AlertPage> {
         ),
         body: GFFloatingWidget(
           verticalPosition: 150,
-          showblurness: showblur,
+          showBlurness: showblur,
           child: alertWidget,
           body: ListView(
             children: <Widget>[
@@ -54,54 +54,16 @@ class _AlertPageState extends State<AlertPage> {
                           onPressed: () {
                             setState(() {
                               showblur = true;
-                              alertWidget = GFToast(
-                                text: 'hi',
+                              // alertWidget = GFToast(
+                              //   text: 'hi',
+                              // );
+                              alertWidget = GFAlert(
+                                backgroundColor: Colors.white,
+                                title: 'Welcome!',
+                                content:
+                                    'Get Flutter is one of the largest Flutter open-source UI library '
+                                    'for mobile or web apps with  1000+ pre-built reusable widgets.',
                               );
-//                              alertWidget = GFAlert(
-//                                backgroundColor: Colors.white,
-//                                title: 'Welcome!',
-//                                content:
-//                                    'Get Flutter is one of the largest Flutter open-source UI library '
-//                                    'for mobile or web apps with  1000+ pre-built reusable widgets.',
-//                                bottombar: Row(
-//                                  mainAxisAlignment: MainAxisAlignment.end,
-//                                  children: <Widget>[
-//                                    GFButton(
-//                                      onPressed: () {
-//                                        setState(() {
-//                                          alertWidget = null;
-//                                          showblur = false;
-//                                        });
-//                                      },
-//                                      shape: GFButtonShape.pills,
-//                                      color: GFColors.LIGHT,
-//                                      type: GFButtonType.outline2x,
-//                                      child: const Text(
-//                                        'Skip',
-//                                        style: TextStyle(color: Colors.black),
-//                                      ),
-//                                    ),
-//                                    const SizedBox(
-//                                      width: 5,
-//                                    ),
-//                                    GFButton(
-//                                      onPressed: () {
-//                                        setState(() {
-//                                          alertWidget = null;
-//                                          showblur = false;
-//                                        });
-//                                      },
-//                                      shape: GFButtonShape.pills,
-//                                      icon: Icon(
-//                                        Icons.keyboard_arrow_right,
-//                                        color: GFColors.WHITE,
-//                                      ),
-//                                      position: GFPosition.end,
-//                                      text: 'Learn More',
-//                                    )
-//                                  ],
-//                                ),
-//                              );
                             });
                           }),
                     ],
@@ -137,7 +99,7 @@ class _AlertPageState extends State<AlertPage> {
                                 GFButton(
                                   onPressed: () {
                                     setState(() {
-                                      alertWidget = null;
+                                      alertWidget = Container();
                                       showblur = false;
                                     });
                                   },
@@ -153,7 +115,7 @@ class _AlertPageState extends State<AlertPage> {
                                 GFButton(
                                   onPressed: () {
                                     setState(() {
-                                      alertWidget = null;
+                                      alertWidget = Container();
                                       showblur = false;
                                     });
                                   },
@@ -202,7 +164,7 @@ class _AlertPageState extends State<AlertPage> {
                                 GFButton(
                                   onPressed: () {
                                     setState(() {
-                                      alertWidget = null;
+                                      alertWidget = Container();
                                       showblur = false;
                                     });
                                   },
@@ -219,7 +181,7 @@ class _AlertPageState extends State<AlertPage> {
                                 GFButton(
                                   onPressed: () {
                                     setState(() {
-                                      alertWidget = null;
+                                      alertWidget = Container();
                                       showblur = false;
                                     });
                                   },
@@ -266,7 +228,7 @@ class _AlertPageState extends State<AlertPage> {
                                 width: 80,
                               ),
                               contentChild: const Text(
-                                'You have succesfully viewed the Custom Alert... Hurrayyy!!',
+                                'You have successfully viewed the Custom Alert... Hurrayyy!!',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: 15, fontWeight: FontWeight.bold),
@@ -274,7 +236,7 @@ class _AlertPageState extends State<AlertPage> {
                               bottombar: GFButton(
                                 onPressed: () {
                                   setState(() {
-                                    alertWidget = null;
+                                    alertWidget = Container();
                                     showblur = false;
                                   });
                                 },

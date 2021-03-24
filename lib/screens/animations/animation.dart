@@ -9,16 +9,15 @@ class AnimationPage extends StatefulWidget {
   _AnimationPageState createState() => _AnimationPageState();
 }
 
-class _AnimationPageState extends State<AnimationPage> with SingleTickerProviderStateMixin {
+class _AnimationPageState extends State<AnimationPage>
+    with SingleTickerProviderStateMixin {
   bool selected = false;
-  bool _large = false;
-  double _size = 50.0;
-  AnimationController controller;
-  Animation<double> animation;
+  late AnimationController controller;
+  late Animation<double> animation;
   bool _first = true;
   double _fontSize = 30;
   Color _color = GFColors.SUCCESS;
-  Animation<Offset> offsetAnimation;
+  late Animation<Offset> offsetAnimation;
 
   @override
   void initState() {
@@ -27,7 +26,8 @@ class _AnimationPageState extends State<AnimationPage> with SingleTickerProvider
       duration: const Duration(seconds: 2),
       vsync: this,
     );
-    animation = new CurvedAnimation(parent: controller, curve: Curves.bounceInOut);
+    animation =
+        new CurvedAnimation(parent: controller, curve: Curves.bounceInOut);
     controller.repeat();
 
     offsetAnimation = Tween<Offset>(
@@ -41,7 +41,7 @@ class _AnimationPageState extends State<AnimationPage> with SingleTickerProvider
 
   @override
   void dispose() {
-    if (controller != null) controller.dispose();
+    controller.dispose();
     super.dispose();
   }
 

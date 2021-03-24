@@ -9,7 +9,7 @@ class SquareButtons extends StatefulWidget {
 
 class _SquareButtonsState extends State<SquareButtons>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  late TabController tabController;
 
   @override
   void initState() {
@@ -103,6 +103,9 @@ class _SquareButtonsState extends State<SquareButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -209,6 +212,9 @@ class _SquareButtonsState extends State<SquareButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -315,6 +321,9 @@ class _SquareButtonsState extends State<SquareButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -371,6 +380,9 @@ class _SquareButtonsState extends State<SquareButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -445,6 +457,9 @@ class _SquareButtonsState extends State<SquareButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -559,6 +574,9 @@ class _SquareButtonsState extends State<SquareButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -673,6 +691,9 @@ class _SquareButtonsState extends State<SquareButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -732,6 +753,9 @@ class _SquareButtonsState extends State<SquareButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -803,6 +827,9 @@ class _SquareButtonsState extends State<SquareButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -917,6 +944,9 @@ class _SquareButtonsState extends State<SquareButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -1025,6 +1055,9 @@ class _SquareButtonsState extends State<SquareButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -1080,6 +1113,9 @@ class _SquareButtonsState extends State<SquareButtons>
                             ),
                           ),
                           GFCard(
+                            imageOverlay:
+                                AssetImage('lib/assets/images/card1.png'),
+                            image: Image.asset('lib/assets/images/card1.png'),
                             content: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,

@@ -9,7 +9,7 @@ class BottomIconTab extends StatefulWidget {
 
 class _BottomIconTabState extends State<BottomIconTab>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  late TabController tabController;
 
   @override
   void initState() {

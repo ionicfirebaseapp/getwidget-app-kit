@@ -8,7 +8,7 @@ class SegmentedAppbar extends StatefulWidget {
 
 class _SegmentedAppbarState extends State<SegmentedAppbar>
     with TickerProviderStateMixin {
-  TabController tabController;
+  late TabController tabController;
   @override
   void initState() {
     super.initState();

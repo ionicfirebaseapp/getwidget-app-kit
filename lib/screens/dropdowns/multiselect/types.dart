@@ -8,9 +8,9 @@ class MultiselectTypes extends StatefulWidget {
   _MultiselectTypesState createState() => _MultiselectTypesState();
 }
 
-class _MultiselectTypesState extends State<MultiselectTypes> with SingleTickerProviderStateMixin {
-  TabController tabController;
-  int _value = 1;
+class _MultiselectTypesState extends State<MultiselectTypes>
+    with SingleTickerProviderStateMixin {
+  late TabController tabController;
 
   @override
   void initState() {
@@ -32,8 +32,8 @@ class _MultiselectTypesState extends State<MultiselectTypes> with SingleTickerPr
     'Fati',
     'Dest',
   ];
-  String dropdown;
-  String selected, selectedIndex;
+  late String dropdown;
+  late String selected, selectedIndex;
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -98,15 +98,14 @@ class _MultiselectTypesState extends State<MultiselectTypes> with SingleTickerPr
                   controller: tabController,
                   height: 400,
                   children: <Widget>[
-
                     ///
                     /// todo: need fix
                     ///
                     GFMultiSelect(
                       items: dropList,
-//                      onSelect: (value) {
-//                        print('sel $value ');
-//                      },
+                      onSelect: (value) {
+                        print('sel $value ');
+                      },
 //
 //                      dropdownTitleTileText: 'Messi, Griezmann, Coutinho ',
 //                      dropdownTitleTileMargin: EdgeInsets.only(
@@ -132,16 +131,16 @@ class _MultiselectTypesState extends State<MultiselectTypes> with SingleTickerPr
                       padding: const EdgeInsets.all(6),
                       margin: const EdgeInsets.all(6),
                       type: GFCheckboxType.basic,
-                      activebgColor: GFColors.SUCCESS,
+                      activeBgColor: GFColors.SUCCESS,
                       activeBorderColor: GFColors.SUCCESS,
-                      inactiveBorderColor: Colors.grey[200],
+                      inactiveBorderColor: Colors.grey[200]!,
                     ),
                     Container(
                       child: GFMultiSelect(
                         items: dropList,
-//                        onSelect: (value) {
-//                          print('sel $value ');
-//                        },
+                        onSelect: (value) {
+                          print('sel $value ');
+                        },
 //                        dropdownTitleTileText: 'Messi, Griezmann, Coutinho ',
 //                        dropdownTitleTileColor: Colors.grey[200],
 //                        dropdownTitleTileMargin: EdgeInsets.only(
@@ -166,8 +165,8 @@ class _MultiselectTypesState extends State<MultiselectTypes> with SingleTickerPr
                         padding: const EdgeInsets.all(6),
                         margin: const EdgeInsets.all(6),
                         type: GFCheckboxType.basic,
-                        activebgColor: Colors.green.withOpacity(0.5),
-                        inactiveBorderColor: Colors.grey[200],
+                        activeBgColor: Colors.green.withOpacity(0.5),
+                        inactiveBorderColor: Colors.grey[200]!,
                       ),
                     ),
                   ],

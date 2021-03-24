@@ -10,8 +10,7 @@ class DropDownTypes extends StatefulWidget {
 
 class _DropDownTypesState extends State<DropDownTypes>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
-  int _value = 1;
+  late TabController tabController;
   @override
   void initState() {
     super.initState();
@@ -34,8 +33,8 @@ class _DropDownTypesState extends State<DropDownTypes>
     'Drinking',
     'Jogging'
   ];
-  String dropdown;
-  String selected, selectedIndex;
+  late String dropdown;
+  late String selected, selectedIndex;
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -117,7 +116,7 @@ class _DropDownTypesState extends State<DropDownTypes>
                                   onChanged: (newValue) {
                                     print('value $newValue');
                                     setState(() {
-                                      dropdownValue = newValue;
+                                      dropdownValue = newValue.toString();
                                     });
                                   },
                                   items: [
@@ -155,7 +154,7 @@ class _DropDownTypesState extends State<DropDownTypes>
                                   onChanged: (newValue) {
                                     print('value $newValue');
                                     setState(() {
-                                      dropdownValue = newValue;
+                                      dropdownValue = newValue.toString();
                                     });
                                   },
                                   items: [

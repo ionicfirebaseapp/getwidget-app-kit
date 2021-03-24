@@ -40,6 +40,8 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                 ),
               ),
               GFCard(
+                imageOverlay: AssetImage('lib/assets/images/card1.png'),
+                image: Image.asset('lib/assets/images/card1.png'),
                 content: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -141,6 +143,8 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                 ),
               ),
               GFCard(
+                imageOverlay: AssetImage('lib/assets/images/card1.png'),
+                image: Image.asset('lib/assets/images/card1.png'),
                 content: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -196,6 +200,8 @@ class _ShadowButtonsState extends State<ShadowButtons> {
                 ),
               ),
               GFCard(
+                imageOverlay: AssetImage('lib/assets/images/card1.png'),
+                image: Image.asset('lib/assets/images/card1.png'),
                 content: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,

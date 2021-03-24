@@ -53,13 +53,15 @@ class _SearchbarPageState extends State<SearchbarPage> {
             GFSearchBar(
                 searchList: list,
                 searchQueryBuilder: (query, list) => list
-                    .where((item) =>
-                        item.toLowerCase().contains(query.toLowerCase()))
+                    .where((item) => item
+                        .toString()
+                        .toLowerCase()
+                        .contains(query.toLowerCase()))
                     .toList(),
                 overlaySearchListItemBuilder: (item) => Container(
                       padding: const EdgeInsets.all(8),
                       child: Text(
-                        item,
+                        item.toString(),
                         style: const TextStyle(fontSize: 18),
                       ),
                     ),
@@ -95,13 +97,15 @@ class _SearchbarPageState extends State<SearchbarPage> {
                 ),
                 searchList: list,
                 searchQueryBuilder: (query, list) => list
-                    .where((item) =>
-                        item.toLowerCase().contains(query.toLowerCase()))
+                    .where((item) => item
+                        .toString()
+                        .toLowerCase()
+                        .contains(query.toLowerCase()))
                     .toList(),
                 overlaySearchListItemBuilder: (item) => Container(
                       padding: const EdgeInsets.all(8),
                       child: Text(
-                        item,
+                        item.toString(),
                         style: const TextStyle(fontSize: 18),
                       ),
                     ),

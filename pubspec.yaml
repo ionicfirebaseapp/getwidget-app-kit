@@ -4,14 +4,14 @@ description: A GetWidget Demo App
 version: 1.0.8+9
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  getwidget: ^1.2.2
-    #path: D:\Flutter_Apps\Get_Widget\getflutter\
-  flutter_webview_plugin: ^0.3.11
+  getwidget: ^2.0.1-nullsafety.4
+#    path: /home/deepika/flutterPackages/getflutter/
+  webview_flutter: ^2.0.2
   cupertino_icons: ^1.0.0
 
 dev_dependencies:

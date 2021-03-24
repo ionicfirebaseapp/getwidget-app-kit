@@ -41,6 +41,8 @@ class _TogglesState extends State<Toggles> {
                 ),
               ),
               GFCard(
+                imageOverlay: AssetImage('lib/assets/images/card1.png'),
+                image: Image.asset('lib/assets/images/card1.png'),
                 content: Column(
                   children: <Widget>[
                     const SizedBox(
@@ -91,6 +93,8 @@ class _TogglesState extends State<Toggles> {
                 ),
               ),
               GFCard(
+                imageOverlay: AssetImage('lib/assets/images/card1.png'),
+                image: Image.asset('lib/assets/images/card1.png'),
                 content: Column(
                   children: <Widget>[
                     const SizedBox(
@@ -145,6 +149,8 @@ class _TogglesState extends State<Toggles> {
                 ),
               ),
               GFCard(
+                imageOverlay: AssetImage('lib/assets/images/card1.png'),
+                image: Image.asset('lib/assets/images/card1.png'),
                 content: Column(
                   children: <Widget>[
                     const SizedBox(
@@ -199,6 +205,8 @@ class _TogglesState extends State<Toggles> {
                 ),
               ),
               GFCard(
+                imageOverlay: AssetImage('lib/assets/images/card1.png'),
+                image: Image.asset('lib/assets/images/card1.png'),
                 content: Column(
                   children: <Widget>[
                     const SizedBox(height: 10),
