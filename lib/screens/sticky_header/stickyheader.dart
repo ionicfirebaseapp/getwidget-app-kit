@@ -76,7 +76,7 @@ class _StickyHeaderState extends State<StickyHeader>
                           physics: ScrollPhysics(),
                           shrinkWrap: true,
                           scrollDirection: Axis.vertical,
-                          itemCount: 8,
+                          itemCount: 3,
                           itemBuilder: (BuildContext context, int index) {
                             return SingleChildScrollView(
                               child: Column(

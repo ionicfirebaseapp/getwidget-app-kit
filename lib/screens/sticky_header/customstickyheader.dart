@@ -19,7 +19,7 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
     "lib/assets/images/s4.png",
     "lib/assets/images/s5.png",
   ];
-  int groupValue = 0;
+  int groupValue = 1;
 
   @override
   void initState() {
@@ -99,6 +99,7 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                               itemBuilder: (BuildContext context, int index) {
                                 return SingleChildScrollView(
                                   child: Container(
+                                    color: Colors.white,
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 15),
                                     child: Column(
@@ -192,7 +193,7 @@ class _CustomStickyHeaderState extends State<CustomStickyHeader>
                                             GFRadio(
                                               type: GFRadioType.blunt,
                                               size: 23,
-                                              value: 3,
+                                              value: 4,
                                               groupValue: groupValue,
                                               onChanged: (int value) {
                                                 setState(() {

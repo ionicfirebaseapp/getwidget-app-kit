@@ -34,8 +34,8 @@ class _DropDownTypesState extends State<DropDownTypes>
     'Jogging'
   ];
 
-  late String dropdown;
-  late String selected, selectedIndex;
+  // late String dropdown;
+  // late String selected, selectedIndex;
 
   @override
   Widget build(BuildContext context) => Scaffold(

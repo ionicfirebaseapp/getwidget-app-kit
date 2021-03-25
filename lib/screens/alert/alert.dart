@@ -9,7 +9,7 @@ class AlertPage extends StatefulWidget {
 
 class _AlertPageState extends State<AlertPage> {
   bool showblur = false;
-  late Widget alertWidget = Container();
+  Widget alertWidget = Container();
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(

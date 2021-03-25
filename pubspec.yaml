@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  getwidget: ^2.0.1-nullsafety.4
+  getwidget: 2.0.1-nullsafety.4
 #    path: /home/deepika/flutterPackages/getflutter/
   webview_flutter: ^2.0.2
   cupertino_icons: ^1.0.0

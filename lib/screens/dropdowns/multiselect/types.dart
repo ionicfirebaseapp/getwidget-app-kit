@@ -32,8 +32,8 @@ class _MultiselectTypesState extends State<MultiselectTypes>
     'Fati',
     'Dest',
   ];
-  late String dropdown;
-  late String selected, selectedIndex;
+  // late String dropdown;
+  // late String selected, selectedIndex;
 
   @override
   Widget build(BuildContext context) => Scaffold(
