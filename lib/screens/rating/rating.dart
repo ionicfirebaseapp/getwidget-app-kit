@@ -113,6 +113,7 @@ class _RatingPageState extends State<RatingPage> {
               },
               child: const Text('Rate'),
             ),
+            onChanged: (double rating) {},
           ),
           const Padding(
             padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
@@ -145,6 +146,7 @@ class _RatingPageState extends State<RatingPage> {
               },
               child: Icon(Icons.insert_emoticon),
             ),
+            onChanged: (double rating) {},
           ),
           const SizedBox(
             height: 20,

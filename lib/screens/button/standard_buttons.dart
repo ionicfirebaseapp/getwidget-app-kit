@@ -9,7 +9,7 @@ class StandardButtons extends StatefulWidget {
 
 class _StandardButtonsState extends State<StandardButtons>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  TabController? tabController;
 
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _StandardButtonsState extends State<StandardButtons>
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 
@@ -47,6 +47,7 @@ class _StandardButtonsState extends State<StandardButtons>
             Container(
               height: 40,
               margin: const EdgeInsets.only(top: 20, left: 25, right: 25),
+              padding: EdgeInsets.all(0),
               child: GFSegmentTabs(
                 tabController: tabController,
                 width: 280,
@@ -73,8 +74,8 @@ class _StandardButtonsState extends State<StandardButtons>
                     ),
                   ),
                 ),
-                indicatorPadding: const EdgeInsets.all(8),
-                indicatorWeight: 2,
+                // indicatorPadding: const EdgeInsets.all(8),
+                // indicatorWeight: 2,
                 border: Border.all(color: Colors.white, width: 2),
               ),
             ),

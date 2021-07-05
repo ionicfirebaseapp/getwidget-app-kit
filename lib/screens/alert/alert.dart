@@ -9,7 +9,7 @@ class AlertPage extends StatefulWidget {
 
 class _AlertPageState extends State<AlertPage> {
   bool showblur = false;
-  Widget alertWidget;
+  Widget? alertWidget;
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -31,7 +31,7 @@ class _AlertPageState extends State<AlertPage> {
         ),
         body: GFFloatingWidget(
           verticalPosition: 150,
-          showblurness: showblur,
+          showBlurness: showblur,
           child: alertWidget,
           body: ListView(
             children: <Widget>[

@@ -9,7 +9,7 @@ class SquareButtons extends StatefulWidget {
 
 class _SquareButtonsState extends State<SquareButtons>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  TabController? tabController;
 
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _SquareButtonsState extends State<SquareButtons>
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 
@@ -79,8 +79,8 @@ class _SquareButtonsState extends State<SquareButtons>
                     ),
                   ),
                 ),
-                indicatorPadding: const EdgeInsets.all(8),
-                indicatorWeight: 2,
+                // indicatorPadding: const EdgeInsets.all(8),
+                // indicatorWeight: 2,
                 border: Border.all(color: Colors.white, width: 2),
               ),
             ),

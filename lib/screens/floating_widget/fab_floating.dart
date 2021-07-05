@@ -7,10 +7,11 @@ class FabFloatingWidget extends StatefulWidget {
   _FabFloatingWidgetState createState() => _FabFloatingWidgetState();
 }
 
-class _FabFloatingWidgetState extends State<FabFloatingWidget> with TickerProviderStateMixin {
+class _FabFloatingWidgetState extends State<FabFloatingWidget>
+    with TickerProviderStateMixin {
   TextEditingController controller1 = TextEditingController();
-  Animation animation;
-  AnimationController animationController;
+  Animation? animation;
+  late AnimationController animationController;
 
   @override
   void initState() {
@@ -23,19 +24,23 @@ class _FabFloatingWidgetState extends State<FabFloatingWidget> with TickerProvid
       vsync: this,
       duration: const Duration(milliseconds: 300),
     );
-    offset = Tween<Offset>(begin: const Offset(0, -0.04), end: const Offset(0, 0.2)).animate(controller);
+    offset =
+        Tween<Offset>(begin: const Offset(0, -0.04), end: const Offset(0, 0.2))
+            .animate(controller);
 //    offset = Tween<Offset>(begin: Offset.zero, end: Offset(0.0, 1.0))
 //        .animate(controller);
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 300),
     );
-    offset1 = Tween<Offset>(begin: Offset.zero, end: const Offset(0, -0.05)).animate(_controller);
-    animation = Tween(begin: 1, end: 0).animate(CurvedAnimation(parent: animationController, curve: Curves.fastLinearToSlowEaseIn));
+    offset1 = Tween<Offset>(begin: Offset.zero, end: const Offset(0, -0.05))
+        .animate(_controller);
+    animation = Tween(begin: 1, end: 0).animate(CurvedAnimation(
+        parent: animationController, curve: Curves.fastLinearToSlowEaseIn));
   }
 
-  AnimationController controller, _controller;
-  Animation<Offset> offset, offset1;
+  late AnimationController controller, _controller;
+  late Animation<Offset> offset, offset1;
 
   bool showfabFloatingWidget = false;
 
@@ -54,7 +59,8 @@ class _FabFloatingWidgetState extends State<FabFloatingWidget> with TickerProvid
           child: Container(
             margin: const EdgeInsets.only(top: 20),
             child: GFIconButton(
-                icon: showfabFloatingWidget ? Icon(Icons.close) : Icon(Icons.add),
+                icon:
+                    showfabFloatingWidget ? Icon(Icons.close) : Icon(Icons.add),
                 shape: GFIconButtonShape.circle,
                 color: GFColors.PRIMARY,
 //                  iconSize: 80,
@@ -99,11 +105,26 @@ class _FabFloatingWidgetState extends State<FabFloatingWidget> with TickerProvid
                                 alignment: WrapAlignment.end,
                                 direction: Axis.vertical,
                                 children: <Widget>[
-                                  GFIconButton(icon: Icon(Icons.add), shape: GFIconButtonShape.circle, color: GFColors.INFO, onPressed: () {}),
-                                  GFIconButton(icon: Icon(Icons.share), shape: GFIconButtonShape.circle, color: GFColors.SUCCESS, onPressed: () {}),
-                                  GFIconButton(icon: Icon(Icons.message), shape: GFIconButtonShape.circle, color: GFColors.WARNING, onPressed: () {}),
                                   GFIconButton(
-                                      icon: Icon(Icons.settings), shape: GFIconButtonShape.circle, color: GFColors.SECONDARY, onPressed: () {}),
+                                      icon: Icon(Icons.add),
+                                      shape: GFIconButtonShape.circle,
+                                      color: GFColors.INFO,
+                                      onPressed: () {}),
+                                  GFIconButton(
+                                      icon: Icon(Icons.share),
+                                      shape: GFIconButtonShape.circle,
+                                      color: GFColors.SUCCESS,
+                                      onPressed: () {}),
+                                  GFIconButton(
+                                      icon: Icon(Icons.message),
+                                      shape: GFIconButtonShape.circle,
+                                      color: GFColors.WARNING,
+                                      onPressed: () {}),
+                                  GFIconButton(
+                                      icon: Icon(Icons.settings),
+                                      shape: GFIconButtonShape.circle,
+                                      color: GFColors.SECONDARY,
+                                      onPressed: () {}),
                                 ],
                               )
                             ],

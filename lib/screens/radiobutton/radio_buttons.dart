@@ -58,7 +58,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
 //                custombgColor: Colors.red,
                   value: 0,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
@@ -70,7 +70,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   size: GFSize.MEDIUM,
                   value: 1,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
@@ -83,7 +83,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   size: GFSize.SMALL,
                   value: 2,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
@@ -96,7 +96,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   size: 20,
                   value: 3,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
@@ -131,7 +131,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
 //                custombgColor: Colors.red,
                   value: 4,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
@@ -145,7 +145,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   size: GFSize.MEDIUM,
                   value: 5,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
@@ -159,7 +159,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   size: GFSize.SMALL,
                   value: 6,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
@@ -173,7 +173,7 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   size: 20,
                   value: 7,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
@@ -209,54 +209,54 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
 //                custombgColor: Colors.red,
                     value: 8,
                     groupValue: groupValue,
-                    onChanged: (val) {
+                    onChanged: (dynamic val) {
                       setState(() {
                         groupValue = val;
                       });
                     },
                     inactiveIcon: null,
-                    custombgColor: GFColors.SUCCESS),
+                    customBgColor: GFColors.SUCCESS),
                 GFRadio(
                   type: GFRadioType.blunt,
                   size: GFSize.MEDIUM,
                   value: 9,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
                   },
                   inactiveIcon: null,
                   activeBorderColor: GFColors.SUCCESS,
-                  custombgColor: GFColors.SUCCESS,
+                  customBgColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
                   type: GFRadioType.blunt,
                   size: GFSize.SMALL,
                   value: 10,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
                   },
                   inactiveIcon: null,
                   activeBorderColor: GFColors.SUCCESS,
-                  custombgColor: GFColors.SUCCESS,
+                  customBgColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
                   type: GFRadioType.blunt,
                   size: 25,
                   value: 11,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
                   },
                   inactiveIcon: null,
                   activeBorderColor: GFColors.SUCCESS,
-                  custombgColor: GFColors.SUCCESS,
+                  customBgColor: GFColors.SUCCESS,
                 )
               ],
             )),
@@ -278,12 +278,12 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   activeIcon: Icon(Icons.check),
                   radioColor: Colors.red,
                   size: GFSize.LARGE,
-                  activebgColor: GFColors.SUCCESS,
+                  activeBgColor: GFColors.SUCCESS,
                   inactiveBorderColor: GFColors.DARK,
                   activeBorderColor: GFColors.SUCCESS,
                   value: 12,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
@@ -295,14 +295,14 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   size: GFSize.MEDIUM,
                   value: 13,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
                   },
                   inactiveIcon: Icon(Icons.sentiment_dissatisfied),
-                  custombgColor: GFColors.WARNING,
-                  activebgColor: GFColors.SUCCESS,
+                  customBgColor: GFColors.WARNING,
+                  activeBgColor: GFColors.SUCCESS,
                   activeBorderColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
@@ -310,13 +310,13 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   size: GFSize.SMALL,
                   value: 14,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
                   },
                   inactiveIcon: null,
-                  custombgColor: GFColors.SUCCESS,
+                  customBgColor: GFColors.SUCCESS,
                   activeBorderColor: GFColors.SUCCESS,
                 ),
                 GFRadio(
@@ -324,14 +324,14 @@ class _RadioButtonPageState extends State<RadioButtonPage> {
                   size: 25,
                   value: 15,
                   groupValue: groupValue,
-                  onChanged: (val) {
+                  onChanged: (dynamic val) {
                     setState(() {
                       groupValue = val;
                     });
                   },
                   inactiveIcon: null,
                   activeBorderColor: GFColors.SUCCESS,
-                  custombgColor: GFColors.SUCCESS,
+                  customBgColor: GFColors.SUCCESS,
                 ),
               ],
             ))

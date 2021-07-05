@@ -8,7 +8,7 @@ class Images extends StatefulWidget {
 }
 
 class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
-  TabController tabController;
+  TabController? tabController;
 
   @override
   void initState() {
@@ -18,7 +18,7 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 
@@ -72,8 +72,8 @@ class _ImagesState extends State<Images> with SingleTickerProviderStateMixin {
                     ),
                   ),
                 ),
-                indicatorPadding: const EdgeInsets.all(8),
-                indicatorWeight: 2,
+                // indicatorPadding: const EdgeInsets.all(8),
+                // indicatorWeight: 2,
                 border: Border.all(color: Colors.white, width: 2),
               ),
             ),

@@ -10,7 +10,7 @@ class DropDownTypes extends StatefulWidget {
 
 class _DropDownTypesState extends State<DropDownTypes>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  TabController? tabController;
   int _value = 1;
   @override
   void initState() {
@@ -20,11 +20,11 @@ class _DropDownTypesState extends State<DropDownTypes>
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 
-  String dropdownValue = 'FC Barcelona';
+  String? dropdownValue = 'FC Barcelona';
   List<dynamic> dropList = [
     'Running',
     'Walking',
@@ -34,8 +34,8 @@ class _DropDownTypesState extends State<DropDownTypes>
     'Drinking',
     'Jogging'
   ];
-  String dropdown;
-  String selected, selectedIndex;
+  String? dropdown;
+  String? selected, selectedIndex;
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -88,8 +88,8 @@ class _DropDownTypesState extends State<DropDownTypes>
                       ),
                     ),
                   ),
-                  indicatorPadding: const EdgeInsets.all(8),
-                  indicatorWeight: 2,
+                  // indicatorPadding: const EdgeInsets.all(8),
+                  // indicatorWeight: 2,
                   border: Border.all(color: Colors.white, width: 2),
                 ),
               ),
@@ -114,7 +114,7 @@ class _DropDownTypesState extends State<DropDownTypes>
 //                                      color: Colors.black12, width: 1),
                                   dropdownColor: Colors.white,
                                   value: dropdownValue,
-                                  onChanged: (newValue) {
+                                  onChanged: (dynamic newValue) {
                                     print('value $newValue');
                                     setState(() {
                                       dropdownValue = newValue;
@@ -148,11 +148,11 @@ class _DropDownTypesState extends State<DropDownTypes>
                                 child: GFDropdown(
                                   padding: const EdgeInsets.all(15),
                                   borderRadius: BorderRadius.circular(10),
-//                                  border: const BorderSide(
-//                                      color: Colors.black12, width: 1),
+                                  border: const BorderSide(
+                                      color: Colors.black12, width: 1),
                                   dropdownColor: Colors.grey[300],
                                   value: dropdownValue,
-                                  onChanged: (newValue) {
+                                  onChanged: (dynamic newValue) {
                                     print('value $newValue');
                                     setState(() {
                                       dropdownValue = newValue;

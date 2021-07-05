@@ -100,7 +100,10 @@ class _DrawerPageState extends State<DrawerPage> {
                     ),
                     Text(
                       'GetWidget',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Colors.white),
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white),
                     ),
                     const SizedBox(
                       height: 5,
@@ -123,13 +126,15 @@ class _DrawerPageState extends State<DrawerPage> {
                   GFAccordion(
                       title: 'Components',
                       expandedTitleBackgroundColor: Colors.white,
-                      textStyle: const TextStyle(color: Colors.black87, fontSize: 16),
+                      textStyle:
+                          const TextStyle(color: Colors.black87, fontSize: 16),
                       contentChild: Padding(
                         padding: const EdgeInsets.all(0),
                         child: Column(children: <Widget>[
                           GFAccordion(
                             margin: const EdgeInsets.all(0),
-                            titlePadding: const EdgeInsets.only(left: 7, top: 10, bottom: 10, right: 0),
+                            titlePadding: const EdgeInsets.only(
+                                left: 7, top: 10, bottom: 10, right: 0),
                             expandedTitleBackgroundColor: Colors.white,
                             titleChild: Row(children: [
                               Icon(
@@ -159,7 +164,9 @@ class _DrawerPageState extends State<DrawerPage> {
                                   onTap: () {
                                     Navigator.push(
                                       context,
-                                      MaterialPageRoute(builder: (BuildContext context) => StandardButtons()),
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              StandardButtons()),
                                     );
                                   },
                                   child: GFListTile(
@@ -175,7 +182,9 @@ class _DrawerPageState extends State<DrawerPage> {
                                   onTap: () {
                                     Navigator.push(
                                       context,
-                                      MaterialPageRoute(builder: (BuildContext context) => PillsButtons()),
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              PillsButtons()),
                                     );
                                   },
                                   child: GFListTile(
@@ -191,7 +200,9 @@ class _DrawerPageState extends State<DrawerPage> {
                                   onTap: () {
                                     Navigator.push(
                                       context,
-                                      MaterialPageRoute(builder: (BuildContext context) => SquareButtons()),
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              SquareButtons()),
                                     );
                                   },
                                   child: GFListTile(
@@ -207,7 +218,9 @@ class _DrawerPageState extends State<DrawerPage> {
                                   onTap: () {
                                     Navigator.push(
                                       context,
-                                      MaterialPageRoute(builder: (BuildContext context) => ShadowButtons()),
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              ShadowButtons()),
                                     );
                                   },
                                   child: GFListTile(
@@ -223,7 +236,9 @@ class _DrawerPageState extends State<DrawerPage> {
                                   onTap: () {
                                     Navigator.push(
                                       context,
-                                      MaterialPageRoute(builder: (BuildContext context) => IconButtons()),
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              IconButtons()),
                                     );
                                   },
                                   child: GFListTile(
@@ -239,7 +254,9 @@ class _DrawerPageState extends State<DrawerPage> {
                                   onTap: () {
                                     Navigator.push(
                                       context,
-                                      MaterialPageRoute(builder: (BuildContext context) => SocialButtons()),
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              SocialButtons()),
                                     );
                                   },
                                   child: GFListTile(
@@ -258,7 +275,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => BadgesPage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        BadgesPage()),
                               );
                             },
                             child: GFListTile(
@@ -282,7 +301,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => Avatar()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Avatar()),
                               );
                             },
                             child: GFListTile(
@@ -306,7 +327,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => Images()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Images()),
                               );
                             },
                             child: GFListTile(
@@ -330,7 +353,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => CardPage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        CardPage()),
                               );
                             },
                             child: GFListTile(
@@ -354,7 +379,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => Carousel()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Carousel()),
                               );
                             },
                             child: GFListTile(
@@ -378,7 +405,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => TilesPage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        TilesPage()),
                               );
                             },
                             child: GFListTile(
@@ -402,7 +431,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => TabTypes()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        TabTypes()),
                               );
                             },
                             child: GFListTile(
@@ -426,7 +457,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => Toggles()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Toggles()),
                               );
                             },
                             child: GFListTile(
@@ -450,7 +483,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => Toasts()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Toasts()),
                               );
                             },
                             child: GFListTile(
@@ -474,7 +509,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => AlertPage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        AlertPage()),
                               );
                             },
                             child: GFListTile(
@@ -498,7 +535,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => Accordion()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Accordion()),
                               );
                             },
                             child: GFListTile(
@@ -522,7 +561,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => SearchbarPage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        SearchbarPage()),
                               );
                             },
                             child: GFListTile(
@@ -546,7 +587,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => AppHome()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        AppHome()),
                               );
                             },
                             child: GFListTile(
@@ -570,7 +613,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => TypographyPage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        TypographyPage()),
                               );
                             },
                             child: GFListTile(
@@ -594,7 +639,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => Loaders()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Loaders()),
                               );
                             },
                             child: GFListTile(
@@ -618,7 +665,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => RatingPage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        RatingPage()),
                               );
                             },
                             child: GFListTile(
@@ -642,7 +691,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => FloatingWidgetHome()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        FloatingWidgetHome()),
                               );
                             },
                             child: GFListTile(
@@ -666,7 +717,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => ProgressBar()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        ProgressBar()),
                               );
                             },
                             child: GFListTile(
@@ -690,7 +743,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => ShimmerPage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        ShimmerPage()),
                               );
                             },
                             child: GFListTile(
@@ -714,7 +769,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => CheckBoxPage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        CheckBoxPage()),
                               );
                             },
                             child: GFListTile(
@@ -738,7 +795,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => CheckBoxListTilePage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        CheckBoxListTilePage()),
                               );
                             },
                             child: GFListTile(
@@ -762,7 +821,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => RadioButtonPage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        RadioButtonPage()),
                               );
                             },
                             child: GFListTile(
@@ -786,7 +847,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => RadioListTilePage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        RadioListTilePage()),
                               );
                             },
                             child: GFListTile(
@@ -810,7 +873,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => BorderPage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        BorderPage()),
                               );
                             },
                             child: GFListTile(
@@ -834,7 +899,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => BottomSheetPage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        BottomSheetPage()),
                               );
                             },
                             child: GFListTile(
@@ -858,7 +925,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => AnimationPage()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        AnimationPage()),
                               );
                             },
                             child: GFListTile(
@@ -882,7 +951,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => Introscreen()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Introscreen()),
                               );
                             },
                             child: GFListTile(
@@ -906,7 +977,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => StickyTypes()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        StickyTypes()),
                               );
                             },
                             child: GFListTile(
@@ -930,7 +1003,9 @@ class _DrawerPageState extends State<DrawerPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (BuildContext context) => DropDown()),
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        DropDown()),
                               );
                             },
                             child: GFListTile(
@@ -957,14 +1032,17 @@ class _DrawerPageState extends State<DrawerPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (BuildContext context) => WebView(url: 'https://docs.getwidget.dev'),
+                          builder: (BuildContext context) =>
+                              WebView(url: 'https://docs.getwidget.dev'),
                         ),
                       );
                     },
                     child: const Padding(
                       padding: EdgeInsets.only(left: 2),
                       child: GFListTile(
-                        title: Text('Documents', style: TextStyle(fontSize: 16, color: Colors.black87)),
+                        title: Text('Documents',
+                            style:
+                                TextStyle(fontSize: 16, color: Colors.black87)),
                       ),
                     ),
                   ),

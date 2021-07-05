@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 
 class FullWidthIntro extends StatefulWidget {
-  FullWidthIntro({Key key}) : super(key: key);
+  FullWidthIntro({Key? key}) : super(key: key);
   @override
   _FullWidthIntroState createState() => _FullWidthIntroState();
 }
 
 class _FullWidthIntroState extends State<FullWidthIntro> {
-  PageController _pageController;
-  List<Widget> slideList;
-  int initialPage;
+  late PageController _pageController;
+  List<Widget>? slideList;
+  late int initialPage;
   @override
   void initState() {
     _pageController = PageController(initialPage: 2);
@@ -28,14 +28,14 @@ class _FullWidthIntroState extends State<FullWidthIntro> {
         color: Colors.blueGrey,
 // borderRadius: BorderRadius.circular(50),
         // border: Border.all(color: Colors.red, width: 5),
-        slides: slides(),
-        pageController: _pageController, currentIndex: null, pageCount: 5,
+        slides: slides()!,
+        pageController: _pageController, currentIndex: 0, pageCount: 5,
         // showIntroScreenBottomNavigationBar: false,
         // showIntroSCreenBottomNavigationBar: false,
 // introScreenBottomNavigationBar: false,
         introScreenBottomNavigationBar: GFIntroScreenBottomNavigationBar(
           pageController: _pageController,
-          pageCount: slideList.length,
+          pageCount: slideList!.length,
           currentIndex: initialPage,
           // child: Text('dfghj'),
 
@@ -92,7 +92,7 @@ class _FullWidthIntroState extends State<FullWidthIntro> {
           //   side: BorderSide(color: Colors.red, width: 2),
           //     borderRadius: BorderRadius.circular(5)
           // ),
-          inActiveColor: Colors.grey[200],
+          inactiveColor: Colors.grey[200]!,
           activeColor: GFColors.SUCCESS,
           // dotMargin: EdgeInsets.symmetric(horizontal: 6),
 
@@ -103,7 +103,7 @@ class _FullWidthIntroState extends State<FullWidthIntro> {
     );
   }
 
-  List<Widget> slides() {
+  List<Widget>? slides() {
     slideList = [
       Container(
         // color: Colors.teal,
