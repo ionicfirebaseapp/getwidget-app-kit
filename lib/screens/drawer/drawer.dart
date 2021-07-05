@@ -973,14 +973,17 @@ class _DrawerPageState extends State<DrawerPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (BuildContext context) => WebView(url: 'https://getflutter.dev/features/'),
+                          builder: (BuildContext context) =>
+                              WebView(url: 'https://getwidget.dev/features/'),
                         ),
                       );
                     },
                     child: const Padding(
                       padding: EdgeInsets.only(left: 2),
                       child: GFListTile(
-                        title: Text('Features', style: TextStyle(fontSize: 16, color: Colors.black87)),
+                        title: Text('Features',
+                            style:
+                                TextStyle(fontSize: 16, color: Colors.black87)),
                       ),
                     ),
                   ),
