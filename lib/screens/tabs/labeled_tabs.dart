@@ -9,7 +9,7 @@ class LabeledTabs extends StatefulWidget {
 
 class _LabeledTabsState extends State<LabeledTabs>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  TabController? tabController;
 
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _LabeledTabsState extends State<LabeledTabs>
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 

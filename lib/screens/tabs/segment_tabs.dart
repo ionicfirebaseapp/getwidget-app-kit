@@ -9,7 +9,7 @@ class SegmentTabsPage extends StatefulWidget {
 
 class _SegmentTabsPageState extends State<SegmentTabsPage>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  TabController? tabController;
 
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _SegmentTabsPageState extends State<SegmentTabsPage>
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 
@@ -80,8 +80,8 @@ class _SegmentTabsPageState extends State<SegmentTabsPage>
                     ),
                   ),
                 ),
-                indicatorPadding: const EdgeInsets.all(8),
-                indicatorWeight: 2,
+                // indicatorPadding: const EdgeInsets.all(8),
+                // indicatorWeight: 2,
                 border: Border.all(color: Colors.white, width: 2),
               ),
             ),

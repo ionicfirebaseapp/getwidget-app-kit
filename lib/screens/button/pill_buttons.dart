@@ -9,7 +9,7 @@ class PillsButtons extends StatefulWidget {
 
 class _PillsButtonsState extends State<PillsButtons>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  TabController? tabController;
 
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _PillsButtonsState extends State<PillsButtons>
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 
@@ -79,8 +79,8 @@ class _PillsButtonsState extends State<PillsButtons>
                     ),
                   ),
                 ),
-                indicatorPadding: const EdgeInsets.all(8),
-                indicatorWeight: 2,
+                // indicatorPadding: const EdgeInsets.all(8),
+                // indicatorWeight: 2,
                 border: Border.all(color: Colors.white, width: 2),
               ),
             ),

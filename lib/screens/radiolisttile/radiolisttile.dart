@@ -8,7 +8,7 @@ class RadioListTilePage extends StatefulWidget {
 }
 
 class _RadioListTilePageState extends State<RadioListTilePage> {
-  int groupValue = 0;
+  int? groupValue = 0;
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -34,7 +34,7 @@ class _RadioListTilePageState extends State<RadioListTilePage> {
           children: <Widget>[
             GFRadioListTile(
               titleText: 'Hello',
-              subtitleText: 'Happy New Year',
+              subTitleText: 'Happy New Year',
               position: GFPosition.start,
               icon: GFAvatar(
                 backgroundImage: AssetImage('lib/assets/images/img1.png'),
@@ -54,7 +54,7 @@ class _RadioListTilePageState extends State<RadioListTilePage> {
             ),
             GFRadioListTile(
               titleText: 'Hello',
-              subtitleText: 'Happy New Year',
+              subTitleText: 'Happy New Year',
               avatar: GFAvatar(
                 backgroundImage: AssetImage('lib/assets/images/img2.png'),
               ),

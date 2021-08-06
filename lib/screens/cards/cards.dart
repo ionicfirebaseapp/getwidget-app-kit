@@ -9,7 +9,7 @@ class CardPage extends StatefulWidget {
 
 class _CardPageState extends State<CardPage>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  TabController? tabController;
 
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _CardPageState extends State<CardPage>
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 
@@ -76,8 +76,8 @@ class _CardPageState extends State<CardPage>
                     ),
                   ),
                 ),
-                indicatorPadding: const EdgeInsets.all(8),
-                indicatorWeight: 2,
+                // indicatorPadding: const EdgeInsets.all(8),
+                // indicatorWeight: 2,
                 border: Border.all(color: Colors.white, width: 2),
               ),
             ),
@@ -262,7 +262,7 @@ class _CardPageState extends State<CardPage>
                                   AssetImage('lib/assets/images/avatar8.png'),
                             ),
                             titleText: 'Card Title',
-                            subtitleText: 'Sub Title',
+                            subTitleText: 'Sub Title',
                             icon: GFIconButton(
                               onPressed: null,
                               icon: GestureDetector(
@@ -302,7 +302,7 @@ class _CardPageState extends State<CardPage>
                                   AssetImage('lib/assets/images/avatar9.png'),
                             ),
                             titleText: 'Card Title',
-                            subtitleText: 'Sub Title',
+                            subTitleText: 'Sub Title',
                           ),
                           content: Text(
                             'Some quick example text to build on the card',

@@ -9,16 +9,17 @@ class AnimationPage extends StatefulWidget {
   _AnimationPageState createState() => _AnimationPageState();
 }
 
-class _AnimationPageState extends State<AnimationPage> with SingleTickerProviderStateMixin {
+class _AnimationPageState extends State<AnimationPage>
+    with SingleTickerProviderStateMixin {
   bool selected = false;
   bool _large = false;
   double _size = 50.0;
-  AnimationController controller;
-  Animation<double> animation;
+  AnimationController? controller;
+  Animation<double>? animation;
   bool _first = true;
   double _fontSize = 30;
   Color _color = GFColors.SUCCESS;
-  Animation<Offset> offsetAnimation;
+  Animation<Offset>? offsetAnimation;
 
   @override
   void initState() {
@@ -27,21 +28,22 @@ class _AnimationPageState extends State<AnimationPage> with SingleTickerProvider
       duration: const Duration(seconds: 2),
       vsync: this,
     );
-    animation = new CurvedAnimation(parent: controller, curve: Curves.bounceInOut);
-    controller.repeat();
+    animation =
+        new CurvedAnimation(parent: controller!, curve: Curves.bounceInOut);
+    controller!.repeat();
 
     offsetAnimation = Tween<Offset>(
       begin: Offset.zero,
       end: const Offset(1.5, 0),
     ).animate(CurvedAnimation(
-      parent: controller,
+      parent: controller!,
       curve: Curves.linear,
     ));
   }
 
   @override
   void dispose() {
-    if (controller != null) controller.dispose();
+    if (controller != null) controller!.dispose();
     super.dispose();
   }
 
@@ -79,7 +81,7 @@ class _AnimationPageState extends State<AnimationPage> with SingleTickerProvider
             ),
             GestureDetector(
               onTap: () {
-                controller.repeat();
+                controller!.repeat();
               },
               child: GFAnimation(
                 turnsAnimation: animation,
@@ -106,7 +108,7 @@ class _AnimationPageState extends State<AnimationPage> with SingleTickerProvider
             ),
             GestureDetector(
               onTap: () {
-                controller.repeat();
+                controller!.repeat();
               },
               child: GFAnimation(
                 scaleAnimation: animation,

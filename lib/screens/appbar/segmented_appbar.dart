@@ -8,7 +8,7 @@ class SegmentedAppbar extends StatefulWidget {
 
 class _SegmentedAppbarState extends State<SegmentedAppbar>
     with TickerProviderStateMixin {
-  TabController tabController;
+  TabController? tabController;
   @override
   void initState() {
     super.initState();
@@ -17,7 +17,7 @@ class _SegmentedAppbarState extends State<SegmentedAppbar>
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 
@@ -33,8 +33,8 @@ class _SegmentedAppbarState extends State<SegmentedAppbar>
             indicator: const BoxDecoration(
               color: GFColors.DARK,
             ),
-            indicatorPadding: const EdgeInsets.all(8),
-            indicatorWeight: 2,
+            // indicatorPadding: const EdgeInsets.all(8),
+            // indicatorWeight: 2,
             border: Border.all(color: Colors.white, width: 1),
             length: 3,
             tabs: const <Widget>[

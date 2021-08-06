@@ -20,8 +20,8 @@ class _DropDownState extends State<DropDown> {
     'Drinking',
     'Jogging'
   ];
-  String dropdown;
-  String selected, selectedIndex;
+  String? dropdown;
+  String? selected, selectedIndex;
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(

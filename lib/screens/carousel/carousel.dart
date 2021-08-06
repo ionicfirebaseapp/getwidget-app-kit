@@ -32,8 +32,9 @@ class Carousel extends StatefulWidget {
   _CarouselState createState() => _CarouselState();
 }
 
-class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin {
-  TabController tabController;
+class _CarouselState extends State<Carousel>
+    with SingleTickerProviderStateMixin {
+  TabController? tabController;
 
   @override
   void initState() {
@@ -43,7 +44,7 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 
@@ -94,8 +95,8 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                     ),
                   ),
                 ),
-                indicatorPadding: const EdgeInsets.all(8),
-                indicatorWeight: 2,
+                // indicatorPadding: const EdgeInsets.all(8),
+                // indicatorWeight: 2,
                 border: Border.all(color: Colors.white, width: 2),
               ),
             ),
@@ -109,7 +110,8 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                     child: ListView(
                       children: <Widget>[
                         const Padding(
-                          padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                          padding:
+                              EdgeInsets.only(left: 15, top: 30, bottom: 10),
                           child: GFTypography(
                             text: 'Full Width',
                             type: GFTypographyType.typo5,
@@ -137,11 +139,14 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                                     right: 15,
                                     bottom: 24,
                                   ),
-                                  borderRadius: const BorderRadius.all(Radius.circular(4)),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(4)),
                                   content: Padding(
-                                    padding: const EdgeInsets.only(top: 30, left: 0),
+                                    padding:
+                                        const EdgeInsets.only(top: 30, left: 0),
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: const <Widget>[
                                         Text(
                                           'Title',
@@ -150,7 +155,8 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                                           ),
                                         ),
                                         Padding(
-                                          padding: EdgeInsets.only(left: 30, right: 30, top: 30),
+                                          padding: EdgeInsets.only(
+                                              left: 30, right: 30, top: 30),
                                           child: Text(
                                             'GetWidget is an open source library that comes with pre-build 1000+ UI components. ',
                                             textAlign: TextAlign.center,
@@ -167,7 +173,8 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                               .toList(),
                         ),
                         const Padding(
-                          padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                          padding:
+                              EdgeInsets.only(left: 15, top: 30, bottom: 10),
                           child: GFTypography(
                             text: 'Multiple Items',
                             type: GFTypographyType.typo5,
@@ -185,11 +192,15 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                                     end: FractionalOffset.bottomCenter,
                                     colors: gradientColors,
                                   ),
-                                  margin: const EdgeInsets.only(left: 15, right: 5),
-                                  borderRadius: const BorderRadius.all(Radius.circular(4)),
+                                  margin:
+                                      const EdgeInsets.only(left: 15, right: 5),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(4)),
                                   content: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: const <Widget>[
                                       Text(
                                         'Title',
@@ -198,7 +209,8 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsets.only(right: 5, top: 10),
+                                        padding:
+                                            EdgeInsets.only(right: 5, top: 10),
                                         child: Text(
                                           'GetWidget is an open source library that comes with pre-build 1000+ UI components ',
                                           style: TextStyle(
@@ -214,7 +226,8 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                               .toList(),
                         ),
                         const Padding(
-                          padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                          padding:
+                              EdgeInsets.only(left: 15, top: 30, bottom: 10),
                           child: GFTypography(
                             text: 'Full Size',
                             type: GFTypographyType.typo5,
@@ -241,23 +254,30 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                                     ],
                                   ),
                                   height: 200,
-                                  margin: const EdgeInsets.only(left: 15, right: 15),
-                                  borderRadius: const BorderRadius.all(Radius.circular(4)),
+                                  margin: const EdgeInsets.only(
+                                      left: 15, right: 15),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(4)),
                                   content: Padding(
-                                    padding: const EdgeInsets.only(top: 30, left: 0),
+                                    padding:
+                                        const EdgeInsets.only(top: 30, left: 0),
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: const <Widget>[
                                         Text(
                                           'Title',
-                                          style: TextStyle(color: GFColors.WHITE),
+                                          style:
+                                              TextStyle(color: GFColors.WHITE),
                                         ),
                                         Padding(
-                                          padding: EdgeInsets.only(left: 30, right: 30, top: 30),
+                                          padding: EdgeInsets.only(
+                                              left: 30, right: 30, top: 30),
                                           child: Text(
                                             'GetWidget is an open source library that comes with pre-build 1000+ UI components. ',
                                             textAlign: TextAlign.center,
-                                            style: TextStyle(color: GFColors.LIGHT),
+                                            style: TextStyle(
+                                                color: GFColors.LIGHT),
                                           ),
                                         )
                                       ],
@@ -277,7 +297,8 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                     child: ListView(
                       children: <Widget>[
                         const Padding(
-                          padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                          padding:
+                              EdgeInsets.only(left: 15, top: 30, bottom: 10),
                           child: GFTypography(
                             text: 'Full Width',
                             type: GFTypographyType.typo5,
@@ -301,22 +322,28 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                                     right: 15,
                                     bottom: 30,
                                   ),
-                                  borderRadius: const BorderRadius.all(Radius.circular(4)),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(4)),
                                   child: Padding(
-                                    padding: const EdgeInsets.only(top: 30, left: 0),
+                                    padding:
+                                        const EdgeInsets.only(top: 30, left: 0),
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: const <Widget>[
                                         Text(
                                           'Title',
-                                          style: TextStyle(color: GFColors.WHITE),
+                                          style:
+                                              TextStyle(color: GFColors.WHITE),
                                         ),
                                         Padding(
-                                          padding: EdgeInsets.only(left: 30, right: 30, top: 30),
+                                          padding: EdgeInsets.only(
+                                              left: 30, right: 30, top: 30),
                                           child: Text(
                                             'GetWidget is an open source library that comes with pre-build 1000+ UI components. ',
                                             textAlign: TextAlign.center,
-                                            style: TextStyle(color: GFColors.LIGHT),
+                                            style: TextStyle(
+                                                color: GFColors.LIGHT),
                                           ),
                                         )
                                       ],
@@ -331,7 +358,8 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                           },
                         ),
                         const Padding(
-                          padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                          padding:
+                              EdgeInsets.only(left: 15, top: 30, bottom: 10),
                           child: GFTypography(
                             text: 'Multiple Items',
                             type: GFTypographyType.typo5,
@@ -346,17 +374,22 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                                 (url) => GFImageOverlay(
                                   height: 400,
                                   width: 300,
-                                  margin: const EdgeInsets.only(left: 15, right: 5),
-                                  borderRadius: const BorderRadius.all(Radius.circular(4)),
+                                  margin:
+                                      const EdgeInsets.only(left: 15, right: 5),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(4)),
                                   child: Padding(
                                       padding: const EdgeInsets.only(left: 10),
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
                                         children: const <Widget>[
                                           Text(
                                             'Title',
-                                            style: TextStyle(color: GFColors.WHITE),
+                                            style: TextStyle(
+                                                color: GFColors.WHITE),
                                           ),
                                           Padding(
                                               padding: EdgeInsets.only(
@@ -364,7 +397,9 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                                               ),
                                               child: Text(
                                                 'Open source UI library ',
-                                                style: TextStyle(fontSize: 10, color: GFColors.LIGHT),
+                                                style: TextStyle(
+                                                    fontSize: 10,
+                                                    color: GFColors.LIGHT),
                                               ))
                                         ],
                                       )),
@@ -374,7 +409,8 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                               .toList(),
                         ),
                         const Padding(
-                          padding: EdgeInsets.only(left: 15, top: 30, bottom: 10),
+                          padding:
+                              EdgeInsets.only(left: 15, top: 30, bottom: 10),
                           child: GFTypography(
                             text: 'Full Size',
                             type: GFTypographyType.typo5,
@@ -393,16 +429,21 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                               .map(
                                 (url) => GFImageOverlay(
                                   height: 200,
-                                  margin: const EdgeInsets.only(left: 15, right: 15),
-                                  borderRadius: const BorderRadius.all(Radius.circular(4)),
+                                  margin: const EdgeInsets.only(
+                                      left: 15, right: 15),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(4)),
                                   child: Padding(
-                                    padding: const EdgeInsets.only(top: 30, left: 0),
+                                    padding:
+                                        const EdgeInsets.only(top: 30, left: 0),
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: const <Widget>[
                                         Text(
                                           'Title',
-                                          style: TextStyle(color: GFColors.WHITE),
+                                          style:
+                                              TextStyle(color: GFColors.WHITE),
                                         ),
                                         Padding(
                                           padding: EdgeInsets.only(
@@ -413,7 +454,8 @@ class _CarouselState extends State<Carousel> with SingleTickerProviderStateMixin
                                           child: Text(
                                             'GetWidget is an open source library that comes with pre-build 1000+ UI components. ',
                                             textAlign: TextAlign.center,
-                                            style: TextStyle(color: GFColors.LIGHT),
+                                            style: TextStyle(
+                                                color: GFColors.LIGHT),
                                           ),
                                         )
                                       ],

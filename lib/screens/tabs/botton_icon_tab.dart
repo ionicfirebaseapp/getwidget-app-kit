@@ -9,7 +9,7 @@ class BottomIconTab extends StatefulWidget {
 
 class _BottomIconTabState extends State<BottomIconTab>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  TabController? tabController;
 
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _BottomIconTabState extends State<BottomIconTab>
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 

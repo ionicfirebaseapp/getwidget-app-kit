@@ -9,7 +9,7 @@ class BorderPage extends StatefulWidget {
 
 class _BorderPageState extends State<BorderPage>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  TabController? tabController;
 
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _BorderPageState extends State<BorderPage>
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 
@@ -77,8 +77,8 @@ class _BorderPageState extends State<BorderPage>
                       ),
                     ),
                   ),
-                  indicatorPadding: const EdgeInsets.all(8),
-                  indicatorWeight: 2,
+                  // indicatorPadding: const EdgeInsets.all(8),
+                  // indicatorWeight: 2,
                   border: Border.all(color: Colors.white, width: 2),
                 ),
               ),
@@ -358,7 +358,7 @@ class _BorderPageState extends State<BorderPage>
                                         'lib/assets/images/avatar8.png'),
                                   ),
                                   titleText: 'Card Title',
-                                  subtitleText: 'Sub Title',
+                                  subTitleText: 'Sub Title',
                                   icon: GFIconButton(
                                     onPressed: null,
                                     icon: GestureDetector(

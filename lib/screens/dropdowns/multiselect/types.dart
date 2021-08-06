@@ -8,8 +8,9 @@ class MultiselectTypes extends StatefulWidget {
   _MultiselectTypesState createState() => _MultiselectTypesState();
 }
 
-class _MultiselectTypesState extends State<MultiselectTypes> with SingleTickerProviderStateMixin {
-  TabController tabController;
+class _MultiselectTypesState extends State<MultiselectTypes>
+    with SingleTickerProviderStateMixin {
+  TabController? tabController;
   int _value = 1;
 
   @override
@@ -20,7 +21,7 @@ class _MultiselectTypesState extends State<MultiselectTypes> with SingleTickerPr
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 
@@ -32,8 +33,8 @@ class _MultiselectTypesState extends State<MultiselectTypes> with SingleTickerPr
     'Fati',
     'Dest',
   ];
-  String dropdown;
-  String selected, selectedIndex;
+  String? dropdown;
+  String? selected, selectedIndex;
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -87,8 +88,8 @@ class _MultiselectTypesState extends State<MultiselectTypes> with SingleTickerPr
                       ),
                     ),
                   ),
-                  indicatorPadding: const EdgeInsets.all(8),
-                  indicatorWeight: 2,
+                  // indicatorPadding: const EdgeInsets.all(8),
+                  // indicatorWeight: 2,
                   border: Border.all(color: Colors.white, width: 2),
                 ),
               ),
@@ -98,7 +99,6 @@ class _MultiselectTypesState extends State<MultiselectTypes> with SingleTickerPr
                   controller: tabController,
                   height: 400,
                   children: <Widget>[
-
                     ///
                     /// todo: need fix
                     ///
@@ -132,42 +132,44 @@ class _MultiselectTypesState extends State<MultiselectTypes> with SingleTickerPr
                       padding: const EdgeInsets.all(6),
                       margin: const EdgeInsets.all(6),
                       type: GFCheckboxType.basic,
-                      activebgColor: GFColors.SUCCESS,
+                      activeBgColor: GFColors.SUCCESS,
                       activeBorderColor: GFColors.SUCCESS,
-                      inactiveBorderColor: Colors.grey[200],
+                      inactiveBorderColor: Colors.grey[200]!,
+                      onSelect: (List<dynamic> value) {},
                     ),
                     Container(
                       child: GFMultiSelect(
                         items: dropList,
-//                        onSelect: (value) {
-//                          print('sel $value ');
-//                        },
-//                        dropdownTitleTileText: 'Messi, Griezmann, Coutinho ',
-//                        dropdownTitleTileColor: Colors.grey[200],
-//                        dropdownTitleTileMargin: EdgeInsets.only(
-//                            top: 22, left: 18, right: 18, bottom: 5),
-//                        dropdownTitleTilePadding: EdgeInsets.all(10),
-//                        dropdownUnderlineBorder: const BorderSide(
-//                            color: Colors.transparent, width: 2),
-//                        dropdownTitleTileBorder:
-//                            Border.all(color: Colors.grey[300], width: 1),
-//                        dropdownTitleTileBorderRadius: BorderRadius.circular(5),
-//                        expandedIcon: const Icon(
-//                          Icons.keyboard_arrow_down,
-//                          color: Colors.black54,
-//                        ),
-//                        collapsedIcon: const Icon(
-//                          Icons.keyboard_arrow_up,
-//                          color: Colors.black54,
-//                        ),
-//                        submitButton: Text('OK'),
-//                        dropdownTitleTileTextStyle: const TextStyle(
-//                            fontSize: 14, color: Colors.black54),
+                        //  onSelect: (value) {
+                        //    print('sel $value ');
+                        //  },
+                        dropdownTitleTileText: 'Messi, Griezmann, Coutinho ',
+                        dropdownTitleTileColor: Colors.grey[200],
+                        dropdownTitleTileMargin: EdgeInsets.only(
+                            top: 22, left: 18, right: 18, bottom: 5),
+                        dropdownTitleTilePadding: EdgeInsets.all(10),
+                        dropdownUnderlineBorder: const BorderSide(
+                            color: Colors.transparent, width: 2),
+                        //  dropdownTitleTileBorder:
+                        //      Border.all(color: Colors.grey[300], width: 1),
+                        dropdownTitleTileBorderRadius: BorderRadius.circular(5),
+                        expandedIcon: const Icon(
+                          Icons.keyboard_arrow_down,
+                          color: Colors.black54,
+                        ),
+                        collapsedIcon: const Icon(
+                          Icons.keyboard_arrow_up,
+                          color: Colors.black54,
+                        ),
+                        submitButton: Text('OK'),
+                        dropdownTitleTileTextStyle: const TextStyle(
+                            fontSize: 14, color: Colors.black54),
                         padding: const EdgeInsets.all(6),
                         margin: const EdgeInsets.all(6),
                         type: GFCheckboxType.basic,
-                        activebgColor: Colors.green.withOpacity(0.5),
-                        inactiveBorderColor: Colors.grey[200],
+                        activeBgColor: Colors.green.withOpacity(0.5),
+                        inactiveBorderColor: Colors.grey[200]!,
+                        onSelect: (List<dynamic> value) {},
                       ),
                     ),
                   ],

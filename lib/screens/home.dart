@@ -333,11 +333,12 @@ class _HomePageState extends State<HomePage> {
         ),
       );
 
-  Widget buildSquareTile(String title, IconData icon, Widget route) => InkWell(
+  Widget buildSquareTile(String title, IconData? icon, Widget? route) =>
+      InkWell(
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (BuildContext context) => route),
+            MaterialPageRoute(builder: (BuildContext context) => route!),
           );
         },
         child: Container(
