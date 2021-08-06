@@ -249,7 +249,7 @@ class _LoadersState extends State<Loaders> {
                         size: GFSize.SMALL,
                         child: Image(
                           image: AssetImage('lib/assets/gif/loader1.gif'),
-                          width: 150,
+                          width: 130,
                         ),
                       ),
                     ],

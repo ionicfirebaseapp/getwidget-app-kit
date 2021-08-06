@@ -67,6 +67,8 @@ flutter:
     - lib/assets/images/e1.png
 
     - lib/assets/gif/success1.gif
+    - lib/assets/gif/loader.gif
+    - lib/assets/gif/loader1.gif
     - lib/assets/icons/allign.png
     - lib/assets/icons/Rotation.png
     - lib/assets/icons/scaling.png
