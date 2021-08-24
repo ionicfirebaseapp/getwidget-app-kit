@@ -9,20 +9,6 @@ class Toasts extends StatefulWidget {
 }
 
 class _ToastsState extends State<Toasts> {
-  bool showFloatingToast = false;
-  Timer? autoTimer;
-  bool showblurness = true;
-  Duration autoTimerDuration = Duration(milliseconds: 400);
-
-//  @override
-//  initState(){
-//    autoTimer = Timer(autoTimerDuration, (){
-//      setState((){
-//        showblurness = true;
-//        autoTimer= Timer()
-//      });
-//    });
-//  }
 
   @override
   Widget build(BuildContext context) => Scaffold(
