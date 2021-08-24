@@ -108,7 +108,7 @@ class _RatingPageState extends State<RatingPage> {
               type: GFButtonType.transparent,
               onPressed: () {
                 setState(() {
-                  _userRating = double.parse(_ratingController.text ?? '0.0');
+                  _userRating = double.parse(_ratingController.text);
                 });
               },
               child: const Text('Rate'),
@@ -141,7 +141,7 @@ class _RatingPageState extends State<RatingPage> {
               type: GFButtonType.transparent,
               onPressed: () {
                 setState(() {
-                  _customrating = double.parse(_customController.text ?? '0.0');
+                  _customrating = double.parse(_customController.text);
                 });
               },
               child: Icon(Icons.insert_emoticon),

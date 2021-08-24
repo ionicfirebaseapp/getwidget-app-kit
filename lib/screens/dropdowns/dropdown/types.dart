@@ -11,7 +11,6 @@ class DropDownTypes extends StatefulWidget {
 class _DropDownTypesState extends State<DropDownTypes>
     with SingleTickerProviderStateMixin {
   TabController? tabController;
-  int _value = 1;
   @override
   void initState() {
     super.initState();

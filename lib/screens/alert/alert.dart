@@ -54,54 +54,54 @@ class _AlertPageState extends State<AlertPage> {
                           onPressed: () {
                             setState(() {
                               showblur = true;
-                              alertWidget = GFToast(
-                                text: 'hi',
+                              // alertWidget = GFToast(
+                              //   text: 'hi',
+                              // );
+                              alertWidget = GFAlert(
+                                backgroundColor: Colors.white,
+                                title: 'Welcome!',
+                                content:
+                                    'Get Flutter is one of the largest Flutter open-source UI library '
+                                    'for mobile or web apps with  1000+ pre-built reusable widgets.',
+                                bottombar: Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: <Widget>[
+                                    GFButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          alertWidget = null;
+                                          showblur = false;
+                                        });
+                                      },
+                                      shape: GFButtonShape.pills,
+                                      color: GFColors.LIGHT,
+                                      type: GFButtonType.outline2x,
+                                      child: const Text(
+                                        'Skip',
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 5,
+                                    ),
+                                    GFButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          alertWidget = null;
+                                          showblur = false;
+                                        });
+                                      },
+                                      shape: GFButtonShape.pills,
+                                      icon: Icon(
+                                        Icons.keyboard_arrow_right,
+                                        color: GFColors.WHITE,
+                                      ),
+                                      position: GFPosition.end,
+                                      text: 'Learn More',
+                                    )
+                                  ],
+                                ),
                               );
-//                              alertWidget = GFAlert(
-//                                backgroundColor: Colors.white,
-//                                title: 'Welcome!',
-//                                content:
-//                                    'Get Flutter is one of the largest Flutter open-source UI library '
-//                                    'for mobile or web apps with  1000+ pre-built reusable widgets.',
-//                                bottombar: Row(
-//                                  mainAxisAlignment: MainAxisAlignment.end,
-//                                  children: <Widget>[
-//                                    GFButton(
-//                                      onPressed: () {
-//                                        setState(() {
-//                                          alertWidget = null;
-//                                          showblur = false;
-//                                        });
-//                                      },
-//                                      shape: GFButtonShape.pills,
-//                                      color: GFColors.LIGHT,
-//                                      type: GFButtonType.outline2x,
-//                                      child: const Text(
-//                                        'Skip',
-//                                        style: TextStyle(color: Colors.black),
-//                                      ),
-//                                    ),
-//                                    const SizedBox(
-//                                      width: 5,
-//                                    ),
-//                                    GFButton(
-//                                      onPressed: () {
-//                                        setState(() {
-//                                          alertWidget = null;
-//                                          showblur = false;
-//                                        });
-//                                      },
-//                                      shape: GFButtonShape.pills,
-//                                      icon: Icon(
-//                                        Icons.keyboard_arrow_right,
-//                                        color: GFColors.WHITE,
-//                                      ),
-//                                      position: GFPosition.end,
-//                                      text: 'Learn More',
-//                                    )
-//                                  ],
-//                                ),
-//                              );
                             });
                           }),
                     ],
