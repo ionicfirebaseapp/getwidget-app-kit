@@ -12,8 +12,6 @@ class AnimationPage extends StatefulWidget {
 class _AnimationPageState extends State<AnimationPage>
     with SingleTickerProviderStateMixin {
   bool selected = false;
-  bool _large = false;
-  double _size = 50.0;
   AnimationController? controller;
   Animation<double>? animation;
   bool _first = true;
