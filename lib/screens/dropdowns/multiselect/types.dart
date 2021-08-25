@@ -11,7 +11,6 @@ class MultiselectTypes extends StatefulWidget {
 class _MultiselectTypesState extends State<MultiselectTypes>
     with SingleTickerProviderStateMixin {
   TabController? tabController;
-  int _value = 1;
 
   @override
   void initState() {
