@@ -134,7 +134,7 @@ class _MultiselectTypesState extends State<MultiselectTypes>
                       activeBgColor: GFColors.SUCCESS,
                       activeBorderColor: GFColors.SUCCESS,
                       inactiveBorderColor: Colors.grey[200]!,
-                      onSelect: (List<dynamic> value) {},
+                      onSelect: (value) {},
                     ),
                     Container(
                       child: GFMultiSelect(
@@ -168,7 +168,7 @@ class _MultiselectTypesState extends State<MultiselectTypes>
                         type: GFCheckboxType.basic,
                         activeBgColor: Colors.green.withOpacity(0.5),
                         inactiveBorderColor: Colors.grey[200]!,
-                        onSelect: (List<dynamic> value) {},
+                        onSelect: (value) {},
                       ),
                     ),
                   ],
