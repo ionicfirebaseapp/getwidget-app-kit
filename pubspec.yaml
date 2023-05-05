@@ -1,17 +1,21 @@
 name: gf_app
 description: A GetWidget Demo App
-
+repository: https://github.com/ionicfirebaseapp/getwidget-app-kit
 version: 1.0.9+10
+publish_to: none
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  flutter: ^3.7.1
+  sdk: ">=2.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  getwidget: ^2.0.4
+  getwidget:
+   git:
+      url: https://github.com/ionicfirebaseapp/getwidget.git
   #path: D:\Flutter_Apps\Get_Widget\getflutter\
-  flutter_webview_plugin: ^0.4.0
+  webview_flutter: ^4.2.0
   cupertino_icons: ^1.0.3
 
 dev_dependencies:

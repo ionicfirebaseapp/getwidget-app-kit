@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:gf_app/screens/animations/animation.dart';
 import 'package:gf_app/screens/border/border.dart';
@@ -7,6 +6,7 @@ import 'package:gf_app/screens/bottomsheet/bottomsheet.dart';
 import 'package:gf_app/screens/intro-screen/introscreen.dart';
 import 'package:gf_app/screens/radiolisttile/radiolisttile.dart';
 import 'package:gf_app/screens/sticky_header/sticky_types.dart';
+
 import '../screens/accordian/accordian.dart';
 import '../screens/alert/alert.dart';
 import '../screens/appbar/app_home.dart';
@@ -15,11 +15,14 @@ import '../screens/badges/badges.dart';
 import '../screens/button/button_types.dart';
 import '../screens/cards/cards.dart';
 import '../screens/carousel/carousel.dart';
+import '../screens/checkbox/checkboxs.dart';
+import '../screens/checkboxlisttile/checkbox_list_tile_page.dart';
 import '../screens/drawer/drawer.dart';
 import '../screens/floating_widget/floating_widget.dart';
 import '../screens/images/images.dart';
 import '../screens/loader/loaders.dart';
 import '../screens/progress_bar/progress_bar.dart';
+import '../screens/radiobutton/radio_buttons.dart';
 import '../screens/rating/rating.dart';
 import '../screens/searchbar/seachbar.dart';
 import '../screens/shimmer/shimmer.dart';
@@ -28,9 +31,6 @@ import '../screens/tiles/tiles_page.dart';
 import '../screens/toast/toasts.dart';
 import '../screens/toggle/toggles.dart';
 import '../screens/typography/typography.dart';
-import '../screens/checkbox/checkboxs.dart';
-import '../screens/checkboxlisttile/checkbox_list_tile_page.dart';
-import '../screens/radiobutton/radio_buttons.dart';
 import 'dropdowns/dropdown-types.dart';
 
 class HomePage extends StatefulWidget {

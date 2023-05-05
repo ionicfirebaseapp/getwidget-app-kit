@@ -1,6 +1,6 @@
-import 'package:getwidget/getwidget.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 
 class AlertPage extends StatefulWidget {
   @override
@@ -60,10 +60,10 @@ class _AlertPageState extends State<AlertPage> {
                               alertWidget = GFAlert(
                                 backgroundColor: Colors.white,
                                 title: 'Welcome!',
-                                content:
+                                content: Text(
                                     'Get Flutter is one of the largest Flutter open-source UI library '
-                                    'for mobile or web apps with  1000+ pre-built reusable widgets.',
-                                bottombar: Row(
+                                    'for mobile or web apps with  1000+ pre-built reusable widgets.'),
+                                bottomBar: Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: <Widget>[
                                     GFButton(
@@ -128,10 +128,10 @@ class _AlertPageState extends State<AlertPage> {
                             alignment: Alignment.center,
                             backgroundColor: Colors.white,
                             title: 'Welcome!',
-                            content:
-                                'Get Flutter is one of the largest Flutter open-source UI library for mobile or web apps with  1000+ pre-built reusable widgets.',
+                            content: Text(
+                                'Get Flutter is one of the largest Flutter open-source UI library for mobile or web apps with  1000+ pre-built reusable widgets.'),
                             type: GFAlertType.rounded,
-                            bottombar: Row(
+                            bottomBar: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: <Widget>[
                                 GFButton(
@@ -193,10 +193,10 @@ class _AlertPageState extends State<AlertPage> {
                           alertWidget = GFAlert(
                             backgroundColor: Colors.white,
                             title: 'Welcome !',
-                            content:
-                                'Get Flutter is one of the largest Flutter open-source UI library for mobile or web apps with  1000+ pre-built reusable widgets.',
+                            content: Text(
+                                'Get Flutter is one of the largest Flutter open-source UI library for mobile or web apps with  1000+ pre-built reusable widgets.'),
                             type: GFAlertType.fullWidth,
-                            bottombar: Row(
+                            bottomBar: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: <Widget>[
                                 GFButton(
@@ -261,17 +261,17 @@ class _AlertPageState extends State<AlertPage> {
                             alertWidget = GFAlert(
                               alignment: Alignment.center,
                               backgroundColor: Colors.white,
-                              child: Image.asset(
-                                'lib/assets/gif/success1.gif',
-                                width: 80,
-                              ),
-                              contentChild: const Text(
+                              // child: Image.asset(
+                              //   'lib/assets/gif/success1.gif',
+                              //   width: 80,
+                              // ),
+                              content: const Text(
                                 'You have succesfully viewed the Custom Alert... Hurrayyy!!',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: 15, fontWeight: FontWeight.bold),
                               ),
-                              bottombar: GFButton(
+                              bottomBar: GFButton(
                                 onPressed: () {
                                   setState(() {
                                     alertWidget = null;

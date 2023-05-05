@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:getwidget/components/animation/gf_animation.dart';
-import 'package:getwidget/getwidget.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:getwidget/types/gf_animation_type.dart';
+import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 
 class AnimationPage extends StatefulWidget {
   @override
