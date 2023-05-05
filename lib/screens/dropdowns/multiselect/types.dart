@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:getwidget/components/dropdown/gf_multiselect.dart';
 import 'package:getwidget/getwidget.dart';
 
 class MultiselectTypes extends StatefulWidget {

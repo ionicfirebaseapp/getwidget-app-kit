@@ -1,7 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
-import 'package:flutter/cupertino.dart';
-import 'dart:async';
 
 class Toasts extends StatefulWidget {
   @override
@@ -9,7 +8,6 @@ class Toasts extends StatefulWidget {
 }
 
 class _ToastsState extends State<Toasts> {
-
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(

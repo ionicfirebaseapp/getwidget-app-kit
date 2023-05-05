@@ -1,4 +1,4 @@
-package dev.getflutter.gf_app
+package dev.getflutter.appkit
 
 import io.flutter.embedding.android.FlutterActivity
 
