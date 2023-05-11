@@ -106,7 +106,7 @@ class _DropDownTypesState extends State<DropDownTypes>
                               margin: EdgeInsets.all(20),
                               child: DropdownButtonHideUnderline(
                                 child: GFDropdown(
-                                  padding: const EdgeInsets.all(15),
+                                  padding: const EdgeInsets.all(5),
                                   borderRadius: BorderRadius.circular(5),
 //                                  border: const BorderSide(
 //                                      color: Colors.black12, width: 1),
@@ -144,7 +144,7 @@ class _DropDownTypesState extends State<DropDownTypes>
                               margin: EdgeInsets.all(20),
                               child: DropdownButtonHideUnderline(
                                 child: GFDropdown(
-                                  padding: const EdgeInsets.all(15),
+                                  padding: const EdgeInsets.all(5),
                                   borderRadius: BorderRadius.circular(10),
                                   border: const BorderSide(
                                       color: Colors.black12, width: 1),
