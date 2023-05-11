@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 
 class ProgressBar extends StatefulWidget {
@@ -45,6 +45,7 @@ class _ProgressBarState extends State<ProgressBar> {
                 percentage: 0.8,
                 lineHeight: 20,
                 alignment: MainAxisAlignment.spaceBetween,
+                isDragable: true,
                 child: const Text(
                   '80%',
                   textAlign: TextAlign.end,
@@ -73,7 +74,7 @@ class _ProgressBarState extends State<ProgressBar> {
                 percentage: 0.5,
                 lineHeight: 20,
                 alignment: MainAxisAlignment.spaceBetween,
-
+                isDragable: true,
                 child: const Padding(
                   padding: EdgeInsets.only(right: 5),
                   child: Text(
@@ -95,6 +96,7 @@ class _ProgressBarState extends State<ProgressBar> {
               child: GFProgressBar(
                 percentage: 0.3,
                 lineHeight: 20,
+                isDragable: true,
 //                progressHeadType: GFProgressHeadType.square,
                 child: const Text(
                   '30%',
@@ -125,6 +127,7 @@ class _ProgressBarState extends State<ProgressBar> {
                 percentage: 0.4,
                 lineHeight: 20,
                 circleWidth: 10,
+                isDragable: true,
                 child: const Text(
                   '40%',
                   textAlign: TextAlign.end,
@@ -149,6 +152,7 @@ class _ProgressBarState extends State<ProgressBar> {
                 percentage: 0.9,
                 lineHeight: 45,
                 circleWidth: 10,
+                isDragable: true,
                 child: Column(
                   children: <Widget>[
                     const Text(
